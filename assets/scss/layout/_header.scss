@@ -1,0 +1,63 @@
+header {
+  padding: 5px;
+  background-color: black;
+  .header {
+    @include flexbox;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+    nav {
+      ul {
+        margin-bottom: 0;
+        @include flexbox;
+        column-gap: 40px;
+        li {
+          a {
+            color: white;
+          }
+        }
+      }
+    }
+    .right-nav {
+
+      @include flexbox;
+      column-gap: 30px;
+      .search-user {
+        .search-input {
+          outline: none;
+          border: none;
+          padding: 5px 10px;
+          border-radius: 50px;
+        }
+      }
+      .notification {
+        position: relative;
+        span {
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          background-color: red;
+          border-radius: 50%;
+          font-size: 12px;
+          display: flex;
+          justify-content: center;
+          top: -8px;
+          left: 12px;
+          color: white;
+          align-items: center;
+        }
+        .fa-bell {
+          color: white;
+          font-size: 18px;
+        }
+      }
+      .account{
+        .fa-user{
+            color: white;
+            font-size: 18px;
+        }
+      }
+    }
+  }
+}

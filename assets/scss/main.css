@@ -1,13 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none !important;
   list-style: none !important;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
   max-width: 1200px;
   padding: 0 5%;
   margin: auto;
+}
+
+header {
+  padding: 5px;
+  background-color: black;
+}
+header .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header img {
+  width: 60px;
+  height: 60px;
+}
+header .header nav ul {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+header .header nav ul li a {
+  color: white;
+}
+header .header .right-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+header .header .right-nav .search-user .search-input {
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
+header .header .right-nav .notification {
+  position: relative;
+}
+header .header .right-nav .notification span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  top: -8px;
+  left: 12px;
+  color: white;
+  align-items: center;
+}
+header .header .right-nav .notification .fa-bell {
+  color: white;
+  font-size: 18px;
+}
+header .header .right-nav .account .fa-user {
+  color: white;
+  font-size: 18px;
 }/*# sourceMappingURL=main.css.map */
