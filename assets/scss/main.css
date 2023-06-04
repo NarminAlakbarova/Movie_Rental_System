@@ -42,6 +42,10 @@ header .header nav ul {
 }
 header .header nav ul li a {
   color: white;
+  transition: 0.5s;
+}
+header .header nav ul li a:hover {
+  color: #e50914;
 }
 header .header .right-nav {
   display: flex;
@@ -56,6 +60,8 @@ header .header .right-nav .search-user .search-input {
   padding: 5px 10px;
   border-radius: 50px;
   background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 14px;
 }
 header .header .right-nav .search-user .search-input::-moz-placeholder {
   color: white;
@@ -121,6 +127,11 @@ header .header .right-nav .account .fa-user {
   color: white;
   font-size: 16px;
   border-radius: 5px;
+  transition: 0.5s;
+}
+.carousel .carousel-item .carousel-caption .carusel-content .content-left .play-now:hover {
+  background-color: #500206;
+  cursor: pointer;
 }
 .carousel .carousel-item .carousel-caption .carusel-content .content-left span {
   color: #e50914;
@@ -182,6 +193,7 @@ header .header .right-nav .account .fa-user {
   align-items: center;
 }
 .carousel .carousel-item .carousel-caption .carusel-content .content-right a {
+  position: relative;
   width: 80px;
   height: 80px;
   border: 1px solid white;
@@ -191,6 +203,21 @@ header .header .right-nav .account .fa-user {
   align-items: center;
   justify-content: center;
 }
+.carousel .carousel-item .carousel-caption .carusel-content .content-right a::after, .carousel .carousel-item .carousel-caption .carusel-content .content-right a::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #e50914;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+.carousel .carousel-item .carousel-caption .carusel-content .content-right a::before {
+  animation: pulse 2s ease-out infinite;
+}
+.carousel .carousel-item .carousel-caption .carusel-content .content-right a::after {
+  animation: pulse 2s 1s ease-out infinite;
+}
 .carousel .carousel-item .carousel-caption .carusel-content .content-right a i {
   font-size: 24px;
 }
@@ -199,4 +226,11 @@ header .header .right-nav .account .fa-user {
   padding-left: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+@keyframes pulse {
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
 }/*# sourceMappingURL=main.css.map */
