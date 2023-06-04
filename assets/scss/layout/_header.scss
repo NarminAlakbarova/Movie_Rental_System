@@ -29,7 +29,11 @@ header {
       }
     }
     .right-nav {
-
+.fa-bars{
+  font-size: 18px;
+  color: white;
+  display: none
+}
       @include flexbox;
       column-gap: 30px;
       .search-user {
@@ -72,6 +76,18 @@ header {
         .fa-user{
             color: white;
             font-size: 18px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width:991px) {
+    .header{
+      nav{
+        display: none;
+      }
+      .right-nav{
+        .fa-bars{
+          display: block;
         }
       }
     }
