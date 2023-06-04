@@ -1,0 +1,40 @@
+{
+  "upcomingMovies": [
+    {
+      "id": 1,
+      "name": "Barbie",
+      "time": "1h 40m",
+      "img": "./assets/img/upcomingfilms/barbie.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Aquaman and the Lost Kingdom",
+      "time": "1h 40m",
+      "img": "./assets/img/upcomingfilms/aquaman2.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "The Flash",
+      "time": "2h 24m",
+      "img": "./assets/img/upcomingfilms/flash.jpeg"
+    },
+    {
+      "id": 4,
+      "name": "Teenage Mutant Ninja Turtles",
+      "time": "1h 40m",
+      "img": "./assets/img/upcomingfilms/ninja.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Deadpool 3",
+      "time": "1h 40m",
+      "img": "./assets/img/upcomingfilms/deadpool.jpeg"
+    },
+    {
+      "id": 6,
+      "name": "Sonic the Hedgehog 3",
+      "time": "1h 40m",
+      "img": "./assets/img/upcomingfilms/sonic.jpeg"
+    }
+  ]
+}
