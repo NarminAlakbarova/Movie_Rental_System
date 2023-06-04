@@ -6,6 +6,7 @@ header {
   width: 100%;
   z-index: 999;
   background-color: transparent;
+  transition: background-color 1s;
   .header {
     @include flexbox;
     img {
@@ -21,31 +22,39 @@ header {
           a {
             color: white;
             transition: 0.5s;
-            &:hover{
-                color: #e50914
+            &:hover {
+              color: #e50914;
             }
           }
         }
       }
     }
     .right-nav {
-.fa-bars{
-  font-size: 18px;
-  color: white;
-  display: none
-}
+      .fa-bars {
+        font-size: 18px;
+        color: white;
+        display: none;
+      }
       @include flexbox;
       column-gap: 30px;
       .search-user {
+        display: flex;
+        align-items: center;
+        .fa-search {
+          color: white;
+          font-size: 18px;
+          display: none;
+        }
         .search-input {
           outline: none;
           border: none;
-          padding: 5px 10px;
+          padding: 7px 20px;
           border-radius: 50px;
-          background-color: rgb(0,0,0,0.5);
+          background-color: rgb(0, 0, 0, 0.5);
           color: white;
           font-size: 14px;
-          &::placeholder{
+
+          &::placeholder {
             color: white;
             font-weight: 200;
           }
@@ -60,36 +69,113 @@ header {
           background-color: red;
           border-radius: 50%;
           font-size: 12px;
-          display: flex;
+          @include flexbox;
           justify-content: center;
           top: -8px;
           left: 12px;
           color: white;
-          align-items: center;
         }
         .fa-bell {
           color: white;
           font-size: 18px;
         }
       }
-      .account{
-        .fa-user{
-            color: white;
-            font-size: 18px;
+      .account {
+        .fa-user {
+          color: white;
+          font-size: 18px;
         }
       }
     }
   }
-  @media screen and (max-width:991px) {
-    .header{
-      nav{
+  @media screen and (max-width: 991px) {
+    .header {
+      nav {
         display: none;
       }
-      .right-nav{
-        .fa-bars{
+      .right-nav {
+        .fa-bars {
           display: block;
         }
       }
     }
+  }
+  @media screen and (max-width: 767px) {
+    .header {
+      .right-nav {
+        position: relative;
+        .search-user {
+          .search-input {
+            position: absolute;
+            top: 120%;
+            right: 50%;
+
+            display: none;
+            &.show-inp {
+              display: block;
+            }
+          }
+          .fa-search {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+#burger-menu {
+  position: absolute;
+  z-index: 9999;
+  background-color: #141414;
+  display: none;
+  width: 50%;
+  height: 100%;
+  transition: 2s;
+  left: 0;
+  .img-icon {
+    padding: 50px 0;
+    @include flexbox;
+    justify-content: space-around;
+    i {
+      font-size: 36px;
+      color: #e50914;
+    }
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    padding-top: 50px;
+    li {
+      a {
+        color: white;
+        font-size: 24px;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 70%;
+        height: 1px;
+        background-color: white;
+        margin: 7px 0;
+      }
+    }
+  }
+
+  &.show {
+    display: block;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
   }
 }
