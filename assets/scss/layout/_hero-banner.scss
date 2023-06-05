@@ -21,7 +21,9 @@
           flex-direction: column;
           align-items: flex-start;
           font-size: 18px;
+          row-gap: 10px;
           .play-now {
+            margin-top: 20px;
             padding: 10px 20px;
             background-color: #e50914;
             color: white;

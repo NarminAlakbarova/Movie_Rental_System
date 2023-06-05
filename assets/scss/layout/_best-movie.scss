@@ -3,13 +3,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  //   height: 100vh;
+  height: 90vh;
   position: relative;
   color: rgb(255, 255, 255);
-  @media screen and (max-width: 991px) {
-   
-    padding-top: 50px;
-  }
 
   .overlay {
     position: absolute;
@@ -18,16 +14,14 @@
     bottom: 0;
     right: 0;
     background: rgb(0, 0, 0, 0.8);
-    // z-index: -1;
     width: 100%;
   }
   .best-movie {
     .best-movie-row {
-      //  position: absolute;
-      // z-index: 88/;
-      height: 100vh;
+      height: 90vh;
 
       .best-movie-col {
+        row-gap: 10px;
         z-index: 88;
         padding: 0;
         h1 {
@@ -77,6 +71,7 @@
           color: #cfcece77;
         }
         .play-now {
+          margin-top: 20px;
           cursor: pointer;
           display: flex;
           justify-content: center;
@@ -133,7 +128,6 @@
           max-width: 100%;
           height: auto;
         }
-    
       }
     }
   }
