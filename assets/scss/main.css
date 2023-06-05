@@ -363,7 +363,7 @@ header .header .right-nav .account .fa-user {
   gap: 0.5rem;
   width: min(100%, 700px);
 }
-#upcoming .card {
+#upcoming .upcoming-card {
   flex: 1;
   height: 280px;
   overflow: hidden;
@@ -372,10 +372,7 @@ header .header .right-nav .account .fa-user {
   cursor: pointer;
   position: relative;
 }
-#upcoming .card:hover .overlay {
-  bottom: 0;
-}
-#upcoming .card .overlay {
+#upcoming .upcoming-card .overlay {
   transition: 1s;
   display: flex;
   height: 100%;
@@ -386,14 +383,14 @@ header .header .right-nav .account .fa-user {
   background: rgba(0, 0, 0, 0.5);
   bottom: -100%;
 }
-#upcoming .card .overlay .overlay-content {
+#upcoming .upcoming-card .overlay .overlay-content {
   -moz-column-gap: 20px;
        column-gap: 20px;
   top: 48%;
   display: flex;
   position: absolute;
 }
-#upcoming .card .overlay .overlay-content a {
+#upcoming .upcoming-card .overlay .overlay-content a {
   color: white;
   display: flex;
   justify-content: center;
@@ -404,17 +401,17 @@ header .header .right-nav .account .fa-user {
   border-radius: 50%;
   transition: 0.5s;
 }
-#upcoming .card .overlay .overlay-content a:hover {
+#upcoming .upcoming-card .overlay .overlay-content a:hover {
   border-color: #e50914;
   color: #e50914;
 }
-#upcoming .card img {
+#upcoming .upcoming-card img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
 }
-#upcoming .card .title {
+#upcoming .upcoming-card .title {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -426,15 +423,18 @@ header .header .right-nav .account .fa-user {
   transition: 1s ease-in-out;
   color: white;
 }
-#upcoming .card .title h2 {
+#upcoming .upcoming-card .title h2 {
   font-size: 1rem;
   white-space: nowrap;
 }
-#upcoming .card .title p {
+#upcoming .upcoming-card .title p {
   font-size: 0.9rem;
 }
 #upcoming .active {
   flex-grow: 5;
+}
+#upcoming .active:hover .overlay {
+  bottom: 0;
 }
 #upcoming .active .title {
   visibility: visible;
@@ -456,6 +456,7 @@ header .header .right-nav .account .fa-user {
 }
 #upcoming-title .upcoming-title h3 {
   color: white;
+  text-transform: capitalize;
 }
 #upcoming-title .upcoming-title h3::after {
   content: "";
@@ -467,4 +468,97 @@ header .header .right-nav .account .fa-user {
 }
 #upcoming-title .upcoming-title a {
   color: #e50914;
+  font-size: 18px;
+}
+
+.suggested-container {
+  padding: 80px 0;
+}
+.suggested-container .suggested-title {
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.suggested-container .suggested-title h3 {
+  text-align: center;
+  position: relative;
+  color: white;
+}
+.suggested-container .suggested-title h3::after {
+  content: "";
+  height: 2px;
+  background-color: #e50914;
+  width: 30%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 10px 0;
+}
+.suggested-container .card {
+  border: none;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.suggested-container .card:hover .overlay {
+  top: 0;
+}
+.suggested-container .card:hover img {
+  transform: scale(1.2);
+}
+.suggested-container .card .title {
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  color: white;
+  z-index: 100;
+}
+.suggested-container .card .title h2 {
+  font-size: 18px;
+}
+.suggested-container .card .title p {
+  color: rgba(223, 220, 220, 0.4666666667);
+}
+.suggested-container .card .overlay {
+  position: absolute;
+  transition: 1s;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  z-index: 99;
+}
+.suggested-container .card .overlay .overlay-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+.suggested-container .card .overlay .overlay-content a {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.suggested-container .card .overlay .overlay-content a:hover {
+  border-color: #e50914;
+  color: #e50914;
+  cursor: pointer;
+}
+.suggested-container .card img {
+  transition: 1s;
+}
+@media screen and (max-width: 991px) {
+  .suggested-container {
+    padding: 80px 30px;
+  }
 }/*# sourceMappingURL=main.css.map */
