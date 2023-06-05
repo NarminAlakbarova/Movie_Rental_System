@@ -7,7 +7,7 @@
   position: relative;
   color: rgb(255, 255, 255);
   @media screen and (max-width: 991px) {
-    height: 800px;
+   
     padding-top: 50px;
   }
 
@@ -77,6 +77,7 @@
           color: #cfcece77;
         }
         .play-now {
+          cursor: pointer;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -132,9 +133,7 @@
           max-width: 100%;
           height: auto;
         }
-        @media screen and (max-width: 767px) {
-          padding-left: 0;
-        }
+    
       }
     }
   }

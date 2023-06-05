@@ -1,120 +1,136 @@
 #upcoming {
-  display: grid;
-  color: #fff;
-  place-items: center;
-  padding: 50px 0;
-  .slider2 {
-    display: flex;
-    gap: 0.5rem;
-    width: min(100%, 700px);
-  }
-
-  .upcoming-card  {
-    flex: 1;
-    height: 280px;
-    overflow: hidden;
-    border: none;
-    transition: 1s ease-in-out;
+  .upcoming {
     cursor: pointer;
-    position: relative;
-   
-    .overlay {
-      transition: 1s;
-      display: flex;
-      height: 100%;
-      width: 100%;
-      padding-left: 20px;
-      font-size: 18px;
-      position: absolute;
-      background: rgb(0, 0, 0, 0.5);
-      bottom: -100%;
-      .overlay-content {
-        column-gap: 20px;
-        top: 48%;
-        display: flex;
-        position: absolute;
-
-        a {
+    .left-cards {
+      border: none;
+      &:hover img {
+        opacity: 0.8;
+      }
+      &:hover .play-overlay {
+        display: block;
+      }
+      .content {
+        padding: 5px 8px;
+        background-color: #272626;
+        color: #777777af;
+        h4 {
+          font-size: 14px;
           color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+      .play-overlay {
+        position: absolute;
+        transition: 1s;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        display: none;
+        a {
+         
+          color: white;
+          position: relative;
           width: 40px;
           height: 40px;
           border: 1px solid white;
           border-radius: 50%;
-          transition: 0.5s;
-          &:hover {
-            border-color: #e50914;
-            color: #e50914;
+          @include flexbox;
+          justify-content: center;
+          &::after,
+          &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: #e50914;
+            opacity: 0.6;
+            border-radius: 50%;
+          }
+          &::before {
+            animation: pulse 2s ease-out infinite;
+          }
+          &::after {
+            animation: pulse 2s 1s ease-out infinite;
+          }
+          i {
+            font-size: 16px;
           }
         }
       }
-    }
-
-    img {
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-    }
-
-    .title {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      padding: 20px;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
-      visibility: hidden;
-      opacity: 0;
-      transition: 1s ease-in-out;
-      color: white;
-
-      h2 {
-        font-size: 1rem;
-        white-space: nowrap;
+      .star-time {
+        @include flexbox;
+        justify-content: space-around;
+        // display: flex;
+        column-gap: 100px;
+        position: absolute;
+        bottom: 30%;
+        width: 100%;
+        p {
+          margin-bottom: 0;
+        }
+        .star {
+          display: flex;
+          color: rgb(226, 226, 3);
+          display: flex;
+          align-items: center;
+        }
+        .time {
+          color: white;
+        }
+        @media screen and (max-width: 991px) {
+          bottom: 10%;
+          justify-content: space-between;
+          padding: 0 10px;
+          font-size: 26px;
+        }
+        @media screen and (max-width: 767px) {
+          bottom: 20%;
+          font-size: 20px;
+        }
       }
 
-      p {
-        font-size: 0.9rem;
+      img {
+        width: 100%;
+        position: relative;
+        transition: 1s;
       }
     }
-  }
-
-  .active {
-    flex-grow: 5;
-    &:hover .overlay {
-        bottom: 0;
+    .must-have-series {
+      padding-left: 50px;
+      @media screen and (max-width: 991px) {
+        padding-left: 0;
       }
-    .title {
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    padding: 50px 20px;
-  }
-}
-#upcoming-title {
-  padding-top: 30px;
-  .upcoming-title {
-    @include flexbox;
-    h3 {
-      color: white;
-      text-transform: capitalize;
-
-      &::after {
-        content: "";
-        height: 1px;
-        display: block;
-        background-color: #e50914;
-        width: 50%;
-        margin-top: 10px;
+      .right-cards {
+        padding: 7px;
+        border: none;
+        border-radius: 0;
+        background-color: #272626;
+        color: white;
+        .right-all-content {
+          display: flex;
+          p{
+            margin-bottom: 0;
+          }
+          .right-content{
+            padding-left: 20px;
+           .star-icon{
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            color: rgb(201, 201, 2);
+        
+           }
+          }
+          .img {
+            img {
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
       }
-    }
-    a {
-      color: #e50914;
-      font-size: 18px;
     }
   }
 }
