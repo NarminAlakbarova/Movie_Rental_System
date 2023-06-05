@@ -1,0 +1,117 @@
+#upcoming {
+  display: grid;
+  color: #fff;
+  place-items: center;
+  padding: 50px 0;
+  .slider2 {
+    display: flex;
+    gap: 0.5rem;
+    width: min(100%, 700px);
+  }
+
+  .card {
+    flex: 1;
+    height: 280px;
+    overflow: hidden;
+    border: none;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    &:hover .overlay {
+      bottom: 0;
+    }
+    .overlay {
+      transition: 1s;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      padding-left: 20px;
+      font-size: 18px;
+      position: absolute;
+      background: rgb(0, 0, 0, 0.5);
+      bottom: -100%;
+      .overlay-content {
+        column-gap: 20px;
+        top: 48%;
+        display: flex;
+        position: absolute;
+
+        a {
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          border: 1px solid white;
+          border-radius: 50%;
+          transition: 0.5s;
+          &:hover {
+            border-color: #e50914;
+            color: #e50914;
+          }
+        }
+      }
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .title {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+      visibility: hidden;
+      opacity: 0;
+      transition: 1s ease-in-out;
+      color: white;
+
+      h2 {
+        font-size: 1rem;
+        white-space: nowrap;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .active {
+    flex-grow: 5;
+
+    .title {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    padding: 50px 20px;
+  }
+}
+#upcoming-title {
+  padding-top: 30px;
+  .upcoming-title {
+    @include flexbox;
+    h3 {
+      color: white;
+      &::after {
+        content: "";
+        height: 1px;
+        display: block;
+        background-color: #e50914;
+        width: 50%;
+        margin-top: 10px;
+      }
+    }
+    a {
+      color: #e50914;
+    }
+  }
+}

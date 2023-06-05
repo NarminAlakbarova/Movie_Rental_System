@@ -4,6 +4,7 @@ let menuIcon=document.querySelector(".fa-bars")
 let header = document.querySelector("header");
 let searchInp = document.querySelector(".search-input");
 let searchIcon = document.querySelector(".fa-search");
+let cards = document.querySelectorAll('.card');
 
 menuIcon.addEventListener("click",function(){
     burgerMenu.classList.toggle("show")
@@ -26,3 +27,16 @@ window.addEventListener("scroll", scrollFunction);
 searchIcon.addEventListener("click",function(){
     searchInp.classList.toggle("show-inp")
 })
+
+
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        cards.forEach(c => {
+            if(c !== card){
+                c.classList.remove('active');
+            }
+        });
+
+        card.classList.add('active');
+    });
+});
