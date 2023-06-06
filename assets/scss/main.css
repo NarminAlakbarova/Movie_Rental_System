@@ -911,4 +911,37 @@ header .header .right-nav .account .fa-user {
 #all-movies .all-movies .films-cards .movies-info .imbd img {
   height: 50px;
   width: 50px;
+}
+
+footer {
+  background-color: #272626;
+  color: white;
+}
+footer #top-footer {
+  background-color: rgba(229, 9, 20, 0.6039215686);
+}
+footer #top-footer .top-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  footer #top-footer .top-footer {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
+footer .footer .footer-content p {
+  color: rgba(119, 119, 119, 0.4666666667);
+}
+footer .footer .footer-content p a, footer .footer .footer-content p i {
+  color: rgba(119, 119, 119, 0.4666666667);
+}
+footer .footer img {
+  width: 80px;
+  height: 80px;
+}
+footer .copyright {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: rgba(119, 119, 119, 0.4666666667);
 }/*# sourceMappingURL=main.css.map */

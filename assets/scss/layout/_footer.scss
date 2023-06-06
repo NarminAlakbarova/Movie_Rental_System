@@ -1,0 +1,34 @@
+footer {
+  background-color: #272626;
+color: white;
+  #top-footer {
+    background-color: #e509149a;
+    .top-footer {
+      @include flexbox;
+      @media screen and (max-width:767px) {
+        flex-direction: column;
+        row-gap: 10px;
+      }
+    }
+  }
+  .footer{
+    .footer-content{
+        p{
+            color:#7777;
+            a, i{
+                color:#7777;
+            }
+           
+        }
+    }
+    img{
+        width: 80px;
+        height: 80px;
+    }
+  }
+  .copyright{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #7777;
+    
+  }
+}
