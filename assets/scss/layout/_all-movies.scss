@@ -43,45 +43,38 @@
     }
   }
   .all-movies {
-    // padding-top: 50px;
- 
     .genres-col {
       margin-top: 18px;
-      max-height: 300px; // Set a maximum height for the container to enable scrolling
-      overflow-y: auto; // Enable vertical scrolling
-      transition: max-height 0.5s; // Add a smooth transition when the height changes
-    
-      // Add a class to the container when the number of links increases
+      max-height: 300px;
+      overflow-y: auto;
+      transition: max-height 0.5s;
+
       &.links-increased {
-        max-height: 400px; // Increase the maximum height to show more items
+        max-height: 400px;
       }
-    
-      // Style the scrollbar
+
       &::-webkit-scrollbar {
-      
-        width: 5px; // Set the width of the scrollbar
+        width: 5px;
       }
-    
+
       &::-webkit-scrollbar-thumb {
-        background-color: #888; // Set the color of the scrollbar thumb
-        border-radius: 5px; // Add rounded corners to the scrollbar thumb
+        background-color: #888;
+        border-radius: 5px;
       }
-    
+
       &::-webkit-scrollbar-thumb:hover {
-        background-color: #555; // Change the color of the scrollbar thumb on hover
+        background-color: #555;
       }
-    
+
       &::-webkit-scrollbar-track {
-      
-        background-color: #141414; // Set the color of the scrollbar track
-        border-radius: 5px; // Add rounded corners to the scrollbar track
+        background-color: #141414;
+        border-radius: 5px;
       }
     }
-    
+
     .genre-list {
-      padding-right: 20px; // Add some space for the scrollbar
+      padding-right: 20px;
     }
-    
 
     .dropdowns {
       display: flex;

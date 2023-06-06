@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none !important;
   list-style: none !important;
-  font-family: "Kanit", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 p {
@@ -911,6 +911,42 @@ header .header .right-nav .account .fa-user {
 #all-movies .all-movies .films-cards .movies-info .imbd img {
   height: 50px;
   width: 50px;
+}
+
+#hero-banner {
+  background-image: url("../../../assets/img/bg (1).jpg");
+  padding: 150px;
+  position: relative;
+}
+#hero-banner .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+#hero-banner .hero-banner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+}
+#hero-banner .hero-banner h2 {
+  color: white;
+}
+#hero-banner .hero-banner .links {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+#hero-banner .hero-banner .links a,
+#hero-banner .hero-banner .links p {
+  color: #e50914;
 }
 
 footer {
