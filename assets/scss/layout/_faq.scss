@@ -1,0 +1,100 @@
+#hero-banner {
+  background-image: url("../../../assets/img/bg\ \(1\).jpg");
+  padding: 150px;
+  position: relative;
+  .overlay {
+    background: rgb(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .hero-banner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+    h2 {
+      color: white;
+      font-size: 50px;
+      font-weight: 400;
+    }
+    .links {
+      display: flex;
+      column-gap: 5px;
+      a,
+      p {
+        color: #e50914;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+#faq {
+  padding: 100px 0;
+  .accardion {
+    padding-left: 0;
+    li {
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      background: #191919;
+      color: white;
+      input[type="radio"] {
+        display: none;
+      }
+      input[type="radio"]:checked + label + .content {
+        max-height: 400px;
+        padding: 10px 10px 20px;
+      }
+      input[type="radio"]:checked + label::before {
+        content: "-";
+        margin-right: 10px;
+        font-size: 40px;
+        font-weight: 600;
+        color: #e50914;
+      }
+      input[type="radio"]:checked + label::after {
+        bottom: 0;
+        position: absolute;
+        content: "";
+        width: 100%;
+        display: block;
+        height: 1px;
+        background-color: #7777;
+      }
+
+      .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s, padding 0.5s;
+        color: #d1d0cf;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        font-size: 28px;
+        font-weight: 400;
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: "+";
+          margin-right: 10px;
+          font-size: 40px;
+          font-weight: 600;
+          color: #e50914;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
