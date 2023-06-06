@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none !important;
   list-style: none !important;
-  font-family: "Roboto", sans-serif;
+  font-family: "Kanit", sans-serif;
 }
 
 p {
@@ -820,10 +820,35 @@ header .header .right-nav .account .fa-user {
   background-color: #500206;
   cursor: pointer;
 }
+#all-movies .all-movies .genres-col {
+  margin-top: 18px;
+  max-height: 300px;
+  overflow-y: auto;
+  transition: max-height 0.5s;
+}
+#all-movies .all-movies .genres-col.links-increased {
+  max-height: 400px;
+}
+#all-movies .all-movies .genres-col::-webkit-scrollbar {
+  width: 5px;
+}
+#all-movies .all-movies .genres-col::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+#all-movies .all-movies .genres-col::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+#all-movies .all-movies .genres-col::-webkit-scrollbar-track {
+  background-color: #141414;
+  border-radius: 5px;
+}
+#all-movies .all-movies .genre-list {
+  padding-right: 20px;
+}
 #all-movies .all-movies .dropdowns {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
 }
 #all-movies .all-movies .dropdowns .dropdown .btn {
   background-color: #e50914;
@@ -834,6 +859,7 @@ header .header .right-nav .account .fa-user {
   border-radius: 0;
   position: relative;
   overflow: hidden;
+  width: 200px;
   cursor: pointer;
 }
 #all-movies .all-movies .films-cards:hover .overlay {
