@@ -2,15 +2,15 @@
   background-image: url("../../../assets/img/bg\ \(1\).jpg");
   padding: 150px;
   position: relative;
-.overlay{
-    background: rgb(0, 0, 0,0.5);
+  .overlay {
+    background: rgb(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-}
+  }
   .hero-banner {
     text-align: center;
     display: flex;
@@ -21,6 +21,8 @@
     z-index: 999;
     h2 {
       color: white;
+      font-size: 50px;
+      font-weight: 400;
     }
     .links {
       display: flex;
@@ -28,6 +30,55 @@
       a,
       p {
         color: #e50914;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+#form {
+  padding: 100px 0;
+  .form-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+    h1{
+      font-size: 50px;
+      font-weight: 400;
+    }
+    p{
+      color: #d1d0cf;
+    }
+  }
+  form {
+
+    input {
+      width: 100%;
+      padding: 15px;
+      background-color: #111111;
+      border: 1px solid transparent;
+      color: white;
+    }
+    textarea {
+      width: 100%;
+      background-color: #111111;
+      border: none;
+      padding: 10px 15px;
+    }
+    #send-me {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #e50914;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: 0.5s;
+      border: none;
+      &:hover {
+        background-color: #500206;
+        cursor: pointer;
       }
     }
   }
