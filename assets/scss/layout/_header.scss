@@ -14,11 +14,25 @@ header {
       height: 60px;
     }
     nav {
-      ul {
+      .nav-ul {
         margin-bottom: 0;
         @include flexbox;
         column-gap: 40px;
+
         li {
+          #dropdownHover{
+            background-color: #141414;
+            opacity: 0.8;
+            
+          }
+       .dropli{
+.premium{
+  color: rgb(255, 145, 0);
+}
+        a{
+          color: white;
+        }
+       }
           a {
             color: white;
             transition: 0.5s;
@@ -123,8 +137,6 @@ header {
     }
   }
 }
-
-
 
 #burger-menu {
   position: absolute;

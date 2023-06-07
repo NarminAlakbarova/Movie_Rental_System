@@ -21,6 +21,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./assets/scss/main.css" />
     <style>
       .swiper {
@@ -63,12 +68,84 @@
         <div class="header">
           <img src="./assets/img/logo.png" alt="logo" />
           <nav>
-            <ul>
+            <ul class="nav-ul">
               <li><a href="#">Home</a></li>
               <li><a href="#">Tv Shows</a></li>
-              <li><a href="#">Movies</a></li>
+              <li>
+                <button
+                  id="dropdownHoverButton"
+                  data-dropdown-toggle="dropdownHover"
+                  data-dropdown-trigger="hover"
+                  class="text-white  font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  type="button"
+                >
+                 Pages
+                  <svg
+                    class="w-4 h-4 ml-2"
+                    aria-hidden="true"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownHover"
+                  class="z-10 hidden  divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                >
+                  <ul
+                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownHoverButton"
+                  >
+                    <li class="dropli">
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Movies</a
+                      >
+                    </li>
+                    <li class="dropli">
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Tv Shows</a
+                      >
+                    </li>
+                    <li class="dropli">
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >FAQ</a
+                      >
+                    </li>
+                    <li class="dropli">
+                      <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Contact Us</a
+                      >
+                    </li>
+                    <li class="dropli">
+                      <a
+                        href="#"
+                        class="premium block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                        >Premium Movies</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
               <li><a href="#">My List </a></li>
               <li><a href="#">Blog </a></li>
+            
             </ul>
           </nav>
           <div class="right-nav">
@@ -744,11 +821,14 @@
               <div class="cards">
                 <div class="img">
                   <img src="./assets/img/pirates.jpg" alt="" class="myImg" />
-                  
+
                   <div id="myModal" class="modal">
                     <span class="close">&times;</span>
                     <div class="modal-content">
-                    <video src="assets/videos/the-little-mermaid-trailer-2_h720p.mov" controls></video>
+                      <video
+                        src="assets/videos/the-little-mermaid-trailer-2_h720p.mov"
+                        controls
+                      ></video>
                     </div>
                   </div>
                 </div>
@@ -763,11 +843,13 @@
               <div class="cards">
                 <div class="img">
                   <img src="./assets/img/Skull.jpg" alt="" class="myImg" />
-                  <div  class="modal">
+                  <div class="modal">
                     <span class="close">&times;</span>
                     <div class="modal-content">
-                      <video src="assets/videos/the-little-mermaid-trailer-2_h720p.mov" controls></video>
-
+                      <video
+                        src="assets/videos/the-little-mermaid-trailer-2_h720p.mov"
+                        controls
+                      ></video>
                     </div>
                   </div>
                 </div>
@@ -782,11 +864,13 @@
               <div class="cards">
                 <div class="img">
                   <img src="./assets/img/Skull.jpg" alt="" class="myImg" />
-                  <div  class="modal">
+                  <div class="modal">
                     <span class="close">&times;</span>
                     <div class="modal-content">
-                      <video src="assets/videos/the-little-mermaid-trailer-2_h720p.mov" controls></video>
-
+                      <video
+                        src="assets/videos/the-little-mermaid-trailer-2_h720p.mov"
+                        controls
+                      ></video>
                     </div>
                   </div>
                 </div>
@@ -801,11 +885,13 @@
               <div class="cards">
                 <div class="img">
                   <img src="./assets/img/Skull.jpg" alt="" class="myImg" />
-                  <div  class="modal">
+                  <div class="modal">
                     <span class="close">&times;</span>
                     <div class="modal-content">
-                      <video src="assets/videos/the-little-mermaid-trailer-2_h720p.mov" controls></video>
-
+                      <video
+                        src="assets/videos/the-little-mermaid-trailer-2_h720p.mov"
+                        controls
+                      ></video>
                     </div>
                   </div>
                 </div>
@@ -820,11 +906,13 @@
               <div class="cards">
                 <div class="img">
                   <img src="./assets/img/Skull.jpg" alt="" class="myImg" />
-                  <div  class="modal">
+                  <div class="modal">
                     <span class="close">&times;</span>
                     <div class="modal-content">
-                      <video src="assets/videos/the-little-mermaid-trailer-2_h720p.mov" controls></video>
-
+                      <video
+                        src="assets/videos/the-little-mermaid-trailer-2_h720p.mov"
+                        controls
+                      ></video>
                     </div>
                   </div>
                 </div>
@@ -839,11 +927,13 @@
               <div class="cards">
                 <div class="img">
                   <img src="./assets/img/Skull.jpg" alt="" class="myImg" />
-                  <div  class="modal">
+                  <div class="modal">
                     <span class="close">&times;</span>
                     <div class="modal-content">
-                      <video src="assets/videos/the-little-mermaid-trailer-2_h720p.mov" controls></video>
-
+                      <video
+                        src="assets/videos/the-little-mermaid-trailer-2_h720p.mov"
+                        controls
+                      ></video>
                     </div>
                   </div>
                 </div>
@@ -1314,7 +1404,7 @@
     <footer class="text-center text-lg-start">
       <section class="d-flex justify-content-between p-3" id="top-footer">
         <div class="container top-footer">
-          <div class="me-5">
+          <div class="">
             <span>Get connected with us on social networks:</span>
           </div>
 
@@ -1404,6 +1494,7 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 
     <script src="assets/js/main.js"></script>
   </body>
