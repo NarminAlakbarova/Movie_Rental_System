@@ -49,15 +49,14 @@ header .header nav .nav-ul {
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
-header .header nav .nav-ul li #dropdownHover {
-  background-color: #141414;
-  opacity: 0.8;
+header .header nav .nav-ul li .dropdown:hover .dropdown-menu {
+  display: block;
 }
-header .header nav .nav-ul li .dropli .premium {
-  color: rgb(255, 145, 0);
+header .header nav .nav-ul li .dropdown .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.5);
 }
-header .header nav .nav-ul li .dropli a {
-  color: white;
+header .header nav .nav-ul li .dropdown .dropdown-menu .premium {
+  color: #e50914;
 }
 header .header nav .nav-ul li a {
   color: white;
@@ -353,7 +352,10 @@ header .header .right-nav .account .fa-user {
     padding-top: 30px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
+  .carousel .carousel-item .carousel-caption {
+    top: 20%;
+  }
   .carousel .carousel-item .carousel-caption .carusel-content .content-left {
     font-size: 16px;
   }

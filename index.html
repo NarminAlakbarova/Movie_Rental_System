@@ -21,10 +21,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"
-      rel="stylesheet"
-    />
 
     <link rel="stylesheet" href="./assets/scss/main.css" />
     <style>
@@ -72,71 +68,25 @@
               <li><a href="#">Home</a></li>
               <li><a href="#">Tv Shows</a></li>
               <li>
-                <button
-                  id="dropdownHoverButton"
-                  data-dropdown-toggle="dropdownHover"
-                  data-dropdown-trigger="hover"
-                  class="text-white  font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                  type="button"
-                >
-                 Pages
-                  <svg
-                    class="w-4 h-4 ml-2"
-                    aria-hidden="true"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div class="dropdown">
+                  <button
+                    class="btn text-white dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </button>
-                <!-- Dropdown menu -->
-                <div
-                  id="dropdownHover"
-                  class="z-10 hidden  divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                >
+                    Pages
+                  </button>
                   <ul
-                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="dropdownHoverButton"
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
                   >
-                    <li class="dropli">
-                      <a
-                        href="#"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >Movies</a
-                      >
-                    </li>
-                    <li class="dropli">
-                      <a
-                        href="#"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >Tv Shows</a
-                      >
-                    </li>
-                    <li class="dropli">
-                      <a
-                        href="#"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >FAQ</a
-                      >
-                    </li>
-                    <li class="dropli">
-                      <a
-                        href="#"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                        >Contact Us</a
-                      >
-                    </li>
-                    <li class="dropli">
-                      <a
-                        href="#"
-                        class="premium block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    <li><a class="dropdown-item" href="#">All Movies</a></li>
+                    <li><a class="dropdown-item" href="#">Tv Shows</a></li>
+                    <li><a class="dropdown-item" href="#">FAQ</a></li>
+                    <li>
+                      <a class="dropdown-item premium" href="#"
                         >Premium Movies</a
                       >
                     </li>
@@ -145,7 +95,6 @@
               </li>
               <li><a href="#">My List </a></li>
               <li><a href="#">Blog </a></li>
-            
             </ul>
           </nav>
           <div class="right-nav">
@@ -1494,7 +1443,6 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 
     <script src="assets/js/main.js"></script>
   </body>

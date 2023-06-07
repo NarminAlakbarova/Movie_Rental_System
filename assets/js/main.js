@@ -95,3 +95,14 @@ closeBtns.forEach((closeBtn, index) => {
 });
 
 
+let dropdown = document.querySelector('.dropdown');
+
+dropdown.addEventListener('mouseenter', function () {
+  dropdown.setAttribute('data-bs-toggle', '');
+  dropdown.removeAttribute('aria-expanded');
+});
+
+dropdown.addEventListener('mouseleave', function () {
+  dropdown.setAttribute('data-bs-toggle', 'dropdown');
+  dropdown.setAttribute('aria-expanded', 'false');
+});
