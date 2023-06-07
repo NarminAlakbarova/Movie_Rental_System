@@ -1,0 +1,178 @@
+#blog {
+  .blog-container {
+    // padding: 0 1%;
+    .blog {
+      .left-col {
+        padding-right: 50px;
+        .card {
+          border: none;
+          background-color: transparent;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+          .info {
+            width: 100%;
+          }
+          .calendar {
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+          }
+          .read-more {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #e50914;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.5s;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            &:hover {
+              background-color: #500206;
+              cursor: pointer;
+            }
+          }
+          .categories {
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            a {
+              color: white;
+              padding: 3px 10px;
+              background-color: #242424;
+            }
+          }
+          .tags {
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            a {
+              color: white;
+              padding: 3px 10px;
+              background-color: #242424;
+            }
+          }
+        }
+      }
+      .right-col {
+        .search {
+          padding: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #181818;
+          // position: relative;
+          input {
+            width: 100%;
+            padding: 5px 5px;
+            background-color: #141414;
+            border: none;
+          }
+          input[type="text"]:focus {
+            border: 3px solid #e50914;
+          }
+          i {
+            color: white;
+            font-size: 12px;
+            padding: 13px;
+            background-color: #e50914;
+          }
+        }
+        .right-card {
+          background-color: #181818;
+          padding: 10px;
+          h1 {
+            color: white;
+            font-size: 22px;
+          }
+          .card {
+            border: none;
+            background-color: transparent;
+            display: flex;
+            flex-direction: row;
+            color: white;
+            padding: 10px;
+            //   align-items: center;
+
+            img {
+              width: 60px;
+              height: 60px;
+            }
+            .content {
+              padding-left: 20px;
+              .calendar {
+                padding-top: 8px;
+                display: flex;
+                align-items: center;
+                column-gap: 8px;
+                i {
+                  color: #e50914;
+                }
+              }
+            }
+          }
+        }
+        .categories-col {
+          // padding: 10px;
+          h1 {
+            color: white;
+            font-size: 22px;
+            padding-bottom: 20px;
+          }
+          .categories-ul {
+            padding: 20px;
+            background-color: #181818;
+            ul {
+              color: white;
+              padding-left: 0;
+              li {
+                padding-bottom: 20px;
+                &::after {
+                  content: "";
+                  height: 1px;
+                  width: 100%;
+                  background: #85858586;
+                  display: block;
+                }
+                a {
+                  color: #d1d0cf;
+                }
+              }
+            }
+          }
+        }
+        .tags-col {
+          .tags {
+            padding: 10px ;
+            background-color: #181818;
+            h1 {
+              color: white;
+              font-size: 22px;
+              padding:20px 10px;
+            }
+            ul {
+              padding-left: 0;
+              li {
+                display: inline-block;
+                // padding-bottom: 5px;
+                margin-bottom: 15px;
+                margin-left: 10px;
+               a{
+                color: white;
+                border-radius: 8px;
+                padding: 5px 15px;
+                background-color: #242424;
+               }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

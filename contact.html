@@ -46,10 +46,35 @@
         <div class="header">
           <img src="./assets/img/logo.png" alt="logo" />
           <nav>
-            <ul>
+            <ul class="nav-ul">
               <li><a href="#">Home</a></li>
               <li><a href="#">Tv Shows</a></li>
-              <li><a href="#">Movies</a></li>
+              <li>
+                <div class="dropdown">
+                  <button
+                    class="btn text-white dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Pages
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li><a class="dropdown-item" href="#">All Movies</a></li>
+                    <li><a class="dropdown-item" href="#">Tv Shows</a></li>
+                    <li><a class="dropdown-item" href="#">FAQ</a></li>
+                    <li>
+                      <a class="dropdown-item premium" href="#"
+                        >Premium Movies</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
               <li><a href="#">My List </a></li>
               <li><a href="#">Blog </a></li>
             </ul>

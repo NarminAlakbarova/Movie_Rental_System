@@ -1269,6 +1269,171 @@ header .header .right-nav .account .fa-user {
   height: 50px;
 }
 
+#blog .blog-container .blog .left-col {
+  padding-right: 50px;
+}
+#blog .blog-container .blog .left-col .card {
+  border: none;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+#blog .blog-container .blog .left-col .card .info {
+  width: 100%;
+}
+#blog .blog-container .blog .left-col .card .calendar {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+#blog .blog-container .blog .left-col .card .read-more {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e50914;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: 0.5s;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+#blog .blog-container .blog .left-col .card .read-more:hover {
+  background-color: #500206;
+  cursor: pointer;
+}
+#blog .blog-container .blog .left-col .card .categories {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+#blog .blog-container .blog .left-col .card .categories a {
+  color: white;
+  padding: 3px 10px;
+  background-color: #242424;
+}
+#blog .blog-container .blog .left-col .card .tags {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+#blog .blog-container .blog .left-col .card .tags a {
+  color: white;
+  padding: 3px 10px;
+  background-color: #242424;
+}
+#blog .blog-container .blog .right-col .search {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #181818;
+}
+#blog .blog-container .blog .right-col .search input {
+  width: 100%;
+  padding: 5px 5px;
+  background-color: #141414;
+  border: none;
+}
+#blog .blog-container .blog .right-col .search input[type=text]:focus {
+  border: 3px solid #e50914;
+}
+#blog .blog-container .blog .right-col .search i {
+  color: white;
+  font-size: 12px;
+  padding: 13px;
+  background-color: #e50914;
+}
+#blog .blog-container .blog .right-col .right-card {
+  background-color: #181818;
+  padding: 10px;
+}
+#blog .blog-container .blog .right-col .right-card h1 {
+  color: white;
+  font-size: 22px;
+}
+#blog .blog-container .blog .right-col .right-card .card {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  padding: 10px;
+}
+#blog .blog-container .blog .right-col .right-card .card img {
+  width: 60px;
+  height: 60px;
+}
+#blog .blog-container .blog .right-col .right-card .card .content {
+  padding-left: 20px;
+}
+#blog .blog-container .blog .right-col .right-card .card .content .calendar {
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+#blog .blog-container .blog .right-col .right-card .card .content .calendar i {
+  color: #e50914;
+}
+#blog .blog-container .blog .right-col .categories-col h1 {
+  color: white;
+  font-size: 22px;
+  padding-bottom: 20px;
+}
+#blog .blog-container .blog .right-col .categories-col .categories-ul {
+  padding: 20px;
+  background-color: #181818;
+}
+#blog .blog-container .blog .right-col .categories-col .categories-ul ul {
+  color: white;
+  padding-left: 0;
+}
+#blog .blog-container .blog .right-col .categories-col .categories-ul ul li {
+  padding-bottom: 20px;
+}
+#blog .blog-container .blog .right-col .categories-col .categories-ul ul li::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: rgba(133, 133, 133, 0.5254901961);
+  display: block;
+}
+#blog .blog-container .blog .right-col .categories-col .categories-ul ul li a {
+  color: #d1d0cf;
+}
+#blog .blog-container .blog .right-col .tags-col .tags {
+  padding: 10px;
+  background-color: #181818;
+}
+#blog .blog-container .blog .right-col .tags-col .tags h1 {
+  color: white;
+  font-size: 22px;
+  padding: 20px 10px;
+}
+#blog .blog-container .blog .right-col .tags-col .tags ul {
+  padding-left: 0;
+}
+#blog .blog-container .blog .right-col .tags-col .tags ul li {
+  display: inline-block;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+#blog .blog-container .blog .right-col .tags-col .tags ul li a {
+  color: white;
+  border-radius: 8px;
+  padding: 5px 15px;
+  background-color: #242424;
+}
+
 footer {
   background-color: #272626;
   color: white;
