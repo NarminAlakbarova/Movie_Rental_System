@@ -1,6 +1,25 @@
 #upcoming {
   .upcoming {
     cursor: pointer;
+    h3 {
+      // text-align: center;
+      position: relative;
+      color: white;
+      font-weight: 400;
+font-size: 24px;
+      &::after {
+        content: "";
+        height: 2px;
+        background-color: #e50914;
+        width: 10%;
+        display: block;
+        position: absolute;
+        // left: 50%;
+        // transform: translate(-50%);
+        // margin: 10px 0;
+        margin: 5px 0;
+      }
+    }
     .left-cards {
       border: none;
       &:hover img {
@@ -29,7 +48,6 @@
         transform: translate(-50%, -50%);
         display: none;
         a {
-         
           color: white;
           position: relative;
           width: 40px;
@@ -111,18 +129,17 @@
         color: white;
         .right-all-content {
           display: flex;
-          p{
+          p {
             margin-bottom: 0;
           }
-          .right-content{
+          .right-content {
             padding-left: 20px;
-           .star-icon{
-            display: flex;
-            align-items: center;
-            column-gap: 10px;
-            color: rgb(201, 201, 2);
-        
-           }
+            .star-icon {
+              display: flex;
+              align-items: center;
+              column-gap: 10px;
+              color: rgb(201, 201, 2);
+            }
           }
           .img {
             img {

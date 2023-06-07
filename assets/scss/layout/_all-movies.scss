@@ -1,151 +1,151 @@
-#all-movies {
-  padding: 50px 5%;
-  .movies-title {
-    padding-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: capitalize;
-    h3 {
-      text-align: center;
-      position: relative;
-      color: white;
-      font-weight: 400;
+// #all-movies {
+//   padding: 50px 5%;
+//   .movies-title {
+//     padding-bottom: 50px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-transform: capitalize;
+//     h3 {
+//       text-align: center;
+//       position: relative;
+//       color: white;
+//       font-weight: 400;
 
-      &::after {
-        content: "";
-        height: 2px;
-        background-color: #e50914;
-        width: 30%;
-        display: block;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        margin: 10px 0;
-      }
-    }
-  }
-  #load {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .load {
-      padding: 10px 20px;
-      background-color: #e50914;
-      color: white;
-      font-size: 16px;
-      border-radius: 5px;
-      transition: 0.5s;
-      border: none;
+//       &::after {
+//         content: "";
+//         height: 2px;
+//         background-color: #e50914;
+//         width: 30%;
+//         display: block;
+//         position: absolute;
+//         left: 50%;
+//         transform: translate(-50%);
+//         margin: 10px 0;
+//       }
+//     }
+//   }
+//   #load {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     .load {
+//       padding: 10px 20px;
+//       background-color: #e50914;
+//       color: white;
+//       font-size: 16px;
+//       border-radius: 5px;
+//       transition: 0.5s;
+//       border: none;
 
-      &:hover {
-        background-color: #500206;
-        cursor: pointer;
-      }
-    }
-  }
-  .all-movies {
-    .genres-col {
-      margin-top: 18px;
-      max-height: 300px;
-      overflow-y: auto;
-      transition: max-height 0.5s;
+//       &:hover {
+//         background-color: #500206;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+//   .all-movies {
+//     .genres-col {
+//       margin-top: 18px;
+//       max-height: 300px;
+//       overflow-y: auto;
+//       transition: max-height 0.5s;
 
-      &.links-increased {
-        max-height: 400px;
-      }
+//       &.links-increased {
+//         max-height: 400px;
+//       }
 
-      &::-webkit-scrollbar {
-        width: 5px;
-      }
+//       &::-webkit-scrollbar {
+//         width: 5px;
+//       }
 
-      &::-webkit-scrollbar-thumb {
-        background-color: #888;
-        border-radius: 5px;
-      }
+//       &::-webkit-scrollbar-thumb {
+//         background-color: #888;
+//         border-radius: 5px;
+//       }
 
-      &::-webkit-scrollbar-thumb:hover {
-        background-color: #555;
-      }
+//       &::-webkit-scrollbar-thumb:hover {
+//         background-color: #555;
+//       }
 
-      &::-webkit-scrollbar-track {
-        background-color: #141414;
-        border-radius: 5px;
-      }
-    }
+//       &::-webkit-scrollbar-track {
+//         background-color: #141414;
+//         border-radius: 5px;
+//       }
+//     }
 
-    .genre-list {
-      padding-right: 20px;
-    }
+//     .genre-list {
+//       padding-right: 20px;
+//     }
 
-    .dropdowns {
-      display: flex;
-      justify-content: flex-end;
-      .dropdown {
-        .btn {
-          background-color: #e50914;
-          color: white;
-        }
-      }
-    }
-    .films-cards {
-      border: none;
-      border-radius: 0;
-      position: relative;
-      overflow: hidden;
-      width: 200px;
-      cursor: pointer;
-      &:hover .overlay {
-        right: 0;
-      }
-      .overlay {
-        transition: 1s;
-        padding-top: 10px;
-        padding-right: 10px;
-        background: rgb(0, 0, 0, 0.5);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        row-gap: 20px;
-        right: -100%;
-        a {
-          width: 40px;
-          height: 40px;
-          border: 1px solid white;
-          color: white;
-          @include flexbox;
-          justify-content: center;
-          border-radius: 50%;
-          transition: 1s;
-          &:hover {
-            border-color: #e50914;
-            color: #e50914;
-          }
-        }
-      }
-      .img {
-        img {
-          width: 100%;
-        }
-      }
-      .movies-info {
-        position: absolute;
-        bottom: 0;
-        color: white;
-        left: 20px;
+//     .dropdowns {
+//       display: flex;
+//       justify-content: flex-end;
+//       .dropdown {
+//         .btn {
+//           background-color: #e50914;
+//           color: white;
+//         }
+//       }
+//     }
+//     .films-cards {
+//       border: none;
+//       border-radius: 0;
+//       position: relative;
+//       overflow: hidden;
+//       width: 200px;
+//       cursor: pointer;
+//       &:hover .overlay {
+//         right: 0;
+//       }
+//       .overlay {
+//         transition: 1s;
+//         padding-top: 10px;
+//         padding-right: 10px;
+//         background: rgb(0, 0, 0, 0.5);
+//         width: 100%;
+//         height: 100%;
+//         position: absolute;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: flex-end;
+//         row-gap: 20px;
+//         right: -100%;
+//         a {
+//           width: 40px;
+//           height: 40px;
+//           border: 1px solid white;
+//           color: white;
+//           @include flexbox;
+//           justify-content: center;
+//           border-radius: 50%;
+//           transition: 1s;
+//           &:hover {
+//             border-color: #e50914;
+//             color: #e50914;
+//           }
+//         }
+//       }
+//       .img {
+//         img {
+//           width: 100%;
+//         }
+//       }
+//       .movies-info {
+//         position: absolute;
+//         bottom: 0;
+//         color: white;
+//         left: 20px;
 
-        .imbd {
-          display: flex;
-          align-items: center;
-          img {
-            height: 50px;
-            width: 50px;
-          }
-        }
-      }
-    }
-  }
-}
+//         .imbd {
+//           display: flex;
+//           align-items: center;
+//           img {
+//             height: 50px;
+//             width: 50px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
