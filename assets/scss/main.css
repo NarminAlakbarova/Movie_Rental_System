@@ -424,11 +424,10 @@ header .header .right-nav .account .fa-user {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  -moz-column-gap: 100px;
-       column-gap: 100px;
+  justify-content: space-between;
+  padding: 0 10px;
   position: absolute;
-  bottom: 30%;
+  bottom: 25%;
   width: 100%;
 }
 #upcoming .upcoming .left-cards .star-time p {
@@ -445,15 +444,12 @@ header .header .right-nav .account .fa-user {
 }
 @media screen and (max-width: 991px) {
   #upcoming .upcoming .left-cards .star-time {
-    bottom: 10%;
-    justify-content: space-between;
-    padding: 0 10px;
-    font-size: 26px;
+    bottom: 17%;
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 767px) {
   #upcoming .upcoming .left-cards .star-time {
-    bottom: 20%;
     font-size: 20px;
   }
 }
@@ -511,6 +507,7 @@ header .header .right-nav .account .fa-user {
   text-align: center;
   position: relative;
   color: white;
+  font-weight: 400;
 }
 .suggested-container .suggested-title h3::after {
   content: "";
@@ -738,6 +735,7 @@ header .header .right-nav .account .fa-user {
   text-align: center;
   position: relative;
   color: white;
+  font-weight: 400;
 }
 #trailers .trailers .trailers-title h3::after {
   content: "";
@@ -790,6 +788,7 @@ header .header .right-nav .account .fa-user {
   text-align: center;
   position: relative;
   color: white;
+  font-weight: 400;
 }
 #all-movies .movies-title h3::after {
   content: "";
@@ -1101,7 +1100,7 @@ header .header .right-nav .account .fa-user {
 }
 
 .premium-container {
-  padding: 80px 5%;
+  padding-bottom: 80px;
 }
 .premium-container .premium-title {
   padding-bottom: 50px;

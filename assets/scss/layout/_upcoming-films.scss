@@ -61,11 +61,12 @@
       }
       .star-time {
         @include flexbox;
-        justify-content: space-around;
+        justify-content: space-between;
         // display: flex;
-        column-gap: 100px;
+        // column-gap: 100px;
+        padding: 0 10px;
         position: absolute;
-        bottom: 30%;
+        bottom: 25%;
         width: 100%;
         p {
           margin-bottom: 0;
@@ -80,13 +81,13 @@
           color: white;
         }
         @media screen and (max-width: 991px) {
-          bottom: 10%;
-          justify-content: space-between;
-          padding: 0 10px;
-          font-size: 26px;
+          bottom: 17%;
+          // justify-content: space-between;
+          // padding: 0 10px;
+          font-size: 24px;
         }
         @media screen and (max-width: 767px) {
-          bottom: 20%;
+          // bottom: 20%;
           font-size: 20px;
         }
       }

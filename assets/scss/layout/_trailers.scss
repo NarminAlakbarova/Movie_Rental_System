@@ -11,6 +11,8 @@
         text-align: center;
         position: relative;
         color: white;
+      font-weight: 400;
+
         &::after {
           content: "";
           height: 2px;
