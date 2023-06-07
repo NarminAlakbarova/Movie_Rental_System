@@ -62,6 +62,7 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 var swiper = new Swiper(".lastSwipper", {
+  initialSlide: 1, 
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
