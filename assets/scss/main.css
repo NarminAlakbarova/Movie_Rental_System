@@ -1031,6 +1031,95 @@ header .header .right-nav .account .fa-user {
   }
 }
 
+.pricing-area {
+  padding: 100px 0;
+}
+.pricing-area .single-price {
+  text-align: center;
+  background: #262626;
+  transition: 1s;
+  margin-top: 20px;
+}
+.pricing-area .single-price:hover {
+  background: #a8060e;
+  cursor: pointer;
+}
+.pricing-area .single-price:hover:hover .deal-top {
+  background: #262626;
+}
+.pricing-area .single-price:hover .deal-top:after {
+  border-top: 50px solid #262626;
+}
+.pricing-area .single-price:hover .btn-area a {
+  background: #262626;
+}
+.pricing-area .single-price h3 {
+  font-size: 25px;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+  margin-top: -80px;
+  font-family: poppins;
+  color: #fff;
+}
+.pricing-area .single-price h4 {
+  font-size: 48px;
+  font-weight: 500;
+  color: #fff;
+}
+.pricing-area .single-price h4 span {
+  vertical-align: text-top;
+  font-size: 25px;
+}
+.pricing-area .single-price .deal-top {
+  position: relative;
+  background: #a8060e;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 136px 24px 0;
+}
+.pricing-area .single-price .deal-top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  width: 0;
+  height: 0;
+  border-top: 50px solid #a8060e;
+  border-left: 175px solid transparent;
+  border-right: 183px solid transparent;
+}
+.pricing-area .single-price .deal-bottom {
+  padding: 56px 16px 0;
+}
+.pricing-area .single-price .deal-bottom ul {
+  margin: 0;
+  padding: 0;
+}
+.pricing-area .single-price .deal-bottom ul li {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+  margin-top: 16px;
+  border-top: 1px solid #e4e4e4;
+  padding-top: 16px;
+  list-style: none;
+}
+.pricing-area .single-price .deal-bottom .btn-area a {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #a8060e;
+  padding: 8px 64px;
+  margin-top: 32px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .premium-container {
   padding-bottom: 80px;
 }

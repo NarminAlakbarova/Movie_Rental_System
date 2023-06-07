@@ -47,10 +47,35 @@
         <div class="header">
           <img src="./assets/img/logo.png" alt="logo" />
           <nav>
-            <ul>
+            <ul class="nav-ul">
               <li><a href="#">Home</a></li>
               <li><a href="#">Tv Shows</a></li>
-              <li><a href="#">Movies</a></li>
+              <li>
+                <div class="dropdown">
+                  <button
+                    class="btn text-white dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Pages
+                  </button>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    <li><a class="dropdown-item" href="#">All Movies</a></li>
+                    <li><a class="dropdown-item" href="#">Tv Shows</a></li>
+                    <li><a class="dropdown-item" href="#">FAQ</a></li>
+                    <li>
+                      <a class="dropdown-item premium" href="#"
+                        >Premium Movies</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
               <li><a href="#">My List </a></li>
               <li><a href="#">Blog </a></li>
             </ul>
@@ -77,12 +102,79 @@
       </div>
     </header>
     <!-- PRICING -->
-
+    <div class="pricing-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="single-price">
+              <div class="deal-top">
+                <h3>Basic</h3>
+                <h4> 29 <span class="sup">$</span> </h4> 
+              </div>
+              <div class="deal-bottom">
+                <ul class="deal-item">
+                  <li>Ad Free Entertainment</li>
+                  <li>American Tv Shows</li>
+                  <li>Hollywood Movies </li>
+                  <li>New Movies </li>
+                  <li>Streamit Special </li>
+                </ul>
+                <div class="btn-area">
+                  <a href="#">Sign Up</a>       
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="single-price">
+              <div class="deal-top">
+                <h3>Standard</h3>
+                <h4> 59 <span class="sup">$</span> </h4>
+              </div>
+              <div class="deal-bottom">
+                <ul class="deal-item">
+                  <li>Ad Free Entertainment</li>
+                  <li>American Tv Shows</li>
+                  <li>Hollywood Movies </li>
+                  <li>New Movies </li>
+                  <li>Streamit Special </li>
+                </ul>
+                <div class="btn-area">
+                  <a href="#">Sign Up</a>       
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <div class="single-price">
+              <div class="deal-top">
+                <h3>Professional</h3>
+                <h4> 79 <span class="sup">$</span> </h4> 
+              </div>
+              <div class="deal-bottom">
+                <ul class="deal-item">
+                  <li>Ad Free Entertainment</li>
+                  <li>American Tv Shows</li>
+                  <li>Hollywood Movies </li>
+                  <li>New Movies </li>
+                  <li>Streamit Special </li>
+                </ul>
+                <div class="btn-area">
+                  <a href="#">Sign Up</a>       
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>       
+    
+    
+    </div>
     <!-- Footer -->
     <footer class="text-center text-lg-start">
       <section class="d-flex justify-content-between p-3" id="top-footer">
         <div class="container top-footer">
-          <div class="me-5">
+          <div class="">
             <span>Get connected with us on social networks:</span>
           </div>
 
