@@ -1,17 +1,17 @@
-let burgerMenu=document.querySelector("#burger-menu")
-let markIcon=document.querySelector(".fa-xmark")
-let menuIcon=document.querySelector(".fa-bars")
+let burgerMenu = document.querySelector("#burger-menu");
+let markIcon = document.querySelector(".fa-xmark");
+let menuIcon = document.querySelector(".fa-bars");
 let header = document.querySelector("header");
 let searchInp = document.querySelector(".search-input");
 let searchIcon = document.querySelector(".fa-search");
-let cards = document.querySelectorAll('.card');
+let cards = document.querySelectorAll(".card");
 
-menuIcon.addEventListener("click",function(){
-    burgerMenu.classList.toggle("show")
-})
-markIcon.addEventListener("click",function(){
-    burgerMenu.classList.toggle("show")
-})
+menuIcon.addEventListener("click", function () {
+  burgerMenu.classList.toggle("show");
+});
+markIcon.addEventListener("click", function () {
+  burgerMenu.classList.toggle("show");
+});
 
 function scrollFunction() {
   if (
@@ -24,21 +24,20 @@ function scrollFunction() {
   }
 }
 window.addEventListener("scroll", scrollFunction);
-searchIcon.addEventListener("click",function(){
-    searchInp.classList.toggle("show-inp")
-})
+searchIcon.addEventListener("click", function () {
+  searchInp.classList.toggle("show-inp");
+});
 
-
-cards.forEach(card => {
-    card.addEventListener('click', () => {
-        cards.forEach(c => {
-            if(c !== card){
-                c.classList.remove('active');
-            }
-        });
-
-        card.classList.add('active');
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    cards.forEach((c) => {
+      if (c !== card) {
+        c.classList.remove("active");
+      }
     });
+
+    card.classList.add("active");
+  });
 });
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
@@ -78,3 +77,21 @@ var swiper = new Swiper(".lastSwipper", {
     el: ".swiper-pagination",
   },
 });
+// POPUP
+let modals = document.querySelectorAll(".modal");
+let imgs = document.querySelectorAll(".myImg");
+let closeBtns = document.querySelectorAll(".close");
+
+imgs.forEach((img, index) => {
+  img.onclick = function () {
+    modals[index].style.display = "block";
+  };
+});
+
+closeBtns.forEach((closeBtn, index) => {
+  closeBtn.addEventListener("click", function () {
+    modals[index].style.display = "none";
+  });
+});
+
+

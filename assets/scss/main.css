@@ -783,10 +783,53 @@ header .header .right-nav .account .fa-user {
   background: linear-gradient(to right, red, purple);
   padding: 3px;
 }
+#trailers .trailers .cards .img .modal {
+  display: none;
+  position: fixed;
+  z-index: 11111111111;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#trailers .trailers .cards .img .modal .close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#trailers .trailers .cards .img .modal .modal-content {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  max-width: 700px;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#trailers .trailers .cards .img .modal .modal-content video {
+  width: 100%;
+  height: 100%;
+}
 #trailers .trailers .cards .img img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+#trailers .trailers .cards .img img:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 #hero-banner {
