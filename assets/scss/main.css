@@ -1434,6 +1434,78 @@ header .header .right-nav .account .fa-user {
   background-color: #242424;
 }
 
+#login {
+  background-image: url("../../../assets/img/01-2.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 50px 0;
+}
+#login .login .form-row .form-col form {
+  overflow-y: auto;
+  max-height: 600px;
+  color: white;
+  padding: 30px 30px;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#login .login .form-row .form-col form::-webkit-scrollbar {
+  width: 5px;
+}
+#login .login .form-row .form-col form::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+#login .login .form-row .form-col form::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+#login .login .form-row .form-col form::-webkit-scrollbar-track {
+  background-color: #141414;
+  border-radius: 5px;
+}
+#login .login .form-row .form-col form h2 {
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #bf000a;
+}
+#login .login .form-row .form-col form label {
+  padding-bottom: 8px;
+}
+#login .login .form-row .form-col form input {
+  border: none;
+  padding: 8px 15px;
+  background: #242424;
+  opacity: 0.8;
+  color: white;
+  accent-color: red;
+}
+#login .login .form-row .form-col form h5 {
+  padding-bottom: 10px;
+}
+#login .login .form-row .form-col form .cards input {
+  margin-right: 5px;
+}
+#login .login .form-row .form-col form .cards label {
+  padding-right: 10px;
+}
+#login .login .form-row .form-col form #register {
+  width: 100%;
+  border: none;
+  padding: 10px 10px;
+  background-color: #bf000a;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  transition: 1s;
+}
+#login .login .form-row .form-col form #register:hover {
+  background-color: #5f0206;
+}
+
 footer {
   background-color: #272626;
   color: white;
