@@ -2,16 +2,28 @@ footer {
   background-color: #272626;
 color: white;
   #top-footer {
-    background-color: #e509149a;
+    // background-color: #e509149a;
     .top-footer {
       @include flexbox;
+      .icons{
+        padding-right: 20px;
+      }
       @media screen and (max-width:767px) {
         flex-direction: column;
         row-gap: 10px;
+        .icons{
+          padding-right: 0;
+        }
+
       }
     }
   }
   .footer{
+    .footer-place{
+      @media screen and (max-width:767px) {
+        margin-bottom: 20px;
+      }
+    }
     .footer-content{
         p{
             color:#7777;

@@ -1645,7 +1645,7 @@ header .header .right-nav .account .fa-user {
   background-color: #5f0206;
 }
 
-header {
+.details-header {
   background-color: #141414;
 }
 
@@ -1844,18 +1844,26 @@ footer {
   background-color: #272626;
   color: white;
 }
-footer #top-footer {
-  background-color: rgba(229, 9, 20, 0.6039215686);
-}
 footer #top-footer .top-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+footer #top-footer .top-footer .icons {
+  padding-right: 20px;
+}
 @media screen and (max-width: 767px) {
   footer #top-footer .top-footer {
     flex-direction: column;
     row-gap: 10px;
+  }
+  footer #top-footer .top-footer .icons {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .footer .footer-place {
+    margin-bottom: 20px;
   }
 }
 footer .footer .footer-content p {
