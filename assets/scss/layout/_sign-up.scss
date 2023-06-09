@@ -10,9 +10,9 @@
     .form-row {
       .form-col {
         form {
-          backdrop-filter: blur(0.625em);
           overflow-y: auto;
           max-height: 600px;
+          backdrop-filter: blur(0.625em);
           color: white;
           &::-webkit-scrollbar {
             width: 5px;
@@ -36,9 +36,9 @@
             font-weight: 400;
             color: #bf000a;
           }
-          padding: 30px 30px;
-          //   height: 100vh;
+          
           background: rgb(0, 0, 0, 0.8);
+          padding: 30px 30px;
           align-items: center;
           display: flex;
           flex-direction: column;

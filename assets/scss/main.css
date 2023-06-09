@@ -1443,13 +1443,13 @@ header .header .right-nav .account .fa-user {
   position: relative;
 }
 #login .login .form-row .form-col form {
-  -webkit-backdrop-filter: blur(0.625em);
-          backdrop-filter: blur(0.625em);
   overflow-y: auto;
   max-height: 600px;
+  -webkit-backdrop-filter: blur(0.625em);
+          backdrop-filter: blur(0.625em);
   color: white;
-  padding: 30px 30px;
   background: rgba(0, 0, 0, 0.8);
+  padding: 30px 30px;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -1505,6 +1505,103 @@ header .header .right-nav .account .fa-user {
   transition: 1s;
 }
 #login .login .form-row .form-col form #register:hover {
+  background-color: #5f0206;
+}
+
+#sign-in {
+  background-image: url("../../../assets/img/bg (1).jpg");
+  height: 100vh;
+  display: flex;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+#sign-in .sign-in form {
+  -webkit-backdrop-filter: blur(0.625em);
+          backdrop-filter: blur(0.625em);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px 30px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+#sign-in .sign-in form label {
+  padding-bottom: 8px;
+}
+#sign-in .sign-in form h2 {
+  color: #bf000a;
+}
+#sign-in .sign-in form .forgot-link {
+  color: #bf000a;
+  font-size: 18px;
+}
+#sign-in .sign-in form .forgot-link:hover {
+  color: #5f0206;
+}
+#sign-in .sign-in form #remember {
+  background: transparent;
+}
+#sign-in .sign-in form input {
+  border: none;
+  padding: 8px 15px;
+  background: #242424;
+  opacity: 0.8;
+  color: white;
+  accent-color: red;
+}
+#sign-in .sign-in form .register-link {
+  color: #bf000a;
+}
+#sign-in .sign-in form .or-p .line-1,
+#sign-in .sign-in form .or-p .line-2 {
+  flex: auto;
+  display: inline-block;
+  border-bottom: 0.0625em solid rgba(119, 119, 119, 0.4666666667);
+  vertical-align: middle;
+  min-width: 50px;
+  line-height: 0;
+}
+#sign-in .sign-in form .icons {
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  font-size: 24px;
+  padding: 20px 0;
+  cursor: pointer;
+}
+#sign-in .sign-in form .icons i {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+#sign-in .sign-in form .icons i:hover {
+  transform: scale(1.2);
+}
+#sign-in .sign-in form .icons .fa-google {
+  background-color: #db4437;
+}
+#sign-in .sign-in form .icons .fa-linkedin {
+  background-color: #007BB6;
+}
+#sign-in .sign-in form .icons .fa-amazon {
+  background-color: rgb(255, 153, 0);
+}
+#sign-in .sign-in form #loginbtn {
+  width: 100%;
+  border: none;
+  padding: 10px 10px;
+  background-color: #bf000a;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 8px;
+  transition: 1s;
+}
+#sign-in .sign-in form #loginbtn:hover {
   background-color: #5f0206;
 }
 

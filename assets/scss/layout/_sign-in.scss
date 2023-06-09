@@ -1,1 +1,96 @@
-
+#sign-in {
+  background-image: url("../../../assets/img/bg\ \(1\).jpg");
+  height: 100vh;
+  display: flex;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  .sign-in {
+    form {
+      backdrop-filter: blur(0.625em);
+      color: white;
+      background: rgb(0, 0, 0, 0.5);
+      padding: 30px 30px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      label {
+        padding-bottom: 8px;
+      }
+      h2 {
+        color: #bf000a;
+      }
+      .forgot-link {
+        color: #bf000a;
+        font-size: 18px;
+        &:hover {
+          color: #5f0206;
+        }
+      }
+      #remember {
+        background: transparent;
+      }
+      input {
+        border: none;
+        padding: 8px 15px;
+        background: #242424;
+        opacity: 0.8;
+        color: white;
+        accent-color: red;
+      }
+      .register-link {
+        color: #bf000a;
+      }
+      .or-p {
+        .line-1,
+        .line-2 {
+          flex: auto;
+          display: inline-block;
+          border-bottom: 0.0625em solid #7777;
+          vertical-align: middle;
+          min-width: 50px;
+          line-height: 0;
+        }
+      }
+      .icons {
+        column-gap: 30px;
+        font-size: 24px;
+        padding: 20px 0;
+        cursor: pointer;
+        i {
+          width: 45px;
+          height: 45px;
+          @include flexbox(center);
+          border-radius: 50%;
+          transition: .5s;
+          &:hover{
+            transform: scale(1.2);
+          }
+        }
+        .fa-google {
+          background-color: #db4437;
+        }
+        .fa-linkedin{
+            background-color: #007BB6;
+        }
+        .fa-amazon{
+            background-color: rgb(255, 153, 0);
+        }
+      }
+      #loginbtn {
+        width: 100%;
+        border: none;
+        padding: 10px 10px;
+        background-color: #bf000a;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 8px;
+        transition: 1s;
+        &:hover {
+          background-color: #5f0206;
+        }
+      }
+    }
+  }
+}
