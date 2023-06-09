@@ -30,7 +30,6 @@ header {
                 color: #e50914;
               }
             }
-        
           }
           a {
             color: white;
@@ -94,10 +93,43 @@ header {
         }
       }
       .account {
+        position: relative;
+        cursor: pointer;
+        .sing-in-up {
+          display: none;
+          width: 300px;
+          height: 100px;
+         background: rgb(0, 0, 0,0.8);
+          padding-left: 20px;
+          // display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: absolute;
+          right: 15%;
+          top: 100%;
+          margin-top: 29px;
+          border-radius: 10px;
+          row-gap: 10px;
+          li {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            a {
+              color: white;
+            }
+            p {
+              color: white;
+            }
+          }
+          &.active{
+            display: flex;
+          }
+        }
         .fa-user {
           color: white;
           font-size: 18px;
         }
+       
       }
     }
   }

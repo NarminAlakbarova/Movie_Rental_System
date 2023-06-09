@@ -94,18 +94,18 @@ closeBtns.forEach((closeBtn, index) => {
     modals[index].style.display = "none";
   });
 });
-let imgDetails = document.querySelector(".right-content");
-let modalDetails = document.querySelector(".modal-details");
-let closeBtnsDetails = document.querySelector(".close-details");
+// let imgDetails = document.querySelector(".right-content");
+// let modalDetails = document.querySelector(".modal-details");
+// let closeBtnsDetails = document.querySelector(".close-details");
 
-imgDetails.addEventListener("click", function () {
-  modalDetails.style.display = "block";
-});
+// imgDetails.addEventListener("click", function () {
+//   modalDetails.style.display = "block";
+// });
 
-closeBtnsDetails.addEventListener("click", function () {
-  console.log("hh");
-  modalDetails.style.display = "none ";
-});
+// closeBtnsDetails.addEventListener("click", function () {
+//   console.log("hh");
+//   modalDetails.style.display = "none ";
+// });
 
 
 let dropdown = document.querySelector(".dropdown");
@@ -119,3 +119,10 @@ dropdown.addEventListener("mouseleave", function () {
   dropdown.setAttribute("data-bs-toggle", "dropdown");
   dropdown.setAttribute("aria-expanded", "false");
 });
+
+let userIcon=document.querySelector(".fa-user")
+let userMenu=document.querySelector(".sing-in-up ")
+userIcon.addEventListener("click",function(){
+  console.log("jsj");
+  userMenu.classList.toggle("active")
+})
