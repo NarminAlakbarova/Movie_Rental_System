@@ -62,7 +62,7 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 var swiper = new Swiper(".lastSwipper", {
-  initialSlide: 1, 
+  initialSlide: 1,
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
@@ -94,16 +94,28 @@ closeBtns.forEach((closeBtn, index) => {
     modals[index].style.display = "none";
   });
 });
+let imgDetails = document.querySelector(".right-content");
+let modalDetails = document.querySelector(".modal-details");
+let closeBtnsDetails = document.querySelector(".close-details");
 
-
-let dropdown = document.querySelector('.dropdown');
-
-dropdown.addEventListener('mouseenter', function () {
-  dropdown.setAttribute('data-bs-toggle', '');
-  dropdown.removeAttribute('aria-expanded');
+imgDetails.addEventListener("click", function () {
+  modalDetails.style.display = "block";
 });
 
-dropdown.addEventListener('mouseleave', function () {
-  dropdown.setAttribute('data-bs-toggle', 'dropdown');
-  dropdown.setAttribute('aria-expanded', 'false');
+closeBtnsDetails.addEventListener("click", function () {
+  console.log("hh");
+  modalDetails.style.display = "none ";
+});
+
+
+let dropdown = document.querySelector(".dropdown");
+
+dropdown.addEventListener("mouseenter", function () {
+  dropdown.setAttribute("data-bs-toggle", "");
+  dropdown.removeAttribute("aria-expanded");
+});
+
+dropdown.addEventListener("mouseleave", function () {
+  dropdown.setAttribute("data-bs-toggle", "dropdown");
+  dropdown.setAttribute("aria-expanded", "false");
 });

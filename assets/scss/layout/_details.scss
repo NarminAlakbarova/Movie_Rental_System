@@ -1,0 +1,185 @@
+header {
+  background-color: #141414;
+}
+#films-video {
+  padding: 80px 0 30px 0;
+  .films-video {
+    @include flexbox(center);
+    iframe {
+      width: 100%;
+      // height: 100%;
+      height: 500px;
+    }
+  }
+}
+
+#details {
+  padding-bottom: 30px;
+  .details {
+    .details-content {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      .title {
+        display: flex;
+        align-items: center;
+        h2 {
+          font-size: 38px;
+          font-weight: 800;
+          -webkit-background-clip: text;
+          background-clip: text;
+          background-image: url("../../../assets/img/texure.jpg");
+          color: transparent;
+          padding-right: 30px;
+        }
+        img {
+          width: 50px;
+        }
+        p {
+          padding-right: 10px;
+          font-size: 20px;
+          font-weight: 400;
+        }
+      }
+      .genres {
+        font-size: 18px;
+        color: #e50914;
+      }
+      .time-date {
+        display: flex;
+        column-gap: 20px;
+        .gp {
+          width: 30px;
+          height: 28px;
+          background-color: rgb(83, 83, 83);
+          color: white;
+          padding: 7px;
+          @include flexbox;
+          justify-content: center;
+        }
+        h3 {
+          font-size: 20px;
+          font-weight: 500;
+        }
+        .time {
+          position: relative;
+          padding-right: 5px;
+          &::before {
+            content: "";
+            width: 5px;
+            background-color: red;
+            display: block;
+            height: 5px;
+            position: absolute;
+            right: -13px;
+            top: 40%;
+            border-radius: 50%;
+            margin: 0 5px;
+          }
+        }
+      }
+      .icons {
+        display: flex;
+        column-gap: 30px;
+        div {
+          width: 50px;
+          height: 50px;
+          background-color: #7777;
+          border-radius: 50%;
+          @include flexbox(center);
+        }
+        i {
+          color: #e50914;
+          border-radius: 50%;
+          background-color: white;
+          width: 40px;
+          height: 40px;
+          @include flexbox(center);
+          transition: 1s;
+          cursor: pointer;
+          &:hover {
+            color: white;
+            background-color: #e50914;
+          }
+        }
+      }
+      .tags {
+        display: flex;
+        align-items: center;
+        i {
+          font-size: 20px;
+          color: #e50914;
+        }
+        .tags-title {
+          font-size: 20px;
+          color: #e50914;
+          padding-right: 10px;
+        }
+        .tags-content {
+          font-size: 20px;
+        }
+      }
+    }
+    .right-content {
+      position: relative;
+      border: none;
+      .overlay {
+        @include flexbox(center);
+        flex-direction: column;
+        background: rgb(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        position: absolute;
+      }
+      img {
+     width: 100%;
+     height: 100%;
+      }
+      .modal-details {
+        display: none;
+        position: fixed;
+        z-index: 11111111111;
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0, 0.8);
+        .close-details {
+          position: absolute;
+          top: 15px;
+          right: 35px;
+          color: #f1f1f1;
+          font-size: 40px;
+          font-weight: bold;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+        .modal-content {
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 80%;
+          max-width: 700px;
+          height: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          iframe {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -7,6 +7,12 @@
   list-style: none !important;
   font-family: "Roboto", sans-serif;
 }
+* ::-moz-selection {
+  background-color: #e50914;
+}
+* ::selection {
+  background-color: #e50914;
+}
 
 p {
   margin-bottom: 0;
@@ -1603,6 +1609,201 @@ header .header .right-nav .account .fa-user {
 }
 #sign-in .sign-in form #loginbtn:hover {
   background-color: #5f0206;
+}
+
+header {
+  background-color: #141414;
+}
+
+#films-video {
+  padding: 80px 0 30px 0;
+}
+#films-video .films-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#films-video .films-video iframe {
+  width: 100%;
+  height: 500px;
+}
+
+#details {
+  padding-bottom: 30px;
+}
+#details .details .details-content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+#details .details .details-content .title {
+  display: flex;
+  align-items: center;
+}
+#details .details .details-content .title h2 {
+  font-size: 38px;
+  font-weight: 800;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url("../../../assets/img/texure.jpg");
+  color: transparent;
+  padding-right: 30px;
+}
+#details .details .details-content .title img {
+  width: 50px;
+}
+#details .details .details-content .title p {
+  padding-right: 10px;
+  font-size: 20px;
+  font-weight: 400;
+}
+#details .details .details-content .genres {
+  font-size: 18px;
+  color: #e50914;
+}
+#details .details .details-content .time-date {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+#details .details .details-content .time-date .gp {
+  width: 30px;
+  height: 28px;
+  background-color: rgb(83, 83, 83);
+  color: white;
+  padding: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+#details .details .details-content .time-date h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+#details .details .details-content .time-date .time {
+  position: relative;
+  padding-right: 5px;
+}
+#details .details .details-content .time-date .time::before {
+  content: "";
+  width: 5px;
+  background-color: red;
+  display: block;
+  height: 5px;
+  position: absolute;
+  right: -13px;
+  top: 40%;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+#details .details .details-content .icons {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+#details .details .details-content .icons div {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(119, 119, 119, 0.4666666667);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#details .details .details-content .icons i {
+  color: #e50914;
+  border-radius: 50%;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  cursor: pointer;
+}
+#details .details .details-content .icons i:hover {
+  color: white;
+  background-color: #e50914;
+}
+#details .details .details-content .tags {
+  display: flex;
+  align-items: center;
+}
+#details .details .details-content .tags i {
+  font-size: 20px;
+  color: #e50914;
+}
+#details .details .details-content .tags .tags-title {
+  font-size: 20px;
+  color: #e50914;
+  padding-right: 10px;
+}
+#details .details .details-content .tags .tags-content {
+  font-size: 20px;
+}
+#details .details .right-content {
+  position: relative;
+  border: none;
+}
+#details .details .right-content .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  position: absolute;
+}
+#details .details .right-content img {
+  width: 100%;
+  height: 100%;
+}
+#details .details .right-content .modal-details {
+  display: none;
+  position: fixed;
+  z-index: 11111111111;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#details .details .right-content .modal-details .close-details {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#details .details .right-content .modal-details .modal-content {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  max-width: 700px;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#details .details .right-content .modal-details .modal-content iframe {
+  width: 100%;
+  height: 100%;
 }
 
 footer {
