@@ -1437,10 +1437,10 @@ header .header .right-nav .account .fa-user {
 #login {
   background-image: url("../../../assets/img/01-2.jpg");
   height: 100vh;
+  display: flex;
   background-position: center;
   background-size: cover;
   position: relative;
-  padding: 50px 0;
 }
 #login .login .form-row .form-col form {
   overflow-y: auto;

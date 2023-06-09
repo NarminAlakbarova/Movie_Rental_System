@@ -1,16 +1,14 @@
 #login {
   background-image: url("../../../assets/img/01-2.jpg");
   height: 100vh;
-
+  display: flex;
   background-position: center;
   background-size: cover;
   position: relative;
-  padding: 50px 0;
+
   .login {
     .form-row {
       .form-col {
-
-
         form {
           overflow-y: auto;
           max-height: 600px;
@@ -38,7 +36,7 @@
             color: #bf000a;
           }
           padding: 30px 30px;
-        //   height: 100vh;
+          //   height: 100vh;
           background: rgb(0, 0, 0, 0.8);
           align-items: center;
           display: flex;
