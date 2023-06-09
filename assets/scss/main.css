@@ -1443,6 +1443,8 @@ header .header .right-nav .account .fa-user {
   position: relative;
 }
 #login .login .form-row .form-col form {
+  -webkit-backdrop-filter: blur(0.625em);
+          backdrop-filter: blur(0.625em);
   overflow-y: auto;
   max-height: 600px;
   color: white;
