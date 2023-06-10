@@ -10,6 +10,7 @@ header {
       display: flex;
       column-gap: 50px;
       align-items: center;
+      //   margin-right: 150px;
       img {
         width: 60px;
         height: 60px;
@@ -23,11 +24,99 @@ header {
         width: 40px;
         height: 40px;
       }
-      .dropdown{
-        button{
-            color: white;
+      .dropdown {
+        button {
+          color: white;
         }
       }
     }
   }
+}
+#left-bars {
+  background-color: rgb(25, 28, 36);
+  //   display: none;
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  z-index: 1111;
+  .left-bars {
+    .left-bars-title {
+      //   display: none;
+      padding-left: 10px;
+      .admin-info {
+        padding: 30px 0 20px;
+        display: flex;
+        column-gap: 20px;
+        .admin-name {
+          display: flex;
+          flex-direction: column;
+
+          h5 {
+            font-size: 18px;
+            margin-bottom: 0;
+            color: white;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      .bars-content {
+        color: white;
+        padding-left: 0;
+        li {
+          padding-bottom: 20px;
+        }
+      }
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  &.show-bars {
+    display: none;
+  }
+}
+#left-bars-burger {
+  background-color: rgb(25, 28, 36);
+  // left: 0;
+padding-top: 30px;
+  display: none;
+  position: fixed;
+  width: 7%;
+  height: 100%;
+  z-index: 1111;
+  .left-bars-burger {
+    .icons {
+      row-gap: 20px;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .fa-users {
+        color: rgb(1, 66, 1);
+      }
+      .fa-film {
+        color: rgb(117, 117, 0);
+      }
+      .fa-wallet {
+        color: rgb(2, 2, 131);
+      }
+      .fa-comment {
+        color: rgb(109, 2, 2);
+      }
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+  &.show-burger {
+    display: block;
+  }
+}
+#admin-panel {
+  padding-left: 300px;
 }
