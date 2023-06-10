@@ -59,7 +59,7 @@ header .header nav .nav-ul li .dropdown:hover .dropdown-menu {
   display: block;
 }
 header .header nav .nav-ul li .dropdown .dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 header .header nav .nav-ul li .dropdown .dropdown-menu .premium {
   color: #e50914;
@@ -1945,6 +1945,94 @@ header .header .right-nav .account .fa-user {
   cursor: pointer;
 }
 
+#related {
+  padding-bottom: 50px;
+}
+#related .related .card {
+  position: relative;
+  border: none;
+  transition: 1s;
+  cursor: pointer;
+}
+#related .related .card:hover {
+  transform: scale(1.2);
+}
+#related .related .card:hover .overlay {
+  background: rgba(0, 0, 0, 0.9);
+}
+#related .related .card:hover .overlay .icons {
+  display: flex;
+}
+#related .related .card img {
+  position: relative;
+}
+#related .related .card .overlay {
+  transition: 1s;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+#related .related .card .overlay .content {
+  position: absolute;
+  color: white;
+  top: 20px;
+  left: 10px;
+}
+#related .related .card .overlay .content p,
+#related .related .card .overlay .content h5 {
+  font-size: 16px;
+}
+#related .related .card .overlay .content .time {
+  margin-bottom: 20px;
+}
+#related .related .card .overlay .content a {
+  padding: 10px 15px;
+  background-color: #e50914;
+  color: white;
+  border-radius: 10px;
+  transition: 1s;
+}
+#related .related .card .overlay .content a:hover {
+  background-color: #500206;
+}
+#related .related .card .overlay .icons {
+  transition: 1s all;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  flex-direction: column;
+  row-gap: 20px;
+  display: none;
+}
+#related .related .card .overlay .icons div {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(119, 119, 119, 0.4666666667);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#related .related .card .overlay .icons i {
+  color: #e50914;
+  border-radius: 50%;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  cursor: pointer;
+}
+#related .related .card .overlay .icons i:hover {
+  color: white;
+  background-color: #e50914;
+}
+
 #recommended {
   padding: 50px 0;
 }
@@ -1952,17 +2040,22 @@ header .header .right-nav .account .fa-user {
   position: relative;
   border: none;
   transition: 1s;
+  cursor: pointer;
 }
 #recommended .recommended .card:hover {
   transform: scale(1.2);
 }
-#recommended .recommended .card:hover .icons {
+#recommended .recommended .card:hover .overlay {
+  background: rgba(0, 0, 0, 0.9);
+}
+#recommended .recommended .card:hover .overlay .icons {
   display: flex;
 }
 #recommended .recommended .card img {
   position: relative;
 }
 #recommended .recommended .card .overlay {
+  transition: 1s;
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -1992,7 +2085,7 @@ header .header .right-nav .account .fa-user {
   background-color: #500206;
 }
 #recommended .recommended .card .overlay .icons {
-  transition: 1s;
+  transition: 1s all;
   -moz-column-gap: 30px;
        column-gap: 30px;
   position: absolute;
