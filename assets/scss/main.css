@@ -1863,9 +1863,6 @@ header .header .right-nav .account .fa-user {
 #rate-review {
   display: none;
 }
-#rate-review.show {
-  display: block;
-}
 #rate-review .rate-review {
   color: white;
 }
@@ -1925,7 +1922,8 @@ header .header .right-nav .account .fa-user {
   padding-bottom: 10px;
   font-size: 18px;
 }
-#rate-review .rate-review form input, #rate-review .rate-review form textarea {
+#rate-review .rate-review form input,
+#rate-review .rate-review form textarea {
   background-color: #111111;
   padding: 8px 15px;
   border: none;
@@ -1945,6 +1943,89 @@ header .header .right-nav .account .fa-user {
 #rate-review .rate-review form #submit:hover {
   background-color: #500206;
   cursor: pointer;
+}
+
+#recommended {
+  padding: 50px 0;
+}
+#recommended .recommended .card {
+  position: relative;
+  border: none;
+  transition: 1s;
+}
+#recommended .recommended .card:hover {
+  transform: scale(1.2);
+}
+#recommended .recommended .card:hover .icons {
+  display: flex;
+}
+#recommended .recommended .card img {
+  position: relative;
+}
+#recommended .recommended .card .overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+#recommended .recommended .card .overlay .content {
+  position: absolute;
+  color: white;
+  top: 20px;
+  left: 10px;
+}
+#recommended .recommended .card .overlay .content p,
+#recommended .recommended .card .overlay .content h5 {
+  font-size: 16px;
+}
+#recommended .recommended .card .overlay .content .time {
+  margin-bottom: 20px;
+}
+#recommended .recommended .card .overlay .content a {
+  padding: 10px 15px;
+  background-color: #e50914;
+  color: white;
+  border-radius: 10px;
+  transition: 1s;
+}
+#recommended .recommended .card .overlay .content a:hover {
+  background-color: #500206;
+}
+#recommended .recommended .card .overlay .icons {
+  transition: 1s;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  flex-direction: column;
+  row-gap: 20px;
+  display: none;
+}
+#recommended .recommended .card .overlay .icons div {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(119, 119, 119, 0.4666666667);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#recommended .recommended .card .overlay .icons i {
+  color: #e50914;
+  border-radius: 50%;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  cursor: pointer;
+}
+#recommended .recommended .card .overlay .icons i:hover {
+  color: white;
+  background-color: #e50914;
 }
 
 footer {

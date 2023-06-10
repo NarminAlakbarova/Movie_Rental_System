@@ -191,11 +191,10 @@
       padding: 20px 0;
       background-color: rgb(39, 38, 39, 0.3);
       li {
- 
         a {
           color: white;
           font-size: 18px;
-          &:hover{
+          &:hover {
             color: #e50914;
           }
         }
@@ -211,9 +210,7 @@
 }
 #rate-review {
   display: none;
-  &.show{
-    display: block;
-  }
+
   .rate-review {
     color: white;
     .card {
@@ -225,72 +222,154 @@
         width: 70px;
         height: 70px;
       }
-      .users-info{
+      .users-info {
         color: white;
-      
-        .title{
+
+        .title {
           @include flexbox(center);
           column-gap: 20px;
-          @media screen and (max-width:767px) {
+          @media screen and (max-width: 767px) {
             flex-direction: column;
-           align-items: flex-start;
+            align-items: flex-start;
           }
-          h3{
+          h3 {
             font-weight: 500;
             font-size: 18px;
           }
-          span{
+          span {
             padding-left: 5px;
             font-size: 10px;
             color: #7777;
           }
-          .icons-stars{
+          .icons-stars {
             color: #e50914;
           }
         }
       }
     }
-    .review-title{
+    .review-title {
       display: flex;
       flex-direction: column;
       row-gap: 10px;
-      .rating{
+      .rating {
         display: flex;
         column-gap: 10px;
-        .icons-rating{
-          i{
+        .icons-rating {
+          i {
             color: #e50914;
           }
         }
       }
     }
-    form{
-      
-      label{
+    form {
+      label {
         padding-bottom: 10px;
         font-size: 18px;
       }
-      input, textarea{
+      input,
+      textarea {
         background-color: #111111;
         padding: 8px 15px;
         border: none;
         color: white;
       }
-   #submit{
-    padding: 10px 30px;
-    background-color: #e50914;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: 0.5s;
-    border: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    &:hover {
-      background-color: #500206;
-      cursor: pointer;
+      #submit {
+        padding: 10px 30px;
+        background-color: #e50914;
+        color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        transition: 0.5s;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        &:hover {
+          background-color: #500206;
+          cursor: pointer;
+        }
+      }
     }
-   }
+  }
+}
+
+#recommended {
+  padding: 50px 0;
+  .recommended {
+    .card {
+      position: relative;
+      border: none;
+      transition: 1s;
+      &:hover {
+        transform: scale(1.2);
+        .icons {
+          display: flex;
+        }
+      }
+
+      img {
+        position: relative;
+      }
+      .overlay {
+        position: absolute;
+        background: rgb(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        .content {
+          position: absolute;
+          color: white;
+          top: 20px;
+          left: 10px;
+          p,
+          h5 {
+            font-size: 16px;
+          }
+          .time {
+            margin-bottom: 20px;
+          }
+          a {
+            padding: 10px 15px;
+            background-color: #e50914;
+            color: white;
+            border-radius: 10px;
+            transition: 1s;
+            &:hover {
+              background-color: #500206;
+            }
+          }
+        }
+     
+        .icons {
+          transition: 1s;
+          column-gap: 30px;
+          position: absolute;
+          right: 10px;
+          top: 20px;
+          flex-direction: column;
+          row-gap: 20px;
+          display: none;
+          div {
+            width: 40px;
+            height: 40px;
+            background-color: #7777;
+            border-radius: 50%;
+            @include flexbox(center);
+          }
+          i {
+            color: #e50914;
+            border-radius: 50%;
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            @include flexbox(center);
+            transition: 1s;
+            cursor: pointer;
+            &:hover {
+              color: white;
+              background-color: #e50914;
+            }
+          }
+        }
+      }
     }
   }
 }
