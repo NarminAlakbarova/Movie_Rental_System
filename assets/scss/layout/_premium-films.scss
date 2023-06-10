@@ -56,12 +56,16 @@
         row-gap: 10px;
         // width: 100%;
         padding-right: 10px;
-        @media screen and (max-width: 767px) {
-          padding-right: 40px;
-          //   top: 0;
-        }
+        // @media screen and (max-width: 767px) {
+        //   padding-right: 40px;
+        //   //   top: 0;
+        // }
         @media screen and (max-width: 991px) {
           //   padding-right: 40px;
+          // padding: 0 40px 0 40px;
+          .info{
+            max-width: 250px;
+          }
           top: 5%;
           //   padding-bottom: 10px;
         }

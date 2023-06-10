@@ -136,8 +136,8 @@
         position: absolute;
       }
       img {
-     width: 100%;
-     height: 100%;
+        width: 100%;
+        height: 100%;
       }
       .modal-details {
         display: none;
@@ -178,7 +178,119 @@
           }
         }
       }
-
+    }
+  }
+}
+#links {
+  .links {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 50px;
+      padding: 20px 0;
+      background-color: rgb(39, 38, 39, 0.3);
+      li {
+ 
+        a {
+          color: white;
+          font-size: 18px;
+          &:hover{
+            color: #e50914;
+          }
+        }
+      }
+    }
+  }
+}
+#description {
+  .description {
+    padding: 50px 0;
+    color: white;
+  }
+}
+#rate-review {
+  display: none;
+  &.show{
+    display: block;
+  }
+  .rate-review {
+    color: white;
+    .card {
+      border: none;
+      background: transparent;
+      column-gap: 30px;
+      flex-direction: row;
+      img {
+        width: 70px;
+        height: 70px;
+      }
+      .users-info{
+        color: white;
+      
+        .title{
+          @include flexbox(center);
+          column-gap: 20px;
+          @media screen and (max-width:767px) {
+            flex-direction: column;
+           align-items: flex-start;
+          }
+          h3{
+            font-weight: 500;
+            font-size: 18px;
+          }
+          span{
+            padding-left: 5px;
+            font-size: 10px;
+            color: #7777;
+          }
+          .icons-stars{
+            color: #e50914;
+          }
+        }
+      }
+    }
+    .review-title{
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      .rating{
+        display: flex;
+        column-gap: 10px;
+        .icons-rating{
+          i{
+            color: #e50914;
+          }
+        }
+      }
+    }
+    form{
+      
+      label{
+        padding-bottom: 10px;
+        font-size: 18px;
+      }
+      input, textarea{
+        background-color: #111111;
+        padding: 8px 15px;
+        border: none;
+        color: white;
+      }
+   #submit{
+    padding: 10px 30px;
+    background-color: #e50914;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.5s;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    &:hover {
+      background-color: #500206;
+      cursor: pointer;
+    }
+   }
     }
   }
 }

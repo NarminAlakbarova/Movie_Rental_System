@@ -126,3 +126,21 @@ userIcon.addEventListener("click",function(){
   console.log("jsj");
   userMenu.classList.toggle("active")
 })
+
+
+
+
+let descriptionLink=document.querySelector(".description-link")
+let rateReviewLink=document.querySelector(".rate-review-link")
+let rateReviewSection=document.querySelector("#rate-review")
+let descriptionSection=document.querySelector("#description")
+rateReviewLink.addEventListener("click",function(){
+rateReviewSection.style.display="block"
+
+descriptionSection.style.display="none"
+
+})
+descriptionLink.addEventListener("click",function(){
+  rateReviewSection.style.display="none"
+  descriptionSection.style.display="block"
+})
