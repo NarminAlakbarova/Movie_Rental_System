@@ -1,40 +1,59 @@
 {
-  "upcomingMovies": [
+  "users": [
     {
       "id": 1,
-      "name": "Barbie",
-      "time": "1h 40m",
-      "img": "./assets/img/upcomingfilms/barbie.jpeg"
+      "firstName": "Nermin",
+      "lastName": "Alakbarova",
+      "password": "nermin123",
+      "isAdmin": true
     },
     {
-      "id": 2,
-      "name": "Aquaman and the Lost Kingdom",
-      "time": "1h 40m",
-      "img": "./assets/img/upcomingfilms/aquaman2.jpeg"
+      "isAdmin": false,
+      "userName": "xefurohu",
+      "firstName": "wirityt",
+      "lastName": "nakajigo",
+      "password": "Pa$$w0rd!",
+      "id": 3
     },
     {
-      "id": 3,
-      "name": "The Flash",
-      "time": "2h 24m",
-      "img": "./assets/img/upcomingfilms/flash.jpeg"
+      "isAdmin": false,
+      "userName": "makyt",
+      "firstName": "vybiwaroj",
+      "lastName": "bypodapu",
+      "password": "Pa$$w0rd!",
+      "id": 4
     },
     {
-      "id": 4,
-      "name": "Teenage Mutant Ninja Turtles",
-      "time": "1h 40m",
-      "img": "./assets/img/upcomingfilms/ninja.jpeg"
+      "isAdmin": false,
+      "userName": "wimojif",
+      "firstName": "gezuh",
+      "lastName": "wyqymij",
+      "password": "Pa$$w0rd!",
+      "id": 5
     },
     {
-      "id": 5,
-      "name": "Deadpool 3",
-      "time": "1h 40m",
-      "img": "./assets/img/upcomingfilms/deadpool.jpeg"
+      "isAdmin": false,
+      "userName": "potihafuqu",
+      "firstName": "fadyty",
+      "lastName": "podyvo",
+      "password": "nermin",
+      "id": 6
     },
     {
-      "id": 6,
-      "name": "Sonic the Hedgehog 3",
-      "time": "1h 40m",
-      "img": "./assets/img/upcomingfilms/sonic.jpeg"
+      "isAdmin": false,
+      "userName": "rygibalyle",
+      "firstName": "lyrohazew",
+      "lastName": "vypunuhop",
+      "password": "Pa$$w0rd!",
+      "id": 7
+    },
+    {
+      "isAdmin": false,
+      "userName": "fatime",
+      "firstName": "zamifitog",
+      "lastName": "zabyvo",
+      "password": "fatime123",
+      "id": 8
     }
   ]
 }

@@ -39,55 +39,55 @@
                 <div class="row">
                   <div class="col-md-6 d-flex flex-column my-3">
                     <label for="">Username*</label>
-                    <input type="text" required />
+                    <input type="text" minlength="2" maxlength="15"  class="usernameinp"/>
                   </div>
                   <div class="col-md-6 d-flex flex-column my-3">
                     <label for="">E-mail*</label>
-                    <input type="email" required />
+                    <input type="email"  minlength="2" maxlength="15"  class="emailinp" />
                   </div>
                   <div class="col-md-6 d-flex flex-column my-3">
                     <label for="">First Name*</label>
-                    <input type="text" required />
+                    <input type="text"  minlength="2" maxlength="15"   class="firstnameinp"/>
                   </div>
                   <div class="col-md-6 d-flex flex-column my-3">
                     <label for="">Last Name*</label>
-                    <input type="text" required />
+                    <input type="text"  minlength="2" maxlength="15"  class="lastnameinp"/>
                   </div>
                   <div class="col-md-6 d-flex flex-column my-3">
                     <label for="">Password*</label>
-                    <input type="password" required/>
+                    <input type="password"   class="passwordinp" />
                   </div>
                   <div class="col-md-6 d-flex flex-column my-3">
                     <label for="">Repeat Password*</label>
-                    <input type="text" required />
+                    <input type="password"   class="passwordinp2" />
                   </div>
                   <div class="col-md-12 my-2">
-                    <input type="radio" id="premium" name="radio" required/>
+                    <input type="radio" id="premium" name="radio" />
                     <label for="premium"
                       >Premium - $39 / 3 Months with a 5 day free trial</label
                     >
                   </div>
                   <div class="col-md-12 my-2">
-                    <input type="radio" id="basic" name="radio" required/>
+                    <input type="radio" id="basic" name="radio" />
                     <label for="basic">Basic - $19 / 1 Month</label>
                   </div>
                   <div class="col-md-12 my-2">
-                    <input type="radio" id="free"name="radio" required />
+                    <input type="radio" id="free"name="radio"  />
                     <label for="free">Free </label>
                   </div>
                   <div class="col-md-12 my-2">
                     <h5>Select a Payment Method</h5>
                     <div class="cards">
-                      <input type="radio" id="manual" name="payment" required />
+                      <input type="radio" id="manual" name="payment"  />
                       <label for="manual">Manual/Offline</label>
-                      <input type="radio" id="paypal" name="payment" required/>
+                      <input type="radio" id="paypal" name="payment" />
                       <label for="paypal">PayPal</label>
-                      <input type="radio" id="woo" name="payment" required/>
+                      <input type="radio" id="woo" name="payment" />
                       <label for="woo"> Woocommerce Payment Gateway</label>
                     </div>
                   </div>
                   <div class="col-md-12 my-2">
-                    <button id="register">Register</button>
+                    <button id="register" type="submit">Register</button>
                   </div>
                 </div>
               </form>
@@ -111,6 +111,6 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/sign-up.js"></script>
   </body>
 </html>
