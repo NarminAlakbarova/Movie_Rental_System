@@ -2,6 +2,9 @@ header {
   padding: 10px 0;
   background-color: rgb(25, 28, 36);
   color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
   .header {
     display: flex;
     justify-content: space-between;
@@ -39,6 +42,13 @@ header {
   width: 20%;
   height: 100%;
   z-index: 1111;
+  top: 80px;
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
+  &.show-mobile {
+    display: block;
+  }
   .left-bars {
     .left-bars-title {
       //   display: none;
@@ -78,45 +88,55 @@ header {
     display: none;
   }
 }
-#left-bars-burger {
-  background-color: rgb(25, 28, 36);
-  // left: 0;
-padding-top: 30px;
-  display: none;
-  position: fixed;
-  width: 7%;
-  height: 100%;
-  z-index: 1111;
-  .left-bars-burger {
-    .icons {
-      row-gap: 20px;
-      padding-left: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .fa-users {
-        color: rgb(1, 66, 1);
+
+#admin-panel {
+  padding-left: 300px;
+  padding-top: 80px;
+  .admin-panel {
+    table {
+      thead {
+        tr {
+          th {
+            text-align: center;
+          }
+        }
       }
-      .fa-film {
-        color: rgb(117, 117, 0);
-      }
-      .fa-wallet {
-        color: rgb(2, 2, 131);
-      }
-      .fa-comment {
-        color: rgb(109, 2, 2);
-      }
-      img {
-        width: 40px;
-        height: 40px;
+      tbody {
+      
+        tr {
+          // display: flex;
+          text-align: center;
+
+          td {
+            text-align: center;
+            // padding: 10px;
+            vertical-align: middle;
+         
+
+            img {
+              width: 40px;
+              border-radius: 50%;
+            }
+          }
+        }
       }
     }
   }
-  &.show-burger {
-    display: block;
+}
+
+
+.modal-dialog {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+.close{
+  border: none;
+  background: transparent;
+  span{
+    font-size: 24px;
   }
 }
-#admin-panel {
-  padding-left: 300px;
 }

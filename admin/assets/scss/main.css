@@ -31,6 +31,9 @@ header {
   padding: 10px 0;
   background-color: rgb(25, 28, 36);
   color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 header .header {
   display: flex;
@@ -67,6 +70,15 @@ header .header .admin .dropdown button {
   width: 20%;
   height: 100%;
   z-index: 1111;
+  top: 80px;
+}
+@media screen and (max-width: 991px) {
+  #left-bars {
+    display: none;
+  }
+}
+#left-bars.show-mobile {
+  display: block;
 }
 #left-bars .left-bars .left-bars-title {
   padding-left: 10px;
@@ -104,43 +116,36 @@ header .header .admin .dropdown button {
   display: none;
 }
 
-#left-bars-burger {
-  background-color: rgb(25, 28, 36);
-  padding-top: 30px;
-  display: none;
-  position: fixed;
-  width: 7%;
-  height: 100%;
-  z-index: 1111;
-}
-#left-bars-burger .left-bars-burger .icons {
-  row-gap: 20px;
-  padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#left-bars-burger .left-bars-burger .icons .fa-users {
-  color: rgb(1, 66, 1);
-}
-#left-bars-burger .left-bars-burger .icons .fa-film {
-  color: rgb(117, 117, 0);
-}
-#left-bars-burger .left-bars-burger .icons .fa-wallet {
-  color: rgb(2, 2, 131);
-}
-#left-bars-burger .left-bars-burger .icons .fa-comment {
-  color: rgb(109, 2, 2);
-}
-#left-bars-burger .left-bars-burger .icons img {
-  width: 40px;
-  height: 40px;
-}
-#left-bars-burger.show-burger {
-  display: block;
-}
-
 #admin-panel {
   padding-left: 300px;
+  padding-top: 80px;
+}
+#admin-panel .admin-panel table thead tr th {
+  text-align: center;
+}
+#admin-panel .admin-panel table tbody tr {
+  text-align: center;
+}
+#admin-panel .admin-panel table tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+}
+#admin-panel .admin-panel table tbody tr td img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.modal-dialog .close {
+  border: none;
+  background: transparent;
+}
+.modal-dialog .close span {
+  font-size: 24px;
 }/*# sourceMappingURL=main.css.map */
