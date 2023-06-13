@@ -54,6 +54,58 @@
       "lastName": "zabyvo",
       "password": "fatime123",
       "id": 8
+    },
+    {
+      "isAdmin": false,
+      "userName": "sybubyf",
+      "firstName": "cavodo",
+      "lastName": "tovatim",
+      "password": "Pa$$w0rd!",
+      "email": "pifyhujy@mailinator.com",
+      "id": 9
     }
+  ],
+  "allMovies": [
+    {
+      "id": 10,
+      "movieName": "100% Wolf",
+      "imbd": 5.6,
+      "title": "Freddy, a young boy, who belongs to a family of werewolves, is horrified when he transforms into a poodle instead. He must now prove that he is indeed a werewolf, in order to avoid being banished.",
+      "releaseDate": "May 29, 2020",
+      "trailer": "https://www.youtube.com/embed/CcuodcWK2-s",
+      "genres":"Family ",
+      "img":"./assets/img/animasyon/100-wolf.jpg"
+    },
+    {
+      "id": 11,
+      "movieName": "Alvin and the Chipmunks",
+      "imbd": 4.3,
+      "title": "The Chipmunks and Chipettes are on a cruise ship when their pranks go overboard. They end up on a deserted, tropical island and soon discover that they are not really alone.",
+      "releaseDate": "December 16, 2011",
+      "trailer": "https://www.youtube.com/embed/V4G_Xn8SIGg",
+      "genres":"Family ",
+      "img":"./assets/img/animasyon/alvin-and-the-chipmunks-chipwrecked.jpg"
+    },
+    {
+      "id": 12,
+      "movieName": "100% Wolf",
+      "imbd": 5.6,
+      "title": "Freddy, a young boy, who belongs to a family of werewolves, is horrified when he transforms into a poodle instead. He must now prove that he is indeed a werewolf, in order to avoid being banished.",
+      "releaseDate": "May 29, 2020",
+      "trailer": "https://www.youtube.com/embed/CcuodcWK2-s",
+      "genres":"Family ",
+      "img":"./assets/img/animasyon/100-wolf.jpg"
+    },
+    {
+      "id": 13,
+      "movieName": "100% Wolf",
+      "imbd": 5.6,
+      "title": "Freddy, a young boy, who belongs to a family of werewolves, is horrified when he transforms into a poodle instead. He must now prove that he is indeed a werewolf, in order to avoid being banished.",
+      "releaseDate": "May 29, 2020",
+      "trailer": "https://www.youtube.com/embed/CcuodcWK2-s",
+      "genres":"Family ",
+      "img":"./assets/img/animasyon/100-wolf.jpg"
+    }
+
   ]
 }

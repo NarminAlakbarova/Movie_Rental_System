@@ -144,3 +144,4 @@ descriptionLink.addEventListener("click",function(){
   rateReviewSection.style.display="none"
   descriptionSection.style.display="block"
 })
+

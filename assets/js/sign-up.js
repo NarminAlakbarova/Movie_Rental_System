@@ -20,6 +20,7 @@ form.addEventListener("submit", async function (e) {
     firstName: firstNameInp.value,
     lastName: lastNameInp.value,
     password: passwordInp.value,
+    email:emailInp.value
   };
   if (passwordInp.value === passwordInp2.value) {
     await axios.post(`${BASE_URL}users`, obj);
