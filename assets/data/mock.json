@@ -81,7 +81,7 @@
     {
       "id": 14,
       "movieName": "Barbie",
-      "imbd": "-",
+      "imbd": 4.5,
       "title": "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.",
       "releaseDate": "July 20, 2023",
       "trailer": "https://www.youtube.com/embed/pBk4NYhWNMM",
@@ -93,7 +93,7 @@
     {
       "id": 15,
       "movieName": "Aquaman2",
-      "imbd": "-",
+      "imbd": 5.3,
       "title": "Aquaman forges an uneasy alliance with an unlikely ally in a bid to save Atlantis and the rest of the planet.",
       "releaseDate": "December 20, 2023",
       "trailer": "https://www.youtube.com/embed/pBk4NYhWNMM",
@@ -105,7 +105,7 @@
     {
       "id": 16,
       "movieName": "Deadpool 3",
-      "imbd": "-",
+      "imbd": 7.8,
       "title": "Wolverine is recovering from his injuries when he crosses paths with the loudmouth, Deadpool. They team up to defeat a common enemy.",
       "releaseDate": "November 8, 2024",
       "trailer": "https://www.youtube.com/embed/pBk4NYhWNMM",
@@ -117,7 +117,7 @@
     {
       "id": 17,
       "movieName": "Flash",
-      "imbd": "10",
+      "imbd": 10,
       "title": "Worlds collide when the Flash uses his superpowers to travel back in time to change the events of the past.",
       "releaseDate": "June 16, 2023",
       "trailer": "https://www.youtube.com/embed/pBk4NYhWNMM",
@@ -129,7 +129,7 @@
     {
       "id": 18,
       "movieName": "Teenage Mutant Ninja Turtles",
-      "imbd": "-",
+      "imbd": 6.3,
       "title": "After years of being sheltered from the human world, the Turtle brothers set out to win the hearts of New Yorkers and be accepted as normal teenagers",
       "releaseDate": " August 2, 2023",
       "trailer": "https://www.youtube.com/embed/IHvzw4Ibuho",
@@ -141,7 +141,7 @@
     {
       "id": 19,
       "movieName": "Sonic the Hedgehog 3",
-      "imbd": "-",
+      "imbd": 7.4,
       "title": "After years of being sheltered from the human world, the Turtle brothers set out to win the hearts of New Yorkers and be accepted as normal teenagers",
       "releaseDate": "December 20, 2024",
       "trailer": "https://www.youtube.com/embed/IHvzw4Ibuho",
@@ -153,7 +153,7 @@
     {
       "id": 20,
       "movieName": "Five Nights at Freddy's",
-      "imbd": "7.6",
+      "imbd": 7.6,
       "title": "A troubled security guard begins working at Freddy Fazbear's Pizzeria. While spending his first night on the job, he realizes the late shift at Freddy's won't be so easy to make it through.",
       "releaseDate": "October 27, 2023  ",
       "trailer": "https://www.youtube.com/embed/f-zqS2CiZqw",
@@ -165,7 +165,7 @@
     {
       "id": 21,
       "movieName": "White Bird",
-      "imbd": "5.6",
+      "imbd": 5,
       "title": "Julian has struggled to belong ever since he was expelled from his former school for his treatment of Auggie Pullman.",
       "releaseDate": "August 18, 2023",
       "trailer": "https://www.youtube.com/embed/8l8Fz0ObiEw",
@@ -177,7 +177,7 @@
     {
       "id": 22,
       "movieName": "Wonka",
-      "imbd": "5.6",
+      "imbd": 6.5,
       "title": "Focusing on a young Willy Wonka and how he came to meet the Oompa-Loompas on one of his earliest adventures.",
       "releaseDate": "December 15, 2023",
       "trailer": "https://www.youtube.com/embed/wBOrPEX6InU",

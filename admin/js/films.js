@@ -1,6 +1,3 @@
-
-
-
 // COUNTER
 let a = 0;
 $(document).ready(function () {
@@ -19,7 +16,6 @@ $(document).ready(function () {
   });
   a = 1;
 });
-
 
 let dataArr = [];
 let copyArr = [];
@@ -68,7 +64,6 @@ async function getAllData() {
 }
 getAllData();
 
-
 // SEARCH
 searchInp.addEventListener("input", function (e) {
   copyArr = dataArr;
@@ -80,7 +75,6 @@ searchInp.addEventListener("input", function (e) {
   drawTabele(copyArr);
 });
 
-
 // DELETE
 async function deleteMovies(moviesId) {
   await axios.delete(`${BASE_URL}/allMovies/${moviesId}`);
@@ -88,10 +82,9 @@ async function deleteMovies(moviesId) {
   document.querySelector(`#${moviesId}`).closest("tr").remove();
 }
 
-
 // MORE DETAILS
 function showMoreDetails(userId) {
-    console.log(userId);
+  console.log(userId);
   let findFilm = copyArr.find((item) => item.id == userId);
   let modalBody = document.getElementById("userModalBody");
   modalBody.innerHTML = `
@@ -132,6 +125,7 @@ function sortMovies(sortType) {
     copyArr = dataArr;
   } else if (sortType === "imdb rated- highest") {
     copyArr = copyArr.toSorted((a, b) => b.imbd - a.imbd);
+    console.log("nn");
   } else if (sortType === "imdb rated - lowest") {
     copyArr = copyArr.toSorted((a, b) => a.imbd - b.imbd);
   } else if (sortType === "A-Z") {
@@ -147,3 +141,27 @@ function sortMovies(sortType) {
   drawTabele(copyArr);
 }
 sortMovies();
+
+
+
+// FILTER
+let dropdownGenres = document.querySelector(".genres-dropdown");
+dropdownGenres.addEventListener("click", function (event) {
+  let target = event.target;
+  if (target.classList.contains("dropdown-item")) {
+    filterMovies(target.innerText);
+  }
+});
+function filterMovies(genresMovies) {
+    copyArr=dataArr
+    if (genresMovies === "All") {
+      drawTabele(copyArr);
+    } else {
+      copyArr = copyArr.filter((item) =>
+        item.genres.includes(genresMovies)
+      );
+      drawTabele(copyArr);
+    }
+  }
+  
+filterMovies()
