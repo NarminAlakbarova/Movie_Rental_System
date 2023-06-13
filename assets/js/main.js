@@ -139,30 +139,86 @@ userIcon.addEventListener("click", function () {
 //   rateReviewSection.style.display = "none";
 //   descriptionSection.style.display = "block";
 // });
+let allData = [];
+const BASE_URL = "http://localhost:8080";
+
+async function copyData() {
+  let resp = await axios(`${BASE_URL}/allMovies`);
+  let data = resp.data;
+  allData = data;
+  console.log(allData);
+}
+
+copyData();
 
 // SUGGESTED SECTION JS
 
 let suggestedSlide = document.querySelector(".suggested-slide");
-const BASE_URL = "http://localhost:8080";
+
 function drawSuggestedSlide(arr) {
   suggestedSlide.innerHTML = "";
   arr.forEach((item) => {
     suggestedSlide.innerHTML += `
-    
-    <div class="swiper-slide ">
-    <div class="card">
-      <div class="overlay">
-        <div class="overlay-content">
-          <a class="fa-solid fa-cart-shopping"></a>
-          <a class="fa-regular fa-heart"></a>
-          <a class="fa-solid fa-play"></a>
-          <a class="fa-solid fa-plus"></a>
+      <div class="swiper-slide">
+        <div class="card">
+          <div class="overlay">
+            <div class="overlay-content">
+              <a class="fa-solid fa-cart-shopping"></a>
+              <a class="fa-regular fa-heart"></a>
+              <a class="fa-solid fa-play"></a>
+              <a class="fa-solid fa-plus"></a>
+            </div>
+          </div>
+          <img src="${item.img}" alt="" />
+          <div class="title">
+            <h2>${item.movieName}</h2>
+            <p>${item.time}</p>
+          </div>
         </div>
       </div>
-      <img src="${item.img}" alt="" />
-      <div class="title">
-        <h2>${item.movieName}</h2>
-        <p>${item.time}</p>
+    `;
+  });
+}
+
+ async function getSuggestedData() {
+  await copyData()
+  let filteredData = allData.filter((item) => item.section === "Suggested");
+  console.log(allData);
+  drawSuggestedSlide(filteredData);
+}
+
+getSuggestedData();
+
+
+// Umcoming section js
+
+let upcomingCards = document.querySelector(".upcoming-row");
+
+function drawUpcomingCards(arr) {
+  upcomingCards.innerHTML = "";
+  arr.forEach((item) => {
+    upcomingCards.innerHTML += `
+    
+    <div class="col-lg-4 col-md-6 col-sm-6 my-2">
+    <div class="card left-cards">
+      <div class="img">
+        <img src="${item.img}" alt="" />
+      </div>
+      <div class="content">
+        <h4>${item.movieName}</h4>
+        <p>${item.genres}</p>
+      </div>
+      <div class="play-overlay">
+        <a>
+          <i class="fa-solid fa-play"></i>
+        </a>
+      </div>
+      <div class="star-time">
+        <div class="star">
+          <i class="fa-solid fa-star"></i>
+          <p>${item.imbd}</p>
+        </div>
+        <p class="time">${item.releaseDate.split(",").slice(1).join("")}</p>
       </div>
     </div>
   </div>
@@ -172,9 +228,51 @@ function drawSuggestedSlide(arr) {
   });
 }
 
-async function getSuggestedData(){
-  let resp=await axios(`${BASE_URL}/allMovies`)
-  let data=resp.data
-  drawSuggestedSlide(data)
+async function getUpcomingFilms() {
+  // let resp = await axios(`${BASE_URL}/allMovies`);
+  // let data = resp.data;
+  await copyData()
+  allData = allData.filter((item) => item.section === "upcoming");
+  drawUpcomingCards(allData.slice(0,6));
 }
-getSuggestedData()
+getUpcomingFilms();
+
+// Most-Have js
+let mostHaveRow = document.querySelector(".most-have-row");
+function drawMostHaveRow(arr) {
+  mostHaveRow.innerHTML = "";
+  arr.forEach((item) => {
+    mostHaveRow.innerHTML += `
+    
+         <div class="col-lg-12 my-2">
+                  <div class="card right-cards">
+                    <div class="right-all-content">
+                      <div class="img">
+                        <img
+                          src="${item.img}"
+                          alt=""
+                        />
+                      </div>
+                      <div class="right-content">
+                        <p>${item.movieName}</p>
+                        <div class="star-icon">
+                          <i class="fa-solid fa-star"></i>
+                          <p>${item.imbd}</p>
+                          <p style="color: #7777">${item.releaseDate
+                            .split(",")
+                            .slice(1)
+                            .join("")}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    `;
+  });
+}
+async function getMostHaveSeries(){
+  await copyData()
+  allData=allData.filter(item=>item.section==="most-have")
+  drawMostHaveRow(allData)
+}
+getMostHaveSeries()

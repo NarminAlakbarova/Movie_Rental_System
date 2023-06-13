@@ -6,7 +6,7 @@
       position: relative;
       color: white;
       font-weight: 400;
-font-size: 24px;
+      font-size: 24px;
       &::after {
         content: "";
         height: 2px;
@@ -22,6 +22,7 @@ font-size: 24px;
     }
     .left-cards {
       border: none;
+      // height: 300px;
       &:hover img {
         opacity: 0.8;
       }
