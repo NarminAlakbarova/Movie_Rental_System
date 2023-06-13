@@ -39,14 +39,16 @@ function drawTabele(arr) {
 
       <i class="fa-solid fa-eye btn btn-success"></i>
       <i class="fa-solid fa-pen-to-square btn btn-secondary"></i>
-      <i class="fa-solid fa-trash btn btn-danger"></i>
+      <i class="fa-solid fa-trash btn btn-danger" onclick=deleteMovies(${
+        item.id
+      }) id=${item.id}></i>
     </td>
   </tr>
     
     `;
   });
 }
-
+// GETDATA
 async function getAllData() {
   let resp = await axios(`${BASE_URL}/allMovies`);
   let data = resp.data;
@@ -54,3 +56,9 @@ async function getAllData() {
   drawTabele(data);
 }
 getAllData();
+// DELETE
+async function deleteMovies(moviesId) {
+  await axios.delete(`${BASE_URL}/allMovies/${moviesId}`);
+
+  document.querySelector(`#${moviesId}`).closest("tr").remove();
+}
