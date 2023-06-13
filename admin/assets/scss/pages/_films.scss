@@ -21,5 +21,72 @@
         font-weight: 700;
       }
     }
+    .search-sort {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      input {
+        padding: 4px 0;
+        width: 300px;
+        text-indent: 5px;
+        background-color: #272626;
+        border: none;
+        color: white;
+     
+      }
+      .dropdowns {
+        display: flex;
+        column-gap: 30px;
+        // padding-bottom: 30px;
+        .dropdown {
+          // display: none;
+          // display: flex;
+
+          .dropdown-menu {
+            background-color: #272626;
+
+            li {
+              &:hover {
+                a {
+                  color: black;
+                }
+              }
+              a {
+                transition: 1s;
+                color: white;
+              }
+            }
+          }
+          button {
+            color: white;
+          }
+        }
+      }
+    }
+    table {
+      thead {
+        tr {
+          th {
+            text-align: center;
+          }
+        }
+      }
+      tbody {
+        tr {
+          text-align: center;
+
+          td {
+            text-align: center;
+            vertical-align: middle;
+
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+      }
+    }
   }
 }

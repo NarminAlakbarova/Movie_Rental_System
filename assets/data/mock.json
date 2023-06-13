@@ -74,7 +74,9 @@
       "releaseDate": "May 29, 2020",
       "trailer": "https://www.youtube.com/embed/CcuodcWK2-s",
       "genres":"Family ",
-      "img":"./assets/img/animasyon/100-wolf.jpg"
+      "img":"../assets/img/animasyon/100-wolf.jpg",
+      "section":"all-movies",
+      "time":"1h 36m"
     },
     {
       "id": 11,
@@ -84,7 +86,9 @@
       "releaseDate": "December 16, 2011",
       "trailer": "https://www.youtube.com/embed/V4G_Xn8SIGg",
       "genres":"Family ",
-      "img":"./assets/img/animasyon/alvin-and-the-chipmunks-chipwrecked.jpg"
+      "img":"../assets/img/animasyon/alvin-and-the-chipmunks-chipwrecked.jpg",
+      "section":"all-movies",
+      "time":"1h 36m"
     },
     {
       "id": 12,
@@ -94,7 +98,9 @@
       "releaseDate": "May 29, 2020",
       "trailer": "https://www.youtube.com/embed/CcuodcWK2-s",
       "genres":"Family ",
-      "img":"./assets/img/animasyon/100-wolf.jpg"
+      "img":"../assets/img/animasyon/100-wolf.jpg",
+      "section":"all-movies",
+      "time":"1h 36m"
     },
     {
       "id": 13,
@@ -104,7 +110,9 @@
       "releaseDate": "May 29, 2020",
       "trailer": "https://www.youtube.com/embed/CcuodcWK2-s",
       "genres":"Family ",
-      "img":"./assets/img/animasyon/100-wolf.jpg"
+      "img":"../assets/img/animasyon/100-wolf.jpg",
+      "section":"all-movies",
+      "time":"1h 36m"
     }
 
   ]

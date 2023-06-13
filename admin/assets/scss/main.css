@@ -197,4 +197,50 @@ header .header .admin .dropdown button {
 }
 #films-panel .films-panel .card h4 {
   font-weight: 700;
+}
+#films-panel .films-panel .search-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+#films-panel .films-panel .search-sort input {
+  padding: 4px 0;
+  width: 300px;
+  text-indent: 5px;
+  background-color: #272626;
+  border: none;
+  color: white;
+}
+#films-panel .films-panel .search-sort .dropdowns {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+#films-panel .films-panel .search-sort .dropdowns .dropdown .dropdown-menu {
+  background-color: #272626;
+}
+#films-panel .films-panel .search-sort .dropdowns .dropdown .dropdown-menu li:hover a {
+  color: black;
+}
+#films-panel .films-panel .search-sort .dropdowns .dropdown .dropdown-menu li a {
+  transition: 1s;
+  color: white;
+}
+#films-panel .films-panel .search-sort .dropdowns .dropdown button {
+  color: white;
+}
+#films-panel .films-panel table thead tr th {
+  text-align: center;
+}
+#films-panel .films-panel table tbody tr {
+  text-align: center;
+}
+#films-panel .films-panel table tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+}
+#films-panel .films-panel table tbody tr td img {
+  width: 40px;
+  height: 40px;
 }/*# sourceMappingURL=main.css.map */
