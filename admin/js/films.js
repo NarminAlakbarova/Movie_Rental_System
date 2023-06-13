@@ -37,7 +37,9 @@ function drawTabele(arr) {
     <td>
 
 
-      <i class="fa-solid fa-eye btn btn-success"></i>
+      <i class="fa-solid fa-eye btn btn-success" onclick=showMoreDetails(${
+        item.id
+      })></i>
       <i class="fa-solid fa-pen-to-square btn btn-secondary"></i>
       <i class="fa-solid fa-trash btn btn-danger" onclick=deleteMovies(${
         item.id
@@ -61,4 +63,29 @@ async function deleteMovies(moviesId) {
   await axios.delete(`${BASE_URL}/allMovies/${moviesId}`);
 
   document.querySelector(`#${moviesId}`).closest("tr").remove();
+}
+// MORE DETAILS
+function showMoreDetails(userId) {
+  let findFilm = filteredData.find((item) => item.id == userId);
+  let modalBody = document.getElementById("userModalBody");
+  modalBody.innerHTML = `
+          <div class="img"><img src="${findFilm.img}"></div>
+          <div class="content">
+          <h5 class="text-center title">${findFilm.movieName}</h5>
+          <p><strong>Title: </strong> ${findFilm.title}</p>
+          <p><strong>Release-Date: </strong>${findFilm.releaseDate}</p>
+          <p><strong>Genres: </strong>${findFilm.genres}</p>
+          <p><strong>Time: </strong>${findFilm.time}</p>
+          <p><strong>Imbd: </strong>${findFilm.imbd}</p>
+          </div>
+
+
+       
+          `;
+  let userModal = new bootstrap.Modal(document.getElementById("userModal"));
+  userModal.show();
+  let closeModalBtn = document.getElementById("closeModalBtn");
+  closeModalBtn.addEventListener("click", function () {
+    userModal.hide();
+  });
 }

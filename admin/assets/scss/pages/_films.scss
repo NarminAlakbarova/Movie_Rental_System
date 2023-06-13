@@ -33,7 +33,6 @@
         background-color: #272626;
         border: none;
         color: white;
-     
       }
       .dropdowns {
         display: flex;
@@ -86,6 +85,48 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+.custom-modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .modal-content {
+    #userModalBody {
+      display: flex;
+      column-gap: 20px;
+      align-items: center;
+      .img {
+        display: flex;
+        align-items: center;
+        img {
+          width: 200px;
+        }
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        .title {
+          font-size: 24px;
+          font-weight: 700;
+          color: rgb(65, 3, 3);
+          padding: 0;
+          margin: 0;
+        }
+        strong {
+          font-size: 18px;
+        }
+      }
+    }
+    .close {
+      border: none;
+      background: transparent;
+      span {
+        font-size: 24px;
       }
     }
   }

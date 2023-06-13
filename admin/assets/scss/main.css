@@ -243,4 +243,45 @@ header .header .admin .dropdown button {
 #films-panel .films-panel table tbody tr td img {
   width: 40px;
   height: 40px;
+}
+
+.custom-modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-modal-dialog .modal-content #userModalBody {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  align-items: center;
+}
+.custom-modal-dialog .modal-content #userModalBody .img {
+  display: flex;
+  align-items: center;
+}
+.custom-modal-dialog .modal-content #userModalBody .img img {
+  width: 200px;
+}
+.custom-modal-dialog .modal-content #userModalBody .content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.custom-modal-dialog .modal-content #userModalBody .content .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(65, 3, 3);
+  padding: 0;
+  margin: 0;
+}
+.custom-modal-dialog .modal-content #userModalBody .content strong {
+  font-size: 18px;
+}
+.custom-modal-dialog .modal-content .close {
+  border: none;
+  background: transparent;
+}
+.custom-modal-dialog .modal-content .close span {
+  font-size: 24px;
 }/*# sourceMappingURL=main.css.map */
