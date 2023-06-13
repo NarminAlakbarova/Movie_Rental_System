@@ -1473,6 +1473,162 @@ header .header .right-nav .account .fa-user {
   height: 50px;
 }
 
+#premium-movies {
+  padding: 200px 0;
+  margin-top: 250px;
+}
+#premium-movies .premium-movies {
+  color: white;
+}
+#premium-movies .premium-movies .title {
+  text-align: center;
+  padding: 50px 0;
+}
+#premium-movies .premium-movies .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+#premium-movies .premium-movies .buttons button {
+  border: none;
+  margin-top: 20px;
+  padding: 8px 15px;
+  background-color: #e50914;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+#premium-movies .premium-movies .buttons button:hover {
+  background-color: #500206;
+  cursor: pointer;
+}
+#premium-movies .premium-movies .genres-sort .genres-dropdown {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  #premium-movies .premium-movies .genres-sort .genres-dropdown {
+    display: block;
+  }
+}
+#premium-movies .premium-movies .genres-sort .dropdown {
+  background-color: #272626;
+}
+#premium-movies .premium-movies .genres-sort .dropdown .dropdown-menu {
+  background-color: #272626;
+}
+#premium-movies .premium-movies .genres-sort .dropdown .dropdown-menu li:hover a {
+  color: black;
+}
+#premium-movies .premium-movies .genres-sort .dropdown .dropdown-menu li a {
+  transition: 1s;
+  color: white;
+}
+#premium-movies .premium-movies .genres-sort .dropdown button {
+  color: white;
+}
+#premium-movies .premium-movies .list-ul h3 {
+  padding-bottom: 20px;
+}
+#premium-movies .premium-movies .list-ul li {
+  padding-bottom: 15px;
+}
+@media screen and (max-width: 991px) {
+  #premium-movies .premium-movies .genres-col {
+    display: none;
+  }
+}
+#premium-movies .premium-movies .genres-dropdown {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  #premium-movies .premium-movies .genres-dropdown {
+    display: block;
+  }
+}
+#premium-movies .premium-movies .card {
+  background-color: transparent;
+  position: relative;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+#premium-movies .premium-movies .card img {
+  transition: 1s;
+}
+#premium-movies .premium-movies .card:hover img {
+  opacity: 0.5;
+}
+#premium-movies .premium-movies .card:hover .icons {
+  top: 35%;
+}
+#premium-movies .premium-movies .card .card-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  padding-top: 10px;
+  text-align: center;
+  left: 10px;
+  bottom: 5px;
+  color: white;
+}
+#premium-movies .premium-movies .card .card-content .price {
+  color: #e50914;
+}
+#premium-movies .premium-movies .card .card-content h4 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+#premium-movies .premium-movies .card .card-content p {
+  font-size: 16px;
+  color: rgba(119, 119, 119, 0.4666666667);
+}
+#premium-movies .premium-movies .card .icons {
+  transition: 1s;
+  position: absolute;
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%);
+}
+#premium-movies .premium-movies .card .icons div {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(119, 119, 119, 0.4666666667);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#premium-movies .premium-movies .card .icons i {
+  color: #e50914;
+  border-radius: 50%;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  cursor: pointer;
+}
+#premium-movies .premium-movies .card .icons i:hover {
+  color: white;
+  background-color: #e50914;
+}
+
+.premium-carusel {
+  padding: 100px 0;
+  height: 50vh;
+}
+.premium-carusel .carousel-inner img {
+  width: 100%;
+}
+
 #blog .blog-container .blog .left-col {
   padding-right: 50px;
 }

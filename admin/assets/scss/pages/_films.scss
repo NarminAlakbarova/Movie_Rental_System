@@ -1,0 +1,25 @@
+#films-panel {
+  padding-top: 100px;
+  padding-left: 300px;
+  .films-panel {
+    .card {
+      width: 200px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url("../../../../assets/img/bg\ \(1\).jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+      border: none;
+      .count {
+        font-size: 20px;
+      }
+      h4 {
+        font-weight: 700;
+      }
+    }
+  }
+}
