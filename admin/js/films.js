@@ -44,7 +44,9 @@ function drawTabele(arr) {
       <i class="fa-solid fa-eye btn btn-success" onclick=showMoreDetails(${
         item.id
       })></i>
-      <i class="fa-solid fa-pen-to-square btn btn-secondary"></i>
+      <a class="fa-solid fa-pen-to-square btn btn-secondary" href="add-movies.html?id=${
+        item.id
+      }"></a>
       <i class="fa-solid fa-trash btn btn-danger" onclick=deleteMovies(${
         item.id
       }) id=${item.id}></i>
@@ -142,8 +144,6 @@ function sortMovies(sortType) {
 }
 sortMovies();
 
-
-
 // FILTER
 let dropdownGenres = document.querySelector(".genres-dropdown");
 dropdownGenres.addEventListener("click", function (event) {
@@ -153,15 +153,13 @@ dropdownGenres.addEventListener("click", function (event) {
   }
 });
 function filterMovies(genresMovies) {
-    copyArr=dataArr
-    if (genresMovies === "All") {
-      drawTabele(copyArr);
-    } else {
-      copyArr = copyArr.filter((item) =>
-        item.genres.includes(genresMovies)
-      );
-      drawTabele(copyArr);
-    }
+  copyArr = dataArr;
+  if (genresMovies === "All") {
+    drawTabele(copyArr);
+  } else {
+    copyArr = copyArr.filter((item) => item.genres.includes(genresMovies));
+    drawTabele(copyArr);
   }
-  
-filterMovies()
+}
+
+filterMovies();

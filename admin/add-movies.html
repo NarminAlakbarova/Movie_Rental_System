@@ -62,6 +62,7 @@
       </div>
     </header>
     <!-- Left Bars -->
+
     <section id="left-bars">
       <div class="container">
         <div class="left-bars">
@@ -99,68 +100,83 @@
         </div>
       </div>
     </section>
-    <div
-      class="modal fade"
-      id="userModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="userModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="userModalLabel">User Details</h4>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-              id="closeModalBtn"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body" id="userModalBody"></div>
-        </div>
-      </div>
-    </div>
- 
-    <div id="admin-panel">
+    <!-- Form -->
+    
+    <section id="add-movies">
       <div class="container">
-        <div class="admin-panel">
-          <div class="row my-5 admin-row">
-            <div
-              class="col-lg-12 canvas-col d-flex flex-column align-items-center"
-            >
-              <h4 class="title">The number of people joining in the year</h4>
-              <canvas
-                id="myChart"
-                style="width: 100%; max-width: 700px"
-              ></canvas>
+        <div class="add-movies">
+          <form action="">
+            <h3 class="my-4">Add Movies</h3>
+            <div class="row">
+              <div class="col-md-6 d-flex flex-column">
+                <label for="">Movie Name</label>
+                <input
+                  type="text"
+                  name=""
+                  id="name"
+                  placeholder="Enter movie name..."
+                />
+              </div>
+              <div class="col-md-6 d-flex flex-column">
+                <label for="">Release Date</label>
+                <input
+                  type="text"
+                  name=""
+                  id="date"
+                  placeholder="Enter movie name..."
+                />
+              </div>
+              <div class="col-md-6 d-flex flex-column">
+                <label for="">Genres</label>
+                <input
+                  type="text"
+                  name=""
+                  id="genres"
+                  placeholder="Enter movie name..."
+                />
+              </div>
+              <div class="col-md-6 d-flex flex-column">
+                <label for="">Section</label>
+                <select name="" id="selection">
+                  <option value="Upcoming">Upcoming</option>
+                  <option value="Suggested">Suggested</option>
+                  <option value="MustHave">Must Have</option>
+                  <option value="Trailer">Trailer</option>
+                  <option value="Premium">Premium</option>
+                </select>
+              </div>
+              <div class="col-md-6 d-flex flex-column">
+                <label for="">Time</label>
+                <input type="text" id="time" />
+              </div>
+              <div class="col-md-6 d-flex flex-column">
+                <label for="">imbd</label>
+                <input type="number" id="imbd" />
+              </div>
+              <div class="col-md-12 mt-3">
+                <textarea
+                  style="width: 100%"
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="5"
+                ></textarea>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label for="">Trailer</label>
+                <input type="url" id="urlinp">
+              </div>
+              <div class="col-md-12">
+                <input type="file" id="imginp" style="width: 100%" />
+              </div>
             </div>
-            <div class="col-lg-12 my-5">
-              <h1 class="text-center mb-5 text-white">Users</h1>
-              <table class="table table-dark table-hover">
-                <thead>
-                  <tr>
-                    <th>№</th>
-                    <th>User</th>
-                    <th>UserName</th>
-                    <th>Name</th>
-                    <th>PAssword</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-        
-                </tbody>
-              </table>
+            <div class="col-md-12 d-flex justify-content-center">
+              <button type="submit" id="add">Add</button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
-    </div>
+    </section>
   </body>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
@@ -170,6 +186,11 @@
   ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script src="./js/admin.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="./js/add-edit.js"></script>
 </html>
