@@ -107,7 +107,6 @@ closeBtns.forEach((closeBtn, index) => {
 //   modalDetails.style.display = "none ";
 // });
 
-
 let dropdown = document.querySelector(".dropdown");
 
 dropdown.addEventListener("mouseenter", function () {
@@ -120,28 +119,62 @@ dropdown.addEventListener("mouseleave", function () {
   dropdown.setAttribute("aria-expanded", "false");
 });
 
-let userIcon=document.querySelector(".fa-user")
-let userMenu=document.querySelector(".sing-in-up ")
-userIcon.addEventListener("click",function(){
+let userIcon = document.querySelector(".fa-user");
+let userMenu = document.querySelector(".sing-in-up ");
+userIcon.addEventListener("click", function () {
   console.log("jsj");
-  userMenu.classList.toggle("active")
-})
+  userMenu.classList.toggle("active");
+});
 
+// let descriptionLink = document.querySelector(".description-link");
+// let rateReviewLink = document.querySelector(".rate-review-link");
+// let rateReviewSection = document.querySelector("#rate-review");
+// let descriptionSection = document.querySelector("#description");
+// rateReviewLink.addEventListener("click", function () {
+//   rateReviewSection.style.display = "block";
 
+//   descriptionSection.style.display = "none";
+// });
+// descriptionLink.addEventListener("click", function () {
+//   rateReviewSection.style.display = "none";
+//   descriptionSection.style.display = "block";
+// });
 
+// SUGGESTED SECTION JS
 
-let descriptionLink=document.querySelector(".description-link")
-let rateReviewLink=document.querySelector(".rate-review-link")
-let rateReviewSection=document.querySelector("#rate-review")
-let descriptionSection=document.querySelector("#description")
-rateReviewLink.addEventListener("click",function(){
-rateReviewSection.style.display="block"
+let suggestedSlide = document.querySelector(".suggested-slide");
+const BASE_URL = "http://localhost:8080";
+function drawSuggestedSlide(arr) {
+  suggestedSlide.innerHTML = "";
+  arr.forEach((item) => {
+    suggestedSlide.innerHTML += `
+    
+    <div class="swiper-slide ">
+    <div class="card">
+      <div class="overlay">
+        <div class="overlay-content">
+          <a class="fa-solid fa-cart-shopping"></a>
+          <a class="fa-regular fa-heart"></a>
+          <a class="fa-solid fa-play"></a>
+          <a class="fa-solid fa-plus"></a>
+        </div>
+      </div>
+      <img src="${item.img}" alt="" />
+      <div class="title">
+        <h2>${item.movieName}</h2>
+        <p>${item.time}</p>
+      </div>
+    </div>
+  </div>
+    
+    
+    `;
+  });
+}
 
-descriptionSection.style.display="none"
-
-})
-descriptionLink.addEventListener("click",function(){
-  rateReviewSection.style.display="none"
-  descriptionSection.style.display="block"
-})
-
+async function getSuggestedData(){
+  let resp=await axios(`${BASE_URL}/allMovies`)
+  let data=resp.data
+  drawSuggestedSlide(data)
+}
+getSuggestedData()
