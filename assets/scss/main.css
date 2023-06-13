@@ -870,7 +870,7 @@ header .header .right-nav .account .fa-user {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#trailers .trailers .cards .img .modal .modal-content video {
+#trailers .trailers .cards .img .modal .modal-content iframe {
   width: 100%;
   height: 100%;
 }

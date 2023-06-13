@@ -305,7 +305,78 @@
       "section": "most-have",
       "id": 33,
       "img": "../assets/img/most-have-series/orange.jpg"
+    },
+    {
+      "movieName": "Lupin",
+      "imbd": "8.1",
+      "title": "A retelling of the classic French story about Arsène Lupin, the world-famous gentleman thief and master of disguise.",
+      "releaseDate": "May 3, 2019",
+      "trailer": "https://www.youtube.com/embed/_d3ZzGL6I4A",
+      "genres": "Mystery",
+      "section": "trailer",
+      "season": "3",
+      "id": 34,
+      "img": "../assets/img/trailer/lupin-izle_thumb.jpg"
+    },
+    {
+      "movieName": "Ahsoka",
+      "imbd": "8.1",
+      "title": "Ahsoka Tano, a Togruta female, was the Padawan learner to Anakin Skywalker and a hero of the Clone Wars. Alongside Anakin, she grew from headstrong student into a mature leader.",
+      "releaseDate": "May 3, 2019",
+      "trailer": "https://www.youtube.com/embed/HnzNZ0Mdx4I",
+      "genres": "Action",
+      "section": "trailer",
+      "season": "5",
+      "id": 35,
+      "img": "../assets/img/trailer/ahsoka_thumb.jpg"
+    },
+    {
+      "movieName": "Black Mirror",
+      "imbd": "8.1",
+      "title": "In an abstrusely dystopian future, several individuals grapple with the manipulative effects of cutting edge technology in their personal lives and behaviours.",
+      "releaseDate": "May 3, 2019",
+      "trailer": "https://www.youtube.com/embed/5jY1ecibLYo",
+      "genres": "Action",
+      "section": "trailer",
+      "season": "6",
+      "id": 36,
+      "img": "../assets/img/trailer/black-mirror-izle-5_thumb.jpg"
+    },
+    {
+      "movieName": "The Witcher",
+      "imbd": "8.1",
+      "title": "The witcher Geralt, a mutated monster hunter, struggles to find his place in a world in which people often prove more wicked than beasts.",
+      "releaseDate": "May 3, 2019",
+      "trailer": "https://www.youtube.com/embed/SzS8Ao0H6Co",
+      "genres": "Action",
+      "section": "trailer",
+      "season": "6",
+      "id": 37,
+      "img": "../assets/img/trailer/the-witcher-izle_thumb.jpg"
+    },
+    {
+      "movieName": "Star Trek",
+      "imbd": "8.1",
+      "title": "Michael Burnham and her companions in the USS Discovery travel into the far reaches of space in an attempt to meet new lifeforms and discover new planets.",
+      "releaseDate": "September 24, 2017",
+      "trailer": "https://www.youtube.com/embed/pKFUZ10Wmbw",
+      "genres": "Tv-Shows",
+      "section": "trailer",
+      "season": "4",
+      "id": 38,
+      "img": "../assets/img/trailer/star-trek-strange-new-worlds_thumb.jpg"
+    },
+    {
+      "movieName": "The Great",
+      "imbd": "8.1",
+      "title": "Michael Burnham and her companions in the USS Discovery travel into the far reaches of space in an attempt to meet new lifeforms and discover new planets.",
+      "releaseDate": "September 24, 2017",
+      "trailer": "https://www.youtube.com/embed/1sMrtt7sAR8",
+      "genres": "Tv-Shows",
+      "section": "trailer",
+      "season": "3",
+      "id": 38,
+      "img": "../assets/img/trailer/the-great_thumb.jpg"
     }
-
   ]
 }

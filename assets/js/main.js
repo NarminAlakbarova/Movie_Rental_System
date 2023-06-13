@@ -79,21 +79,7 @@ var swiper = new Swiper(".lastSwipper", {
   },
 });
 // POPUP
-let modals = document.querySelectorAll(".modal");
-let imgs = document.querySelectorAll(".myImg");
-let closeBtns = document.querySelectorAll(".close");
 
-imgs.forEach((img, index) => {
-  img.onclick = function () {
-    modals[index].style.display = "block";
-  };
-});
-
-closeBtns.forEach((closeBtn, index) => {
-  closeBtn.addEventListener("click", function () {
-    modals[index].style.display = "none";
-  });
-});
 // let imgDetails = document.querySelector(".right-content");
 // let modalDetails = document.querySelector(".modal-details");
 // let closeBtnsDetails = document.querySelector(".close-details");
@@ -276,3 +262,68 @@ async function getMostHaveSeries(){
   drawMostHaveRow(allData)
 }
 getMostHaveSeries()
+
+
+// TRAILER JS
+let trailerRow = document.querySelector(".trailer-row");
+
+function drawTrailerRow(arr) {
+  trailerRow.innerHTML = "";
+  arr.forEach((item) => {
+    trailerRow.innerHTML += `
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="cards">
+          <div class="img">
+            <img src="${item.img}" alt="" class="myImg" />
+
+            <div class="modal">
+              <span class="close">&times;</span>
+              <div class="modal-content">
+                <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="trailer-content">
+            <h5>${item.movieName}</h5>
+            <p>Season: ${item.season}</p>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+}
+
+async function getTrailerData() {
+  await copyData();
+  let filteredData = allData.filter((item) => item.section === "trailer");
+  drawTrailerRow(filteredData);
+  populateModalData()
+}
+getTrailerData()
+
+async function populateModalData() {
+  await copyData()
+  let filteredData = allData.filter((item) => item.section === "trailer");
+
+  let modals = document.querySelectorAll(".modal");
+  modals.forEach((modal, index) => {
+    let iframe = modal.querySelector("iframe");
+    iframe.src = filteredData[index].trailer;
+  });
+}
+
+trailerRow.addEventListener("click", function (event) {
+  if (event.target.classList.contains("myImg")) {
+    let modal = event.target.parentNode.querySelector(".modal");
+    modal.style.display = "block";
+  }
+  if (event.target.classList.contains("close")) {
+    let modal = event.target.closest(".modal");
+    let iframe = modal.querySelector("iframe");
+
+    // Pause the video
+    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    modal.style.display = "none";
+  }
+});
+
