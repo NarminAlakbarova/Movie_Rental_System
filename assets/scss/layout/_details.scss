@@ -304,7 +304,7 @@
       &:hover {
         transform: scale(1.1);
         .overlay {
-        background: rgb(0, 0, 0, 0.9);
+          background: rgb(0, 0, 0, 0.9);
 
           .icons {
             display: flex;
@@ -315,6 +315,7 @@
 
       img {
         position: relative;
+        height: 150px;
       }
       .overlay {
         transition: 1s;
@@ -392,7 +393,7 @@
       &:hover {
         transform: scale(1.1);
         .overlay {
-        background: rgb(0, 0, 0, 0.9);
+          background: rgb(0, 0, 0, 0.9);
 
           .icons {
             display: flex;
@@ -403,6 +404,9 @@
 
       img {
         position: relative;
+        // height: 100%;
+        height: 150px;
+        // width: 300px;
       }
       .overlay {
         transition: 1s;

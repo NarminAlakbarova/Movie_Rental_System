@@ -2297,6 +2297,7 @@ header .header .right-nav .account .fa-user {
 }
 #related .related .card img {
   position: relative;
+  height: 150px;
 }
 #related .related .card .overlay {
   transition: 1s;
@@ -2385,6 +2386,7 @@ header .header .right-nav .account .fa-user {
 }
 #recommended .recommended .card img {
   position: relative;
+  height: 150px;
 }
 #recommended .recommended .card .overlay {
   transition: 1s;

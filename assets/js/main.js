@@ -168,10 +168,10 @@ async function copyData() {
   let resp = await axios(`${BASE_URL}/allMovies`);
   let data = resp.data;
   allData = data;
-  console.log(allData);
+  // console.log(allData);
 }
 
-copyData();
+// copyData();
 
 // SUGGESTED SECTION JS
 
@@ -187,7 +187,7 @@ function drawSuggestedSlide(arr) {
             <div class="overlay-content">
               <a class="fa-solid fa-cart-shopping"></a>
               <a class="fa-regular fa-heart"></a>
-              <a class="fa-solid fa-play"></a>
+              <a class="fa-solid fa-play" href="details.html?id=${item.id}"></a>
               <a class="fa-solid fa-plus"></a>
             </div>
           </div>
@@ -205,7 +205,7 @@ function drawSuggestedSlide(arr) {
 async function getSuggestedData() {
   await copyData();
   let filteredData = allData.filter((item) => item.section === "Suggested");
-  console.log(allData);
+  // console.log(allData);
   drawSuggestedSlide(filteredData);
 }
 
@@ -230,7 +230,8 @@ function drawUpcomingCards(arr) {
         <p>${item.genres}</p>
       </div>
       <div class="play-overlay">
-        <a>
+        <a href="details.html?id=${item.id}">
+        
           <i class="fa-solid fa-play"></i>
         </a>
       </div>
@@ -410,7 +411,7 @@ function drawPremiumMovies(arr) {
         <span> Price </span>
        ${item.price}
       </p>
-      <a class="play-now">
+      <a class="play-now" href="details.html?id=${item.id}">
         <i class="fa-solid fa-play"></i>
         Play Now
       </a>
@@ -425,6 +426,9 @@ async function getPremiumFilms() {
   // let data = resp.data;
   await copyData();
   allData = allData.filter((item) => item.section === "Premium");
+  console.log(allData);
   drawPremiumMovies(allData);
 }
 getPremiumFilms();
+
+

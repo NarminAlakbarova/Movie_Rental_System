@@ -147,7 +147,7 @@
       "trailer": "https://www.youtube.com/embed/f-zqS2CiZqw",
       "genres": "Horror",
       "img": "../assets/img/upcomingfilms/five-nights.jpg",
-      "section": "upcoming",
+      "section": "Suggested",
       "time": "1h 36m"
     },
     {
@@ -159,7 +159,7 @@
       "trailer": "https://www.youtube.com/embed/8l8Fz0ObiEw",
       "genres": "Drama",
       "img": "../assets/img/upcomingfilms/white-birds.jpeg",
-      "section": "upcoming",
+      "section": "Suggested",
       "time": "2h 20m"
     },
     {
@@ -171,20 +171,8 @@
       "trailer": "https://www.youtube.com/embed/wBOrPEX6InU",
       "genres": "Drama",
       "img": "../assets/img/upcomingfilms/wonka.jpeg",
-      "section": "upcoming",
-      "time": "2h 20m"
-    },
-    {
-      "movieName": "Enola Holmes 2",
-      "imbd": "6.7",
-      "title": "Enola Holmes takes on her first case as a detective, but to unravel the mystery of a missing girl, she'll need some help from friends -- and brother Sherlock.",
-      "releaseDate": "October 27, 2022",
-      "trailer": "https://www.youtube.com/embed/KKXNmYoPkx0",
-      "genres": "Crime ",
       "section": "Suggested",
-      "id": 23,
-      "time":"1h 20m",
-      "img": "../assets/img/Suggestedfilms/Enola+Holmes+2.jpg"
+      "time": "2h 20m"
     },
     {
       "movieName": "Tolkien",
@@ -196,7 +184,11 @@
       "section": "Suggested",
       "id": 25,
       "img": "../assets/img/Suggestedfilms/tolkien.jpeg",
-      "time":"1h 20m"
+      "time": "1h 20m",
+      "username": "Fatime",
+      "email": "fatime",
+      "commentContent": "Perfect!",
+      "commentDate": "6/14/2023, 10:24:50 PM"
     },
     {
       "movieName": "Game of Thrones",
@@ -208,7 +200,7 @@
       "section": "Must-Have",
       "id": 26,
       "img": "../assets/img/Must-Have-series/gameofthrons.jpg",
-      "time":"1h 20m"
+      "time": "1h 20m"
     },
     {
       "movieName": "The Walking Dead",
@@ -220,7 +212,7 @@
       "section": "Must-Have",
       "id": 27,
       "img": "../assets/img/Must-Have-series/the-walking-dead.jpg",
-      "time":"1h 20m"
+      "time": "1h 20m"
     },
     {
       "movieName": "13 Reasons Why",
@@ -232,7 +224,7 @@
       "section": "Must-Have",
       "id": 28,
       "img": "../assets/img/Must-Have-series/the-walking-dead.jpg",
-      "time":"2h 20m"
+      "time": "2h 20m"
     },
     {
       "movieName": " The 100 ",
@@ -243,13 +235,13 @@
       "genres": "Mystery ",
       "section": "Must-Have",
       "id": 29,
-      "time":"1h 45m",
+      "time": "1h 45m",
       "img": "../assets/img/Must-Have-series/the100.jpg"
     },
     {
       "movieName": "Orange Is the New Black  ",
       "imbd": "8.1",
-      "time":"1h 20m",
+      "time": "1h 20m",
       "title": "Convicted of a decade old crime of transporting drug money to an ex-girlfriend, normally law-abiding Piper Chapman is sentenced to a year and a half behind bars to face the reality of how life-changing prison can really be.",
       "releaseDate": "May 3, 2019",
       "trailer": "https://www.youtube.com/embed/Hgeu5rhoxxY",
@@ -267,7 +259,7 @@
       "genres": "Mystery ",
       "section": "Must-Have",
       "id": 30,
-      "time":"1h 20m",
+      "time": "1h 20m",
       "img": "../assets/img/Must-Have-series/the100.jpg"
     },
     {
@@ -279,7 +271,7 @@
       "genres": "Mystery ",
       "section": "Must-Have",
       "id": 31,
-      "time":"1h 20m",
+      "time": "1h 20m",
       "img": "../assets/img/Must-Have-series/the100.jpg"
     },
     {
@@ -291,7 +283,7 @@
       "genres": "Comedy ",
       "section": "Must-Have",
       "id": 32,
-      "time":"1h 20m",
+      "time": "1h 20m",
       "img": "../assets/img/Must-Have-series/orange.jpg"
     },
     {
@@ -303,7 +295,7 @@
       "genres": "Comedy ",
       "section": "Must-Have",
       "id": 33,
-      "time":"1h 20m",
+      "time": "1h 20m",
       "img": "../assets/img/Must-Have-series/orange.jpg"
     },
     {
@@ -315,7 +307,7 @@
       "genres": "Mystery",
       "section": "trailer",
       "season": "3",
-      "time":"1h 20m",
+      "time": "1h 20m",
       "id": 34,
       "img": "../assets/img/trailer/lupin-izle_thumb.jpg"
     },
@@ -328,7 +320,7 @@
       "genres": "Action",
       "section": "trailer",
       "season": "5",
-      "time":"1h 20m",
+      "time": "1h 20m",
       "id": 35,
       "img": "../assets/img/trailer/ahsoka_thumb.jpg"
     },
@@ -342,7 +334,7 @@
       "section": "trailer",
       "season": "6",
       "id": 36,
-      "time":"1h 20m",
+      "time": "1h 20m",
       "img": "../assets/img/trailer/black-mirror-izle-5_thumb.jpg"
     },
     {
@@ -355,7 +347,7 @@
       "section": "trailer",
       "season": "6",
       "id": 37,
-      "time":"1h 20m",
+      "time": "1h 20m",
       "img": "../assets/img/trailer/the-witcher-izle_thumb.jpg"
     },
     {
@@ -368,7 +360,7 @@
       "section": "trailer",
       "season": "4",
       "id": 38,
-      "time":"1h 20m",
+      "time": "1h 20m",
       "img": "../assets/img/trailer/star-trek-strange-new-worlds_thumb.jpg"
     },
     {
@@ -381,7 +373,7 @@
       "section": "trailer",
       "season": "3",
       "id": 38,
-      "time":"1h 20m",
+      "time": "1h 20m",
       "img": "../assets/img/trailer/the-great_thumb.jpg"
     },
     {
@@ -392,10 +384,10 @@
       "trailer": "https://www.youtube.com/embed/1sMrtt7sAR8",
       "genres": "Tv-Shows",
       "section": "Premium",
-      "price":3,
+      "price": 3,
       "season": "3",
       "id": 39,
-      "time":"1h 7m",
+      "time": "1h 7m",
       "img": "../assets/img/premium/wednesday.jpeg"
     },
     {
@@ -408,8 +400,8 @@
       "section": "Premium",
       "season": "3",
       "id": 40,
-      "price":5,
-      "time":"1h 20m",
+      "price": 5,
+      "time": "1h 20m",
       "img": "../assets/img/premium/quasi.jpg"
     },
     {
@@ -422,8 +414,8 @@
       "section": "Premium",
       "season": "3",
       "id": 41,
-      "price":2.5,
-      "time":"1h 20m",
+      "price": 2.5,
+      "time": "1h 20m",
       "img": "../assets/img/premium/boga-boga.jpg"
     },
     {
@@ -436,8 +428,8 @@
       "section": "Premium",
       "season": "3",
       "id": 42,
-      "price":3,
-      "time":"1h 20m",
+      "price": 3,
+      "time": "1h 20m",
       "img": "../assets/img/premium/pollen.jpg"
     },
     {
@@ -450,8 +442,8 @@
       "section": "Premium",
       "season": "3",
       "id": 43,
-      "price":3,
-      "time":"1h 20m",
+      "price": 3,
+      "time": "1h 20m",
       "img": "../assets/img/premium/Sisu_Movie.avif"
     },
     {
@@ -464,8 +456,8 @@
       "section": "Suggested",
       "season": "3",
       "id": 44,
-      "price":3,
-      "time":"1h 20m",
+      "price": 3,
+      "time": "1h 20m",
       "img": "../assets/img/Suggestedfilms/pirates.jpeg"
     },
     {
@@ -478,9 +470,13 @@
       "section": "Suggested",
       "season": "3",
       "id": 45,
-      "price":3,
-      "time":"1h 20m",
-      "img": "../assets/img/Suggestedfilms/asset-14.jpg"
+      "price": 3,
+      "time": "1h 20m",
+      "img": "../assets/img/Suggestedfilms/asset-14.jpg",
+      "username": "fatime",
+      "email": "fatime@gmail.com",
+      "commentContent": "hello very nice!",
+      "commentDate": "6/14/2023, 10:17:58 PM"
     },
     {
       "movieName": "Sisu",
@@ -492,8 +488,8 @@
       "section": "Suggested",
       "season": "3",
       "id": 46,
-      "price":3,
-      "time":"1h 20m",
+      "price": 3,
+      "time": "1h 20m",
       "img": "../assets/img/Suggestedfilms/asset-15.jpg"
     },
     {
@@ -506,10 +502,51 @@
       "section": "Suggested",
       "season": "3",
       "id": 47,
-      "price":3,
-      "time":"1h 20m",
+      "price": 3,
+      "time": "1h 20m",
       "img": "../assets/img/Suggestedfilms/13.jpg"
+    },
+    {
+      "movieName": "Sherlock Holmes",
+      "imbd": "5.7",
+      "title": "Sherlock Holmes is a fictional detective created by British author Arthur Conan Doyle. Referring to himself as a consulting detective in the stories, Holmes is known for his proficiency with observation,.",
+      "releaseDate": "September 24, 2017",
+      "trailer": "https://www.youtube.com/embed/IrBKwzL3K7s",
+      "genres": "Tv-Shows",
+      "section": "Hero-Banner",
+      "season": "3",
+      "id": 48,
+      "price": 3,
+      "time": "1h 20m",
+      "img": "../assets/img/hero-banner/sherlock.jpg"
+    },
+    {
+      "movieName": "Avengers: Infinity War",
+      "imbd": "8.4",
+      "title": "The Avengers must stop Thanos, an intergalactic warlord, from getting his hands on all the infinity stones. However, Thanos is prepared to go to any lengths to carry out his insane plan.",
+      "releaseDate": "September 24, 2017",
+      "trailer": "https://www.youtube.com/embed/6ZfuNTqbHE8",
+      "genres": "Tv-Shows",
+      "section": "Hero-Banner",
+      "season": "3",
+      "id": 49,
+      "price": 3,
+      "time": "1h 20m",
+      "img": "../assets/img/hero-banner/marvel.jpg"
+    },
+    {
+      "movieName": "Bridgerton",
+      "imbd": "7.4",
+      "title": "During the Regency era in England, eight close-knit siblings of the powerful Bridgerton family attempt to find love.",
+      "releaseDate": "September 24, 2017",
+      "trailer": "https://www.youtube.com/embed/6ZfuNTqbHE8",
+      "genres": "Tv-Shows",
+      "section": "Hero-Banner",
+      "season": "3",
+      "id": 50,
+      "price": 3,
+      "time": "1h 20m",
+      "img": "../assets/img/hero-banner/bridgerton.jpg"
     }
-
   ]
 }
