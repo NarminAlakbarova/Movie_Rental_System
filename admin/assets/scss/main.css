@@ -107,7 +107,29 @@ header .header .admin .dropdown button {
   padding-left: 0;
 }
 #left-bars .left-bars .left-bars-title .bars-content li {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+#left-bars .left-bars .left-bars-title .bars-content li .fa-users {
+  color: rgb(131, 0, 0);
+}
+#left-bars .left-bars .left-bars-title .bars-content li .fa-film {
+  color: rgb(0, 59, 0);
+}
+#left-bars .left-bars .left-bars-title .bars-content li .fa-wallet {
+  color: rgb(61, 0, 61);
+}
+#left-bars .left-bars .left-bars-title .bars-content li .fa-comment {
+  color: rgb(80, 80, 1);
+}
+#left-bars .left-bars .left-bars-title .bars-content li .fa-plus {
+  color: rgb(0, 0, 105);
+}
+#left-bars .left-bars .left-bars-title .bars-content li a {
+  color: white;
 }
 #left-bars .left-bars .left-bars-title img {
   width: 40px;

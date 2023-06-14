@@ -13,6 +13,42 @@ markIcon.addEventListener("click", function () {
   burgerMenu.classList.toggle("show");
 });
 
+
+
+
+// 
+
+// Scroll Reveal
+// ScrollReveal().reveal(".content-left", {
+//   duration: 2000,
+//   origin: "left",
+//   distance: "100px",
+//   easing: "cubic-bezier(.37,.01,.74,1)",
+//   opacity: 0.3,
+//   scale: 0.5,
+// });
+
+// ScrollReveal().reveal(".content-right", {
+//   duration: 2000,
+//   origin: "right",
+//   distance: "100px",
+//   easing: "cubic-bezier(.37,.01,.74,1)",
+//   opacity:0.3,
+// });
+ScrollReveal().reveal(".best-movie-col", {
+  duration: 2000,
+  origin: "left",
+  distance: "100px",
+  easing: "cubic-bezier(.37,.01,.74,1)",
+  opacity:0.3,
+});
+ScrollReveal().reveal(".img-col", {
+  duration: 2000,
+  origin: "right",
+  distance: "100px",
+  easing: "cubic-bezier(.37,.01,.74,1)",
+  opacity:0.3,
+});
 function scrollFunction() {
   if (
     document.body.scrollTop > 100 ||
@@ -222,12 +258,12 @@ async function getUpcomingFilms() {
 }
 getUpcomingFilms();
 
-// Most-Have js
-let mostHaveRow = document.querySelector(".most-have-row");
+// Must-Have js
+let mustHaveRow = document.querySelector(".must-have-row");
 function drawMostHaveRow(arr) {
-  mostHaveRow.innerHTML = "";
+  mustHaveRow.innerHTML = "";
   arr.forEach((item) => {
-    mostHaveRow.innerHTML += `
+    mustHaveRow.innerHTML += `
     
          <div class="col-lg-12 my-2">
                   <div class="card right-cards">
@@ -257,7 +293,7 @@ function drawMostHaveRow(arr) {
 }
 async function getMostHaveSeries() {
   await copyData();
-  allData = allData.filter((item) => item.section === "most-have");
+  allData = allData.filter((item) => item.section === "Must-Have");
   drawMostHaveRow(allData);
 }
 getMostHaveSeries();

@@ -430,6 +430,7 @@ header .header .right-nav .account .fa-user {
 }
 #upcoming .upcoming .left-cards {
   border: none;
+  height: 100%;
 }
 #upcoming .upcoming .left-cards:hover img {
   opacity: 0.8;
@@ -441,6 +442,11 @@ header .header .right-nav .account .fa-user {
   padding: 5px 8px;
   background-color: #272626;
   color: rgba(119, 119, 119, 0.6862745098);
+  height: 71px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #upcoming .upcoming .left-cards .content h4 {
   font-size: 14px;
@@ -520,10 +526,11 @@ header .header .right-nav .account .fa-user {
     font-size: 20px;
   }
 }
-#upcoming .upcoming .left-cards img {
+#upcoming .upcoming .left-cards .img img {
   width: 100%;
   position: relative;
   transition: 1s;
+  height: 100%;
 }
 #upcoming .upcoming .must-have-series {
   padding-left: 50px;
@@ -587,32 +594,33 @@ header .header .right-nav .account .fa-user {
   transform: translate(-50%);
   margin: 10px 0;
 }
-.suggested-container .card {
+.suggested-container .swiper-slide .card {
   border: none;
   position: relative;
   overflow: hidden;
+  height: 100%;
   cursor: pointer;
 }
-.suggested-container .card:hover .overlay {
+.suggested-container .swiper-slide .card:hover .overlay {
   top: 0;
 }
-.suggested-container .card:hover img {
+.suggested-container .swiper-slide .card:hover img {
   transform: scale(1.2);
 }
-.suggested-container .card .title {
+.suggested-container .swiper-slide .card .title {
   position: absolute;
   bottom: 0;
   left: 2%;
   color: white;
   z-index: 100;
 }
-.suggested-container .card .title h2 {
+.suggested-container .swiper-slide .card .title h2 {
   font-size: 18px;
 }
-.suggested-container .card .title p {
+.suggested-container .swiper-slide .card .title p {
   color: rgba(223, 220, 220, 0.4666666667);
 }
-.suggested-container .card .overlay {
+.suggested-container .swiper-slide .card .overlay {
   position: absolute;
   transition: 1s;
   background: rgba(0, 0, 0, 0.7);
@@ -621,7 +629,7 @@ header .header .right-nav .account .fa-user {
   top: -100%;
   z-index: 99;
 }
-.suggested-container .card .overlay .overlay-content {
+.suggested-container .swiper-slide .card .overlay .overlay-content {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -629,7 +637,7 @@ header .header .right-nav .account .fa-user {
   right: 10px;
   top: 20px;
 }
-.suggested-container .card .overlay .overlay-content a {
+.suggested-container .swiper-slide .card .overlay .overlay-content a {
   color: white;
   display: flex;
   justify-content: center;
@@ -640,13 +648,15 @@ header .header .right-nav .account .fa-user {
   border-radius: 50%;
   transition: 0.5s;
 }
-.suggested-container .card .overlay .overlay-content a:hover {
+.suggested-container .swiper-slide .card .overlay .overlay-content a:hover {
   border-color: #e50914;
   color: #e50914;
   cursor: pointer;
 }
-.suggested-container .card img {
+.suggested-container .swiper-slide .card img {
   transition: 1s;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media screen and (max-width: 991px) {
   .suggested-container {

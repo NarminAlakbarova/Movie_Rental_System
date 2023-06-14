@@ -75,8 +75,30 @@ header {
       .bars-content {
         color: white;
         padding-left: 0;
+
         li {
-          padding-bottom: 20px;
+          padding-bottom: 30px;
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+          .fa-users{
+            color: rgb(131, 0, 0);
+          }
+          .fa-film{
+            color: rgb(0, 59, 0);
+          }
+          .fa-wallet{
+            color: rgb(61, 0, 61);
+          }
+          .fa-comment{
+            color: rgb(80, 80, 1);
+          }
+          .fa-plus{
+color: rgb(0, 0, 105);
+          }
+          a{
+            color: white;
+          }
         }
       }
       img {
