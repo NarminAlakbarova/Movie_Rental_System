@@ -166,15 +166,14 @@ function drawSuggestedSlide(arr) {
   });
 }
 
- async function getSuggestedData() {
-  await copyData()
+async function getSuggestedData() {
+  await copyData();
   let filteredData = allData.filter((item) => item.section === "Suggested");
   console.log(allData);
   drawSuggestedSlide(filteredData);
 }
 
 getSuggestedData();
-
 
 // Umcoming section js
 
@@ -217,9 +216,9 @@ function drawUpcomingCards(arr) {
 async function getUpcomingFilms() {
   // let resp = await axios(`${BASE_URL}/allMovies`);
   // let data = resp.data;
-  await copyData()
+  await copyData();
   allData = allData.filter((item) => item.section === "upcoming");
-  drawUpcomingCards(allData.slice(0,6));
+  drawUpcomingCards(allData.slice(0, 6));
 }
 getUpcomingFilms();
 
@@ -256,13 +255,12 @@ function drawMostHaveRow(arr) {
     `;
   });
 }
-async function getMostHaveSeries(){
-  await copyData()
-  allData=allData.filter(item=>item.section==="most-have")
-  drawMostHaveRow(allData)
+async function getMostHaveSeries() {
+  await copyData();
+  allData = allData.filter((item) => item.section === "most-have");
+  drawMostHaveRow(allData);
 }
-getMostHaveSeries()
-
+getMostHaveSeries();
 
 // TRAILER JS
 let trailerRow = document.querySelector(".trailer-row");
@@ -297,12 +295,12 @@ async function getTrailerData() {
   await copyData();
   let filteredData = allData.filter((item) => item.section === "trailer");
   drawTrailerRow(filteredData);
-  populateModalData()
+  populateModalData();
 }
-getTrailerData()
+getTrailerData();
 
 async function populateModalData() {
-  await copyData()
+  await copyData();
   let filteredData = allData.filter((item) => item.section === "trailer");
 
   let modals = document.querySelectorAll(".modal");
@@ -322,8 +320,75 @@ trailerRow.addEventListener("click", function (event) {
     let iframe = modal.querySelector("iframe");
 
     // Pause the video
-    iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+    iframe.contentWindow.postMessage(
+      '{"event":"command","func":"pauseVideo","args":""}',
+      "*"
+    );
     modal.style.display = "none";
   }
 });
 
+// PREMIUM JS
+let premiumSlider = document.querySelector(".premium-slider");
+
+function drawPremiumMovies(arr) {
+  premiumSlider.innerHTML = "";
+  arr.forEach((item) => {
+    premiumSlider.innerHTML += `
+    
+    <div class="swiper-slide">
+    <div class="overlay"></div>
+    <img src="${item.img}" />
+    <div class="slider-content">
+      <div class="gender">
+        <p class="action">${item.genres}</p>
+        <p class="adventures">Adventures</p>
+      </div>
+      <div class="first-title">${item.movieName}</div>
+      <div class="info-film">
+        <div class="imdb">
+          <p>${item.imbd}</p>
+          <img
+            src="./assets/img/imdb-film-director-computer-icons-television-u-b9ac4bbc964b1399dc797db594cf699a.png"
+            alt=""
+          />
+        </div>
+        <div id="gp">
+          <div class="gp">GP</div>
+          <p>2hr:22mins</p>
+        </div>
+      </div>
+      <p class="info">
+  ${item.title}
+      </p>
+      <p class="starring">
+        <span> Starring </span>
+        Karen Gilchrist, James Earl Jones
+      </p>
+
+      <p class="tags">
+        <span> Tags </span>
+        Action, Adventures, Horror
+      </p>
+      <p class="price">
+        <span> Price </span>
+       ${item.price}
+      </p>
+      <a class="play-now">
+        <i class="fa-solid fa-play"></i>
+        Play Now
+      </a>
+    </div>
+  </div>
+    `;
+  });
+}
+
+async function getPremiumFilms() {
+  // let resp = await axios(`${BASE_URL}/allMovies`);
+  // let data = resp.data;
+  await copyData();
+  allData = allData.filter((item) => item.section === "Premium");
+  drawPremiumMovies(allData);
+}
+getPremiumFilms();

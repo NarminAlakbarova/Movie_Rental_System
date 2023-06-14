@@ -377,6 +377,71 @@
       "season": "3",
       "id": 38,
       "img": "../assets/img/trailer/the-great_thumb.jpg"
+    },
+    {
+      "movieName": "Wednesday",
+      "imbd": "8.1",
+      "title": "Michael Burnham and her companions in the USS Discovery travel into the far reaches of space in an attempt to meet new lifeforms and discover new planets.",
+      "releaseDate": "September 24, 2017",
+      "trailer": "https://www.youtube.com/embed/1sMrtt7sAR8",
+      "genres": "Tv-Shows",
+      "section": "Premium",
+      "price":3,
+      "season": "3",
+      "id": 39,
+      "img": "../assets/img/premium/wednesday.jpeg"
+    },
+    {
+      "movieName": "Quasi",
+      "imbd": "5.3",
+      "title": "A hapless hunchback yearns for love, but finds himself in the middle of a deadly feud between the Pope and the King of France when they each order the misfit to kill the other",
+      "releaseDate": "September 24, 2017",
+      "trailer": "https://www.youtube.com/embed/1sMrtt7sAR8",
+      "genres": "Tv-Shows",
+      "section": "Premium",
+      "season": "3",
+      "id": 40,
+      "price":5,
+      "img": "../assets/img/premium/quasi.jpg"
+    },
+    {
+      "movieName": "Chokehold",
+      "imbd": "5.7",
+      "title": "Evading a scandal, a couple from Istanbul starts over in a town on the Aegean coast, but quickly discover the locals are determined to get rid of them.",
+      "releaseDate": "September 24, 2017",
+      "trailer": "https://www.youtube.com/embed/1sMrtt7sAR8",
+      "genres": "Tv-Shows",
+      "section": "Premium",
+      "season": "3",
+      "id": 41,
+      "price":2.5,
+      "img": "../assets/img/premium/boga-boga.jpg"
+    },
+    {
+      "movieName": "Pollen",
+      "imbd": "5.7",
+      "title": "After being assaulted by a senior co-worker, a young woman's dream job becomes a living nightmare. She tries to keep her career together while being tormented in her dreams by a mysterious tree monster.",
+      "releaseDate": "September 24, 2017",
+      "trailer": "https://www.youtube.com/embed/1sMrtt7sAR8",
+      "genres": "Tv-Shows",
+      "section": "Premium",
+      "season": "3",
+      "id": 42,
+      "price":3,
+      "img": "../assets/img/premium/pollen.jpg"
+    },
+    {
+      "movieName": "Sisu",
+      "imbd": "5.7",
+      "title": "After being assaulted by a senior co-worker, a young woman's dream job becomes a living nightmare. She tries to keep her career together while being tormented in her dreams by a mysterious tree monster.",
+      "releaseDate": "September 24, 2017",
+      "trailer": "https://www.youtube.com/embed/1sMrtt7sAR8",
+      "genres": "Tv-Shows",
+      "section": "Premium",
+      "season": "3",
+      "id": 43,
+      "price":3,
+      "img": "../assets/img/premium/Sisu_Movie.avif"
     }
   ]
 }
