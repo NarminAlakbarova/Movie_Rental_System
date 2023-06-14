@@ -1,3 +1,6 @@
+let loadMore = document.querySelector("#load-more");
+let max = 6;
+
 // COUNTER
 let a = 0;
 $(document).ready(function () {
@@ -62,7 +65,8 @@ async function getAllData() {
   let resp = await axios(`${BASE_URL}/allMovies`);
   dataArr = resp.data;
   copyArr = searchInp.value ? copyArr : resp.data;
-  drawTabele(copyArr);
+  // filterMovies()
+  drawTabele(copyArr.slice(0, max));
 }
 getAllData();
 
@@ -74,7 +78,7 @@ searchInp.addEventListener("input", function (e) {
       .toLocaleLowerCase()
       .includes(e.target.value.toLocaleLowerCase())
   );
-  drawTabele(copyArr);
+  drawTabele(copyArr.slice(0, max));
 });
 
 // DELETE
@@ -139,8 +143,8 @@ function sortMovies(sortType) {
       b.movieName.localeCompare(a.movieName)
     );
   }
-  sorted = copyArr;
-  drawTabele(copyArr);
+  sortedArr = copyArr;
+  drawTabele(copyArr.slice(0, max));
 }
 sortMovies();
 
@@ -160,6 +164,18 @@ function filterMovies(genresMovies) {
     copyArr = copyArr.filter((item) => item.genres.includes(genresMovies));
     drawTabele(copyArr);
   }
+  // copyArr=sortedArr
 }
 
 filterMovies();
+loadMore.addEventListener("click", function () {
+  max = max + 6;
+  if (max >= copyArr.length) {
+    loadMore.style.display = "none";
+  }
+  if (sortedArr.length) {
+    drawTabele(sortedArr.slice(0, max));
+  } else {
+    getAllData();
+  }
+});
