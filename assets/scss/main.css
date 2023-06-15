@@ -2641,23 +2641,11 @@ header .header .right-nav .account .fa-user {
   width: 45px;
   border-radius: 10px;
 }
-#basket .basket .basket-cards .card .card-body .master-card,
-#basket .basket .basket-cards .card .card-body .visa,
-#basket .basket .basket-cards .card .card-body .amex,
-#basket .basket .basket-cards .card .card-body .paypal {
-  font-size: 40px;
+#basket .basket .basket-cards .card .card-body a {
+  padding-right: 10px;
 }
-#basket .basket .basket-cards .card .card-body .master-card {
-  color: rgb(117, 0, 0);
-}
-#basket .basket .basket-cards .card .card-body .visa {
-  color: #0164ac;
-}
-#basket .basket .basket-cards .card .card-body .amex {
-  color: #a7955b;
-}
-#basket .basket .basket-cards .card .card-body .paypal {
-  color: #8b0464;
+#basket .basket .basket-cards .card .card-body a img {
+  height: 40px;
 }
 #basket .basket .basket-cards .card .card-body img {
   width: 65px;

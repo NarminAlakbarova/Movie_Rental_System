@@ -21,11 +21,11 @@
             position: relative;
             overflow: hidden;
             transition: all 0.5s ease-in-out;
-          
+
             &:hover {
               box-shadow: 0.5px 0.5px 150px #252525;
             }
-          
+
             &.type1 {
               &::after {
                 content: "Thanks";
@@ -44,7 +44,7 @@
                 justify-content: center;
                 transition: all 0.5s ease-in-out;
               }
-          
+
               &::before {
                 content: "Submit";
                 height: 50px;
@@ -62,38 +62,26 @@
                 justify-content: center;
                 transition: all 0.5s ease-in-out;
               }
-          
+
               &:hover::after {
                 transform: translateY(0) scale(1.2);
               }
-          
+
               &:hover::before {
                 transform: translateY(-50px) scale(0) rotate(120deg);
               }
             }
           }
-          
+
           .user-img {
             width: 45px;
             border-radius: 10px;
           }
-          .master-card,
-          .visa,
-          .amex,
-          .paypal {
-            font-size: 40px;
-          }
-          .master-card {
-            color: rgb(117, 0, 0);
-          }
-          .visa {
-            color: #0164ac;
-          }
-          .amex {
-            color: #a7955b;
-          }
-          .paypal {
-            color: #8b0464;
+          a {
+            padding-right: 10px;
+            img {
+           height: 40px;
+            }
           }
           img {
             width: 65px;
