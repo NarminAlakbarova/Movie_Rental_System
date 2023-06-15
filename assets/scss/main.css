@@ -2569,6 +2569,128 @@ header .header .right-nav .account .fa-user {
   background-color: #e50914;
 }
 
+#basket {
+  padding: 50px 0;
+}
+#basket .basket .basket-cards {
+  padding: 20px;
+  background: transparent;
+  color: white;
+}
+#basket .basket .basket-cards .card {
+  border: none;
+}
+#basket .basket .basket-cards .card .card-body {
+  background-color: #272626;
+  border: none;
+}
+#basket .basket .basket-cards .card .card-body button {
+  height: 50px;
+  width: 150px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+#basket .basket .basket-cards .card .card-body button:hover {
+  box-shadow: 0.5px 0.5px 150px #252525;
+}
+#basket .basket .basket-cards .card .card-body button.type1::after {
+  content: "Thanks";
+  height: 50px;
+  width: 150px;
+  background-color: #750000;
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(50px);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+#basket .basket .basket-cards .card .card-body button.type1::before {
+  content: "Submit";
+  height: 50px;
+  width: 150px;
+  background-color: #fff;
+  color: #750000;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(0px) scale(1.2);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+#basket .basket .basket-cards .card .card-body button.type1:hover::after {
+  transform: translateY(0) scale(1.2);
+}
+#basket .basket .basket-cards .card .card-body button.type1:hover::before {
+  transform: translateY(-50px) scale(0) rotate(120deg);
+}
+#basket .basket .basket-cards .card .card-body .user-img {
+  width: 45px;
+  border-radius: 10px;
+}
+#basket .basket .basket-cards .card .card-body .master-card,
+#basket .basket .basket-cards .card .card-body .visa,
+#basket .basket .basket-cards .card .card-body .amex,
+#basket .basket .basket-cards .card .card-body .paypal {
+  font-size: 40px;
+}
+#basket .basket .basket-cards .card .card-body .master-card {
+  color: rgb(117, 0, 0);
+}
+#basket .basket .basket-cards .card .card-body .visa {
+  color: #0164ac;
+}
+#basket .basket .basket-cards .card .card-body .amex {
+  color: #a7955b;
+}
+#basket .basket .basket-cards .card .card-body .paypal {
+  color: #8b0464;
+}
+#basket .basket .basket-cards .card .card-body img {
+  width: 65px;
+}
+#basket .basket .basket-cards .card .card-body .title {
+  color: white;
+  padding-left: 20px;
+}
+#basket .basket .basket-cards .card .card-body .title .genres {
+  font-size: 15px;
+}
+#basket .basket .basket-cards .card .card-body .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+#basket .basket .basket-cards .card .card-body .price .price-title {
+  width: 65px;
+}
+#basket .basket .basket-cards .card .card-body .price .price-title h5 {
+  margin-bottom: 0;
+}
+#basket .basket .basket-cards .card .card-body .price a {
+  transition: 1s;
+}
+#basket .basket .basket-cards .card .card-body .price a .fa-trash-alt {
+  color: rgb(117, 0, 0);
+}
+#basket .basket .basket-cards .card .card-body .price a:hover {
+  transform: scale(1.5);
+}
+
 footer {
   background-color: #272626;
   color: white;

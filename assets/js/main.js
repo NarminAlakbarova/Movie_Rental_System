@@ -161,7 +161,7 @@ function drawSuggestedSlide(arr) {
               <a class="fa-solid fa-plus"></a>
             </div>
           </div>
-          <img src="${item.img}" alt="" />
+          <img src="${item.img.length>100?item.img:item.img.slice(1)}" alt="" />
           <div class="title">
             <h2>${item.movieName}</h2>
             <p>${item.time}</p>
@@ -193,7 +193,7 @@ function drawUpcomingCards(arr) {
     <div class="col-lg-4 col-md-6 col-sm-6 my-2">
     <div class="card left-cards">
       <div class="img">
-        <img src="${item.img}" alt="" />
+        <img src="${item.img.length>100?item.img:item.img.slice(1)}" alt="" />
       </div>
       <div class="content">
         <h4>${item.movieName}</h4>
@@ -241,7 +241,7 @@ function drawMostHaveRow(arr) {
                     <div class="right-all-content">
                       <div class="img">
                         <img
-                          src="${item.img}"
+                          src="${item.img.length>100?item.img:item.img.slice(1)}"
                           alt=""
                         />
                       </div>
@@ -279,7 +279,7 @@ function drawTrailerRow(arr) {
       <div class="col-lg-2 col-md-3 col-sm-4 col-6">
         <div class="cards">
           <div class="img">
-            <img src="${item.img}" alt="" class="myImg" />
+            <img src="${item.img.length>100?item.img:item.img.slice(1)}" alt="" class="myImg" />
 
             <div class="modal">
               <span class="close">&times;</span>
@@ -344,7 +344,7 @@ function drawPremiumMovies(arr) {
     premiumSlider.innerHTML += `
     <div class="swiper-slide">
     <div class="overlay"></div>
-    <img src="${item.img}" />
+    <img src="${item.img.length>100?item.img:item.img.slice(1)}" />
     <div class="slider-content">
       <div class="gender">
         <p class="action">${item.genres}</p>
