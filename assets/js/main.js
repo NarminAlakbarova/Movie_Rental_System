@@ -13,10 +13,7 @@ markIcon.addEventListener("click", function () {
   burgerMenu.classList.toggle("show");
 });
 
-
-
-
-// 
+//
 
 // Scroll Reveal
 // ScrollReveal().reveal(".content-left", {
@@ -40,14 +37,14 @@ ScrollReveal().reveal(".best-movie-col", {
   origin: "left",
   distance: "100px",
   easing: "cubic-bezier(.37,.01,.74,1)",
-  opacity:0.3,
+  opacity: 0.3,
 });
 ScrollReveal().reveal(".img-col", {
   duration: 2000,
   origin: "right",
   distance: "100px",
   easing: "cubic-bezier(.37,.01,.74,1)",
-  opacity:0.3,
+  opacity: 0.3,
 });
 function scrollFunction() {
   if (
@@ -114,7 +111,6 @@ var swiper = new Swiper(".lastSwipper", {
     el: ".swiper-pagination",
   },
 });
-
 
 let dropdown = document.querySelector(".dropdown");
 
@@ -346,7 +342,6 @@ function drawPremiumMovies(arr) {
   premiumSlider.innerHTML = "";
   arr.forEach((item) => {
     premiumSlider.innerHTML += `
-    
     <div class="swiper-slide">
     <div class="overlay"></div>
     <img src="${item.img}" />
@@ -404,5 +399,3 @@ async function getPremiumFilms() {
   drawPremiumMovies(allData);
 }
 getPremiumFilms();
-
-
