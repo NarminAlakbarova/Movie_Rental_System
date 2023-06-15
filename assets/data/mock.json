@@ -63,6 +63,15 @@
       "password": "Pa$$w0rd!",
       "email": "pifyhujy@mailinator.com",
       "id": 9
+    },
+    {
+      "isAdmin": false,
+      "userName": "nino",
+      "firstName": "minaye",
+      "lastName": "eliyeva",
+      "password": "minaye123",
+      "email": "nino@gmail.com",
+      "id": 10
     }
   ],
   "allMovies": [

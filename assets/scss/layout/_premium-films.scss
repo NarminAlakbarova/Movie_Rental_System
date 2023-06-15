@@ -1,311 +1,269 @@
-.premium-container {
-  //   padding:0 5% 80px 5%;
-  padding-bottom: 80px;
-  .premium-title {
-    padding-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    h3 {
-      text-align: center;
-      position: relative;
-      color: white;
-      font-weight: 400;
-      &::after {
-        content: "";
-        height: 2px;
-        background-color: #e50914;
-        width: 30%;
-        display: block;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        margin: 10px 0;
-      }
+
+#hero {
+  background-image: url("../../assets/img/bg\ \(1\).jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  // padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  h2 {
+    color: white;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    a,
+    p {
+      color: rgb(180, 1, 1);
+    }
+    p {
+      margin: 0 5px;
     }
   }
-  .lastSwipper {
-    .swiper-slide {
-      position: relative;
-      .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
+}
+#premium-movies {
+  .premium-movies {
+    // padding: 100px 0;
+    .left-col {
+      .sortDrop {
+        .dropdown-toggle {
+          width: 100%;
+          //  color: white;
+        }
+      }
+    }
+    .search {
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #181818;
+      // position: relative;
+      input {
         width: 100%;
-        background: rgb(0, 0, 0, 0.8);
+        padding: 5px 5px;
+        background-color: #141414;
+        border: none;
       }
-      height: 80vh;
-      width: 50vw;
-      @media screen and (max-width: 767px) {
-        width: 100vw;
+      input[type="text"]:focus {
+        border: 3px solid #e50914;
       }
-      img {
-        height: 100%;
-        width: 100%;
-      }
-      .slider-content {
-        position: absolute;
-        top: 12%;
-        left: 10%;
+      i {
         color: white;
+        font-size: 12px;
+        padding: 13px;
+        background-color: #e50914;
+      }
+    }
+    .right-card {
+      background-color: #181818;
+      padding: 10px;
+      h1 {
+        color: white;
+        font-size: 22px;
+      }
+      .card {
+        border: none;
+        background-color: transparent;
         display: flex;
-        flex-direction: column;
-        row-gap: 10px;
-        // width: 100%;
-        padding-right: 10px;
-        // @media screen and (max-width: 767px) {
-        //   padding-right: 40px;
-        //   //   top: 0;
-        // }
-        @media screen and (max-width: 991px) {
-          //   padding-right: 40px;
-          // padding: 0 40px 0 40px;
-          .info {
-            max-width: 250px;
-          }
-          top: 5%;
-          //   padding-bottom: 10px;
-        }
-        .info {
-          color: #777;
-        }
-        span {
-          color: red;
-        }
-        .play-now {
-          //   margin-top: 80px;
-          padding: 10px 20px;
-          background-color: #e50914;
-          color: white;
-          font-size: 16px;
-          border-radius: 5px;
-          transition: 0.5s;
-          width: 150px;
-          &:hover {
-            background-color: #500206;
-            cursor: pointer;
-          }
-        }
-        // .price{
-        //     padding-bottom: 20px;
-        // }
-        .first-title {
-          font-size: 50px;
-          font-weight: 500;
-        }
-        .info-film {
-          display: flex;
-          align-items: center;
-          column-gap: 5px;
+        flex-direction: row;
+        color: white;
+        padding: 10px;
+        //   align-items: center;
 
-          .imdb {
+        img {
+          width: 60px;
+          height: 60px;
+        }
+        .content {
+          padding-left: 20px;
+          .calendar {
+            padding-top: 8px;
             display: flex;
             align-items: center;
-            column-gap: 5px;
-          }
-          #gp {
-            display: flex;
-            column-gap: 5px;
-            .gp {
-              width: 30px;
-              height: 28px;
-              background-color: rgb(83, 83, 83);
-              color: white;
-              padding: 7px;
-              @include flexbox;
-              justify-content: center;
+            column-gap: 8px;
+            i {
+              color: #e50914;
             }
-          }
-        }
-        .gender {
-          display: flex;
-          column-gap: 10px;
-          .adventures {
-            padding-left: 5px;
-          }
-          .action {
-            position: relative;
-            padding-right: 5px;
-            &::before {
-              content: "";
-              width: 5px;
-              background-color: red;
-              display: block;
-              height: 5px;
-              position: absolute;
-              right: -13px;
-              top: 40%;
-              border-radius: 50%;
-              margin: 0 5px;
-            }
-          }
-        }
-        .info-film {
-          img {
-            width: 50px;
-            height: 50px;
           }
         }
       }
     }
-  }
-}
-
-#premium-movies {
-  padding: 200px 0;
-  margin-top: 250px;
- 
-  .premium-movies {
-    color: white;
-    .title{
-      text-align: center;
-      padding: 50px 0
-    }
-    .buttons {
-      @include flexbox(center);
-      column-gap: 20px;
-      button {
-        border: none;
-        margin-top: 20px;
-        padding: 8px 15px;
-        background-color: #e50914;
+    .categories-col {
+      // padding: 10px;
+      h1 {
         color: white;
-        font-size: 16px;
-        border-radius: 5px;
-        transition: 0.5s;
-        &:hover {
-          background-color: #500206;
-          cursor: pointer;
-        }
-      }
-    }
-    .genres-sort {
-      .genres-dropdown {
-        display: none;
-        @media screen and (max-width: 991px) {
-          display: block;
-        }
-      }
-      .dropdown {
-        // display: none;
-        // display: flex;
-    
-        background-color: #272626;
-        .dropdown-menu {
-          background-color: #272626;
-        
-
-          li {
-            &:hover {
-              a {
-                color: black;
-              }
-            }
-            a {
-              transition: 1s;
-              color: white;
-            }
-          }
-        }
-        button {
-          color: white;
-        }
-      }
-    }
-    .list-ul{
-      h3{
+        font-size: 22px;
         padding-bottom: 20px;
       }
-      li{
-        padding-bottom: 15px;
-      }
-    }
-    .genres-col {
-      
-      @media screen and (max-width: 991px) {
-        display: none;
-      }
-    }
-    .genres-dropdown {
-      display: none;
-      @media screen and (max-width: 991px) {
-        display: block;
-      }
-    }
-    .card {
-      background-color: transparent;
-      position: relative;
-      border: none;
-      overflow: hidden;
-      cursor: pointer;
-      img {
-        transition: 1s;
-      }
-      &:hover {
-        img {
-          opacity: 0.5;
-        }
-        .icons {
-          top: 35%;
+      .categories-ul {
+        padding: 20px;
+        background-color: #181818;
+        ul {
+          color: white;
+          padding-left: 0;
+          li {
+            padding-bottom: 20px;
+            &::after {
+              content: "";
+              height: 1px;
+              width: 100%;
+              background: #85858586;
+              display: block;
+            }
+            a {
+              color: #d1d0cf;
+            }
+          }
         }
       }
-
-      .card-content {
+    }
+    .tags-col {
+      .tags {
+        padding: 10px;
+        background-color: #181818;
+        h1 {
+          color: white;
+          font-size: 22px;
+          padding: 20px 10px;
+        }
+        ul {
+          padding-left: 0;
+          li {
+            display: inline-block;
+            // padding-bottom: 5px;
+            margin-bottom: 15px;
+            margin-left: 10px;
+            a {
+              color: white;
+              border-radius: 8px;
+              padding: 5px 15px;
+              background-color: #242424;
+            }
+          }
+        }
+      }
+    }
+  }
+  .movie-list {
+    background-color: #181818;
+    // height: 200px;
+    transition: 1s;
+    &:hover {
+      transform: scale(1.05);
+    }
+    .listing-container {
+      display: flex;
+      column-gap: 20px;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+      .listing-img {
+        display: flex;
+        align-items: flex-start; // Align items to the top
+        .img {
+          max-width: 300px;
+          position: relative;
+          top: -20px;
+          left: 70%;
+          transform: translate(-50%);
+          // Adjust the value as per your requirement
+          @media screen and (max-width: 991px) {
+            left: 50%;
+          }
+          .overlay {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+          }
+          img {
+            // width: 200px;
+            width: 100%;
+            // height: auto;
+            height: 250px;
+            object-fit: cover;
+          }
+        }
+      }
+      .listing-content {
+        padding: 20px 20px 20px 50px;
+        // padding-left: 50px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.842);
         display: flex;
         flex-direction: column;
-        row-gap: 5px;
-        padding-top: 10px;
-        // top: 0;
-        text-align: center;
-        left: 10px;
-        bottom: 5px;
-        color: white;
-        .price {
-          color: #e50914;
-        }
-        h4 {
-          font-size: 18px;
-          margin-bottom: 0;
-        }
+        justify-content: center;
+        position: relative;
+        row-gap: 15px;
         p {
-          font-size: 16px;
           color: #7777;
         }
-      }
+        .top-btn {
+          position: absolute;
+          top: -20px;
+          right: 0;
+          padding: 20px;
+          a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #83080e;
+            margin: 10px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0px 5px 10px 0px #909090;
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+            border: 1px dotted #fff;
+            cursor: pointer;
+            // z-index:55 ;
+            &:hover i {
+              transform: scale(1.3);
+              color: #c8102e;
+            }
+            &:hover::before {
+              animation: effect 0.6s 1;
+              top: -10%;
+              left: -10%;
+              // color: red;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              width: 120%;
+              height: 120%;
+              background: #ffffff;
+              transform: rotate(45deg);
+              left: -110%;
+              top: 90%;
+            }
 
-      .icons {
-        transition: 1s;
-        position: absolute;
-        // flex-direction: column;
-        display: flex;
-        // row-gap: 10px;
-        column-gap: 10px;
-        top: -100%;
-        // bottom: 10px;
-        left: 50%;
-        transform: translate(-50%);
-        div {
-          width: 40px;
-          height: 40px;
-          background-color: #7777;
-          border-radius: 50%;
-          @include flexbox(center);
+            i {
+              line-height: 40px;
+              font-size: 18px;
+              transition: 0.2s linear;
+            }
+          }
+          @media screen and (max-width: 991px) {
+            top: 50%;
+          }
         }
-        i {
-          color: #e50914;
-          border-radius: 50%;
-          background-color: white;
-          width: 30px;
-          height: 30px;
-          @include flexbox(center);
-          transition: 1s;
-          cursor: pointer;
-          &:hover {
-            color: white;
-            background-color: #e50914;
+        .bottom-btn {
+          .icons {
+            i {
+              color: #83080e;
+            }
           }
         }
       }
@@ -313,13 +271,17 @@
   }
 }
 
-
-.premium-carusel{
-  padding: 100px 0;
-  height: 50vh;
-  .carousel-inner{
-    img{
-      width: 100%;
-    }
+@keyframes effect {
+  0% {
+    left: -120%;
+    top: 100%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
   }
 }

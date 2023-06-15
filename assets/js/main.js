@@ -114,20 +114,7 @@ var swiper = new Swiper(".lastSwipper", {
     el: ".swiper-pagination",
   },
 });
-// POPUP
 
-// let imgDetails = document.querySelector(".right-content");
-// let modalDetails = document.querySelector(".modal-details");
-// let closeBtnsDetails = document.querySelector(".close-details");
-
-// imgDetails.addEventListener("click", function () {
-//   modalDetails.style.display = "block";
-// });
-
-// closeBtnsDetails.addEventListener("click", function () {
-//   console.log("hh");
-//   modalDetails.style.display = "none ";
-// });
 
 let dropdown = document.querySelector(".dropdown");
 
@@ -148,19 +135,6 @@ userIcon.addEventListener("click", function () {
   userMenu.classList.toggle("active");
 });
 
-// let descriptionLink = document.querySelector(".description-link");
-// let rateReviewLink = document.querySelector(".rate-review-link");
-// let rateReviewSection = document.querySelector("#rate-review");
-// let descriptionSection = document.querySelector("#description");
-// rateReviewLink.addEventListener("click", function () {
-//   rateReviewSection.style.display = "block";
-
-//   descriptionSection.style.display = "none";
-// });
-// descriptionLink.addEventListener("click", function () {
-//   rateReviewSection.style.display = "none";
-//   descriptionSection.style.display = "block";
-// });
 let allData = [];
 const BASE_URL = "http://localhost:8080";
 
@@ -186,7 +160,7 @@ function drawSuggestedSlide(arr) {
           <div class="overlay">
             <div class="overlay-content">
               <a class="fa-solid fa-cart-shopping"></a>
-              <a class="fa-regular fa-heart"></a>
+              
               <a class="fa-solid fa-play" href="details.html?id=${item.id}"></a>
               <a class="fa-solid fa-plus"></a>
             </div>
