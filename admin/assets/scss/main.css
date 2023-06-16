@@ -341,6 +341,7 @@ header .header .admin .dropdown button {
   /* text-align: center; */
   border: 2px solid white;
   border-radius: 5px;
+  color: white;
 }
 #add-movies .add-movies form input:focus,
 #add-movies .add-movies form select:focus {
@@ -350,9 +351,6 @@ header .header .admin .dropdown button {
   box-shadow: -3px -3px 15px rgb(0, 255, 255);
   transition: 0.1s;
   transition-property: box-shadow;
-}
-#add-movies .add-movies form select {
-  color: white;
 }
 #add-movies .add-movies form #add {
   margin-top: 15px;
