@@ -3,12 +3,15 @@
   padding-left: 300px;
   .films-panel {
     .card {
+      box-shadow: 42px 0px 199px 28px rgba(65, 90, 119, 0.75);
+      -webkit-box-shadow: 42px 0px 199px 28px rgba(65, 90, 119, 0.75);
+      -moz-box-shadow: 42px 0px 199px 28px rgba(65, 90, 119, 0.75);
       width: 200px;
       height: 100px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-image: url("../../../../assets/img/bg\ \(1\).jpg");
+      background-image: url("../../../assets/img/bg\ \(1\).jpg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -27,23 +30,30 @@
       align-items: center;
       padding-bottom: 20px;
       input {
-        padding: 4px 0;
+        padding: 5px 0;
         width: 300px;
         text-indent: 5px;
-        background-color: #272626;
+        background-color: #415a77;
         border: none;
         color: white;
+        &:focus{
+          outline: none;
+        }
+        &::placeholder {
+          color: white;
+        }
       }
       .dropdowns {
         display: flex;
         column-gap: 30px;
+
         // padding-bottom: 30px;
         .dropdown {
           // display: none;
           // display: flex;
 
           .dropdown-menu {
-            background-color: #272626;
+            background-color: #415a77;
 
             li {
               &:hover {
@@ -58,7 +68,7 @@
             }
           }
           button {
-            color: white;
+            color: #415a77;
           }
         }
       }
@@ -68,6 +78,8 @@
         tr {
           th {
             text-align: center;
+            background-color: #415a77;
+            color: #e0e1dd;
           }
         }
       }
@@ -77,6 +89,8 @@
 
           td {
             text-align: center;
+            background-color: #e0e1dd;
+
             vertical-align: middle;
 
             img {
@@ -84,6 +98,23 @@
               height: 40px;
             }
           }
+        }
+      }
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      #load-more {
+        padding: 10px 50px;
+        border: none;
+        background-color: #415a77;
+        color: #0d1b2a;
+        font-size: 18px;
+        transition: 1s;
+        &:hover{
+         color: #e0e1dd;
+          background-color: #0d1b2a;
         }
       }
     }
@@ -113,7 +144,7 @@
         .title {
           font-size: 24px;
           font-weight: 700;
-          color: rgb(65, 3, 3);
+          color: #415a77;
           padding: 0;
           margin: 0;
         }

@@ -29,15 +29,9 @@
     <header>
       <div class="container">
         <div class="header">
-          <div class="logo-menu">
-            <img src="../assets/img/logo.png" alt="" />
-
-            <!-- <i class="fa-solid fa-bars"></i> -->
-          </div>
-
           <div class="admin">
             <i class="fa-solid fa-sun"></i>
-            <img src="../assets/img/team.png" alt="" />
+
             <div class="dropdown">
               <button
                 class="btn dropdown-toggle"
@@ -61,8 +55,7 @@
         </div>
       </div>
     </header>
-    <!-- Left Bars -->
-
+    <!-- Left Bar -->
     <section id="left-bars">
       <div class="container">
         <div class="left-bars">
@@ -92,7 +85,8 @@
                 <a href="#">Comments</a>
               </li>
               <li>
-                <i class="fa-solid fa-comment"></i>
+                <i class="fa-solid fa-plus"></i>
+
                 <a href="#">Add Movies</a>
               </li>
             </ul>
@@ -101,7 +95,7 @@
       </div>
     </section>
     <!-- Form -->
-    
+
     <section id="add-movies">
       <div class="container">
         <div class="add-movies">
@@ -147,24 +141,26 @@
               </div>
               <div class="col-md-6 d-flex flex-column">
                 <label for="">Time</label>
-                <input type="text" id="time" />
+                <input type="text" id="time" placeholder="time.."/>
               </div>
               <div class="col-md-6 d-flex flex-column">
                 <label for="">imbd</label>
-                <input type="number" id="imbd" />
+                <input type="number" id="imbd" placeholder="imbd..." />
               </div>
               <div class="col-md-12 mt-3">
+                <label for="">Title</label>
                 <textarea
                   style="width: 100%"
                   name=""
                   id=""
                   cols="30"
                   rows="5"
+                  placeholder="Films Title..."
                 ></textarea>
               </div>
               <div class="col-md-12 mb-3">
                 <label for="">Trailer</label>
-                <input type="url" id="urlinp">
+                <input type="url" id="urlinp" placeholder="Trailer link..." />
               </div>
               <div class="col-md-12">
                 <input type="file" id="imginp" style="width: 100%" />
