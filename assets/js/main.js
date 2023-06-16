@@ -1,17 +1,7 @@
-let burgerMenu = document.querySelector("#burger-menu");
-let markIcon = document.querySelector(".fa-xmark");
-let menuIcon = document.querySelector(".fa-bars");
-let header = document.querySelector("header");
-let searchInp = document.querySelector(".search-input");
-let searchIcon = document.querySelector(".fa-search");
+
 let cards = document.querySelectorAll(".card");
 
-menuIcon.addEventListener("click", function () {
-  burgerMenu.classList.toggle("show");
-});
-markIcon.addEventListener("click", function () {
-  burgerMenu.classList.toggle("show");
-});
+
 
 //
 
@@ -45,20 +35,6 @@ ScrollReveal().reveal(".img-col", {
   distance: "100px",
   easing: "cubic-bezier(.37,.01,.74,1)",
   opacity: 0.3,
-});
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 100 ||
-    document.documentElement.scrollTop > 100
-  ) {
-    header.style.background = "#141414";
-  } else {
-    header.style.background = "";
-  }
-}
-window.addEventListener("scroll", scrollFunction);
-searchIcon.addEventListener("click", function () {
-  searchInp.classList.toggle("show-inp");
 });
 
 cards.forEach((card) => {
@@ -112,24 +88,7 @@ var swiper = new Swiper(".lastSwipper", {
   },
 });
 
-let dropdown = document.querySelector(".dropdown");
 
-dropdown.addEventListener("mouseenter", function () {
-  dropdown.setAttribute("data-bs-toggle", "");
-  dropdown.removeAttribute("aria-expanded");
-});
-
-dropdown.addEventListener("mouseleave", function () {
-  dropdown.setAttribute("data-bs-toggle", "dropdown");
-  dropdown.setAttribute("aria-expanded", "false");
-});
-
-let userIcon = document.querySelector(".fa-user");
-let userMenu = document.querySelector(".sing-in-up ");
-userIcon.addEventListener("click", function () {
-  console.log("jsj");
-  userMenu.classList.toggle("active");
-});
 
 let allData = [];
 const BASE_URL = "http://localhost:8080";
