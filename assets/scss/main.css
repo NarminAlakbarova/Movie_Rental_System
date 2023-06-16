@@ -47,7 +47,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 999999;
   background-color: transparent;
   transition: background-color 1s;
 }
@@ -2817,6 +2817,7 @@ header .header .right-nav .account .fa-user {
 }
 #my-list .my-list .card img {
   height: 150px;
+  width: 100%;
 }
 #my-list .my-list .card .content {
   color: white;

@@ -8,16 +8,16 @@ async function getAllUser() {
   allUsers = resp.data;
 }
 getAllUser();
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", async function (e) {
   e.preventDefault();
-  
+
   let admin = allUsers.find(
     (item) =>
       item.isAdmin === true &&
       item.firstName === userNameEmailInp.value &&
       item.password === passwordInp.value
   );
-  
+
   if (admin) {
     window.location.href = "../admin/admin.html";
   } else {
@@ -26,9 +26,10 @@ form.addEventListener("submit", function (e) {
         userNameEmailInp.value === item.userName &&
         passwordInp.value === item.password
     );
-
+    // console.log(rightUser);
     if (rightUser) {
-      window.location.href = "index.html";
+     
+      window.location.href = `index.html?id=${rightUser.id}`;
     } else {
       alert("Invalid credentials");
     }

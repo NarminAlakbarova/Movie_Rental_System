@@ -1,7 +1,8 @@
-
 let cards = document.querySelectorAll(".card");
+// let logOutIcon = document.querySelector(".log-out");
+let userId = new URLSearchParams(window.location.search).get("id");
 
-
+let allMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
 
 //
 
@@ -88,8 +89,6 @@ var swiper = new Swiper(".lastSwipper", {
   },
 });
 
-
-
 let allData = [];
 const BASE_URL = "http://localhost:8080";
 
@@ -117,10 +116,12 @@ function drawSuggestedSlide(arr) {
               <a class="fa-solid fa-cart-shopping"></a>
               
               <a class="fa-solid fa-play" href="details.html?id=${item.id}"></a>
-              <a class="fa-solid fa-plus"></a>
+              <a class="fa-solid fa-plus" onclick=addMyList(${item.id})></a>
             </div>
           </div>
-          <img src="${item.img.length>100?item.img:item.img.slice(1)}" alt="" />
+          <img src="${
+            item.img.length > 100 ? item.img : item.img.slice(1)
+          }" alt="" />
           <div class="title">
             <h2>${item.movieName}</h2>
             <p>${item.time}</p>
@@ -140,6 +141,20 @@ async function getSuggestedData() {
 
 getSuggestedData();
 
+async function addMyList(id) {
+  let selectedObj = allMovies.find((item) => item.id == id);
+  allMovies.includes(selectedObj);
+  if (!allMovies.includes(selectedObj) && userId) {
+    let favMovies = allData.find((obj) => obj.id === +id);
+    allMovies.push(favMovies);
+    localStorage.setItem("favMovies", JSON.stringify(allMovies));
+  } else if (!userId) {
+    alert("please sign in ");
+  } else if (allMovies.includes(selectedObj)) {
+    alert("no");
+  }
+}
+
 // Umcoming section js
 
 let upcomingCards = document.querySelector(".upcoming-row");
@@ -152,7 +167,9 @@ function drawUpcomingCards(arr) {
     <div class="col-lg-4 col-md-6 col-sm-6 my-2">
     <div class="card left-cards">
       <div class="img">
-        <img src="${item.img.length>100?item.img:item.img.slice(1)}" alt="" />
+        <img src="${
+          item.img.length > 100 ? item.img : item.img.slice(1)
+        }" alt="" />
       </div>
       <div class="content">
         <h4>${item.movieName}</h4>
@@ -200,7 +217,9 @@ function drawMostHaveRow(arr) {
                     <div class="right-all-content">
                       <div class="img">
                         <img
-                          src="${item.img.length>100?item.img:item.img.slice(1)}"
+                          src="${
+                            item.img.length > 100 ? item.img : item.img.slice(1)
+                          }"
                           alt=""
                         />
                       </div>
@@ -238,7 +257,9 @@ function drawTrailerRow(arr) {
       <div class="col-lg-2 col-md-3 col-sm-4 col-6">
         <div class="cards">
           <div class="img">
-            <img src="${item.img.length>100?item.img:item.img.slice(1)}" alt="" class="myImg" />
+            <img src="${
+              item.img.length > 100 ? item.img : item.img.slice(1)
+            }" alt="" class="myImg" />
 
             <div class="modal">
               <span class="close">&times;</span>
@@ -303,7 +324,7 @@ function drawPremiumMovies(arr) {
     premiumSlider.innerHTML += `
     <div class="swiper-slide">
     <div class="overlay"></div>
-    <img src="${item.img.length>100?item.img:item.img.slice(1)}" />
+    <img src="${item.img.length > 100 ? item.img : item.img.slice(1)}" />
     <div class="slider-content">
       <div class="gender">
         <p class="action">${item.genres}</p>
@@ -354,7 +375,9 @@ async function getPremiumFilms() {
   // let data = resp.data;
   await copyData();
   allData = allData.filter((item) => item.section === "Premium");
-  console.log(allData);
+  // console.log(allData);
   drawPremiumMovies(allData);
 }
 getPremiumFilms();
+
+// console.log(userId);
