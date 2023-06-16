@@ -33,24 +33,29 @@
       </div>
       <ul>
         <li><a href="#" style="color: #e50914">Home</a></li>
-        <li><a href="#">Tv Shows</a></li>
-        <li><a href="#">Movies</a></li>
-        <li><a href="#">My List </a></li>
-        <li><a href="#">Blog </a></li>
+
+        <li><a href="all-movies.html">All Movies</a></li>
+        <li><a href="my-list.html">My List </a></li>
+        <li><a href="blog.html">Blog </a></li>
+        <li><a href="premium.html">Premium Movies </a></li>
+        <li><a href="pricing.html">Pricing </a></li>
+        <li><a href="faq.html">FAQ </a></li>
+        <li><a href="contact.html">Contact-Us </a></li>
+        <li><a href="basket.html">Basket </a></li>
       </ul>
     </div>
 
     <!-- HEADER -->
-    <header class="details-header">
+    <header>
       <div class="container">
         <div class="header">
           <img src="./assets/img/logo.png" alt="logo" />
           <nav>
             <ul class="nav-ul">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Tv Shows</a></li>
+              <li><a href="index.html">Home</a></li>
+
               <li>
-                <div class="dropdown">
+                <div class="dropdown header-dropdown">
                   <button
                     class="btn text-white dropdown-toggle"
                     type="button"
@@ -64,19 +69,24 @@
                     class="dropdown-menu"
                     aria-labelledby="dropdownMenuButton1"
                   >
-                    <li><a class="dropdown-item" href="#">All Movies</a></li>
-                    <li><a class="dropdown-item" href="#">Tv Shows</a></li>
-                    <li><a class="dropdown-item" href="#">FAQ</a></li>
                     <li>
-                      <a class="dropdown-item premium" href="#"
+                      <a class="dropdown-item" href="all-movies.html"
+                        >All Movies</a
+                      >
+                    </li>
+                   
+                    <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                    <li>
+                      <a class="dropdown-item premium" href="premium.html"
                         >Premium Movies</a
                       >
                     </li>
                   </ul>
                 </div>
               </li>
-              <li><a href="#">My List </a></li>
-              <li><a href="#">Blog </a></li>
+              <li><a href="my-list.html">My List </a></li>
+              <li><a href="blog.html">Blog </a></li>
+              <li><a href="basket.html">Basket </a></li>
             </ul>
           </nav>
           <div class="right-nav">
@@ -94,103 +104,64 @@
             </div>
             <div class="account">
               <i class="fa-regular fa-user"></i>
+              <ul class="sing-in-up">
+                <li>
+                  <a class="fa-solid fa-user-plus d-flex" href="sign-up.html">
+                    <p>Register</p>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="fa-solid fa-arrow-right-to-bracket d-flex"
+                    href="sign-in.html"
+                  >
+                    <p>Log In</p>
+                  </a>
+                </li>
+              </ul>
             </div>
             <i class="fa-solid fa-bars"></i>
           </div>
         </div>
       </div>
     </header>
+
+    <div class="swiper all-movies-swipper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <!-- <video
+            class="mario"
+            src="./assets/videos/little2.mp4"
+            autoplay
+            muted
+          ></video> -->
+          <div class="content">
+            <h2>The Little Mermaiid</h2>
+            <p>2023 ‧Fantasy/Musical</p>
+            <p>2h 15m</p>
+            <a class="btn"> Play now </a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <!-- <video src="./assets/videos/barbie2.mp4" autoplay muted></video> -->
+          <div class="content">
+            <h2>Barbie</h2>
+            <p>2023 ‧ Fantasy/Musical</p>
+            <p>2h 15m</p>
+            <a class="btn"> Play now </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALL MOVIES -->
     <section id="all-movies">
       <div class="container">
         <div class="all-movies">
-          <div class="row">
-            <div class="col-lg-3 genres-col">
-              <ul class="list-ul">
-                <h3>Genres</h3>
-                <li>Action</li>
-                <li>Drama</li>
-                <li>Horror</li>
-                <li>Adventure</li>
-                <li>Anime</li>
-                <li>Sports</li>
-                <li>Romance</li>
-                <li>Crime</li>
-                <li>Children & Family</li>
-              </ul>
-            </div>
-            <div class="col-lg-9">
+          <div class="row all-movies-row">
+            <div class="col-lg-8 col-sm-12 my-5 right-col">
               <div class="row">
-                <div class="genres-sort d-flex justify-content-between">
-                  <div class="dropdown">
-                    <button
-                      class="btn dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton1"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Sort
-                    </button>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton1"
-                    >
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          >imdb rated- highest</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#"
-                          >imdb rated - lowest</a
-                        >
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">A-Z</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Z-A</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="dropdown genres-dropdown">
-                    <button
-                      class="btn dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton1"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Genres
-                    </button>
-                    <ul
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton1"
-                    >
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Drama</a></li>
-                      <li>
-                        <a class="dropdown-item" href="#">Horror</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Adventure</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Anime</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Sports</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Romance</a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">Crime</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 my-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 my-3">
                   <div class="card">
                     <img src="./assets/img/all-movies/culpa-m-a.jpg" alt="" />
                     <div class="overlay">
@@ -216,7 +187,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 my-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 my-3">
                   <div class="card">
                     <img src="./assets/img/all-movies/culpa-m-a.jpg" alt="" />
                     <div class="overlay">
@@ -242,7 +213,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 my-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 my-3">
                   <div class="card">
                     <img src="./assets/img/all-movies/culpa-m-a.jpg" alt="" />
                     <div class="overlay">
@@ -268,7 +239,111 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 my-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 my-3">
+                  <div class="card">
+                    <img src="./assets/img/all-movies/culpa-m-a.jpg" alt="" />
+                    <div class="overlay">
+                      <div class="card-content">
+                        <div class="rating">
+                          <i class="fa-solid fa-star"></i>
+                          4.7
+                        </div>
+                        <h4>Culpa mia</h4>
+                        <p>Dram, Romantic</p>
+                      </div>
+                    </div>
+                    <div class="icons">
+                      <div>
+                        <i class="fa-solid fa-heart"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-plus"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-play"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 my-3">
+                  <div class="card">
+                    <img src="./assets/img/all-movies/culpa-m-a.jpg" alt="" />
+                    <div class="overlay">
+                      <div class="card-content">
+                        <div class="rating">
+                          <i class="fa-solid fa-star"></i>
+                          4.7
+                        </div>
+                        <h4>Culpa mia</h4>
+                        <p>Dram, Romantic</p>
+                      </div>
+                    </div>
+                    <div class="icons">
+                      <div>
+                        <i class="fa-solid fa-heart"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-plus"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-play"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 my-3">
+                  <div class="card">
+                    <img src="./assets/img/all-movies/culpa-m-a.jpg" alt="" />
+                    <div class="overlay">
+                      <div class="card-content">
+                        <div class="rating">
+                          <i class="fa-solid fa-star"></i>
+                          4.7
+                        </div>
+                        <h4>Culpa mia</h4>
+                        <p>Dram, Romantic</p>
+                      </div>
+                    </div>
+                    <div class="icons">
+                      <div>
+                        <i class="fa-solid fa-heart"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-plus"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-play"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 my-3">
+                  <div class="card">
+                    <img src="./assets/img/all-movies/culpa-m-a.jpg" alt="" />
+                    <div class="overlay">
+                      <div class="card-content">
+                        <div class="rating">
+                          <i class="fa-solid fa-star"></i>
+                          4.7
+                        </div>
+                        <h4>Culpa mia</h4>
+                        <p>Dram, Romantic</p>
+                      </div>
+                    </div>
+                    <div class="icons">
+                      <div>
+                        <i class="fa-solid fa-heart"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-plus"></i>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-play"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 my-3">
                   <div class="card">
                     <img src="./assets/img/all-movies/culpa-m-a.jpg" alt="" />
                     <div class="overlay">
@@ -295,9 +370,107 @@
                   </div>
                 </div>
               </div>
-              <div class="buttons">
-                <button id="more">Load More</button>
-                <button id="less">Load Less</button>
+              <div class="btn">
+                <button id="load">Load More</button>
+              </div>
+            </div>
+            <div class="col-xl-4 col-sm-12 my-5 left-col">
+              <div class="row">
+                <div class="col-lg-12 my-3">
+                  <div class="search">
+                    <input type="search" placeholder="Search" />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                </div>
+                <div class="col-lg-12 my-3">
+                  <div class="dropdown sortDrop">
+                    <button
+                      class="btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      style="color: white; background-color: #181818"
+                    >
+                      Sort
+                    </button>
+                    <ul
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton1"
+                      style="width: 100%; background-color: #181818"
+                    >
+                      <li>
+                        <a class="dropdown-item" href="#" style="color: white"
+                          >Default</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#" style="color: white"
+                          >imdb rated- highest</a
+                        >
+                      </li>
+
+                      <li>
+                        <a class="dropdown-item" href="#" style="color: white"
+                          >imdb rated - lowest</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" style="color: white" href="#"
+                          >A-Z</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" style="color: white" href="#"
+                          >Z-A</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-lg-12 my-3 categories-col">
+                  <div class="categories-ul">
+                    <h1>Categories</h1>
+                    <ul>
+                      <li><a href="#"> Dramas </a></li>
+                      <li><a href="#"> Action </a></li>
+                      <li><a href="#"> Horror </a></li>
+                      <li><a href="#"> Dramas </a></li>
+                      <li><a href="#"> Comedy </a></li>
+                      <li><a href="#"> Fantasy </a></li>
+                      <li><a href="#"> Romance Novel </a></li>
+                      <li><a href="#"> Mystery </a></li>
+                      <li><a href="#"> Fiction </a></li>
+                      <li><a href="#"> Adventure </a></li>
+                      <li><a href="#"> History </a></li>
+                      <li><a href="#"> Tragedy </a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-12 my-3 tags-col">
+                  <div class="tags">
+                    <h1>Tags</h1>
+                    <ul>
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Comedies</a></li>
+                      <li><a href="#">Comedy</a></li>
+                      <li><a href="#">Dramas</a></li>
+                      <li><a href="#">Historical</a></li>
+                      <li><a href="#">horr</a></li>
+                      <li><a href="#">Horror</a></li>
+                      <li><a href="#">Movie</a></li>
+                      <li><a href="#">Movie Trailers</a></li>
+                      <li><a href="#">Mystery</a></li>
+                      <li><a href="#">Rumors</a></li>
+                      <li><a href="#">thrill</a></li>
+                      <li><a href="#">Thriller</a></li>
+                      <li><a href="#">Trailers</a></li>
+                      <li><a href="#">Tv Rumors</a></li>
+                      <li><a href="#">Tv Series</a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -312,26 +485,30 @@
           <div class="">
             <span>Get connected with us on social networks:</span>
           </div>
-
-          <div>
-            <a href="" class="text-white me-4">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="text-white me-4">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" class="text-white me-4">
-              <i class="fab fa-google"></i>
-            </a>
-            <a href="" class="text-white me-4">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="text-white me-4">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="text-white me-4">
-              <i class="fab fa-github"></i>
-            </a>
+          <div class="hover-effect1">
+            <ul>
+              <li>
+                <a href="#." title="Facebook">
+                  <i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#." title="Twitter"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#." title="Google Plus">
+                  <i class="fab fa-google"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#." title="Youtube"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#." title="Vimeo"> <i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -371,9 +548,7 @@
               </p>
             </div>
 
-            <div
-              class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 footer-content"
-            >
+            <div class="col-md-4 col-lg-3 col-xl-3 footer-content footer-place">
               <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
               <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
               <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
@@ -401,5 +576,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script src="assets/js/all-movies.js"></script>
+    <script src="./assets/js/common.js"></script>
   </body>
 </html>
