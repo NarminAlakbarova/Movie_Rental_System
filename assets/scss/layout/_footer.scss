@@ -64,5 +64,19 @@ footer {
   .copyright {
     background-color: rgba(0, 0, 0, 0.2);
     color: #7777;
+    position: relative;
+    #scroll{
+      position: fixed;
+      right: 20px;
+      bottom: 7px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      background-color: #b71c1c;
+     
+      @include flexbox(center);
+      border-radius: 50%;
+      color: white;
+    }
   }
 }

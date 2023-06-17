@@ -48,7 +48,7 @@ cards.forEach((card) => {
     card.classList.add("active");
   });
 });
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
   pagination: {
@@ -70,7 +70,7 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
-var swiper = new Swiper(".lastSwipper", {
+let swiper2 = new Swiper(".lastSwipper", {
   initialSlide: 1,
   effect: "coverflow",
   grabCursor: true,
@@ -140,30 +140,7 @@ async function getSuggestedData() {
 
 getSuggestedData();
 
-// async function addMyList(movieId) {
-//   // console.log(id);
-//   let selectedObj = allMovies.find((item) => item.id == movieId);
-//   // console.log(selectedObj);
-//   // console.log(selectedObj.id);
-//   let resp = await axios("http://localhost:8080/users");
-//   let data = resp.data;
-//   let checkUser = data.find((user) => user.check === true);
-
-//   allMovies.includes(selectedObj);
-
-//   if (!checkUser) {
-//     alert("please sign in ");
-//   } else if (!allMovies.includes(selectedObj) && checkUser) {
-//     let favMovies = allData.find((obj) => obj.id === movieId);
-//     allMovies.push(favMovies);
-//     localStorage.setItem("favMovies", JSON.stringify(allMovies));
-//   } else if (allMovies.includes(selectedObj)) {
-//     alert("no");
-//   }
-// }
-
-// Umcoming section js
-
+// ADD MY LIST
 async function addMyList(movieId) {
   console.log(allData);
 
@@ -174,23 +151,19 @@ async function addMyList(movieId) {
   let resp = await axios("http://localhost:8080/users");
   let data = resp.data;
   let checkUser = data.find((user) => user.check === true);
-  let checkMovie=allMovies.some((movie) => movie.id == selectedMovieData.id)
+  let checkMovie = allMovies.some((movie) => movie.id == selectedMovieData.id);
   console.log(checkMovie);
   if (!checkUser) {
     alert("Please sign in");
-  }
-  else if (checkMovie) {
+  } else if (checkMovie) {
     alert("Movie is already in the list");
-  }
-  else if (!checkMovie && checkUser) {
+  } else if (!checkMovie && checkUser) {
     let favMovie = selectedMovieData;
     allMovies.push(favMovie);
     localStorage.setItem("favMovies", JSON.stringify(allMovies));
     alert("Movie added successfully");
   }
 }
-
-
 
 // UPCOMING
 let upcomingCards = document.querySelector(".upcoming-row");
@@ -492,5 +465,19 @@ logOutIcon.addEventListener("click", async function () {
     check: false,
   });
   localStorage.clear();
+});
 
+
+$(document).ready(function(){ 
+  $(window).scroll(function(){ 
+      if ($(this).scrollTop() > 100) { 
+          $('#scroll').fadeIn(); 
+      } else { 
+          $('#scroll').fadeOut(); 
+      } 
+  }); 
+  $('#scroll').click(function(){ 
+      $("html, body").animate({ scrollTop: 0 }, 600); 
+      return false; 
+  }); 
 });
