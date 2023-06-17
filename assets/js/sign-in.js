@@ -26,7 +26,9 @@ form.addEventListener("submit", async function (e) {
     );
     // console.log(rightUser);
     if (rightUser) {
-      await axios.patch(`http://localhost:8080/users/${rightUser.id}`, { check: true });
+      await axios.patch(`http://localhost:8080/users/${rightUser.id}`, {
+        check: true,
+      });
       window.location.href = "index.html";
     } else {
       alert("Invalid credentials");

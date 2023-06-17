@@ -302,87 +302,19 @@ async function showTrailer(element, itemId) {
   if (data) {
     let modal = element.querySelector(".modal");
     let iframe = modal.querySelector("iframe");
-
-    // Set the trailer URL for the iframe
     iframe.src = data.trailer;
-
     modal.style.display = "block";
+
   }
 }
-// function outsideClickHandler(event) {
-//   let modal = document.querySelector(".modal");
-//   if (!modal.contains(event.target)) {
-//     closeModal(modal.querySelector(".close"));
-//   }
-// }
-// function closeModal(closeElement) {
-//   let modal = closeElement.closest(".modal");
-//   let iframe = modal.querySelector("iframe");
+function closeModal(element) {
+  let modal = element.closest(".modal"); 
+  if (modal) {
+    modal.style.display = "none";
+    modal.style.visibility = "hidden";
+  }
+}
 
-//   // Pause the video
-//   iframe.contentWindow.postMessage(
-//     '{"event":"command","func":"pauseVideo","args":"" }',
-//     "*"
-//   );
-
-//   modal.style.display = "none";
-//   modal.parentNode.classList.remove("modal-open"); // Modal kapatıldığında "modal-open" sınıfını kaldırın
-// }
-// function closeModal(closeElement) {
-//   let modal = closeElement.closest(".modal");
-//   let iframe = modal.querySelector("iframe");
-
-//   // Pause the video
-//   iframe.contentWindow.postMessage(
-//     '{"event":"command","func":"pauseVideo","args":"" }',
-//     "*"
-//   );
-
-//   modal.style.display = "none";
-// }
-
-// async function populateModalData() {
-//   await copyData();
-//   let filteredData = allData.filter((item) => item.section === "trailer");
-
-//   let modals = document.querySelectorAll(".modal");
-//   modals.forEach((modal, index) => {
-//     let iframe = modal.querySelector("iframe");
-//     iframe.src = filteredData[index].trailer;
-//   });
-// }
-// async function populateModalData() {
-//   if (allData.length === 0) {
-//     await copyData();
-//   }
-
-//   let filteredData = allData.filter((item) => item.section === "trailer");
-
-//   let modals = document.querySelectorAll(".modal");
-//   modals.forEach((modal, index) => {
-//     let iframe = modal.querySelector("iframe");
-//     iframe.src = filteredData[index].trailer;
-//   });
-// }
-// populateModalData()
-// let trailerCard=document.querySelector(".trailer-cards")
-// trailerCard.addEventListener("click", function (event) {
-//   if (event.target.classList.contains("myImg")) {
-//     let modal = event.target.parentNode.querySelector(".modal");
-//     modal.style.display = "block";
-//   }
-//   if (event.target.classList.contains("close")) {
-//     let modal = event.target.closest(".modal");
-//     let iframe = modal.querySelector("iframe");
-
-//     // Pause the video
-//     iframe.contentWindow.postMessage(
-//       '{"event":"command","func":"pauseVideo","args":"" }',
-//       "*"
-//     );
-//     modal.style.display = "none";
-//   }
-// });
 async function getTrailer(id) {
   let resp = await axios(`${BASE_URL}/allMovies/${id}`);
   let data = resp.data;
@@ -467,4 +399,82 @@ logOutIcon.addEventListener("click", async function () {
   localStorage.clear();
 });
 
+let heroCarusel = document.querySelector(".hero-carusel-item");
 
+function drawHeroSection(arr) {
+  heroCarusel.innerHTML = "";
+  arr.forEach((item) => {
+    
+    heroCarusel.innerHTML += `
+    
+    <div class="carousel-item active">
+    <div class="opacity-slide"></div>
+    <img
+      src="${item.img.length > 100 ? item.img : item.img.slice(1)}"
+      class="d-block w-100"
+      alt="..."
+    />
+
+    <div class="carousel-caption">
+      <div class="container">
+        <div class="row carusel-content">
+          <div class="col-lg-7 col-sm-12 content-left">
+            <div class="first-title">${item.movieName}</div>
+            <div class="info-film">
+              <div class="imdb">
+                <h4>${item.imbd}</h4>
+                <img
+                  src="./assets/img/imdb-film-director-computer-icons-television-u-b9ac4bbc964b1399dc797db594cf699a.png"
+                  alt=""
+                />
+              </div>
+              <div id="gp">
+                <div class="gp">GP</div>
+                <p>${item.time}</p>
+              </div>
+            </div>
+            <p>
+            ${item.title}
+            </p>
+            <p class="starring">
+              <span> Starring </span>
+              Karen Gilchrist, James Earl Jones
+            </p>
+            <p class="genres">
+              <span> Genres </span>
+              ${item.genres}
+            </p>
+            <p class="tags">
+              <span> Tags </span>
+              Action, Adventures, Horror
+            </p>
+            <a class="play-now" href="details.html?id=${item.id}">
+              <i class="fa-solid fa-play"></i>
+              Play Now
+            </a>
+          </div>
+
+          <div
+            class="col-lg-5 col-sm-12 d-none my-5 d-sm-flex content-right"
+          >
+            <a>
+              <i class="fa-solid fa-play"></i>
+            </a>
+            <p>Watch Trailer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    
+    `;
+  });
+}
+async function getHeroData() {
+  await copyData();
+  allData = allData.filter((item) => item.section === "Hero-Banner");
+  // console.log(allData);
+  drawHeroSection(allData);
+}
+getHeroData()

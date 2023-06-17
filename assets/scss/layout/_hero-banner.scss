@@ -14,7 +14,7 @@
       height: 100vh;
     }
     .carousel-caption {
-      top: 20%;
+      top: 25%;
       left: 12%;
       .carusel-content {
         .content-left {
@@ -49,8 +49,9 @@
             background-clip: text;
             background-image: url("../../../assets/img/texure.jpg");
             color: transparent;
-            font-size: 60px;
+            font-size: 40px;
             font-weight: 900;
+            text-align: left;
             text-transform: uppercase;
             @media screen and (max-width: 991px) {
               font-size: 50px;

@@ -276,7 +276,7 @@ header .header .right-nav .account .fa-user {
   height: 100vh;
 }
 .carousel .carousel-item .carousel-caption {
-  top: 20%;
+  top: 25%;
   left: 12%;
 }
 .carousel .carousel-item .carousel-caption .carusel-content .content-left {
@@ -311,8 +311,9 @@ header .header .right-nav .account .fa-user {
   background-clip: text;
   background-image: url("../../../assets/img/texure.jpg");
   color: transparent;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 900;
+  text-align: left;
   text-transform: uppercase;
 }
 @media screen and (max-width: 991px) {
