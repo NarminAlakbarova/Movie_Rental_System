@@ -133,7 +133,7 @@
         >
           <div class="card basket-cards">
             <div class="row">
-              <div class="col-lg-7">
+              <div class="col-lg-7 basket-col">
                 <h5 class="mb-3">
                   <a href="premium.html" class="text-body"
                     ><i class="fas fa-long-arrow-alt-left me-2"></i>Continue
@@ -147,145 +147,13 @@
                 >
                   <div>
                     <p class="mb-1">Shopping cart</p>
-                    <p class="mb-0">You have 4 items in your cart</p>
+                    <p class="mb-0">You have <span class="count-basket">0</span> items in your cart</p>
                   </div>
                 </div>
+<div class="basket-row">
 
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-                        <div>
-                          <img
-                            src="assets/img/premium/ahsoka_thumb.jpg"
-                            class="img-fluid rounded-3"
-                            alt="Shopping item"
-                          />
-                        </div>
-                        <div class="title">
-                          <h5>Ahoska</h5>
-                          <p class="genres">TV Shows</p>
-                          <p>Ahsoka Tano, a Togruta female...</p>
-                        </div>
-                      </div>
-                      <div class="price">
-                        <div class="price-title">
-                          <h5 class="">2 $</h5>
-                        </div>
-
-                        <a href="#"><i class="fas fa-trash-alt"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-                        <div>
-                          <img
-                            src="assets/img/premium/ahsoka_thumb.jpg"
-                            class="img-fluid rounded-3"
-                            alt="Shopping item"
-                          />
-                        </div>
-                        <div class="title">
-                          <h5>Ahoska</h5>
-                          <p class="genres">TV Shows</p>
-                          <p>Ahsoka Tano, a Togruta female...</p>
-                        </div>
-                      </div>
-                      <div class="price">
-                        <div class="price-title">
-                          <h5 class="">2 $</h5>
-                        </div>
-
-                        <a href="#"><i class="fas fa-trash-alt"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-                        <div>
-                          <img
-                            src="assets/img/premium/ahsoka_thumb.jpg"
-                            class="img-fluid rounded-3"
-                            alt="Shopping item"
-                          />
-                        </div>
-                        <div class="title">
-                          <h5>Ahoska</h5>
-                          <p class="genres">TV Shows</p>
-                          <p>Ahsoka Tano, a Togruta female...</p>
-                        </div>
-                      </div>
-                      <div class="price">
-                        <div class="price-title">
-                          <h5 class="">2 $</h5>
-                        </div>
-
-                        <a href="#"><i class="fas fa-trash-alt"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-                        <div>
-                          <img
-                            src="assets/img/premium/ahsoka_thumb.jpg"
-                            class="img-fluid rounded-3"
-                            alt="Shopping item"
-                          />
-                        </div>
-                        <div class="title">
-                          <h5>Ahoska</h5>
-                          <p class="genres">TV Shows</p>
-                          <p>Ahsoka Tano, a Togruta female...</p>
-                        </div>
-                      </div>
-                      <div class="price">
-                        <div class="price-title">
-                          <h5 class="">2 $</h5>
-                        </div>
-
-                        <a href="#"><i class="fas fa-trash-alt"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div class="d-flex flex-row align-items-center">
-                        <div>
-                          <img
-                            src="assets/img/premium/ahsoka_thumb.jpg"
-                            class="img-fluid rounded-3"
-                            alt="Shopping item"
-                          />
-                        </div>
-                        <div class="title">
-                          <h5>Ahoska</h5>
-                          <p class="genres">TV Shows</p>
-                          <p>Ahsoka Tano, a Togruta female...</p>
-                        </div>
-                      </div>
-                      <div class="price">
-                        <div class="price-title">
-                          <h5 class="">2 $</h5>
-                        </div>
-
-                        <a href="#"><i class="fas fa-trash-alt"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+</div>               
+                
               </div>
               <div class="col-lg-5">
                 <div class="card text-white card-details">
@@ -321,7 +189,10 @@
                       />
                     </a>
                     <a href="#" class="paypal">
-                        <img src="./assets/img/Cards/paypal-784404_640.png" alt="">
+                      <img
+                        src="./assets/img/Cards/paypal-784404_640.png"
+                        alt=""
+                      />
                     </a>
 
                     <form class="mt-4">
@@ -329,8 +200,7 @@
                         <input
                           type="text"
                           id="typeName"
-                          class="form-control form-control-lg"
-                          siez="17"
+                          class="form-control "
                           placeholder="Cardholder's Name"
                         />
                         <label class="form-label" for="typeName"
@@ -342,8 +212,7 @@
                         <input
                           type="text"
                           id="typeText"
-                          class="form-control form-control-lg"
-                          siez="17"
+                          class="form-control"
                           placeholder="1234 5678 9012 3457"
                           minlength="19"
                           maxlength="19"
@@ -359,9 +228,8 @@
                             <input
                               type="text"
                               id="typeExp"
-                              class="form-control form-control-lg"
+                              class="form-control "
                               placeholder="MM/YYYY"
-                              size="7"
                               id="exp"
                               minlength="7"
                               maxlength="7"
@@ -376,9 +244,8 @@
                             <input
                               type="password"
                               id="typeText"
-                              class="form-control form-control-lg"
+                              class="form-control "
                               placeholder="&#9679;&#9679;&#9679;"
-                              size="1"
                               minlength="3"
                               maxlength="3"
                             />
@@ -392,17 +259,7 @@
 
                     <div class="d-flex justify-content-between">
                       <p class="mb-2">Subtotal</p>
-                      <p class="mb-2">$4798.00</p>
-                    </div>
-
-                    <div class="d-flex justify-content-between">
-                      <p class="mb-2">Shipping</p>
-                      <p class="mb-2">$20.00</p>
-                    </div>
-
-                    <div class="d-flex justify-content-between mb-4">
-                      <p class="mb-2">Total(Incl. taxes)</p>
-                      <p class="mb-2">$4818.00</p>
+                      <p class="mb-2 subtotal" >0$</p>
                     </div>
 
                     <button type="button" class="type1"></button>
@@ -516,6 +373,5 @@
 
     <script src="assets/js/basket.js"></script>
     <script src="./assets/js/common.js"></script>
-
   </body>
 </html>
