@@ -2,7 +2,9 @@ let basketCol = document.querySelector(".basket-row");
 
 let countBasket = document.querySelector(".count-basket");
 let subtotalCount = document.querySelector(".subtotal");
+
 let allPremiumMovies = JSON.parse(localStorage.getItem("premiumMovies")) || [];
+let purchasedMovies=JSON.parse(localStorage.getItem("myMovies"))||[]
 function allBasket() {
   basketCol.innerHTML = "";
   allPremiumMovies.forEach((item) => {
@@ -68,3 +70,28 @@ function deleteBasket(movieId) {
   calcSubtotal();
   basketLength();
 }
+let allInputs = document.querySelectorAll("input");
+console.log(allInputs);
+let submitBtn = document.querySelector(".submitbtn");
+
+
+submitBtn.addEventListener("click", function () {
+  if (
+    allInputs[1].value &&
+    allInputs[2].value &&
+    allInputs[3].value &&
+    allInputs[4].value
+  ) {
+    purchasedMovies.push(...allPremiumMovies); // Add all items from allPremiumMovies to purchasedMovies
+    localStorage.setItem("myMovies", JSON.stringify(purchasedMovies)); // Store the updated purchasedMovies array in localStorage
+    allPremiumMovies = []; // Clear the allPremiumMovies array
+    localStorage.removeItem("premiumMovies"); // Remove the premiumMovies data from localStorage
+    basketCol.innerHTML = "";
+    subtotalCount.innerHTML = "0";
+    alert("Items purchased successfully!");
+    basketLength()
+  } else {
+    alert("Please fill in all the required fields.");
+  }
+});
+

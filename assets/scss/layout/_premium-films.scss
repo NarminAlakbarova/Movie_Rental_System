@@ -319,6 +319,8 @@
       }
     }
     .purchased-movies{
+      height: 300px;
+      overflow-y: scroll;
       h5{
         color: white;
       }

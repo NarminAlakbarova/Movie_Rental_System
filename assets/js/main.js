@@ -112,7 +112,7 @@ function drawSuggestedSlide(arr) {
         <div class="card">
           <div class="overlay">
             <div class="overlay-content">
-              <a class="fa-solid fa-cart-shopping" ></a>
+             
               
               <a class="fa-solid fa-play" href="details.html?id=${item.id}"></a>
               <a class="fa-solid fa-plus" onclick=addMyList(${item.id})></a>
@@ -140,27 +140,59 @@ async function getSuggestedData() {
 
 getSuggestedData();
 
-async function addMyList(id) {
-  let selectedObj = allMovies.find((item) => item.id == id);
-  let resp = await axios("http://localhost:8080/users");
-  let data = resp.data;
-  let checkUser = data.find((user) => user.check === true);
+// async function addMyList(movieId) {
+//   // console.log(id);
+//   let selectedObj = allMovies.find((item) => item.id == movieId);
+//   // console.log(selectedObj);
+//   // console.log(selectedObj.id);
+//   let resp = await axios("http://localhost:8080/users");
+//   let data = resp.data;
+//   let checkUser = data.find((user) => user.check === true);
 
-  allMovies.includes(selectedObj);
+//   allMovies.includes(selectedObj);
 
-  if (!checkUser) {
-    alert("please sign in ");
-  } else if (!allMovies.includes(selectedObj) && checkUser) {
-    let favMovies = allData.find((obj) => obj.id === +id);
-    allMovies.push(favMovies);
-    localStorage.setItem("favMovies", JSON.stringify(allMovies));
-  } else if (allMovies.includes(selectedObj)) {
-    alert("no");
-  }
-}
+//   if (!checkUser) {
+//     alert("please sign in ");
+//   } else if (!allMovies.includes(selectedObj) && checkUser) {
+//     let favMovies = allData.find((obj) => obj.id === movieId);
+//     allMovies.push(favMovies);
+//     localStorage.setItem("favMovies", JSON.stringify(allMovies));
+//   } else if (allMovies.includes(selectedObj)) {
+//     alert("no");
+//   }
+// }
 
 // Umcoming section js
 
+async function addMyList(movieId) {
+  console.log(allData);
+
+  let selectedMovie = await axios(`${BASE_URL}/allMovies/${movieId}`);
+  let selectedMovieData = selectedMovie.data;
+  console.log(selectedMovieData);
+
+  let resp = await axios("http://localhost:8080/users");
+  let data = resp.data;
+  let checkUser = data.find((user) => user.check === true);
+  let checkMovie=allMovies.some((movie) => movie.id == selectedMovieData.id)
+  console.log(checkMovie);
+  if (!checkUser) {
+    alert("Please sign in");
+  }
+  else if (checkMovie) {
+    alert("Movie is already in the list");
+  }
+  else if (!checkMovie && checkUser) {
+    let favMovie = selectedMovieData;
+    allMovies.push(favMovie);
+    localStorage.setItem("favMovies", JSON.stringify(allMovies));
+    alert("Movie added successfully");
+  }
+}
+
+
+
+// UPCOMING
 let upcomingCards = document.querySelector(".upcoming-row");
 
 function drawUpcomingCards(arr) {
@@ -302,7 +334,6 @@ async function showTrailer(element, itemId) {
     iframe.src = data.trailer;
 
     modal.style.display = "block";
-
   }
 }
 // function outsideClickHandler(event) {
@@ -460,5 +491,6 @@ logOutIcon.addEventListener("click", async function () {
   await axios.patch(`http://localhost:8080/users/${users.id}`, {
     check: false,
   });
-  localStorage.removeItem("favMovies");
+  localStorage.clear();
+
 });

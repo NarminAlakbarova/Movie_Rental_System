@@ -1751,6 +1751,10 @@ header .header .right-nav .account .fa-user {
   padding: 5px 15px;
   background-color: #242424;
 }
+#premium-movies .premium-movies .purchased-movies {
+  height: 300px;
+  overflow-y: scroll;
+}
 #premium-movies .premium-movies .purchased-movies h5 {
   color: white;
 }
@@ -2894,7 +2898,7 @@ header .header .right-nav .account .fa-user {
   color: white;
 }
 #my-list .my-list .card .content h3 {
-  size: 18px;
+  size: 16px;
 }
 #my-list .my-list .card .content p {
   font-size: 12px;

@@ -1,6 +1,8 @@
 let premiumRow = document.querySelector(".premium-row");
 let purchasedMovie=document.querySelector(".cards")
 let allPremiumMovies = JSON.parse(localStorage.getItem("premiumMovies")) || [];
+let purchasedMovies=JSON.parse(localStorage.getItem("myMovies"))||[]
+
 let dataArr = [];
 let copyArr = [];
 let sortedArr = [];
@@ -144,7 +146,7 @@ async function addBasket(moviId) {
 
 function getPurchasedMovies(){
   purchasedMovie.innerHTML=""
-  allPremiumMovies.forEach((item)=>{
+  purchasedMovies.forEach((item)=>{
     purchasedMovie.innerHTML+=`
     
     <div class="card my-3">
@@ -156,7 +158,7 @@ function getPurchasedMovies(){
         <p>${item.title.split(" ").slice(0, 3).concat("...").join(" ")}</p>
       </div>
       <div class="play">
-        <a href="" class="fa-solid fa-play"></a>
+        <a href="details.html?id=${item.id}" class="fa-solid fa-play"></a>
       </div>
     </div>
   </div>
