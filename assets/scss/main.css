@@ -1751,6 +1751,51 @@ header .header .right-nav .account .fa-user {
   padding: 5px 15px;
   background-color: #242424;
 }
+#premium-movies .premium-movies .purchased-movies h5 {
+  color: white;
+}
+#premium-movies .premium-movies .purchased-movies .card {
+  background-color: #242424;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  color: white;
+  cursor: pointer;
+}
+#premium-movies .premium-movies .purchased-movies .card:hover .img-content .play {
+  display: flex;
+}
+#premium-movies .premium-movies .purchased-movies .card .img-content {
+  padding: 10px;
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  position: relative;
+}
+#premium-movies .premium-movies .purchased-movies .card .img-content h5 {
+  margin-bottom: 0;
+}
+#premium-movies .premium-movies .purchased-movies .card .img-content img {
+  width: 60px;
+  height: 60px;
+}
+#premium-movies .premium-movies .purchased-movies .card .img-content .play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  transition: 1s;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #83080e;
+  position: absolute;
+  top: 30%;
+  left: 8%;
+}
+#premium-movies .premium-movies .purchased-movies .card .img-content .play a {
+  color: white;
+}
 #premium-movies .movie-list {
   background-color: #181818;
   transition: 1s;

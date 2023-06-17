@@ -1,7 +1,7 @@
 let basketCol = document.querySelector(".basket-row");
 
-let countBasket=document.querySelector(".count-basket")
-let subtotalCount=document.querySelector(".subtotal")
+let countBasket = document.querySelector(".count-basket");
+let subtotalCount = document.querySelector(".subtotal");
 let allPremiumMovies = JSON.parse(localStorage.getItem("premiumMovies")) || [];
 function allBasket() {
   basketCol.innerHTML = "";
@@ -29,7 +29,9 @@ function allBasket() {
         <h5 class="">${item.price} $</h5>
       </div>
 
-      <a href="#"><i class="fas fa-trash-alt" onclick=deleteBasket(${item.id})></i></a>
+      <a href="#"><i class="fas fa-trash-alt" onclick=deleteBasket(${
+        item.id
+      })></i></a>
     </div>
   </div>
 </div>
@@ -40,23 +42,29 @@ function allBasket() {
   });
 }
 
-allBasket()
+allBasket();
 
 function calcSubtotal() {
-    let totalPrice = 0;
-    allPremiumMovies.forEach((item) => {
-      totalPrice += item.price;
-    });
-    subtotalCount.innerHTML = `${totalPrice} $`;
-  }
-  
-  calcSubtotal();
-  
-countBasket.innerHTML=`${allPremiumMovies.length}`
+  let totalPrice = 0;
+  allPremiumMovies.forEach((item) => {
+    totalPrice += item.price;
+  });
+  subtotalCount.innerHTML = `${totalPrice} $`;
+}
 
-function deleteBasket(movieId){
-allPremiumMovies=allPremiumMovies.filter((obj)=>obj.id!=movieId)
-localStorage.setItem("premiumMovies",JSON.stringify(allPremiumMovies))
-allBasket()
-calcSubtotal()
+calcSubtotal();
+
+function basketLength() {
+  countBasket.innerHTML = `${allPremiumMovies.length}`;
+}
+
+basketLength();
+
+// DELETE BASKET
+function deleteBasket(movieId) {
+  allPremiumMovies = allPremiumMovies.filter((obj) => obj.id != movieId);
+  localStorage.setItem("premiumMovies", JSON.stringify(allPremiumMovies));
+  allBasket();
+  calcSubtotal();
+  basketLength();
 }

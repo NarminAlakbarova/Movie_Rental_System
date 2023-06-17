@@ -318,6 +318,62 @@
         }
       }
     }
+    .purchased-movies{
+      h5{
+        color: white;
+      }
+    .card{
+      // transition: 1s;
+      background-color: #242424;
+      border: none;
+      border-radius: 0;
+      overflow: hidden;
+      color: white;
+      cursor: pointer;
+      &:hover{
+       .img-content{
+        .play{
+          display: flex;
+          // transition: 1s;
+          // top: 22%;
+        }
+       }
+      }
+      .img-content{
+        padding: 10px;
+        // padding-top: 10px;
+        display: flex;
+        column-gap: 10px;
+        position: relative;
+        // transition: 1s;
+        h5{
+          margin-bottom: 0;
+        }
+        
+        img{
+          width: 60px;
+          height: 60px;
+        }
+        .play{
+          @include flexbox(center);
+        display: none;
+        transition: 1s;
+         width: 30px;
+         height: 30px;
+          border-radius: 50%;
+          background-color: #83080e;
+          position: absolute;
+          top: 30%;
+          left: 8%;
+          // transform: translate(-50%);
+          a{
+            color: white;
+          //  height: 10px;
+          }
+        }
+      }
+    }
+    }
   }
   .movie-list {
     background-color: #181818;
