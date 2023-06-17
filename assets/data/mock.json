@@ -569,7 +569,15 @@
       "id": 49,
       "price": 3,
       "time": "1h 20m",
-      "img": "../assets/img/hero-banner/marvel.jpg"
+      "img": "../assets/img/hero-banner/marvel.jpg",
+      "comments": [
+        {
+          "username": "fatime",
+          "email": "fatime123@gljhj",
+          "commentContent": "ilahiiiiiiiiiii nece cgozellllllllllllll filmmmmmmmmmmmmmmmmm",
+          "commentDate": "6/17/2023, 11:53:52 PM"
+        }
+      ]
     },
     {
       "movieName": "Bridgerton",
