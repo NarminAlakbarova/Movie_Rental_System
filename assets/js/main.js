@@ -304,11 +304,10 @@ async function showTrailer(element, itemId) {
     let iframe = modal.querySelector("iframe");
     iframe.src = data.trailer;
     modal.style.display = "block";
-
   }
 }
 function closeModal(element) {
-  let modal = element.closest(".modal"); 
+  let modal = element.closest(".modal");
   if (modal) {
     modal.style.display = "none";
     modal.style.visibility = "hidden";
@@ -399,22 +398,30 @@ logOutIcon.addEventListener("click", async function () {
   localStorage.clear();
 });
 
+// HERO-SECTION JS
 let heroCarusel = document.querySelector(".hero-carusel-item");
 
 function drawHeroSection(arr) {
   heroCarusel.innerHTML = "";
   arr.forEach((item) => {
-    
     heroCarusel.innerHTML += `
     
     <div class="carousel-item active">
     <div class="opacity-slide"></div>
+    <div class="modal2">
+    <span class="close" onclick="closeModalHero(this)" >&times;</span>
+    <div class="modal-content">
+      <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
     <img
       src="${item.img.length > 100 ? item.img : item.img.slice(1)}"
       class="d-block w-100"
       alt="..."
     />
 
+  
+  
     <div class="carousel-caption">
       <div class="container">
         <div class="row carusel-content">
@@ -457,9 +464,10 @@ function drawHeroSection(arr) {
           <div
             class="col-lg-5 col-sm-12 d-none my-5 d-sm-flex content-right"
           >
-            <a>
-              <i class="fa-solid fa-play"></i>
-            </a>
+          <a onclick="showHeroTrailer(this.parentElement, '${item.id}')">
+          <i class="fa-solid fa-play"></i>
+        </a>
+        
             <p>Watch Trailer</p>
           </div>
         </div>
@@ -477,4 +485,24 @@ async function getHeroData() {
   // console.log(allData);
   drawHeroSection(allData);
 }
-getHeroData()
+getHeroData();
+
+async function showHeroTrailer(element, itemId) {
+  console.log("mm");
+  let resp = await axios(`http://localhost:8080/allMovies/${itemId}`);
+  let data = resp.data;
+
+  if (data) {
+    let modal = element.closest(".carousel-item").querySelector(".modal2");
+    let iframe = modal.querySelector("iframe");
+    iframe.src = data.trailer;
+    modal.style.display = "block";
+  }
+}
+function closeModalHero(element) {
+  let modal = element.closest(".modal2");
+  if (modal) {
+    modal.style.display = "none";
+    modal.style.visibility = "hidden";
+  }
+}
