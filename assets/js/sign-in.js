@@ -3,14 +3,12 @@ let userNameEmailInp = document.querySelector(".username-email");
 let passwordInp = document.querySelector(".passwordInp");
 const BASE_URL = "http://localhost:8080/";
 let allUsers = [];
-async function getAllUser() {
-  let resp = await axios(`${BASE_URL}users`);
-  allUsers = resp.data;
-}
-getAllUser();
+
+// getAllUser();
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
-
+  let resp = await axios(`${BASE_URL}users`);
+  allUsers = resp.data;
   let admin = allUsers.find(
     (item) =>
       item.isAdmin === true &&
@@ -28,8 +26,8 @@ form.addEventListener("submit", async function (e) {
     );
     // console.log(rightUser);
     if (rightUser) {
-     
-      window.location.href = `index.html?id=${rightUser.id}`;
+      await axios.patch(`http://localhost:8080/users/${rightUser.id}`, { check: true });
+      window.location.href = "index.html";
     } else {
       alert("Invalid credentials");
     }

@@ -52,7 +52,7 @@
         flex-direction: column;
         row-gap: 10px;
         padding-right: 10px;
-        @media screen and (max-width:991px) {
+        @media screen and (max-width: 991px) {
           padding: 0 80px 0 20px;
         }
       }
@@ -146,8 +146,6 @@
       }
     }
   }
-
-
 }
 // PREMIUM PAGE
 #hero {
@@ -185,7 +183,7 @@
     // padding: 100px 0;
     .left-col {
       padding-right: 50px;
-      @media screen and (max-width:991px) {
+      @media screen and (max-width: 991px) {
         padding-right: 10px;
       }
       .sortDrop {
@@ -193,6 +191,17 @@
           width: 100%;
           //  color: white;
         }
+        .dropdown-menu {
+          li{
+            &:hover{
+              a{
+                color: black !important;
+              }
+            }
+          }
+        }
+        
+        
       }
     }
     .search {
@@ -254,6 +263,8 @@
     }
     .categories-col {
       // padding: 10px;
+      height: 300px;
+      overflow-y: scroll;
       h1 {
         color: white;
         font-size: 22px;
@@ -341,11 +352,11 @@
             background: rgba(0, 0, 0, 0.6);
           }
           img {
-            // width: 200px;
-            width: 100%;
+            width: 180px;
+            // width: 100%;
             // height: auto;
             height: 250px;
-            object-fit: cover;
+            // object-fit: cover;
           }
         }
       }
@@ -415,8 +426,23 @@
         }
         .bottom-btn {
           .icons {
-            i {
-              color: #83080e;
+            --percent: calc(var(--rating) / 10 * 100%);
+            display: inline-block;
+            font-size: 25px;
+            font-family: Times; // make sure ★ appears correctly
+            line-height: 1;
+
+            &::before {
+              content: "★★★★★";
+              letter-spacing: 3px;
+              background: linear-gradient(
+                90deg,
+                #83080e var(--percent),
+                #fff var(--percent)
+              );
+              background-clip: text;
+              color: transparent;
+              -webkit-text-fill-color: transparent;
             }
           }
         }

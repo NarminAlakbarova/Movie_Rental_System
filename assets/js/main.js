@@ -1,9 +1,8 @@
 let cards = document.querySelectorAll(".card");
-// let logOutIcon = document.querySelector(".log-out");
-let userId = new URLSearchParams(window.location.search).get("id");
+let logOutIcon = document.querySelector(".log-out");
+// let userId = new URLSearchParams(window.location.search).get("id");
 
 let allMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
-
 //
 
 // Scroll Reveal
@@ -113,7 +112,7 @@ function drawSuggestedSlide(arr) {
         <div class="card">
           <div class="overlay">
             <div class="overlay-content">
-              <a class="fa-solid fa-cart-shopping"></a>
+              <a class="fa-solid fa-cart-shopping" ></a>
               
               <a class="fa-solid fa-play" href="details.html?id=${item.id}"></a>
               <a class="fa-solid fa-plus" onclick=addMyList(${item.id})></a>
@@ -143,13 +142,18 @@ getSuggestedData();
 
 async function addMyList(id) {
   let selectedObj = allMovies.find((item) => item.id == id);
+  let resp = await axios("http://localhost:8080/users");
+  let data = resp.data;
+  let checkUser = data.find((user) => user.check === true);
+
   allMovies.includes(selectedObj);
-  if (!allMovies.includes(selectedObj) && userId) {
+
+  if (!checkUser) {
+    alert("please sign in ");
+  } else if (!allMovies.includes(selectedObj) && checkUser) {
     let favMovies = allData.find((obj) => obj.id === +id);
     allMovies.push(favMovies);
     localStorage.setItem("favMovies", JSON.stringify(allMovies));
-  } else if (!userId) {
-    alert("please sign in ");
   } else if (allMovies.includes(selectedObj)) {
     alert("no");
   }
@@ -255,14 +259,14 @@ function drawTrailerRow(arr) {
   arr.forEach((item) => {
     trailerRow.innerHTML += `
       <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="cards">
+        <div class="cards " onclick="showTrailer(this, '${item.id}')">
           <div class="img">
             <img src="${
               item.img.length > 100 ? item.img : item.img.slice(1)
             }" alt="" class="myImg" />
 
             <div class="modal">
-              <span class="close">&times;</span>
+              <span class="close" onclick="closeModal(this)" >&times;</span>
               <div class="modal-content">
                 <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
@@ -282,38 +286,105 @@ async function getTrailerData() {
   await copyData();
   let filteredData = allData.filter((item) => item.section === "trailer");
   drawTrailerRow(filteredData);
-  populateModalData();
+  // populateModalData();
 }
 getTrailerData();
 
-async function populateModalData() {
-  await copyData();
-  let filteredData = allData.filter((item) => item.section === "trailer");
+async function showTrailer(element, itemId) {
+  let resp = await axios(`http://localhost:8080/allMovies/${itemId}`);
+  let data = resp.data;
 
-  let modals = document.querySelectorAll(".modal");
-  modals.forEach((modal, index) => {
+  if (data) {
+    let modal = element.querySelector(".modal");
     let iframe = modal.querySelector("iframe");
-    iframe.src = filteredData[index].trailer;
-  });
-}
 
-trailerRow.addEventListener("click", function (event) {
-  if (event.target.classList.contains("myImg")) {
-    let modal = event.target.parentNode.querySelector(".modal");
+    // Set the trailer URL for the iframe
+    iframe.src = data.trailer;
+
     modal.style.display = "block";
-  }
-  if (event.target.classList.contains("close")) {
-    let modal = event.target.closest(".modal");
-    let iframe = modal.querySelector("iframe");
 
-    // Pause the video
-    iframe.contentWindow.postMessage(
-      '{"event":"command","func":"pauseVideo","args":""}',
-      "*"
-    );
-    modal.style.display = "none";
   }
-});
+}
+// function outsideClickHandler(event) {
+//   let modal = document.querySelector(".modal");
+//   if (!modal.contains(event.target)) {
+//     closeModal(modal.querySelector(".close"));
+//   }
+// }
+// function closeModal(closeElement) {
+//   let modal = closeElement.closest(".modal");
+//   let iframe = modal.querySelector("iframe");
+
+//   // Pause the video
+//   iframe.contentWindow.postMessage(
+//     '{"event":"command","func":"pauseVideo","args":"" }',
+//     "*"
+//   );
+
+//   modal.style.display = "none";
+//   modal.parentNode.classList.remove("modal-open"); // Modal kapatıldığında "modal-open" sınıfını kaldırın
+// }
+// function closeModal(closeElement) {
+//   let modal = closeElement.closest(".modal");
+//   let iframe = modal.querySelector("iframe");
+
+//   // Pause the video
+//   iframe.contentWindow.postMessage(
+//     '{"event":"command","func":"pauseVideo","args":"" }',
+//     "*"
+//   );
+
+//   modal.style.display = "none";
+// }
+
+// async function populateModalData() {
+//   await copyData();
+//   let filteredData = allData.filter((item) => item.section === "trailer");
+
+//   let modals = document.querySelectorAll(".modal");
+//   modals.forEach((modal, index) => {
+//     let iframe = modal.querySelector("iframe");
+//     iframe.src = filteredData[index].trailer;
+//   });
+// }
+// async function populateModalData() {
+//   if (allData.length === 0) {
+//     await copyData();
+//   }
+
+//   let filteredData = allData.filter((item) => item.section === "trailer");
+
+//   let modals = document.querySelectorAll(".modal");
+//   modals.forEach((modal, index) => {
+//     let iframe = modal.querySelector("iframe");
+//     iframe.src = filteredData[index].trailer;
+//   });
+// }
+// populateModalData()
+// let trailerCard=document.querySelector(".trailer-cards")
+// trailerCard.addEventListener("click", function (event) {
+//   if (event.target.classList.contains("myImg")) {
+//     let modal = event.target.parentNode.querySelector(".modal");
+//     modal.style.display = "block";
+//   }
+//   if (event.target.classList.contains("close")) {
+//     let modal = event.target.closest(".modal");
+//     let iframe = modal.querySelector("iframe");
+
+//     // Pause the video
+//     iframe.contentWindow.postMessage(
+//       '{"event":"command","func":"pauseVideo","args":"" }',
+//       "*"
+//     );
+//     modal.style.display = "none";
+//   }
+// });
+async function getTrailer(id) {
+  let resp = await axios(`${BASE_URL}/allMovies/${id}`);
+  let data = resp.data;
+
+  console.log(data);
+}
 
 // PREMIUM JS
 let premiumSlider = document.querySelector(".premium-slider");
@@ -360,7 +431,7 @@ function drawPremiumMovies(arr) {
         <span> Price </span>
        ${item.price}
       </p>
-      <a class="play-now" href="details.html?id=${item.id}">
+      <a class="play-now" href="premium.html">
         <i class="fa-solid fa-play"></i>
         Play Now
       </a>
@@ -381,3 +452,13 @@ async function getPremiumFilms() {
 getPremiumFilms();
 
 // console.log(userId);
+logOutIcon.addEventListener("click", async function () {
+  let resp = await axios("http://localhost:8080/users");
+  let data = resp.data;
+  let users = data.find((user) => user.check === true);
+  console.log(users);
+  await axios.patch(`http://localhost:8080/users/${users.id}`, {
+    check: false,
+  });
+  localStorage.removeItem("favMovies");
+});

@@ -1,19 +1,18 @@
-.container{
-    max-width: 1200px;
-    padding: 0 5%;
-    margin: auto;
+.container {
+  max-width: 1200px;
+  padding: 0 5%;
+  margin: auto;
 }
-body{
-    background-color: #141414;
+body {
+  background-color: #141414;
 }
 ::-webkit-scrollbar {
-    width: 5px; 
-  }
-  ::-webkit-scrollbar-track {
-    background-color: #141414;
-  }
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #141414;
+}
 
-  ::-webkit-scrollbar-thumb {
-    background-color: #9902099f;
-  }
-  
+::-webkit-scrollbar-thumb {
+  background-color: #9902099f;
+}

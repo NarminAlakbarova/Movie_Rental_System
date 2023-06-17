@@ -9,7 +9,7 @@
     },
     {
       "isAdmin": false,
-     
+      "check": false,
       "userName": "xefurohu",
       "firstName": "wirityt",
       "lastName": "nakajigo",
@@ -18,7 +18,7 @@
     },
     {
       "isAdmin": false,
-     
+      "check": false,
       "userName": "makyt",
       "firstName": "vybiwaroj",
       "lastName": "bypodapu",
@@ -27,7 +27,7 @@
     },
     {
       "isAdmin": false,
-     
+      "check": false,
       "userName": "wimojif",
       "firstName": "gezuh",
       "lastName": "wyqymij",
@@ -36,7 +36,7 @@
     },
     {
       "isAdmin": false,
-      
+      "check": false,
       "userName": "potihafuqu",
       "firstName": "fadyty",
       "lastName": "podyvo",
@@ -45,7 +45,7 @@
     },
     {
       "isAdmin": false,
-     
+      "check": false,
       "userName": "rygibalyle",
       "firstName": "lyrohazew",
       "lastName": "vypunuhop",
@@ -54,7 +54,7 @@
     },
     {
       "isAdmin": false,
-      
+      "check": true,
       "userName": "fatime",
       "firstName": "zamifitog",
       "lastName": "zabyvo",
@@ -73,7 +73,7 @@
     },
     {
       "isAdmin": false,
-     
+      "check": false,
       "userName": "nino",
       "firstName": "minaye",
       "lastName": "eliyeva",
@@ -395,11 +395,11 @@
     },
     {
       "movieName": "Wednesday",
-      "imbd": "8.1",
+      "imbd": "8.5",
       "title": "Michael Burnham and her companions in the USS Discovery travel into the far reaches of space in an attempt to meet new lifeforms and discover new planets.",
       "releaseDate": "September 24, 2017",
       "trailer": "https://www.youtube.com/embed/1sMrtt7sAR8",
-      "genres": "Tv-Shows",
+      "genres": "Horror",
       "section": "Premium",
       "price": 3,
       "season": "3",
@@ -413,7 +413,7 @@
       "title": "A hapless hunchback yearns for love, but finds himself in the middle of a deadly feud between the Pope and the King of France when they each order the misfit to kill the other",
       "releaseDate": "September 24, 2017",
       "trailer": "https://www.youtube.com/embed/1sMrtt7sAR8",
-      "genres": "Tv-Shows",
+      "genres": "Comedy",
       "section": "Premium",
       "season": "3",
       "id": 40,
@@ -427,7 +427,7 @@
       "title": "Evading a scandal, a couple from Istanbul starts over in a town on the Aegean coast, but quickly discover the locals are determined to get rid of them.",
       "releaseDate": "September 24, 2017",
       "trailer": "https://www.youtube.com/embed/1sMrtt7sAR8",
-      "genres": "Tv-Shows",
+      "genres": "Dram",
       "section": "Premium",
       "season": "3",
       "id": 41,
@@ -441,7 +441,7 @@
       "title": "After being assaulted by a senior co-worker, a young woman's dream job becomes a living nightmare. She tries to keep her career together while being tormented in her dreams by a mysterious tree monster.",
       "releaseDate": "September 24, 2017",
       "trailer": "https://www.youtube.com/embed/1sMrtt7sAR8",
-      "genres": "Tv-Shows",
+      "genres": "Horror",
       "section": "Premium",
       "season": "3",
       "id": 42,
@@ -455,7 +455,7 @@
       "title": "After being assaulted by a senior co-worker, a young woman's dream job becomes a living nightmare. She tries to keep her career together while being tormented in her dreams by a mysterious tree monster.",
       "releaseDate": "September 24, 2017",
       "trailer": "https://www.youtube.com/embed/1sMrtt7sAR8",
-      "genres": "Tv-Shows",
+      "genres": "Action",
       "section": "Premium",
       "season": "3",
       "id": 43,
