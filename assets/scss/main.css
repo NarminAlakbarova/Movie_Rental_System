@@ -1564,7 +1564,8 @@ header .header .right-nav .account .fa-user {
   }
 }
 .premium-container .lastSwipper .swiper-slide .info {
-  color: #777;
+  color: #1f1e1e;
+  font-weight: 700;
 }
 .premium-container .lastSwipper .swiper-slide span {
   color: red;

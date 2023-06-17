@@ -154,14 +154,25 @@ async function addMyList(movieId) {
   let checkMovie = allMovies.some((movie) => movie.id == selectedMovieData.id);
   console.log(checkMovie);
   if (!checkUser) {
-    alert("Please sign in");
+    Swal.fire({
+      title: "Please Sign in",
+      icon: "info",
+      confirmButtonColor: "#e50914",
+
+      confirmButtonText: "OK",
+      customClass: {
+        confirmButton: "custom-confirm-button-class",
+      },
+    });
   } else if (checkMovie) {
-    alert("Movie is already in the list");
+    Swal.fire({
+      title: "Movie is already in the list",
+      confirmButtonColor: "#e50914",
+    });
   } else if (!checkMovie && checkUser) {
     let favMovie = selectedMovieData;
     allMovies.push(favMovie);
     localStorage.setItem("favMovies", JSON.stringify(allMovies));
-    alert("Movie added successfully");
   }
 }
 

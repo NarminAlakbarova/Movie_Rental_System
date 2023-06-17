@@ -54,7 +54,7 @@
     },
     {
       "isAdmin": false,
-      "check": false,
+      "check": true,
       "userName": "fatime",
       "firstName": "zamifitog",
       "lastName": "zabyvo",
@@ -189,7 +189,15 @@
       "genres": "Drama",
       "img": "../assets/img/upcomingfilms/wonka.jpeg",
       "section": "Suggested",
-      "time": "2h 20m"
+      "time": "2h 20m",
+      "comments": [
+        {
+          "username": "bijazavyxo",
+          "email": "tyzo@mailinator.com",
+          "commentContent": "Reprehenderit irure ",
+          "commentDate": "6/17/2023, 11:31:49 PM"
+        }
+      ]
     },
     {
       "movieName": "Tolkien",
@@ -202,10 +210,26 @@
       "id": 25,
       "img": "../assets/img/Suggestedfilms/tolkien.jpeg",
       "time": "1h 20m",
-      "username": "Fatime",
-      "email": "fatime",
-      "commentContent": "Perfect!",
-      "commentDate": "6/14/2023, 10:24:50 PM"
+      "comments": [
+        {
+          "username": "xagabibewa",
+          "email": "dyvuh@mailinator.com",
+          "commentContent": "Tempor sed neque nih",
+          "commentDate": "6/17/2023, 11:41:41 PM"
+        },
+        {
+          "username": "guvevol",
+          "email": "koje@mailinator.com",
+          "commentContent": "Quia dolor ex vel te",
+          "commentDate": "6/17/2023, 11:41:54 PM"
+        },
+        {
+          "username": "cedewinoti",
+          "email": "mifa@mailinator.com",
+          "commentContent": "very Good",
+          "commentDate": "6/17/2023, 11:42:01 PM"
+        }
+      ]
     },
     {
       "movieName": "Game of Thrones",
@@ -489,11 +513,7 @@
       "id": 45,
       "price": 3,
       "time": "1h 20m",
-      "img": "../assets/img/Suggestedfilms/asset-14.jpg",
-      "username": "fatime",
-      "email": "fatime@gmail.com",
-      "commentContent": "hello very nice!",
-      "commentDate": "6/14/2023, 10:17:58 PM"
+      "img": "../assets/img/Suggestedfilms/asset-14.jpg"
     },
     {
       "movieName": "Sisu",
