@@ -1,4 +1,4 @@
-let burgerMenu = document.querySelector("#burger-menu");
+// let burgerMenu = document.querySelector("#burger-menu");
 let markIcon = document.querySelector(".fa-xmark");
 let menuIcon = document.querySelector(".fa-bars");
 let header = document.querySelector("header");
@@ -23,13 +23,12 @@ userIcon.addEventListener("click", function () {
   console.log("jsj");
   userMenu.classList.toggle("active");
 });
-// BURGER MENU
-menuIcon.addEventListener("click", function () {
-  burgerMenu.classList.toggle("show");
-});
-markIcon.addEventListener("click", function () {
-  burgerMenu.classList.toggle("show");
-});
+
+
+
+// BURGET MENU
+const burgerMenu = document.getElementById('burger-menu');
+
 
 //   SCROLL
 function scrollFunction() {
@@ -59,5 +58,21 @@ $(document).ready(function () {
   $("#scroll").click(function () {
     $("html, body").animate({ scrollTop: 0 }, 600);
     return false;
+  });
+});
+jQuery(document).ready(function () {
+  var body = jQuery(document.body);
+  var button = jQuery("svg");
+  var line = jQuery("line");
+
+  button.click(function () {
+      if (jQuery(document.body).hasClass("menu-open")) {
+          body.removeClass("menu-open");
+        burgerMenu.classList.remove("show")
+
+          return;
+        }
+        burgerMenu.classList.add("show")
+      body.addClass("menu-open");
   });
 });

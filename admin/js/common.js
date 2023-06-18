@@ -12,7 +12,6 @@ favCaunter();
 // DARK MODE
 const sunIcon = document.querySelector(".fa-sun");
 const body = document.body;
-
 sunIcon.addEventListener("click", function () {
   body.classList.toggle("dark-mode");
   sunIcon.classList.contains("fa-sun")
