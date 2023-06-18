@@ -527,7 +527,7 @@ header .header .admin .dropdown button {
 }
 #contact .contact .card {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-end;
   padding: 12px;
   background-color: #8da9c4;
@@ -536,6 +536,9 @@ header .header .admin .dropdown button {
   border: none;
   border-radius: 0;
   cursor: pointer;
+}
+#contact .contact .card .avatar {
+  padding-bottom: 10px;
 }
 #contact .contact .card:hover .back-card {
   transform: rotate(5deg);

@@ -4,7 +4,7 @@
   .contact {
     .card {
       display: flex;
-      align-items: flex-end;
+      align-items: flex-start;
       justify-content: flex-end;
       padding: 12px;
       background-color: #8da9c4;
@@ -14,6 +14,9 @@
       border: none;
       border-radius: 0;
       cursor: pointer;
+      .avatar{
+        padding-bottom: 10px;
+      }
       &:hover {
         .back-card {
           transform: rotate(5deg);
