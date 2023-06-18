@@ -1,39 +1,49 @@
-#comments{
-    padding: 100px 0 100px 280px;
+#comments {
+  padding: 100px 0 100px 280px;
 
- .comments{
-    .cards-row{
-        h2{
-            color: #0d1b2a;
-            text-align: center;  
-        }
-        .card{
-            cursor: pointer;
-            img{
-                height: 100px;
-                object-fit: cover;
-            }
-        }
-    }
-    h2{
+  .comments {
+    .cards-row {
+      h2 {
         color: #0d1b2a;
         text-align: center;
-    }
-    .comment-row{
-       
-        .comment-card{
-            padding: 10px;
-            background-color: #8696fea6;
-            color: #0d1b2a;
-            border: none;
-           display: flex;
-           flex-direction: row;
-           column-gap: 30px;
+      }
+      .card {
+        box-shadow: 0px -3px 28px 4px rgba(17, 0, 158, 0.54);
+        -webkit-box-shadow: 0px -3px 28px 4px rgba(17, 0, 158, 0.54);
+        -moz-box-shadow: 0px -3px 28px 4px rgba(17, 0, 158, 0.54);
+        cursor: pointer;
+        overflow: hidden;
+        border: none;
+        &:hover{
             img{
-                width: 50px;
-                height: 50px;
+                transform: scale(1.2);
             }
         }
+        img {
+            transition: 1s;
+          height: 100px;
+          object-fit: cover;
+        }
+      }
     }
- }
+    h2 {
+      color: #0d1b2a;
+      text-align: center;
+    }
+    .comment-row {
+      .comment-card {
+        padding: 10px;
+        background-color: #8696fea6;
+        color: #0d1b2a;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        column-gap: 30px;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
 }

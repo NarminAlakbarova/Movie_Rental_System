@@ -141,6 +141,16 @@ async function getSuggestedData() {
 getSuggestedData();
 
 // ADD MY LIST
+
+function showAlert(alerttext, infoalert) {
+  Toastify({
+    text: alerttext,
+    className: infoalert,
+    style: {
+      background: "linear-gradient(to right, #222221, #b00000 )",
+    },
+  }).showToast();
+}
 async function addMyList(movieId) {
   console.log(allData);
 
@@ -154,25 +164,14 @@ async function addMyList(movieId) {
   let checkMovie = allMovies.some((movie) => movie.id == selectedMovieData.id);
   console.log(checkMovie);
   if (!checkUser) {
-    Swal.fire({
-      title: "Please Sign in",
-      icon: "info",
-      confirmButtonColor: "#e50914",
-
-      confirmButtonText: "OK",
-      customClass: {
-        confirmButton: "custom-confirm-button-class",
-      },
-    });
+    showAlert("Please Sign in", "info");
   } else if (checkMovie) {
-    Swal.fire({
-      title: "Movie is already in the list",
-      confirmButtonColor: "#e50914",
-    });
+    showAlert("This movie alredy added my-list", "info");
   } else if (!checkMovie && checkUser) {
     let favMovie = selectedMovieData;
     allMovies.push(favMovie);
     localStorage.setItem("favMovies", JSON.stringify(allMovies));
+    showAlert("Added", "info");
   }
 }
 
