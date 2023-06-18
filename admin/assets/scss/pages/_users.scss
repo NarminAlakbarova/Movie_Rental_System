@@ -25,12 +25,16 @@ header {
 
       align-items: center;
       column-gap: 20px;
+      .fa-sun{
+        cursor: pointer;
+      }
       .letter {
         position: relative;
-        a{
+        a {
           color: white;
+          cursor: pointer;
         }
-        .count{
+        .count {
           position: absolute;
           height: 15px;
           width: 15px;
@@ -102,6 +106,47 @@ header {
           }
           a {
             color: white;
+            letter-spacing: 0;
+            transition: 0.35s;
+            &:hover,
+            &:active {
+              letter-spacing: 5px;
+              transition: 0.35s;
+            }
+
+            &:after {
+              bottom: -10px;
+            }
+
+            &:before {
+              top: -10px;
+            }
+
+            &:after,
+            &:before {
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              border: 1px solid rgba(255, 255, 255, 0);
+              content: " ";
+              display: block;
+              margin: 0 auto;
+              position: relative;
+              transition: all 280ms ease-in-out;
+              width: 0;
+            }
+
+            &:hover:after,
+            &:hover:before {
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              border-color: #fff;
+              transition: width 350ms ease-in-out;
+              width: 100%;
+            }
+
+            &:hover:before {
+              width: 100%;
+            }
           }
         }
       }
