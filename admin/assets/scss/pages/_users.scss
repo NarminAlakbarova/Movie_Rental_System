@@ -25,7 +25,7 @@ header {
 
       align-items: center;
       column-gap: 20px;
-      .fa-sun{
+      .fa-sun {
         cursor: pointer;
       }
       .letter {
@@ -214,42 +214,66 @@ header {
 .modal-dialog {
   .modal-content {
     background-color: #e0e1dd;
-    strong {
-      background: linear-gradient(
-        90deg,
-        #4169e1,
-        #5768df,
-        #8164d7,
-        #aa60c8,
-        #cc60b3,
-        #e3689c,
-        #ed7889,
-        #ee8c7e,
-        #e99e7c,
-        #e4ac7f,
-        #e0b585,
-        #deb887,
-        orange
-      );
-      background-size: 200%;
-      /* Background Text Clip */
-      /* webkit vendor prefix start */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      /* webkit vendor prefix end */
-      background-clip: text;
-      animation: gradient-text-animation 3s alternate infinite;
-      font-size: 18px;
+    .modal-title {
+      color: #0d1b2a;
     }
-    h5 {
-      font-size: 20px;
-      font-weight: 700;
-      // padding: 10px 0;
-      padding-bottom: 20px;
-      color: #4169e1;
+    .ques {
+      p {
+        color: #0d1b2a;
+        padding-bottom: 20px;
+        text-align: center;
+      }
     }
-    p {
-      font-size: 18px;
+    .buttons {
+      display: flex;
+      justify-content: center;
+      button {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 8px;
+        background-color: #415a77;
+        transition: 1s;
+        color: white;
+        &:hover {
+          background-color: #0d1b2a;
+        }
+      }
+    }
+    .content {
+      color: #0d1b2a;
+      strong {
+        background: linear-gradient(
+          90deg,
+          #4169e1,
+          #5768df,
+          #8164d7,
+          #aa60c8,
+          #cc60b3,
+          #e3689c,
+          #ed7889,
+          #ee8c7e,
+          #e99e7c,
+          #e4ac7f,
+          #e0b585,
+          #deb887,
+          orange
+        );
+        background-size: 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradient-text-animation 3s alternate infinite;
+        font-size: 18px;
+      }
+      h5 {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 20px;
+        color: #4169e1;
+      }
+      p {
+        font-size: 18px;
+      }
     }
     .close {
       border: none;

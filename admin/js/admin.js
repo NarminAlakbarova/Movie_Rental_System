@@ -1,7 +1,7 @@
 const BASE_URL = "http://localhost:8080/";
 let tBody = document.querySelector("tbody");
 let allData = [];
-let number=0
+let number = 0;
 function drawTable(arr) {
   tBody.innerHTML = "";
   arr.forEach((user) => {
@@ -15,8 +15,10 @@ function drawTable(arr) {
  <td>
 ${user.password}</td>
   <td>
- <a class="fa-solid fa-eye btn btn-success" onclick=showMoreDetails(${user.id})></a>
- <a class="fa-solid fa-edit btn btn-primary" ></a>
+ <a class="fa-solid fa-eye btn btn-success" onclick=showMoreDetails(${
+   user.id
+ })></a>
+ <a class="fa-solid fa-edit btn btn-primary" onclick=editUser(${user.id}) ></a>
  </td>
 </tr>
   
@@ -75,21 +77,43 @@ new Chart("myChart", {
 });
 
 let modalBody = document.getElementById("userModalBody");
+let userModal = new bootstrap.Modal(document.getElementById("userModal"));
+let closeModalBtn = document.getElementById("closeModalBtn");
+
 function showMoreDetails(userId) {
   let findUser = allData.find((item) => item.id == userId);
-  console.log(findUser);
   modalBody.innerHTML = `
-        
-       <h5 class="text-center">${findUser.userName}</h5>
-       <p><strong>First-Name: </strong> ${findUser.firstName}</p>
-       <p><strong>Last-Name: </strong>${findUser.lastName}</p>
-       <p><strong>Email: </strong>${findUser.email}</p>
+      <div class="content">
+      <h5 class="text-center">${findUser.userName}</h5>
+      <p><strong>First-Name: </strong> ${findUser.firstName}</p>
+      <p><strong>Last-Name: </strong>${findUser.lastName}</p>
+      <p><strong>Email: </strong>${findUser.email}</p>
+      </div>
         `;
-  let userModal = new bootstrap.Modal(document.getElementById("userModal"));
   userModal.show();
-  let closeModalBtn = document.getElementById("closeModalBtn");
   closeModalBtn.addEventListener("click", function () {
     userModal.hide();
   });
 }
 
+async function editUser(userId) {
+  let resp = await axios(`${BASE_URL}users/${userId}`);
+  let data = resp.data;
+  modalBody.innerHTML = "";
+  modalBody.innerHTML = `
+  <div class="ques">
+  <p>Do you want to admin ${data.userName}?</p>
+  </div>
+    <div class="buttons">
+      <button id="yes-btn" onclick="yesFunc(${userId})">Yes</button>
+    </div>
+  `;
+  userModal.show();
+  closeModalBtn.addEventListener("click", function () {
+    userModal.hide();
+  });
+}
+
+async function yesFunc(id) {
+  await axios.patch(`${BASE_URL}users/${id}`, { isAdmin: true });
+}

@@ -9,9 +9,10 @@ form.addEventListener("submit", async function (e) {
   e.preventDefault();
   let resp = await axios(`${BASE_URL}users`);
   allUsers = resp.data;
-  let admin = allUsers.find(
+  let adminUsers = allUsers.filter((item) => item.isAdmin === true);
+
+  let admin = adminUsers.find(
     (item) =>
-      item.isAdmin === true &&
       item.firstName === userNameEmailInp.value &&
       item.password === passwordInp.value
   );
@@ -19,17 +20,20 @@ form.addEventListener("submit", async function (e) {
   if (admin) {
     window.location.href = "../admin/admin.html";
   } else {
-    let rightUser = allUsers.find(
+    let regularUser = allUsers.find(
       (item) =>
-        userNameEmailInp.value === item.userName &&
-        passwordInp.value === item.password
+        item.userName === userNameEmailInp.value &&
+        item.password === passwordInp.value
     );
-    // console.log(rightUser);
-    if (rightUser) {
-      await axios.patch(`http://localhost:8080/users/${rightUser.id}`, {
+    if (regularUser) {
+      await axios.patch(`${BASE_URL}users/${regularUser.id}`, {
         check: true,
       });
-      window.location.href = "index.html";
+      if (regularUser.isAdmin) {
+        window.location.href = "../admin/admin.html";
+      } else {
+        window.location.href = "index.html";
+      }
     } else {
       alert("Invalid credentials");
     }
