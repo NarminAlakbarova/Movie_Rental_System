@@ -78,6 +78,7 @@ searchInp.addEventListener("input", function (e) {
       .toLocaleLowerCase()
       .includes(e.target.value.toLocaleLowerCase())
   );
+  sortedArr=copyArr
   drawTabele(copyArr.slice(0, max));
 });
 
@@ -164,7 +165,7 @@ function filterMovies(genresMovies) {
     copyArr = copyArr.filter((item) => item.genres.includes(genresMovies));
     drawTabele(copyArr);
   }
-  // copyArr=sortedArr
+ sortedArr=copyArr
 }
 
 filterMovies();

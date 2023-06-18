@@ -93,7 +93,21 @@
       "genres": "Family ",
       "img": "../assets/img/upcomingfilms/barbie.jpeg",
       "section": "upcoming",
-      "time": "1h 36m"
+      "time": "1h 36m",
+      "comments": [
+        {
+          "username": "bijazavyxo",
+          "email": "tyzo@mailinator.com",
+          "commentContent": "Reprehenderit irure ",
+          "commentDate": "6/17/2023, 11:31:49 PM"
+        },
+        {
+          "username": "bijazavyxo",
+          "email": "tyzo@mailinator.com",
+          "commentContent": "Reprehenderit irure ",
+          "commentDate": "6/17/2023, 11:31:49 PM"
+        }
+      ]
     },
     {
       "id": 15,
@@ -105,7 +119,15 @@
       "genres": "Family ",
       "img": "../assets/img/upcomingfilms/aquaman2.jpeg",
       "section": "upcoming",
-      "time": "1h 36m"
+      "time": "1h 36m",
+      "comments": [
+        {
+          "username": "minaye",
+          "email": "tyzo@mailinator.com",
+          "commentContent": "good",
+          "commentDate": "6/17/2023, 11:31:49 PM"
+        }
+      ]
     },
     {
       "id": 16,
@@ -117,7 +139,15 @@
       "genres": "Action ",
       "img": "../assets/img/upcomingfilms/deadpool.jpeg",
       "section": "upcoming",
-      "time": "1h 36m"
+      "time": "1h 36m",
+      "comments": [
+        {
+          "username": "bijazavyxo",
+          "email": "tyzo@mailinator.com",
+          "commentContent": "Reprehenderit irure ",
+          "commentDate": "6/17/2023, 11:31:49 PM"
+        }
+      ]
     },
     {
       "id": 17,
@@ -129,7 +159,15 @@
       "genres": "Action ",
       "img": "../assets/img/upcomingfilms/flash.jpeg",
       "section": "upcoming",
-      "time": "1h 36m"
+      "time": "1h 36m",
+      "comments": [
+        {
+          "username": "bijazavyxo",
+          "email": "tyzo@mailinator.com",
+          "commentContent": "Reprehenderit irure ",
+          "commentDate": "6/17/2023, 11:31:49 PM"
+        }
+      ]
     },
     {
       "id": 18,
@@ -141,7 +179,15 @@
       "genres": "Action ",
       "img": "../assets/img/upcomingfilms/ninja.jpeg",
       "section": "upcoming",
-      "time": "1h 36m"
+      "time": "1h 36m",
+      "comments": [
+        {
+          "username": "bijazavyxo",
+          "email": "tyzo@mailinator.com",
+          "commentContent": "Reprehenderit irure ",
+          "commentDate": "6/17/2023, 11:31:49 PM"
+        }
+      ]
     },
     {
       "id": 19,
@@ -153,7 +199,15 @@
       "genres": "Action ",
       "img": "../assets/img/upcomingfilms/sonic.jpg",
       "section": "upcoming",
-      "time": "1h 36m"
+      "time": "1h 36m",
+      "comments": [
+        {
+          "username": "bijazavyxo",
+          "email": "tyzo@mailinator.com",
+          "commentContent": "Reprehenderit irure ",
+          "commentDate": "6/17/2023, 11:31:49 PM"
+        }
+      ]
     },
     {
       "id": 20,
@@ -165,7 +219,15 @@
       "genres": "Horror",
       "img": "../assets/img/upcomingfilms/five-nights.jpg",
       "section": "Suggested",
-      "time": "1h 36m"
+      "time": "1h 36m",
+      "comments": [
+        {
+          "username": "bijazavyxo",
+          "email": "tyzo@mailinator.com",
+          "commentContent": "Reprehenderit irure ",
+          "commentDate": "6/17/2023, 11:31:49 PM"
+        }
+      ]
     },
     {
       "id": 21,

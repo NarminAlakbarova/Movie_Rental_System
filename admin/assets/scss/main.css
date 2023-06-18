@@ -456,4 +456,38 @@ header .header .admin .dropdown button {
 }
 #add-movies .add-movies form #add:active::before {
   scale: 0.7;
+}
+
+#comments {
+  padding: 100px 0 100px 280px;
+}
+#comments .comments .cards-row h2 {
+  color: #0d1b2a;
+  text-align: center;
+}
+#comments .comments .cards-row .card {
+  cursor: pointer;
+}
+#comments .comments .cards-row .card img {
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#comments .comments h2 {
+  color: #0d1b2a;
+  text-align: center;
+}
+#comments .comments .comment-row .comment-card {
+  padding: 10px;
+  background-color: rgba(134, 150, 254, 0.6509803922);
+  color: #0d1b2a;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+#comments .comments .comment-row .comment-card img {
+  width: 50px;
+  height: 50px;
 }/*# sourceMappingURL=main.css.map */
