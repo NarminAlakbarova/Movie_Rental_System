@@ -52,6 +52,25 @@ header .header .admin {
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
+header .header .admin .letter {
+  position: relative;
+}
+header .header .admin .letter a {
+  color: white;
+}
+header .header .admin .letter .count {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: #0d1b2a;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -7px;
+  left: 15px;
+}
 header .header .admin .dropdown button {
   color: white;
 }
@@ -77,6 +96,7 @@ header .header .admin .dropdown button {
   display: flex;
   -moz-column-gap: 20px;
        column-gap: 20px;
+  align-items: center;
 }
 #left-bars .left-bars .left-bars-title .admin-info .admin-name {
   display: flex;
@@ -499,4 +519,84 @@ header .header .admin .dropdown button {
 #comments .comments .comment-row .comment-card img {
   width: 50px;
   height: 50px;
+}
+
+#contact {
+  padding-left: 300px;
+  padding-top: 100px;
+}
+#contact .contact .card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 12px;
+  background-color: #8da9c4;
+  border-radius: 8px;
+  position: relative;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+#contact .contact .card:hover .back-card {
+  transform: rotate(5deg);
+}
+#contact .contact .card:hover .thid-card {
+  transform: rotate(-5deg);
+}
+#contact .contact .card.sent {
+  align-self: flex-end;
+}
+#contact .contact .card.sent .message-content {
+  text-align: right;
+}
+#contact .contact .card.sent .message-content .timestamp {
+  text-align: right;
+}
+#contact .contact .card .message-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#contact .contact .card .message-content .message {
+  margin-bottom: 4px;
+}
+#contact .contact .card .message-content .timestamp {
+  font-size: 12px;
+  color: #888888;
+}
+#contact .contact .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  z-index: -1;
+}
+#contact .contact .card .back-card {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease-in;
+  background: linear-gradient(270deg, #134074 0%, #13315c 16%, #0b2545 82%, #8da9c4 100%);
+  z-index: -1;
+  box-shadow: 10px 10px 51px 0px rgba(141, 169, 196, 0.75);
+  -webkit-box-shadow: 10px 10px 51px 0px rgba(141, 169, 196, 0.75);
+  -moz-box-shadow: 10px 10px 51px 0px rgba(141, 169, 196, 0.75);
+}
+#contact .contact .card .thid-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease-in;
+  background: linear-gradient(270deg, #134074 0%, #13315c 16%, #0b2545 82%, #8da9c4 100%);
+  z-index: -1;
+  box-shadow: 10px 10px 51px 0px rgba(141, 169, 196, 0.75);
+  -webkit-box-shadow: 10px 10px 51px 0px rgba(141, 169, 196, 0.75);
+  -moz-box-shadow: 10px 10px 51px 0px rgba(141, 169, 196, 0.75);
 }/*# sourceMappingURL=main.css.map */

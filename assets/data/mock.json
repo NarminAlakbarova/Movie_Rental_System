@@ -655,5 +655,15 @@
       "time": "1h 20m",
       "img": "../assets/img/hero-banner/bridgerton.jpg"
     }
+  ],
+  "contact": [
+    {
+      "username": "Lesley Lowery",
+      "lastname": "Hoffman",
+      "phone": "+1 (241) 763-4051",
+      "email": "liwi@mailinator.com",
+      "content": "Minus vel mollit eum",
+      "id": 1
+    }
   ]
 }

@@ -7,9 +7,9 @@ header {
   width: 100%;
   top: 0;
   z-index: 99;
-  box-shadow: 14px -1px 115px 0px rgba(65,90,119,0.44);
-  -webkit-box-shadow: 14px -1px 115px 0px rgba(65,90,119,0.44);
-  -moz-box-shadow: 14px -1px 115px 0px rgba(65,90,119,0.44);
+  box-shadow: 14px -1px 115px 0px rgba(65, 90, 119, 0.44);
+  -webkit-box-shadow: 14px -1px 115px 0px rgba(65, 90, 119, 0.44);
+  -moz-box-shadow: 14px -1px 115px 0px rgba(65, 90, 119, 0.44);
   .header {
     display: flex;
     justify-content: flex-end;
@@ -25,7 +25,25 @@ header {
 
       align-items: center;
       column-gap: 20px;
-
+      .letter {
+        position: relative;
+        a{
+          color: white;
+        }
+        .count{
+          position: absolute;
+          height: 15px;
+          width: 15px;
+          background-color: #0d1b2a;
+          border-radius: 50%;
+          font-size: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: -7px;
+          left: 15px;
+        }
+      }
       .dropdown {
         button {
           color: white;
@@ -44,9 +62,9 @@ header {
   top: 0;
 
   .left-bars {
-    box-shadow: 14px -1px 115px 0px rgba(65,90,119,0.44);
--webkit-box-shadow: 14px -1px 115px 0px rgba(65,90,119,0.44);
--moz-box-shadow: 14px -1px 115px 0px rgba(65,90,119,0.44);
+    box-shadow: 14px -1px 115px 0px rgba(65, 90, 119, 0.44);
+    -webkit-box-shadow: 14px -1px 115px 0px rgba(65, 90, 119, 0.44);
+    -moz-box-shadow: 14px -1px 115px 0px rgba(65, 90, 119, 0.44);
     .left-bars-title {
       //   display: none;
       padding-left: 10px;
@@ -54,6 +72,7 @@ header {
         padding: 15px 0 20px;
         display: flex;
         column-gap: 20px;
+        align-items: center;
         .admin-name {
           display: flex;
           flex-direction: column;
@@ -92,7 +111,6 @@ header {
       }
     }
   }
-
 }
 
 #admin-panel {
@@ -119,7 +137,6 @@ header {
     table {
       thead {
         tr {
-        
           th {
             text-align: center;
             background-color: #415a77;
@@ -131,14 +148,12 @@ header {
         tr {
           // display: flex;
           text-align: center;
-       
-          
+
           td {
             text-align: center;
             background-color: #e0e1dd;
             // padding: 10px;
             vertical-align: middle;
-         
 
             img {
               width: 40px;
