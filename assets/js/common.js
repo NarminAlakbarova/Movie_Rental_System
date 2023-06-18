@@ -6,7 +6,6 @@ let searchInp = document.querySelector(".search-input");
 let searchIcon = document.querySelector(".fa-search");
 let dropdown = document.querySelector(".dropdown");
 
-
 // DROPDOWN
 dropdown.addEventListener("mouseenter", function () {
   dropdown.setAttribute("data-bs-toggle", "");
@@ -26,41 +25,39 @@ userIcon.addEventListener("click", function () {
 });
 // BURGER MENU
 menuIcon.addEventListener("click", function () {
-    burgerMenu.classList.toggle("show");
-  });
-  markIcon.addEventListener("click", function () {
-    burgerMenu.classList.toggle("show");
-  });
-
+  burgerMenu.classList.toggle("show");
+});
+markIcon.addEventListener("click", function () {
+  burgerMenu.classList.toggle("show");
+});
 
 //   SCROLL
 function scrollFunction() {
-    if (
-      document.body.scrollTop > 100 ||
-      document.documentElement.scrollTop > 100
-    ) {
-      header.style.background = "#141414";
-    } else {
-      header.style.background = "";
-    }
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    header.style.background = "#141414";
+  } else {
+    header.style.background = "";
   }
-  window.addEventListener("scroll", scrollFunction);
-  searchIcon.addEventListener("click", function () {
-    searchInp.classList.toggle("show-inp");
-  });
-  
+}
+window.addEventListener("scroll", scrollFunction);
+searchIcon.addEventListener("click", function () {
+  searchInp.classList.toggle("show-inp");
+});
 
 // BACT TO TOP
-$(document).ready(function(){ 
-  $(window).scroll(function(){ 
-      if ($(this).scrollTop() > 100) { 
-          $('#scroll').fadeIn(); 
-      } else { 
-          $('#scroll').fadeOut(); 
-      } 
-  }); 
-  $('#scroll').click(function(){ 
-      $("html, body").animate({ scrollTop: 0 }, 600); 
-      return false; 
-  }); 
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $("#scroll").fadeIn();
+    } else {
+      $("#scroll").fadeOut();
+    }
+  });
+  $("#scroll").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
 });

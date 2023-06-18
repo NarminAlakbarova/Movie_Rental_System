@@ -12,14 +12,10 @@ favCaunter();
 // DARK MODE
 const sunIcon = document.querySelector(".fa-sun");
 const body = document.body;
-let isDarkMode = false;
-sunIcon.addEventListener("click", toggleDarkMode);
-function toggleDarkMode() {
-  if (isDarkMode) {
-    body.classList.add("dark-mode");
-    isDarkMode = false;
-  } else {
-    body.classList.remove("dark-mode");
-    isDarkMode = true;
-  }
-}
+
+sunIcon.addEventListener("click", function () {
+  body.classList.toggle("dark-mode");
+  sunIcon.classList.contains("fa-sun")
+    ? (this.classList = "fa-solid fa-moon")
+    : (this.classList = "fa-solid fa-sun");
+});
