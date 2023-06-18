@@ -21,6 +21,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
     <link rel="stylesheet" href="./assets/scss/main.css" />
 
     <title>Document</title>
@@ -69,7 +74,7 @@
                         >All Movies</a
                       >
                     </li>
-          
+
                     <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
                     <li>
                       <a class="dropdown-item premium" href="premium.html"
@@ -81,7 +86,6 @@
               </li>
               <li class="my-list-li"><a href="my-list.html">My List </a></li>
               <li><a href="blog.html">Blog </a></li>
-        
             </ul>
           </nav>
           <div class="right-nav">
@@ -95,30 +99,40 @@
             </div>
             <div class="notification">
               <a href="basket.html" class="fa-solid fa-basket-shopping"></a>
-              <span>1</span>
+              <span class="basket-count"></span>
             </div>
             <div class="account">
-              <i class="fa-regular fa-user"></i>
-              <ul class="sing-in-up">
-                <li>
-                  <a class="fa-solid fa-user-plus d-flex" href="sign-up.html">
-                    <p>Register</p>
-                  </a>
-                </li>
-                <li>
-                  <a class="fa-solid fa-user-plus d-flex" href="sign-in.html">
-                    <p>Sign in</p>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="fa-solid fa-arrow-right-to-bracket d-flex log-out"
-                    href="#"
-                  >
-                    <p>Log out</p>
-                  </a>
-                </li>
-              </ul>
+              <div class="dropdown sign-in-up">
+                <button
+                  class="btn text-white dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-regular fa-user"></i>
+                  <span class="user-name"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li>
+                    <a
+                      class="fa-solid fa-user-plus d-flex dropdown-item"
+                      href="sign-in.html"
+                    >
+                      <p>Sign in</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      class="dropdown-item fa-solid fa-arrow-right-to-bracket d-flex log-out"
+                      href="#"
+                    >
+                      <p>Log out</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <svg class="vbp-header-menu-button__svg">
               <line x1="0" y1="50%" x2="100%" y2="50%" class="top" />
@@ -129,7 +143,6 @@
         </div>
       </div>
     </header>
-
 
     <!--HERO-SECTİON -->
     <section id="hero-banner">
@@ -255,101 +268,99 @@
               </div>
             </div>
             <div class="col-xl-8 col-sm-12 my-5">
-              <div class="row premium-row">
-               
-              </div>
+              <div class="row premium-row"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-      <!-- Footer -->
-      <footer class="text-center text-lg-start">
-        <section class="d-flex justify-content-between p-3" id="top-footer">
-          <div class="container top-footer">
-            <div class="">
-              <span>Get connected with us on social networks:</span>
-            </div>
-            <div class="hover-effect1">
-              <ul>
-                <li>
-                  <a href="#." title="Facebook">
-                    <i class="fab fa-facebook-f"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#." title="Twitter"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href="#." title="Google Plus">
-                    <i class="fab fa-google"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#." title="Youtube"
-                    ><i class="fab fa-instagram"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#." title="Vimeo"> <i class="fab fa-linkedin"></i></a>
-                </li>
-              </ul>
-            </div>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start">
+      <section class="d-flex justify-content-between p-3" id="top-footer">
+        <div class="container top-footer">
+          <div class="">
+            <span>Get connected with us on social networks:</span>
           </div>
-        </section>
-        <section class="footer">
-          <div class="container text-center text-md-start mt-5">
-            <div class="row mt-3">
-              <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
-                <img src="./assets/img/logo.png" alt="" />
-              </div>
-  
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 footer-content">
-                <p>
-                  <a href="#">Terms of Use</a>
-                </p>
-                <p>
-                  <a href="my-list.html"> My List </a>
-                </p>
-                <p>
-                  <a href="faq.html">FAQ</a>
-                </p>
-                <p>
-                  <a href="blog.html">Blog</a>
-                </p>
-              </div>
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-content">
-                <p>
-                  <a href="#">Help Center</a>
-                </p>
-                <p>
-                  <a href="contact.html">Contact Us</a>
-                </p>
-                <p>
-                  <a href="#">Privacy</a>
-                </p>
-                <p>
-                  <a href="#">Media Center</a>
-                </p>
-              </div>
-  
-              <div class="col-md-4 col-lg-3 col-xl-3 footer-content footer-place">
-                <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-                <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-              </div>
-            </div>
+          <div class="hover-effect1">
+            <ul>
+              <li>
+                <a href="#." title="Facebook">
+                  <i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#." title="Twitter"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#." title="Google Plus">
+                  <i class="fab fa-google"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#." title="Youtube"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#." title="Vimeo"> <i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
           </div>
-        </section>
-        <div class="text-center p-3 copyright d-flex justify-content-center">
-          <p>© 2020 Copyright: All Rights Reserved.</p>
-          <a  id="scroll">
-            <i class="fa-solid fa-turn-up"></i>
-          </a>
         </div>
-      </footer>
+      </section>
+      <section class="footer">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+              <img src="./assets/img/logo.png" alt="" />
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 footer-content">
+              <p>
+                <a href="#">Terms of Use</a>
+              </p>
+              <p>
+                <a href="my-list.html"> My List </a>
+              </p>
+              <p>
+                <a href="faq.html">FAQ</a>
+              </p>
+              <p>
+                <a href="blog.html">Blog</a>
+              </p>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 footer-content">
+              <p>
+                <a href="#">Help Center</a>
+              </p>
+              <p>
+                <a href="contact.html">Contact Us</a>
+              </p>
+              <p>
+                <a href="#">Privacy</a>
+              </p>
+              <p>
+                <a href="#">Media Center</a>
+              </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 footer-content footer-place">
+              <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+              <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+              <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="text-center p-3 copyright d-flex justify-content-center">
+        <p>© 2020 Copyright: All Rights Reserved.</p>
+        <a id="scroll">
+          <i class="fa-solid fa-turn-up"></i>
+        </a>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -363,11 +374,15 @@
       referrerpolicy="no-referrer"
     ></script>
     <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script src="assets/js/premium.js"></script>

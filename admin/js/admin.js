@@ -16,6 +16,7 @@ function drawTable(arr) {
 ${user.password}</td>
   <td>
  <a class="fa-solid fa-eye btn btn-success" onclick=showMoreDetails(${user.id})></a>
+ <a class="fa-solid fa-edit btn btn-primary" ></a>
  </td>
 </tr>
   
@@ -73,10 +74,10 @@ new Chart("myChart", {
   },
 });
 
+let modalBody = document.getElementById("userModalBody");
 function showMoreDetails(userId) {
   let findUser = allData.find((item) => item.id == userId);
   console.log(findUser);
-  let modalBody = document.getElementById("userModalBody");
   modalBody.innerHTML = `
         
        <h5 class="text-center">${findUser.userName}</h5>

@@ -68,7 +68,7 @@
                         >All Movies</a
                       >
                     </li>
-          
+
                     <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
                     <li>
                       <a class="dropdown-item premium" href="premium.html"
@@ -80,7 +80,6 @@
               </li>
               <li class="my-list-li"><a href="my-list.html">My List </a></li>
               <li><a href="blog.html">Blog </a></li>
-        
             </ul>
           </nav>
           <div class="right-nav">
@@ -94,30 +93,42 @@
             </div>
             <div class="notification">
               <a href="basket.html" class="fa-solid fa-basket-shopping"></a>
-              <span>1</span>
+              <span class="basket-count"></span>
+
             </div>
             <div class="account">
-              <i class="fa-regular fa-user"></i>
-              <ul class="sing-in-up">
-                <li>
-                  <a class="fa-solid fa-user-plus d-flex" href="sign-up.html">
-                    <p>Register</p>
-                  </a>
-                </li>
-                <li>
-                  <a class="fa-solid fa-user-plus d-flex" href="sign-in.html">
-                    <p>Sign in</p>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="fa-solid fa-arrow-right-to-bracket d-flex log-out"
-                    href="#"
-                  >
-                    <p>Log out</p>
-                  </a>
-                </li>
-              </ul>
+              <div class="dropdown sign-in-up">
+                <button
+                  class="btn text-white dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-regular fa-user"></i>
+                  <span class="user-name"></span>
+
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li>
+                    <a
+                      class="fa-solid fa-user-plus d-flex dropdown-item"
+                      href="sign-in.html"
+                    >
+                      <p>Sign in</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      class="dropdown-item fa-solid fa-arrow-right-to-bracket d-flex log-out"
+                      href="#"
+                    >
+                      <p>Log out</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <svg class="vbp-header-menu-button__svg">
               <line x1="0" y1="50%" x2="100%" y2="50%" class="top" />
@@ -149,9 +160,7 @@
     <section id="details">
       <div class="container">
         <div class="details">
-          <div class="row details-row">
-
-          </div>
+          <div class="row details-row"></div>
         </div>
       </div>
     </section>
@@ -161,27 +170,26 @@
       <div class="container">
         <div class="links">
           <ul>
-            <li class="description-link"><a class="description-link" href="#links">Description</a></li>
-            <li class="rate-review-link"><a class="rate-review-link" href="#links">Rate & Review</a></li>
+            <li >
+              <a class="description-link" href="#links">Description</a>
+            </li>
+            <li >
+              <a class="rate-review-link" href="#links">Rate & Review</a>
+            </li>
           </ul>
         </div>
       </div>
     </section>
     <section id="description">
       <div class="container">
-        <div class="description">
-        
-        </div>
+        <div class="description"></div>
       </div>
     </section>
 
     <section id="rate-review">
       <div class="container">
         <div class="rate-review">
-          <div class="row comments-row">
-           
-       
-          </div>
+          <div class="row comments-row"></div>
           <div class="row">
             <div class="col-lg-12 my-3">
               <div class="review-title">
@@ -214,7 +222,7 @@
                     </div>
                     <div class="col-lg-6 my-3 d-flex flex-column">
                       <label for="">Email *</label>
-                      <input type="email" class="email-inp" required/>
+                      <input type="email" class="email-inp" required />
                     </div>
                     <div class="col-lg-12 my-3">
                       <button type="submit" id="submit">Submit</button>
@@ -235,29 +243,22 @@
           <h3 class="text-white">Recommended</h3>
         </div>
         <div class="recommended">
-          <div class="row recommended-row">
-           
-          </div>
+          <div class="row recommended-row"></div>
         </div>
       </div>
     </section>
 
-<!-- Related Movies -->
+    <!-- Related Movies -->
     <section id="related">
       <div class="container">
         <div class="related-title">
           <h3 class="text-white">Related Movies</h3>
         </div>
         <div class="related">
-          <div class="row retaled-row">
-            
-             
-          </div>
+          <div class="row retaled-row"></div>
         </div>
       </div>
     </section>
-
-
 
     <!-- Footer -->
     <footer class="text-center text-lg-start">
@@ -340,7 +341,7 @@
       </section>
       <div class="text-center p-3 copyright d-flex justify-content-center">
         <p>© 2020 Copyright: All Rights Reserved.</p>
-        <a  id="scroll">
+        <a id="scroll">
           <i class="fa-solid fa-turn-up"></i>
         </a>
       </div>
@@ -358,15 +359,14 @@
       referrerpolicy="no-referrer"
     ></script>
     <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script src="assets/js/details.js"></script>
     <script src="./assets/js/common.js"></script>
-
   </body>
 </html>

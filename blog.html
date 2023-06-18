@@ -83,7 +83,7 @@
                         >All Movies</a
                       >
                     </li>
-          
+
                     <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
                     <li>
                       <a class="dropdown-item premium" href="premium.html"
@@ -95,7 +95,6 @@
               </li>
               <li class="my-list-li"><a href="my-list.html">My List </a></li>
               <li><a href="blog.html">Blog </a></li>
-        
             </ul>
           </nav>
           <div class="right-nav">
@@ -109,30 +108,45 @@
             </div>
             <div class="notification">
               <a href="basket.html" class="fa-solid fa-basket-shopping"></a>
-              <span>1</span>
+              <span class="basket-count"></span>
+
             </div>
             <div class="account">
-              <i class="fa-regular fa-user"></i>
-              <ul class="sing-in-up">
-                <li>
-                  <a class="fa-solid fa-user-plus d-flex" href="sign-up.html">
-                    <p>Register</p>
-                  </a>
-                </li>
-                <li>
-                  <a class="fa-solid fa-user-plus d-flex" href="sign-in.html">
-                    <p>Sign in</p>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="fa-solid fa-arrow-right-to-bracket d-flex log-out"
-                    href="#"
-                  >
-                    <p>Log out</p>
-                  </a>
-                </li>
-              </ul>
+              <div class="dropdown sign-in-up">
+                <button
+                  class="btn text-white dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-regular fa-user"></i>
+                  <span class="user-name"></span>
+
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+             
+
+                  <li>
+                    <a
+                      class="fa-solid fa-user-plus d-flex dropdown-item"
+                      href="sign-in.html"
+                    >
+                      <p>Sign in</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      class="dropdown-item fa-solid fa-arrow-right-to-bracket d-flex log-out"
+                      href="#"
+                    >
+                   
+                      <p>Log out</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <svg class="vbp-header-menu-button__svg">
               <line x1="0" y1="50%" x2="100%" y2="50%" class="top" />

@@ -54,8 +54,8 @@
     },
     {
       "isAdmin": false,
-      "check": true,
-      "userName": "fatime",
+      "check": false,
+      "userName": "Fatime",
       "firstName": "zamifitog",
       "lastName": "zabyvo",
       "password": "fatime123",
@@ -80,6 +80,25 @@
       "password": "minaye123",
       "email": "nino@gmail.com",
       "id": 10
+    },
+    {
+      "isAdmin": false,
+      "userName": "kanan",
+      "firstName": "bifexa",
+      "lastName": "dasaletik",
+      "password": "Pa$$w0rd!",
+      "email": "sajec@mailinator.com",
+      "id": 11
+    },
+    {
+      "isAdmin": false,
+      "userName": "minayee",
+      "firstName": "hyfuj",
+      "lastName": "derevafow",
+      "password": "minaye1234",
+      "email": "kicemo@mailinator.com",
+      "id": 12,
+      "check": true
     }
   ],
   "allMovies": [
@@ -653,7 +672,15 @@
       "id": 50,
       "price": 3,
       "time": "1h 20m",
-      "img": "../assets/img/hero-banner/bridgerton.jpg"
+      "img": "../assets/img/hero-banner/bridgerton.jpg",
+      "comments": [
+        {
+          "username": "kysewipyh",
+          "email": "himufu@mailinator.com",
+          "commentContent": "Quo exercitation ven",
+          "commentDate": "6/18/2023, 11:08:36 PM"
+        }
+      ]
     }
   ],
   "contact": [

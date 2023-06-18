@@ -1,5 +1,4 @@
 let cards = document.querySelectorAll(".card");
-let logOutIcon = document.querySelector(".log-out");
 // let userId = new URLSearchParams(window.location.search).get("id");
 
 let allMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
@@ -108,26 +107,24 @@ function drawSuggestedSlide(arr) {
   suggestedSlide.innerHTML = "";
   arr.forEach((item) => {
     suggestedSlide.innerHTML += `
-      <div class="swiper-slide">
-        <div class="card">
-          <div class="overlay">
-            <div class="overlay-content">
-             
-              
-              <a class="fa-solid fa-play" href="details.html?id=${item.id}"></a>
-              <a class="fa-solid fa-plus" onclick=addMyList(${item.id})></a>
-            </div>
-          </div>
-          <img src="${
-            item.img.length > 100 ? item.img : item.img.slice(1)
-          }" alt="" />
+    <div class="swiper-slide">
+    <div class="card">
+    <div class="overlay">
+    <div class="overlay-content">
+    
+    
+    <a class="fa-solid fa-play" href="details.html?id=${item.id}"></a>
+    <a class="fa-solid fa-plus" onclick=addMyList(${item.id})></a>
+    </div>
+    </div>
+    <img src="${item.img.length > 100 ? item.img : item.img.slice(1)}" alt="" />
           <div class="title">
             <h2>${item.movieName}</h2>
             <p>${item.time}</p>
-          </div>
+            </div>
         </div>
       </div>
-    `;
+      `;
   });
 }
 
@@ -186,32 +183,32 @@ function drawUpcomingCards(arr) {
     <div class="col-lg-4 col-md-6 col-sm-6 my-2">
     <div class="card left-cards">
       <div class="img">
-        <img src="${
-          item.img.length > 100 ? item.img : item.img.slice(1)
-        }" alt="" />
+      <img src="${
+        item.img.length > 100 ? item.img : item.img.slice(1)
+      }" alt="" />
       </div>
       <div class="content">
         <h4>${item.movieName}</h4>
         <p>${item.genres}</p>
-      </div>
-      <div class="play-overlay">
+        </div>
+        <div class="play-overlay">
         <a href="details.html?id=${item.id}">
         
           <i class="fa-solid fa-play"></i>
-        </a>
-      </div>
-      <div class="star-time">
-        <div class="star">
+          </a>
+          </div>
+          <div class="star-time">
+          <div class="star">
           <i class="fa-solid fa-star"></i>
           <p>${item.imbd}</p>
-        </div>
-        <p class="time">${item.releaseDate.split(",").slice(1).join("")}</p>
-      </div>
-    </div>
-  </div>
-    
-    
-    `;
+          </div>
+          <p class="time">${item.releaseDate.split(",").slice(1).join("")}</p>
+          </div>
+          </div>
+          </div>
+          
+          
+          `;
   });
 }
 
@@ -231,32 +228,32 @@ function drawMostHaveRow(arr) {
   arr.forEach((item) => {
     mustHaveRow.innerHTML += `
     
-         <div class="col-lg-12 my-2">
+    <div class="col-lg-12 my-2">
                   <div class="card right-cards">
-                    <div class="right-all-content">
-                      <div class="img">
-                        <img
+                  <div class="right-all-content">
+                  <div class="img">
+                  <img
                           src="${
                             item.img.length > 100 ? item.img : item.img.slice(1)
                           }"
                           alt=""
-                        />
-                      </div>
-                      <div class="right-content">
-                        <p>${item.movieName}</p>
-                        <div class="star-icon">
+                          />
+                          </div>
+                          <div class="right-content">
+                          <p>${item.movieName}</p>
+                          <div class="star-icon">
                           <i class="fa-solid fa-star"></i>
                           <p>${item.imbd}</p>
                           <p style="color: #7777">${item.releaseDate
                             .split(",")
                             .slice(1)
                             .join("")}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-    `;
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            `;
   });
 }
 async function getMostHaveSeries() {
@@ -273,26 +270,26 @@ function drawTrailerRow(arr) {
   trailerRow.innerHTML = "";
   arr.forEach((item) => {
     trailerRow.innerHTML += `
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="cards " onclick="showTrailer(this, '${item.id}')">
-          <div class="img">
-            <img src="${
-              item.img.length > 100 ? item.img : item.img.slice(1)
-            }" alt="" class="myImg" />
-
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+    <div class="cards " onclick="showTrailer(this, '${item.id}')">
+    <div class="img">
+    <img src="${
+      item.img.length > 100 ? item.img : item.img.slice(1)
+    }" alt="" class="myImg" />
+    
             <div class="modal">
               <span class="close" onclick="closeModal(this)" >&times;</span>
               <div class="modal-content">
                 <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
             </div>
-          </div>
+            </div>
           <div class="trailer-content">
             <h5>${item.movieName}</h5>
             <p>Season: ${item.season}</p>
           </div>
         </div>
-      </div>
+        </div>
     `;
   });
 }
@@ -342,13 +339,13 @@ function drawPremiumMovies(arr) {
     <div class="overlay"></div>
     <img src="${item.img.length > 100 ? item.img : item.img.slice(1)}" />
     <div class="slider-content">
-      <div class="gender">
-        <p class="action">${item.genres}</p>
-        <p class="adventures">Adventures</p>
-      </div>
-      <div class="first-title">${item.movieName}</div>
-      <div class="info-film">
-        <div class="imdb">
+    <div class="gender">
+    <p class="action">${item.genres}</p>
+    <p class="adventures">Adventures</p>
+    </div>
+    <div class="first-title">${item.movieName}</div>
+    <div class="info-film">
+    <div class="imdb">
           <p>${item.imbd}</p>
           <img
             src="./assets/img/imdb-film-director-computer-icons-television-u-b9ac4bbc964b1399dc797db594cf699a.png"
@@ -369,17 +366,17 @@ function drawPremiumMovies(arr) {
       </p>
 
       <p class="tags">
-        <span> Tags </span>
+      <span> Tags </span>
         Action, Adventures, Horror
-      </p>
+        </p>
       <p class="price">
         <span> Price </span>
-       ${item.price}
+        ${item.price}
       </p>
       <a class="play-now" href="premium.html">
-        <i class="fa-solid fa-play"></i>
+      <i class="fa-solid fa-play"></i>
         Play Now
-      </a>
+        </a>
     </div>
   </div>
     `;
@@ -397,16 +394,7 @@ async function getPremiumFilms() {
 getPremiumFilms();
 
 // console.log(userId);
-logOutIcon.addEventListener("click", async function () {
-  let resp = await axios("http://localhost:8080/users");
-  let data = resp.data;
-  let users = data.find((user) => user.check === true);
-  console.log(users);
-  await axios.patch(`http://localhost:8080/users/${users.id}`, {
-    check: false,
-  });
-  localStorage.clear();
-});
+
 
 // HERO-SECTION JS
 let heroCarusel = document.querySelector(".hero-carusel-item");

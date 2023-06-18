@@ -18,10 +18,16 @@ let dateValue = new Date();
 rateReviewLink.addEventListener("click", function () {
   descriptionSection.style.display = "none";
   rateReviewSection.style.display = "block";
+  rateReviewLink.classList.add("active")
+  description.classList.remove("active")
+
 });
 descriptionLink.addEventListener("click", function () {
   descriptionSection.style.display = "block";
   rateReviewSection.style.display = "none";
+  descriptionLink.classList.add("active")
+  rateReviewLink.classList.remove("active")
+
 });
 
 form.addEventListener("submit", async function (e) {
@@ -170,7 +176,7 @@ async function getData() {
   let data = resp.data;
   // console.log(data.comments.username);
   drawDetails(data);
-  getAllComments(data.comments)
+  getAllComments(data.comments);
 }
 getData();
 
@@ -186,7 +192,7 @@ function drawRecommendedRow(arr) {
             <div class="content">
               <h5>${item.movieName}</h5>
               <p class="time">${item.time}</p>
-              <a href="#">Play Now</a>
+              <a href="details.html?id=${item.id}">Play Now</a>
             </div>
             <div class="icons">
               <div>
@@ -224,7 +230,7 @@ function drawRelatedRow(arr) {
               <div class="content">
                 <h5>${item.movieName}</h5>
                 <p class="time">${item.time}</p>
-                <a href="#">Play Now</a>
+                <a href="details.html?id=${item.id}">Play Now</a>
               </div>
               <div class="icons">
                 <div>
@@ -246,14 +252,13 @@ async function getRelatedData() {
   let resp = await axios(`${BASE_URL}/allMovies`);
   let data = resp.data;
   drawRelatedRow(data.slice(4, 8));
-
 }
 getRelatedData();
 
-function getAllComments(arr){
+function getAllComments(arr) {
   commentsRow.innerHTML = "";
-arr.forEach((comment) => {
-  commentsRow.innerHTML += `
+  arr.forEach((comment) => {
+    commentsRow.innerHTML += `
     <div class="col-lg-12 my-3">
       <div class="card">
         <img src="./assets/img/users/57337b679b7a518894c3ed321f5ad211.jpeg" alt="" />
@@ -275,6 +280,5 @@ arr.forEach((comment) => {
       </div>
     </div>
   `;
-});
-
+  });
 }

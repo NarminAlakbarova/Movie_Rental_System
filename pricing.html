@@ -69,7 +69,7 @@
                         >All Movies</a
                       >
                     </li>
-          
+
                     <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
                     <li>
                       <a class="dropdown-item premium" href="premium.html"
@@ -81,7 +81,6 @@
               </li>
               <li class="my-list-li"><a href="my-list.html">My List </a></li>
               <li><a href="blog.html">Blog </a></li>
-        
             </ul>
           </nav>
           <div class="right-nav">
@@ -95,30 +94,45 @@
             </div>
             <div class="notification">
               <a href="basket.html" class="fa-solid fa-basket-shopping"></a>
-              <span>1</span>
+              <span class="basket-count"></span>
+
             </div>
             <div class="account">
-              <i class="fa-regular fa-user"></i>
-              <ul class="sing-in-up">
-                <li>
-                  <a class="fa-solid fa-user-plus d-flex" href="sign-up.html">
-                    <p>Register</p>
-                  </a>
-                </li>
-                <li>
-                  <a class="fa-solid fa-user-plus d-flex" href="sign-in.html">
-                    <p>Sign in</p>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="fa-solid fa-arrow-right-to-bracket d-flex log-out"
-                    href="#"
-                  >
-                    <p>Log out</p>
-                  </a>
-                </li>
-              </ul>
+              <div class="dropdown sign-in-up">
+                <button
+                  class="btn text-white dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa-regular fa-user"></i>
+                  <span class="user-name"></span>
+
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+             
+
+                  <li>
+                    <a
+                      class="fa-solid fa-user-plus d-flex dropdown-item"
+                      href="sign-in.html"
+                    >
+                      <p>Sign in</p>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      class="dropdown-item fa-solid fa-arrow-right-to-bracket d-flex log-out"
+                      href="#"
+                    >
+                   
+                      <p>Log out</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <svg class="vbp-header-menu-button__svg">
               <line x1="0" y1="50%" x2="100%" y2="50%" class="top" />
@@ -138,18 +152,18 @@
             <div class="single-price">
               <div class="deal-top">
                 <h3>Basic</h3>
-                <h4> 29 <span class="sup">$</span> </h4> 
+                <h4>29 <span class="sup">$</span></h4>
               </div>
               <div class="deal-bottom">
                 <ul class="deal-item">
                   <li>Ad Free Entertainment</li>
                   <li>American Tv Shows</li>
-                  <li>Hollywood Movies </li>
-                  <li>New Movies </li>
-                  <li>Streamit Special </li>
+                  <li>Hollywood Movies</li>
+                  <li>New Movies</li>
+                  <li>Streamit Special</li>
                 </ul>
                 <div class="btn-area">
-                  <a href="#">Sign Up</a>       
+                  <a href="#">Sign Up</a>
                 </div>
               </div>
             </div>
@@ -158,18 +172,18 @@
             <div class="single-price">
               <div class="deal-top">
                 <h3>Standard</h3>
-                <h4> 59 <span class="sup">$</span> </h4>
+                <h4>59 <span class="sup">$</span></h4>
               </div>
               <div class="deal-bottom">
                 <ul class="deal-item">
                   <li>Ad Free Entertainment</li>
                   <li>American Tv Shows</li>
-                  <li>Hollywood Movies </li>
-                  <li>New Movies </li>
-                  <li>Streamit Special </li>
+                  <li>Hollywood Movies</li>
+                  <li>New Movies</li>
+                  <li>Streamit Special</li>
                 </ul>
                 <div class="btn-area">
-                  <a href="#">Sign Up</a>       
+                  <a href="#">Sign Up</a>
                 </div>
               </div>
             </div>
@@ -178,26 +192,24 @@
             <div class="single-price">
               <div class="deal-top">
                 <h3>Professional</h3>
-                <h4> 79 <span class="sup">$</span> </h4> 
+                <h4>79 <span class="sup">$</span></h4>
               </div>
               <div class="deal-bottom">
                 <ul class="deal-item">
                   <li>Ad Free Entertainment</li>
                   <li>American Tv Shows</li>
-                  <li>Hollywood Movies </li>
-                  <li>New Movies </li>
-                  <li>Streamit Special </li>
+                  <li>Hollywood Movies</li>
+                  <li>New Movies</li>
+                  <li>Streamit Special</li>
                 </ul>
                 <div class="btn-area">
-                  <a href="#">Sign Up</a>       
+                  <a href="#">Sign Up</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>       
-    
-    
+      </div>
     </div>
 
     <!-- Footer -->
@@ -281,7 +293,7 @@
       </section>
       <div class="text-center p-3 copyright d-flex justify-content-center">
         <p>© 2020 Copyright: All Rights Reserved.</p>
-        <a  id="scroll">
+        <a id="scroll">
           <i class="fa-solid fa-turn-up"></i>
         </a>
       </div>
@@ -299,15 +311,14 @@
       referrerpolicy="no-referrer"
     ></script>
     <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!-- <script src="assets/js/main.js"></script> -->
     <script src="./assets/js/common.js"></script>
-
   </body>
 </html>

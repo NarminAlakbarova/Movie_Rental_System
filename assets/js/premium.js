@@ -123,6 +123,15 @@ function filterByGenre(genre) {
   }
   drawPremRow(copyArr);
 }
+function showAlert(alerttext, infoalert) {
+  Toastify({
+    text: alerttext,
+    className: infoalert,
+    style: {
+      background: "linear-gradient(to right, #222221, #b00000 )",
+    },
+  }).showToast();
+}
 
 // ADD BASKET
 async function addBasket(moviId) {
@@ -132,14 +141,15 @@ async function addBasket(moviId) {
   let data = resp.data;
   let checkUser = data.find((user) => user.check === true);
   if (!checkUser) {
-    alert("please sign in");
+    showAlert("Please Sign in", "info");
   } else if (!allPremiumMovies.includes(selectedObj) && checkUser) {
     let premiumMovies = copyArr.find((obj) => obj.id === moviId);
     allPremiumMovies.push(premiumMovies);
     localStorage.setItem("premiumMovies", JSON.stringify(allPremiumMovies));
-    alert("yes")
+    showAlert("Added", "info");
   } else if (allPremiumMovies.includes(selectedObj)) {
-    alert("no");
+    showAlert("This movie alredy added basket", "info");
+
   }
 }
 
