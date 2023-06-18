@@ -25,23 +25,18 @@
     <title>Document</title>
   </head>
   <body>
+
     <!-- BURGER-MENU -->
     <div id="burger-menu">
-      <div class="img-icon">
-        <img src="./assets/img/logo.png" alt="logo" />
-        <i class="fa-solid fa-xmark"></i>
-      </div>
       <ul>
         <li><a href="#" style="color: #e50914">Home</a></li>
-
         <li><a href="all-movies.html">All Movies</a></li>
         <li><a href="my-list.html">My List </a></li>
         <li><a href="blog.html">Blog </a></li>
-        <li><a href="premium.html">Premium Movies </a></li>
-        <li><a href="pricing.html">Pricing </a></li>
-        <li><a href="faq.html">FAQ </a></li>
-        <li><a href="contact.html">Contact-Us </a></li>
         <li><a href="basket.html">Basket </a></li>
+        <li><a href="premium.html">Premium Films </a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="faq.html">FAQ</a></li>
       </ul>
     </div>
 
@@ -55,7 +50,7 @@
               <li><a href="index.html">Home</a></li>
 
               <li>
-                <div class="dropdown header-dropdown">
+                <div class="dropdown">
                   <button
                     class="btn text-white dropdown-toggle"
                     type="button"
@@ -74,7 +69,7 @@
                         >All Movies</a
                       >
                     </li>
-
+          
                     <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
                     <li>
                       <a class="dropdown-item premium" href="premium.html"
@@ -84,9 +79,9 @@
                   </ul>
                 </div>
               </li>
-              <li><a href="my-list.html">My List </a></li>
+              <li class="my-list-li"><a href="my-list.html">My List </a></li>
               <li><a href="blog.html">Blog </a></li>
-              <li><a href="basket.html">Basket </a></li>
+        
             </ul>
           </nav>
           <div class="right-nav">
@@ -99,7 +94,7 @@
               <i class="fa-solid fa-search"></i>
             </div>
             <div class="notification">
-              <i class="fa-regular fa-bell"></i>
+              <a href="basket.html" class="fa-solid fa-basket-shopping"></a>
               <span>1</span>
             </div>
             <div class="account">
@@ -111,16 +106,25 @@
                   </a>
                 </li>
                 <li>
+                  <a class="fa-solid fa-user-plus d-flex" href="sign-in.html">
+                    <p>Sign in</p>
+                  </a>
+                </li>
+                <li>
                   <a
-                    class="fa-solid fa-arrow-right-to-bracket d-flex"
-                    href="sign-in.html"
+                    class="fa-solid fa-arrow-right-to-bracket d-flex log-out"
+                    href="#"
                   >
-                    <p>Log In</p>
+                    <p>Log out</p>
                   </a>
                 </li>
               </ul>
             </div>
-            <i class="fa-solid fa-bars"></i>
+            <svg class="vbp-header-menu-button__svg">
+              <line x1="0" y1="50%" x2="100%" y2="50%" class="top" />
+              <line x1="0" y1="50%" x2="100%" y2="50%" class="middle" />
+              <line x1="0" y1="50%" x2="100%" y2="50%" class="bottom" />
+            </svg>
           </div>
         </div>
       </div>

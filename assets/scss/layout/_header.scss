@@ -83,11 +83,11 @@ header {
           font-size: 12px;
           @include flexbox;
           justify-content: center;
-          top: -8px;
-          left: 12px;
+          top: -10px;
+          left: 16px;
           color: white;
         }
-        .fa-bell {
+        .fa-basket-shopping {
           color: white;
           font-size: 18px;
         }

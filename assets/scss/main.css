@@ -136,11 +136,11 @@ header .header .right-nav .notification span {
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  top: -8px;
-  left: 12px;
+  top: -10px;
+  left: 16px;
   color: white;
 }
-header .header .right-nav .notification .fa-bell {
+header .header .right-nav .notification .fa-basket-shopping {
   color: white;
   font-size: 18px;
 }
