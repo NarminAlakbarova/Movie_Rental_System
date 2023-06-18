@@ -14,8 +14,17 @@
       border: none;
       border-radius: 0;
       cursor: pointer;
-      .avatar{
+      .avatar {
         padding-bottom: 10px;
+        display: flex;
+        column-gap: 150px;
+        align-items: center;
+
+        i {
+          &:hover {
+            color: red;
+          }
+        }
       }
       &:hover {
         .back-card {

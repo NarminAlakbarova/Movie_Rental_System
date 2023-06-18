@@ -713,6 +713,13 @@ header .header .admin .dropdown button {
 }
 #contact .contact .card .avatar {
   padding-bottom: 10px;
+  display: flex;
+  -moz-column-gap: 150px;
+       column-gap: 150px;
+  align-items: center;
+}
+#contact .contact .card .avatar i:hover {
+  color: red;
 }
 #contact .contact .card:hover .back-card {
   transform: rotate(5deg);
