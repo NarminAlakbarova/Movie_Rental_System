@@ -15,6 +15,8 @@ let description = document.querySelector(".description");
 let recommendedRow = document.querySelector(".recommended-row");
 let relatedRow = document.querySelector(".retaled-row");
 let dateValue = new Date();
+
+
 rateReviewLink.addEventListener("click", function () {
   descriptionSection.style.display = "none";
   rateReviewSection.style.display = "block";
@@ -29,7 +31,7 @@ descriptionLink.addEventListener("click", function () {
   rateReviewLink.classList.remove("active")
 
 });
-
+// COMMENTS
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
   let obj = {
@@ -161,7 +163,6 @@ ${item.title}
 async function getData() {
   let resp = await axios(`${BASE_URL}/allMovies/${movieId}`);
   let data = resp.data;
-  // console.log(data.comments.username);
   drawDetails(data);
   getAllComments(data.comments);
 }
@@ -197,6 +198,7 @@ function drawRecommendedRow(arr) {
         `;
   });
 }
+
 
 async function getRecommendedData() {
   let resp = await axios(`${BASE_URL}/allMovies`);

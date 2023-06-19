@@ -1,52 +1,30 @@
-// let cards = document.querySelectorAll(".card");
-// let userId = new URLSearchParams(window.location.search).get("id");
-
 let allMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
-//
+const BASE_URL = "http://localhost:8080";
+let suggestedSlide = document.querySelector(".suggested-slide");
+let upcomingCards = document.querySelector(".upcoming-row");
+let mustHaveRow = document.querySelector(".must-have-row");
+let trailerRow = document.querySelector(".trailer-row");
+let premiumSlider = document.querySelector(".premium-slider");
+let heroCarusel = document.querySelector(".hero-carusel-item");
+let allData = [];
 
-// Scroll Reveal
-// ScrollReveal().reveal(".content-left", {
-//   duration: 2000,
-//   origin: "left",
-//   distance: "100px",
-//   easing: "cubic-bezier(.37,.01,.74,1)",
-//   opacity: 0.3,
-//   scale: 0.5,
-// });
+// SCROLL REVEAL ANIMATION
+ScrollReveal().reveal(".best-movie-col", {
+  duration: 2000,
+  origin: "left",
+  distance: "50px",
+  easing: "cubic-bezier(.37,.01,.74,1)",
+  opacity: 0.3,
+});
+ScrollReveal().reveal(".img-col", {
+  duration: 2000,
+  origin: "right",
+  distance: "50px",
+  easing: "cubic-bezier(.37,.01,.74,1)",
+  opacity: 0.3,
+});
 
-// ScrollReveal().reveal(".content-right", {
-//   duration: 2000,
-//   origin: "right",
-//   distance: "100px",
-//   easing: "cubic-bezier(.37,.01,.74,1)",
-//   opacity:0.3,
-// });
-// ScrollReveal().reveal(".best-movie-col", {
-//   duration: 2000,
-//   origin: "left",
-//   distance: "80px",
-//   easing: "cubic-bezier(.37,.01,.74,1)",
-//   opacity: 0.3,
-// });
-// ScrollReveal().reveal(".img-col", {
-//   duration: 2000,
-//   origin: "right",
-//   distance: "80px",
-//   easing: "cubic-bezier(.37,.01,.74,1)",
-//   opacity: 0.3,
-// });
-
-// cards.forEach((card) => {
-//   card.addEventListener("click", () => {
-//     cards.forEach((c) => {
-//       if (c !== card) {
-//         c.classList.remove("active");
-//       }
-//     });
-
-//     card.classList.add("active");
-//   });
-// });
+// SWIPPER SLIDE
 let swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -87,9 +65,6 @@ let swiper2 = new Swiper(".lastSwipper", {
   },
 });
 
-let allData = [];
-const BASE_URL = "http://localhost:8080";
-
 async function copyData() {
   let resp = await axios(`${BASE_URL}/allMovies`);
   let data = resp.data;
@@ -97,11 +72,7 @@ async function copyData() {
   // console.log(allData);
 }
 
-// copyData();
-
 // SUGGESTED SECTION JS
-
-let suggestedSlide = document.querySelector(".suggested-slide");
 
 function drawSuggestedSlide(arr) {
   suggestedSlide.innerHTML = "";
@@ -111,9 +82,7 @@ function drawSuggestedSlide(arr) {
     <div class="card">
     <div class="overlay">
     <div class="overlay-content">
-    
-    
-    <a class="fa-solid fa-play" href="details.html?id=${item.id}"></a>
+        <a class="fa-solid fa-play" href="details.html?id=${item.id}"></a>
     <a class="fa-solid fa-plus" onclick=addMyList(${item.id})></a>
     </div>
     </div>
@@ -173,7 +142,6 @@ async function addMyList(movieId) {
 }
 
 // UPCOMING
-let upcomingCards = document.querySelector(".upcoming-row");
 
 function drawUpcomingCards(arr) {
   upcomingCards.innerHTML = "";
@@ -213,8 +181,6 @@ function drawUpcomingCards(arr) {
 }
 
 async function getUpcomingFilms() {
-  // let resp = await axios(`${BASE_URL}/allMovies`);
-  // let data = resp.data;
   await copyData();
   allData = allData.filter((item) => item.section === "upcoming");
   drawUpcomingCards(allData.slice(0, 6));
@@ -222,7 +188,6 @@ async function getUpcomingFilms() {
 getUpcomingFilms();
 
 // Must-Have js
-let mustHaveRow = document.querySelector(".must-have-row");
 function drawMostHaveRow(arr) {
   mustHaveRow.innerHTML = "";
   arr.forEach((item) => {
@@ -256,6 +221,7 @@ function drawMostHaveRow(arr) {
                             `;
   });
 }
+
 async function getMostHaveSeries() {
   await copyData();
   allData = allData.filter((item) => item.section === "Must-Have");
@@ -264,7 +230,6 @@ async function getMostHaveSeries() {
 getMostHaveSeries();
 
 // TRAILER JS
-let trailerRow = document.querySelector(".trailer-row");
 
 function drawTrailerRow(arr) {
   trailerRow.innerHTML = "";
@@ -298,7 +263,6 @@ async function getTrailerData() {
   await copyData();
   let filteredData = allData.filter((item) => item.section === "trailer");
   drawTrailerRow(filteredData);
-  // populateModalData();
 }
 getTrailerData();
 
@@ -331,15 +295,7 @@ function closeModal(element) {
   }
 }
 
-async function getTrailer(id) {
-  let resp = await axios(`${BASE_URL}/allMovies/${id}`);
-  let data = resp.data;
-
-  console.log(data);
-}
-
 // PREMIUM JS
-let premiumSlider = document.querySelector(".premium-slider");
 
 function drawPremiumMovies(arr) {
   premiumSlider.innerHTML = "";
@@ -394,19 +350,13 @@ function drawPremiumMovies(arr) {
 }
 
 async function getPremiumFilms() {
-  // let resp = await axios(`${BASE_URL}/allMovies`);
-  // let data = resp.data;
   await copyData();
   allData = allData.filter((item) => item.section === "Premium");
-  // console.log(allData);
   drawPremiumMovies(allData);
 }
 getPremiumFilms();
 
-// console.log(userId);
-
 // HERO-SECTION JS
-let heroCarusel = document.querySelector(".hero-carusel-item");
 
 function drawHeroSection(arr) {
   heroCarusel.innerHTML = "";
@@ -501,7 +451,6 @@ async function showHeroTrailer(element, itemId) {
   console.log("mm");
   let resp = await axios(`http://localhost:8080/allMovies/${itemId}`);
   let data = resp.data;
-
   if (data) {
     let modal = element.closest(".carousel-item").querySelector(".modal2");
     let iframe = modal.querySelector("iframe");

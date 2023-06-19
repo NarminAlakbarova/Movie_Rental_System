@@ -583,7 +583,15 @@
       "id": 45,
       "price": 3,
       "time": "1h 20m",
-      "img": "../assets/img/Suggestedfilms/asset-14.jpg"
+      "img": "../assets/img/Suggestedfilms/asset-14.jpg",
+      "comments": [
+        {
+          "username": "wucodyk",
+          "email": "gufakucebi@mailinator.com",
+          "commentContent": "Sed quis elit et co",
+          "commentDate": "6/19/2023, 7:44:03 PM"
+        }
+      ]
     },
     {
       "movieName": "Sisu",
