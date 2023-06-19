@@ -161,6 +161,11 @@ header .header .right-nav .search-user .search-input::placeholder {
 header .header .right-nav .notification {
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  header .header .right-nav .notification {
+    display: none;
+  }
+}
 header .header .right-nav .notification span {
   position: absolute;
   width: 15px;
@@ -233,7 +238,7 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   left: 0;
   width: 40%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #141414;
   z-index: 999999;
   display: flex;
   align-items: center;
@@ -244,6 +249,11 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 @media screen and (min-width: 1024px) {
   #burger-menu {
     display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  #burger-menu {
+    width: 60%;
   }
 }
 #burger-menu.show {
@@ -431,6 +441,16 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 }
 .carousel .carousel-item img {
   height: 100vh;
+}
+@media screen and (max-width: 991px) {
+  .carousel .carousel-item img {
+    height: 90vh;
+  }
+}
+@media screen and (max-width: 767px) {
+  .carousel .carousel-item img {
+    height: 100vh;
+  }
 }
 .carousel .carousel-item .carousel-caption {
   top: 25%;

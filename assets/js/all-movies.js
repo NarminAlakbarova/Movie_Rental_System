@@ -1,16 +1,16 @@
-let swiper = new Swiper(".all-movies-swipper", {
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});
-
 let row = document.querySelector(".all-movies-cards");
 let loadMore = document.querySelector("#load");
+let dropdownAll = document.querySelector(".sortDrop");
+let premUl = document.querySelector(".all-genres-ul");
+let searchInpMovies = document.querySelector(".search");
+let allMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
+const BASE_URL = "http://localhost:8080";
 let dataArr = [];
 let copyArr = [];
 let sortedArr = [];
 let max = 8;
-const BASE_URL = "http://localhost:8080";
+
+// DRAW ROW
 function drawRow(arr) {
   row.innerHTML = "";
   arr.forEach((item) => {
@@ -45,16 +45,16 @@ function drawRow(arr) {
     `;
   });
 }
-
+//GET DATA
 async function getAllData() {
   let resp = await axios(`${BASE_URL}/allMovies`);
   dataArr = resp.data;
   copyArr = searchInp.value ? copyArr : dataArr;
-  // filterMovies()
   drawRow(copyArr.slice(0, max));
 }
 getAllData();
-let searchInpMovies = document.querySelector(".search");
+
+// SEARCH
 searchInpMovies.addEventListener("input", function (e) {
   copyArr = dataArr;
   copyArr = copyArr.filter((item) =>
@@ -65,6 +65,8 @@ searchInpMovies.addEventListener("input", function (e) {
   sortedArr = copyArr;
   drawRow(copyArr.slice(0, max));
 });
+
+// LOAD MORE
 loadMore.addEventListener("click", function () {
   max = max + 8;
   if (max >= copyArr.length) {
@@ -77,10 +79,10 @@ loadMore.addEventListener("click", function () {
   }
 });
 
-// sort
-let dropdownAll = document.querySelector(".sortDrop");
+// SORT
 dropdownAll.addEventListener("click", function (event) {
   console.log("hello");
+  event.preventDefault();
   let target = event.target;
   if (target.classList.contains("dropdown-item")) {
     sortMovies(target.innerText);
@@ -110,11 +112,11 @@ function sortMovies(sortType) {
 sortMovies();
 
 // filter
-let premUl = document.querySelector(".all-genres-ul");
-premUl.addEventListener("click", function (event) {
-  if (event.target.tagName === "A") {
-    event.preventDefault();
-    var genre = event.target.textContent.trim();
+premUl.addEventListener("click", function (e) {
+  console.log(e);
+  if (e.target.tagName === "A") {
+    e.preventDefault();
+    var genre = e.target.innerHTML.trim();
     filterByGenre(genre);
   }
 });
@@ -129,7 +131,6 @@ function filterByGenre(genre) {
   drawRow(copyArr.slice(0, max));
 }
 
-
 // VIDEO CARDS
 let videoCard = [...document.querySelectorAll(".video-card")];
 videoCard.forEach((item) => {
@@ -143,10 +144,7 @@ videoCard.forEach((item) => {
   });
 });
 
-
-let allMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
-
-
+// ALERT
 function showAlert(alerttext, infoalert) {
   Toastify({
     text: alerttext,
@@ -156,13 +154,12 @@ function showAlert(alerttext, infoalert) {
     },
   }).showToast();
 }
+
+// ADD MY-LIST
 async function addMyList(movieId) {
-
-
   let selectedMovie = await axios(`${BASE_URL}/allMovies/${movieId}`);
   let selectedMovieData = selectedMovie.data;
   console.log(selectedMovieData);
-
   let resp = await axios("http://localhost:8080/users");
   let data = resp.data;
   let checkUser = data.find((user) => user.check === true);

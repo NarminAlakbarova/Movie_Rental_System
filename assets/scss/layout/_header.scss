@@ -78,6 +78,9 @@ header {
       }
       .notification {
         position: relative;
+        @media screen and (max-width:767px) {
+          display: none;
+        }
         span {
           position: absolute;
           width: 15px;
@@ -170,7 +173,7 @@ header {
   left: 0;
   width: 40%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #141414;
   z-index: 999999;
   display: flex;
   align-items: center;
@@ -179,6 +182,11 @@ header {
   transition: transform 0.3s ease-in-out;
   @media screen and (min-width: 1024px) {
     display: none;
+    
+  }
+  @media screen and (max-width: 767px) {
+width: 60%;
+
   }
   &.show {
     transform: translateX(0);
