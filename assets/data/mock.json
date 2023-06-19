@@ -59,7 +59,7 @@
     },
     {
       "isAdmin": false,
-      "check": true,
+      "check": false,
       "userName": "Fatime",
       "firstName": "zamifitog",
       "lastName": "zabyvo",
