@@ -1,10 +1,12 @@
 let basketCol = document.querySelector(".basket-row");
-
 let countBasket = document.querySelector(".count-basket");
 let subtotalCount = document.querySelector(".subtotal");
-
+let allInputs = document.querySelectorAll("input");
+let submitBtn = document.querySelector(".submitbtn");
 let allPremiumMovies = JSON.parse(localStorage.getItem("premiumMovies")) || [];
 let purchasedMovies = JSON.parse(localStorage.getItem("myMovies")) || [];
+
+// DRAW FUNC
 function allBasket() {
   basketCol.innerHTML = "";
   allPremiumMovies.forEach((item) => {
@@ -46,6 +48,7 @@ function allBasket() {
 
 allBasket();
 
+// CALC SUBTOTAL
 function calcSubtotal() {
   let totalPrice = 0;
   allPremiumMovies.forEach((item) => {
@@ -53,9 +56,10 @@ function calcSubtotal() {
   });
   subtotalCount.innerHTML = `${totalPrice} $`;
 }
-
 calcSubtotal();
 
+
+// BASKET LENGTH
 function basketLength() {
   countBasket.innerHTML = `${allPremiumMovies.length}`;
 }
@@ -70,9 +74,10 @@ function deleteBasket(movieId) {
   calcSubtotal();
   basketLength();
 }
-let allInputs = document.querySelectorAll("input");
+
 console.log(allInputs);
-let submitBtn = document.querySelector(".submitbtn");
+
+// SHOW ALERT
 function showAlert(alerttext, infoalert) {
   Toastify({
     text: alerttext,

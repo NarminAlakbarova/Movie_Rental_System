@@ -58,10 +58,5 @@ async function drawComment(movieId) {
 }
 moreBtn.addEventListener("click", function () {
   max = max + 18;
-  // if (max > alldata.length) {
-  //   moreBtn.style.display = "none";
-  // } else {
-  //   getCardsData();
-  // }
   getCardsData()
 });
