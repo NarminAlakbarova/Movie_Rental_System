@@ -494,13 +494,15 @@ async function showHeroTrailer(element, itemId) {
     let iframe = modal.querySelector("iframe");
     iframe.src = data.trailer;
     modal.style.display = "block";
+    modal.style.visibility = "visible";
   }
 }
 function closeModalHero(element) {
   let modal = element.closest(".modal2");
   if (modal) {
+    let iframe = modal.querySelector("iframe");
+    iframe.src = "";
     modal.style.display = "none";
     modal.style.visibility = "hidden";
   }
 }
-
