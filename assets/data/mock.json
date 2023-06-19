@@ -68,7 +68,7 @@
       "id": 8
     },
     {
-      "isAdmin": false,
+      "isAdmin": true,
       "check": false,
       "userName": "minaye",
       "firstName": "cavodo",
@@ -88,7 +88,7 @@
       "id": 10
     },
     {
-      "isAdmin": true,
+      "isAdmin": false,
       "userName": "kanan",
       "firstName": "bifexa",
       "lastName": "dasaletik",

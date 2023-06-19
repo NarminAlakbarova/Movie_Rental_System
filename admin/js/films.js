@@ -93,7 +93,6 @@ function deleteMovies(moviesId) {
   }).then((willDelete) => {
     if (willDelete) {
       axios.delete(`${BASE_URL}/allMovies/${moviesId}`);
-  
     } else {
       swal("Your imaginary file is safe!");
     }
@@ -193,3 +192,4 @@ loadMore.addEventListener("click", function () {
     getAllData();
   }
 });
+

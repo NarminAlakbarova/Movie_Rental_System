@@ -16,14 +16,14 @@ function showAlert(alerttext, infoalert) {
 }
 
 // FORM
+
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
   let resp = await axios(`${BASE_URL}users`);
   allUsers = resp.data;
-  let adminUsers = allUsers.filter((item) => item.isAdmin === true);
-
-  let admin = adminUsers.find(
+  let admin = allUsers.find(
     (item) =>
+      item.isAdmin === true &&
       item.firstName === userNameEmailInp.value &&
       item.password === passwordInp.value
   );
@@ -37,9 +37,11 @@ form.addEventListener("submit", async function (e) {
         item.password === passwordInp.value
     );
     if (regularUser) {
-      await axios.patch(`${BASE_URL}users/${regularUser.id}`, {
-        check: true,
-      });
+      if (!regularUser.isAdmin) {
+        await axios.patch(`${BASE_URL}users/${regularUser.id}`, {
+          check: true,
+        });
+      }
       window.location.href = regularUser.isAdmin
         ? "../admin/admin.html"
         : "index.html";

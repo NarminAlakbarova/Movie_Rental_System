@@ -9,12 +9,18 @@ function drawTable(arr) {
   
   <tr>
  <td>${++number}</td>
+
  <td><img src="../assets/img/users/pic-1.png" alt="" /></td>
+
  <td>${user.userName}</td>
+
  <td>${user.firstName} ${user.lastName}</td>
- <td>
-${user.password}</td>
+
+ <td>${user.password}</td>
+<td>${user.isAdmin === true ? "Admin" : "User"}</td>
+
   <td>
+
  <a class="fa-solid fa-eye btn btn-success" onclick=showMoreDetails(${
    user.id
  })></a>
@@ -28,7 +34,7 @@ ${user.password}</td>
 async function getData() {
   let resp = await axios(`${BASE_URL}users`);
   let data = resp.data;
-  allData = data.filter((user) => user.isAdmin !== true);
+  allData = data;
   drawTable(allData);
 }
 getData();
@@ -102,10 +108,12 @@ async function editUser(userId) {
   modalBody.innerHTML = "";
   modalBody.innerHTML = `
   <div class="ques">
-  <p>Do you want to admin ${data.userName}?</p>
+  <p>Do you want to ${data.isAdmin === true ? "User" : "Admin"} ${
+    data.userName
+  }?</p>
   </div>
     <div class="buttons">
-      <button id="yes-btn" onclick="yesFunc(${userId})">Yes</button>
+      <button id="yes-btn" onclick=yesFunc(${userId})>Yes</button>
     </div>
   `;
   userModal.show();
@@ -115,5 +123,8 @@ async function editUser(userId) {
 }
 
 async function yesFunc(id) {
-  await axios.patch(`${BASE_URL}users/${id}`, { isAdmin: true });
+  console.log(id);
+  const resp = await axios.get(`${BASE_URL}users/${id}`);
+  const isAdmin = resp.data.isAdmin;
+  await axios.patch(`${BASE_URL}users/${id}`, { isAdmin: !isAdmin });
 }
