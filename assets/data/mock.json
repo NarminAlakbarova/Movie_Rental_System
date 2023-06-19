@@ -59,7 +59,7 @@
     },
     {
       "isAdmin": false,
-      "check": true,
+      "check": false,
       "userName": "Fatime",
       "firstName": "zamifitog",
       "lastName": "zabyvo",
@@ -95,7 +95,7 @@
       "password": "Pa$$w0rd!",
       "email": "sajec@mailinator.com",
       "id": 11,
-      "check": true
+      "check": false
     },
     {
       "isAdmin": false,
@@ -124,6 +124,15 @@
       "password": "raul123",
       "email": "rehoqacuj@mailinator.com",
       "id": 14
+    },
+    {
+      "isAdmin": false,
+      "userName": "Elsever",
+      "firstName": "tejera",
+      "lastName": "pasirif",
+      "password": "Pa$$w0rd!",
+      "email": "cadexiqapu@mailinator.com",
+      "id": 15
     }
   ],
   "allMovies": [

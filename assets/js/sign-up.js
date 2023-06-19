@@ -10,6 +10,8 @@ let freePrice = document.querySelector("#free");
 let premiumPrice = document.querySelector("#premium");
 
 const BASE_URL = "http://localhost:8080/";
+
+// ALERT
 function showAlert(alerttext, infoalert) {
   Toastify({
     text: alerttext,
@@ -19,6 +21,7 @@ function showAlert(alerttext, infoalert) {
     },
   }).showToast();
 }
+// FORM
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
   let obj = {
