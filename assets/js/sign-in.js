@@ -3,7 +3,15 @@ let userNameEmailInp = document.querySelector(".username-email");
 let passwordInp = document.querySelector(".passwordInp");
 const BASE_URL = "http://localhost:8080/";
 let allUsers = [];
-
+function showAlert(alerttext, infoalert) {
+  Toastify({
+    text: alerttext,
+    className: infoalert,
+    style: {
+      background: "linear-gradient(to right, #222221, #b00000 )",
+    },
+  }).showToast();
+}
 // getAllUser();
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -35,7 +43,7 @@ form.addEventListener("submit", async function (e) {
         window.location.href = "index.html";
       }
     } else {
-      alert("Invalid credentials");
+      showAlert("Invalid credentials", "info");
     }
   }
 });

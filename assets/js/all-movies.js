@@ -62,7 +62,7 @@ searchInpMovies.addEventListener("input", function (e) {
       .toLocaleLowerCase()
       .includes(e.target.value.toLocaleLowerCase())
   );
-  sortedArr=copyArr
+  sortedArr = copyArr;
   drawRow(copyArr.slice(0, max));
 });
 loadMore.addEventListener("click", function () {
@@ -105,7 +105,7 @@ function sortMovies(sortType) {
     );
   }
   sortedArr = copyArr;
-  drawRow(copyArr.slice(0,max));
+  drawRow(copyArr.slice(0, max));
 }
 sortMovies();
 
@@ -125,7 +125,20 @@ function filterByGenre(genre) {
   } else {
     copyArr = dataArr.filter((item) => item.genres.includes(genre));
   }
-  sortedArr=copyArr
-  drawRow(copyArr.slice(0,max));
+  sortedArr = copyArr;
+  drawRow(copyArr.slice(0, max));
 }
 
+
+// VIDEO CARDS
+let videoCard = [...document.querySelectorAll(".video-card")];
+videoCard.forEach((item) => {
+  item.addEventListener("mouseover", () => {
+    let video = item.children[1];
+    video.play();
+  });
+  item.addEventListener("mouseleave", () => {
+    let video = item.children[1];
+    video.pause();
+  });
+});

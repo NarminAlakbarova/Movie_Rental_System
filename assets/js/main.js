@@ -307,15 +307,23 @@ async function showTrailer(element, itemId) {
   let data = resp.data;
 
   if (data) {
+    console.log("1");
+
     let modal = element.querySelector(".modal");
+
     let iframe = modal.querySelector("iframe");
     iframe.src = data.trailer;
     modal.style.display = "block";
+    modal.style.visibility = "visible";
   }
 }
 function closeModal(element) {
   let modal = element.closest(".modal");
+  console.log("2");
   if (modal) {
+    console.log("3");
+    let iframe = modal.querySelector("iframe");
+    iframe.src = "";
     modal.style.display = "none";
     modal.style.visibility = "hidden";
   }

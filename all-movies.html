@@ -98,7 +98,6 @@
             <div class="notification">
               <a href="basket.html" class="fa-solid fa-basket-shopping"></a>
               <span class="basket-count"></span>
-
             </div>
             <div class="account">
               <div class="dropdown sign-in-up">
@@ -111,11 +110,8 @@
                 >
                   <i class="fa-regular fa-user"></i>
                   <span class="user-name"></span>
-
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-             
-
                   <li>
                     <a
                       class="fa-solid fa-user-plus d-flex dropdown-item"
@@ -130,7 +126,6 @@
                       class="dropdown-item fa-solid fa-arrow-right-to-bracket d-flex log-out"
                       href="#"
                     >
-                   
                       <p>Log out</p>
                     </a>
                   </li>
@@ -149,11 +144,12 @@
     <div class="swiper all-movies-swipper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-         
-         
-        <img src="./assets/img/all-movies/the-little-mermaid-movie.jpg.webp" alt="" class="mermarid">
-        
-        
+          <img
+            src="./assets/img/all-movies/the-little-mermaid-movie.jpg.webp"
+            alt=""
+            class="mermarid"
+          />
+
           <div class="content">
             <h2>The Little Mermaiid</h2>
             <p>2023 ‧Fantasy/Musical</p>
@@ -161,9 +157,42 @@
             <a class="btn"> Play now </a>
           </div>
         </div>
-
       </div>
     </div>
+
+    <!-- Videos -->
+    <section id="videos-cards">
+      <div class="container">
+        <div class="videos-cards">
+          <div class="row cards-row">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 my-2">
+              <div class="card video-card">
+                <img src="./assets/img/disney.PNG" alt="" />
+                <video src="./assets/videos/disney.mp4" ></video>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
+              <div class="card video-card">
+                <img src="./assets/img/marvel.PNG" alt="" />
+                <video src="./assets/videos/marvel.mp4"></video>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
+              <div class="card video-card">
+                <img src="./assets/img/geographic.PNG" alt="" />
+                <video src="./assets/videos/geographic.mp4"></video>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6  my-2">
+              <div class="card video-card">
+                <img src="./assets/img/pixar.PNG" alt="" />
+                <video src="./assets/videos/pixar.mp4"></video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ALL MOVIES -->
     <section id="all-movies">
@@ -171,9 +200,7 @@
         <div class="all-movies">
           <div class="row all-movies-row">
             <div class="col-xl-8 col-lg-12 col-sm-12 my-5 right-col">
-              <div class="row all-movies-cards">
-       
-              </div>
+              <div class="row all-movies-cards"></div>
               <div class="btn">
                 <button id="load">Load More</button>
               </div>
@@ -182,7 +209,7 @@
               <div class="row">
                 <div class="col-lg-12 my-3">
                   <div class="search">
-                    <input type="search" placeholder="Search" class="search"/>
+                    <input type="search" placeholder="Search" class="search" />
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </div>
                 </div>

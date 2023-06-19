@@ -229,7 +229,7 @@
         color: white;
 
         .title {
-          @include flexbox(center);
+          @include flexbox(flex-start);
           column-gap: 20px;
           @media screen and (max-width: 767px) {
             flex-direction: column;

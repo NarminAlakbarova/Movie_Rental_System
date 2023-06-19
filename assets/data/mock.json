@@ -59,7 +59,7 @@
     },
     {
       "isAdmin": false,
-      "check": false,
+      "check": true,
       "userName": "Fatime",
       "firstName": "zamifitog",
       "lastName": "zabyvo",
@@ -95,7 +95,7 @@
       "password": "Pa$$w0rd!",
       "email": "sajec@mailinator.com",
       "id": 11,
-      "check": true
+      "check": false
     },
     {
       "isAdmin": false,
@@ -105,7 +105,25 @@
       "password": "minaye1234",
       "email": "kicemo@mailinator.com",
       "id": 12,
-      "check": true
+      "check": false
+    },
+    {
+      "isAdmin": false,
+      "userName": "Vilayet",
+      "firstName": "hoxymug",
+      "lastName": "wopumodaj",
+      "password": "Pa$$w0rd!",
+      "email": "tyvomebuca@mailinator.com",
+      "id": 13
+    },
+    {
+      "isAdmin": false,
+      "userName": "Raul",
+      "firstName": "visutuxy",
+      "lastName": "gekaxuda",
+      "password": "raul123",
+      "email": "rehoqacuj@mailinator.com",
+      "id": 14
     }
   ],
   "allMovies": [
@@ -664,6 +682,12 @@
           "email": "fatime123@gljhj",
           "commentContent": "ilahiiiiiiiiiii nece cgozellllllllllllll filmmmmmmmmmmmmmmmmm",
           "commentDate": "6/17/2023, 11:53:52 PM"
+        },
+        {
+          "username": "Minaye",
+          "email": "minaye@gmail.com",
+          "commentContent": "goood good!",
+          "commentDate": "6/19/2023, 11:24:43 AM"
         }
       ]
     },
