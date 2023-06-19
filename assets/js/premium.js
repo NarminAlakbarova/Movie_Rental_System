@@ -1,13 +1,16 @@
 let premiumRow = document.querySelector(".premium-row");
-let purchasedMovie=document.querySelector(".cards")
+let purchasedMovie = document.querySelector(".cards");
+let searchInpPrem = document.querySelector(".search");
+let dropdownPrem = document.querySelector(".sortDrop");
 let allPremiumMovies = JSON.parse(localStorage.getItem("premiumMovies")) || [];
-let purchasedMovies=JSON.parse(localStorage.getItem("myMovies"))||[]
+let purchasedMovies = JSON.parse(localStorage.getItem("myMovies")) || [];
 
 let dataArr = [];
 let copyArr = [];
 let sortedArr = [];
 const BASE_URL = "http://localhost:8080";
 
+// DRAW ROW
 function drawPremRow(arr) {
   premiumRow.innerHTML = "";
   arr.forEach((item) => {
@@ -52,8 +55,8 @@ function drawPremRow(arr) {
         `;
   });
 }
-let searchInpPrem = document.querySelector(".search");
 
+// GETDATA
 async function getAllPremiumData() {
   let resp = await axios(`${BASE_URL}/allMovies`);
   dataArr = resp.data;
@@ -74,10 +77,11 @@ searchInpPrem.addEventListener("input", function (e) {
   drawPremRow(copyArr);
 });
 
-let dropdownPrem = document.querySelector(".sortDrop");
-dropdownPrem.addEventListener("click", function (event) {
+// SORT
+dropdownPrem.addEventListener("click", function (e) {
   console.log("hello");
-  let target = event.target;
+  let target = e.target;
+  e.preventDefault();
   if (target.classList.contains("dropdown-item")) {
     sortMovies(target.innerText);
   }
@@ -107,10 +111,10 @@ sortMovies();
 
 //   FILTER CATIGORIES
 let premUl = document.querySelector(".prem-ul");
-premUl.addEventListener("click", function (event) {
-  if (event.target.tagName === "A") {
-    event.preventDefault();
-    var genre = event.target.textContent.trim();
+premUl.addEventListener("click", function (e) {
+  if (e.target.tagName === "A") {
+    e.preventDefault();
+    var genre = e.target.innerHTML.trim();
     filterByGenre(genre);
   }
 });
@@ -123,6 +127,8 @@ function filterByGenre(genre) {
   }
   drawPremRow(copyArr);
 }
+
+// ALERT
 function showAlert(alerttext, infoalert) {
   Toastify({
     text: alerttext,
@@ -149,15 +155,14 @@ async function addBasket(moviId) {
     showAlert("Added", "info");
   } else if (allPremiumMovies.includes(selectedObj)) {
     showAlert("This movie alredy added basket", "info");
-
   }
 }
 
-
-function getPurchasedMovies(){
-  purchasedMovie.innerHTML=""
-  purchasedMovies.forEach((item)=>{
-    purchasedMovie.innerHTML+=`
+// GET PURCHASEDMOVIES
+function getPurchasedMovies() {
+  purchasedMovie.innerHTML = "";
+  purchasedMovies.forEach((item) => {
+    purchasedMovie.innerHTML += `
     
     <div class="card my-3">
     <div class="img-content">
@@ -174,7 +179,7 @@ function getPurchasedMovies(){
   </div>
     
     
-    `
-  })
+    `;
+  });
 }
-getPurchasedMovies()
+getPurchasedMovies();
