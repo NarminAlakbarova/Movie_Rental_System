@@ -1,5 +1,7 @@
 const BASE_URL = "http://localhost:8080";
 let movieId = new URLSearchParams(window.location.search).get("id");
+let allMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
+
 let descriptionLink = document.querySelector(".description-link");
 let rateReviewLink = document.querySelector(".rate-review-link");
 let descriptionSection = document.querySelector("#description");
@@ -16,20 +18,17 @@ let recommendedRow = document.querySelector(".recommended-row");
 let relatedRow = document.querySelector(".retaled-row");
 let dateValue = new Date();
 
-
 rateReviewLink.addEventListener("click", function () {
   descriptionSection.style.display = "none";
   rateReviewSection.style.display = "block";
-  rateReviewLink.classList.add("active")
-  description.classList.remove("active")
-
+  rateReviewLink.classList.add("active");
+  description.classList.remove("active");
 });
 descriptionLink.addEventListener("click", function () {
   descriptionSection.style.display = "block";
   rateReviewSection.style.display = "none";
-  descriptionLink.classList.add("active")
-  rateReviewLink.classList.remove("active")
-
+  descriptionLink.classList.add("active");
+  rateReviewLink.classList.remove("active");
 });
 // COMMENTS
 form.addEventListener("submit", async function (e) {
@@ -94,7 +93,7 @@ function drawDetails(item) {
       <i class="fa-solid fa-heart"></i>
     </div>
     <div>
-      <i class="fa-solid fa-plus"></i>
+      <i class="fa-solid fa-plus" onclick=addMyList(${item.id})></i>
     </div>
     <div>
       <i class="fa-solid fa-download"></i>
@@ -187,7 +186,7 @@ function drawRecommendedRow(arr) {
                 <i class="fa-solid fa-heart"></i>
               </div>
               <div>
-                <i class="fa-solid fa-plus"></i>
+                <i class="fa-solid fa-plus" onclick=addMyList(${item.id})></i>
               </div>
             </div>
           </div>
@@ -198,7 +197,6 @@ function drawRecommendedRow(arr) {
         `;
   });
 }
-
 
 async function getRecommendedData() {
   let resp = await axios(`${BASE_URL}/allMovies`);
@@ -226,7 +224,7 @@ function drawRelatedRow(arr) {
                   <i class="fa-solid fa-heart"></i>
                 </div>
                 <div>
-                  <i class="fa-solid fa-plus"></i>
+                  <i class="fa-solid fa-plus" onclick=addMyList(${item.id})></i>
                 </div>
               </div>
             </div>
@@ -270,4 +268,32 @@ function getAllComments(arr) {
     </div>
   `;
   });
+}
+
+function showAlert(alerttext, infoalert) {
+  Toastify({
+    text: alerttext,
+    className: infoalert,
+    style: {
+      background: "linear-gradient(to right, #222221, #b00000 )",
+    },
+  }).showToast();
+}
+async function addMyList(movieId) {
+  let selectedMovie = await axios(`${BASE_URL}/allMovies/${movieId}`);
+  let selectedMovieData = selectedMovie.data;
+  let resp = await axios("http://localhost:8080/users");
+  let data = resp.data;
+  let checkUser = data.find((user) => user.check === true);
+  let checkMovie = allMovies.some((movie) => movie.id == selectedMovieData.id);
+  if (!checkUser) {
+    showAlert("Please Sign in", "info");
+  } else if (checkMovie) {
+    showAlert("This movie alredy added my-list", "info");
+  } else if (!checkMovie && checkUser) {
+    let favMovie = selectedMovieData;
+    allMovies.push(favMovie);
+    localStorage.setItem("favMovies", JSON.stringify(allMovies));
+    showAlert("Added", "info");
+  }
 }
