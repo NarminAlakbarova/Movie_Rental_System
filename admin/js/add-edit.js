@@ -9,7 +9,7 @@ let dateInp = document.querySelector("#date");
 let moviesNameInp = document.querySelector("#name");
 let trailerInp = document.querySelector("#urlinp");
 let form = document.querySelector("form");
-
+let base64;
 let section;
 const BASE_URL = "http://localhost:8080";
 let id = new URLSearchParams(window.location.search).get("id");

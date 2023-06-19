@@ -52,7 +52,7 @@ function drawTabele(arr) {
       }"></a>
       <i class="fa-solid fa-trash btn btn-danger" onclick=deleteMovies(${
         item.id
-      }) id=${item.id}></i>
+      })></i>
     </td>
   </tr>
     
@@ -78,15 +78,26 @@ searchInp.addEventListener("input", function (e) {
       .toLocaleLowerCase()
       .includes(e.target.value.toLocaleLowerCase())
   );
-  sortedArr=copyArr
+  sortedArr = copyArr;
   drawTabele(copyArr.slice(0, max));
 });
-
+// document.querySelector(`#${moviesId}`).closest("tr").remove();
 // DELETE
-async function deleteMovies(moviesId) {
-  await axios.delete(`${BASE_URL}/allMovies/${moviesId}`);
-
-  document.querySelector(`#${moviesId}`).closest("tr").remove();
+function deleteMovies(moviesId) {
+  swal({
+    title: "Are you sure?",
+    text: "Once deleted, you will not be able to recover this imaginary file!",
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  }).then((willDelete) => {
+    if (willDelete) {
+      axios.delete(`${BASE_URL}/allMovies/${moviesId}`);
+  
+    } else {
+      swal("Your imaginary file is safe!");
+    }
+  });
 }
 
 // MORE DETAILS
@@ -165,10 +176,12 @@ function filterMovies(genresMovies) {
     copyArr = copyArr.filter((item) => item.genres.includes(genresMovies));
     drawTabele(copyArr);
   }
- sortedArr=copyArr
+  sortedArr = copyArr;
 }
 
 filterMovies();
+
+// LOAD MORE
 loadMore.addEventListener("click", function () {
   max = max + 6;
   if (max >= copyArr.length) {

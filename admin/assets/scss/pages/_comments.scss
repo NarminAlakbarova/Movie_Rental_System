@@ -26,11 +26,32 @@
         }
       }
     }
+    .buttons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      button{
+        padding: 10px 50px;
+        border: none;
+        background-color: #415a77;
+        color: #0d1b2a;
+        font-size: 18px;
+        transition: 1s;
+        &:hover{
+         color: #e0e1dd;
+          background-color: #0d1b2a;
+        }
+      }
+    }
     h2 {
       color: #0d1b2a;
       text-align: center;
     }
     .comment-row {
+      .comment-title{
+        color: #0d1b2a;
+      }
       .comment-card {
         padding: 10px;
         background-color: #8696fea6;
@@ -39,6 +60,7 @@
         display: flex;
         flex-direction: row;
         column-gap: 30px;
+     
         img {
           width: 50px;
           height: 50px;

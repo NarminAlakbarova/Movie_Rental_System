@@ -25,7 +25,6 @@ p {
 
 body {
   color: white;
-  transition: 1s all;
 }
 body.dark-mode {
   background-color: black;
@@ -676,9 +675,30 @@ header .header .admin .dropdown button {
   -o-object-fit: cover;
      object-fit: cover;
 }
+#comments .comments .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+#comments .comments .buttons button {
+  padding: 10px 50px;
+  border: none;
+  background-color: #415a77;
+  color: #0d1b2a;
+  font-size: 18px;
+  transition: 1s;
+}
+#comments .comments .buttons button:hover {
+  color: #e0e1dd;
+  background-color: #0d1b2a;
+}
 #comments .comments h2 {
   color: #0d1b2a;
   text-align: center;
+}
+#comments .comments .comment-row .comment-title {
+  color: #0d1b2a;
 }
 #comments .comments .comment-row .comment-card {
   padding: 10px;
