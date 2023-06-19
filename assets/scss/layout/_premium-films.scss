@@ -220,14 +220,14 @@
         padding: 5px 5px;
         background-color: #141414;
         border: none;
+        outline: none;
+        color: white;
       }
-      input[type="text"]:focus {
-        border: 3px solid #e50914;
-      }
+
       i {
         color: white;
         font-size: 12px;
-        padding: 13px;
+        padding: 11px;
         background-color: #e50914;
       }
     }

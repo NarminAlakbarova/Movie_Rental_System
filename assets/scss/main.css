@@ -41,6 +41,36 @@ body {
   background-color: rgba(153, 2, 9, 0.6235294118);
 }
 
+.loader {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #141414;
+  z-index: 9999999999999;
+}
+.loader img {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  animation: spinner infinite 5s linear;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 header {
   padding: 10px;
   background-color: black;
@@ -1141,14 +1171,13 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   padding: 5px 5px;
   background-color: #141414;
   border: none;
-}
-#all-movies .all-movies .all-movies-row .search input[type=text]:focus {
-  border: 3px solid #e50914;
+  outline: none;
+  color: white;
 }
 #all-movies .all-movies .all-movies-row .search i {
   color: white;
   font-size: 12px;
-  padding: 13px;
+  padding: 11px;
   background-color: #e50914;
 }
 #all-movies .all-movies .all-movies-row .right-card {
@@ -1814,14 +1843,13 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   padding: 5px 5px;
   background-color: #141414;
   border: none;
-}
-#premium-movies .premium-movies .search input[type=text]:focus {
-  border: 3px solid #e50914;
+  outline: none;
+  color: white;
 }
 #premium-movies .premium-movies .search i {
   color: white;
   font-size: 12px;
-  padding: 13px;
+  padding: 11px;
   background-color: #e50914;
 }
 #premium-movies .premium-movies .right-card {
@@ -2168,14 +2196,13 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   padding: 5px 5px;
   background-color: #141414;
   border: none;
-}
-#blog .blog-container .blog .right-col .search input[type=text]:focus {
-  border: 3px solid #e50914;
+  outline: none;
+  color: white;
 }
 #blog .blog-container .blog .right-col .search i {
   color: white;
   font-size: 12px;
-  padding: 13px;
+  padding: 11px;
   background-color: #e50914;
 }
 #blog .blog-container .blog .right-col .right-card {

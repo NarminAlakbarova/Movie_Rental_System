@@ -395,7 +395,6 @@ getPremiumFilms();
 
 // console.log(userId);
 
-
 // HERO-SECTION JS
 let heroCarusel = document.querySelector(".hero-carusel-item");
 
@@ -504,3 +503,4 @@ function closeModalHero(element) {
     modal.style.visibility = "hidden";
   }
 }
+

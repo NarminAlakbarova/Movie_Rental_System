@@ -115,3 +115,10 @@ function basketCounter() {
 
 basketCounter();
 
+// SPINNER
+let spinner = document.querySelector(".loader");
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    spinner.style.display = "none";
+  }, 200);
+});

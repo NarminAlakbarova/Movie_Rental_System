@@ -72,14 +72,14 @@
             padding: 5px 5px;
             background-color: #141414;
             border: none;
+            outline: none;
+            color: white;
           }
-          input[type="text"]:focus {
-            border: 3px solid #e50914;
-          }
+
           i {
             color: white;
             font-size: 12px;
-            padding: 13px;
+            padding: 11px;
             background-color: #e50914;
           }
         }
@@ -148,12 +148,12 @@
         }
         .tags-col {
           .tags {
-            padding: 10px ;
+            padding: 10px;
             background-color: #181818;
             h1 {
               color: white;
               font-size: 22px;
-              padding:20px 10px;
+              padding: 20px 10px;
             }
             ul {
               padding-left: 0;
@@ -162,12 +162,12 @@
                 // padding-bottom: 5px;
                 margin-bottom: 15px;
                 margin-left: 10px;
-               a{
-                color: white;
-                border-radius: 8px;
-                padding: 5px 15px;
-                background-color: #242424;
-               }
+                a {
+                  color: white;
+                  border-radius: 8px;
+                  padding: 5px 15px;
+                  background-color: #242424;
+                }
               }
             }
           }
