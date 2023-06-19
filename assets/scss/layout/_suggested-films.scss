@@ -1,7 +1,6 @@
 .suggested-container {
-  padding: 80px 5%;
+  padding: 50px 5%;
   .suggested-title {
-
     padding-bottom: 50px;
     display: flex;
     justify-content: center;
@@ -25,16 +24,13 @@
       }
     }
   }
-  .swiper-slide{
-  
+  .swiper-slide {
     .card {
       border: none;
       position: relative;
       overflow: hidden;
-      // height: 100%;
-      height: 250px; /* Örnek olarak 300px yükseklik atadık */
+      height: 250px;
       width: 100%;
-
       cursor: pointer;
       &:hover .overlay {
         top: 0;
@@ -70,7 +66,7 @@
           position: absolute;
           right: 10px;
           top: 20px;
-  
+
           a {
             color: white;
             display: flex;
@@ -92,12 +88,12 @@
       img {
         transition: 1s;
         object-fit: cover;
-height: 100%;
+        height: 100%;
       }
     }
   }
 
-  @media screen and (max-width:991px){
+  @media screen and (max-width: 991px) {
     padding: 80px 30px;
   }
 }

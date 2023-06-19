@@ -1,4 +1,4 @@
-let cards = document.querySelectorAll(".card");
+// let cards = document.querySelectorAll(".card");
 // let userId = new URLSearchParams(window.location.search).get("id");
 
 let allMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
@@ -21,32 +21,32 @@ let allMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
 //   easing: "cubic-bezier(.37,.01,.74,1)",
 //   opacity:0.3,
 // });
-ScrollReveal().reveal(".best-movie-col", {
-  duration: 2000,
-  origin: "left",
-  distance: "100px",
-  easing: "cubic-bezier(.37,.01,.74,1)",
-  opacity: 0.3,
-});
-ScrollReveal().reveal(".img-col", {
-  duration: 2000,
-  origin: "right",
-  distance: "100px",
-  easing: "cubic-bezier(.37,.01,.74,1)",
-  opacity: 0.3,
-});
+// ScrollReveal().reveal(".best-movie-col", {
+//   duration: 2000,
+//   origin: "left",
+//   distance: "80px",
+//   easing: "cubic-bezier(.37,.01,.74,1)",
+//   opacity: 0.3,
+// });
+// ScrollReveal().reveal(".img-col", {
+//   duration: 2000,
+//   origin: "right",
+//   distance: "80px",
+//   easing: "cubic-bezier(.37,.01,.74,1)",
+//   opacity: 0.3,
+// });
 
-cards.forEach((card) => {
-  card.addEventListener("click", () => {
-    cards.forEach((c) => {
-      if (c !== card) {
-        c.classList.remove("active");
-      }
-    });
+// cards.forEach((card) => {
+//   card.addEventListener("click", () => {
+//     cards.forEach((c) => {
+//       if (c !== card) {
+//         c.classList.remove("active");
+//       }
+//     });
 
-    card.classList.add("active");
-  });
-});
+//     card.classList.add("active");
+//   });
+// });
 let swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -310,16 +310,18 @@ async function showTrailer(element, itemId) {
     console.log("1");
 
     let modal = element.querySelector(".modal");
-
+    console.log(modal);
     let iframe = modal.querySelector("iframe");
     iframe.src = data.trailer;
     modal.style.display = "block";
-    modal.style.visibility = "visible";
+    // modal.style.visibility = "visible";
   }
 }
+
 function closeModal(element) {
-  let modal = element.closest(".modal");
-  console.log("2");
+  let modal = element.closest("div");
+  console.log(modal);
+  // console.log("2");
   if (modal) {
     console.log("3");
     let iframe = modal.querySelector("iframe");
@@ -467,13 +469,16 @@ function drawHeroSection(arr) {
           </div>
 
           <div
-            class="col-lg-5 col-sm-12 d-none my-5 d-sm-flex content-right"
+            class="col-lg-5 col-sm-12 my-5 content-right"
           >
           <a onclick="showHeroTrailer(this.parentElement, '${item.id}')">
           <i class="fa-solid fa-play"></i>
         </a>
+    <div class="trailer-title">
+    <p>Watch Trailer</p>
+    
+    </div>
         
-            <p>Watch Trailer</p>
           </div>
         </div>
       </div>

@@ -104,7 +104,7 @@ let basketCount = document.querySelector(".basket-count");
 console.log(allPremiumMovies2);
 
 function basketCounter() {
-  allPremiumMovies2 = JSON.parse(localStorage.getItem("premiumMovies")) || [];
+
   let counter = allPremiumMovies2.length;
   console.log(counter);
   if (basketCount) {

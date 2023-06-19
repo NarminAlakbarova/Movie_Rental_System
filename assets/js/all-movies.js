@@ -33,7 +33,7 @@ function drawRow(arr) {
       <div class="icons">
 
         <div>
-          <a class="fa-solid fa-plus"></a>
+          <a class="fa-solid fa-plus" onclick=addMyList(${item.id}) ></a>
         </div>
         <div>
           <a href="details.html?id=${item.id}" class="fa-solid fa-play" ></a>
@@ -142,3 +142,40 @@ videoCard.forEach((item) => {
     video.pause();
   });
 });
+
+
+let allMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
+
+
+function showAlert(alerttext, infoalert) {
+  Toastify({
+    text: alerttext,
+    className: infoalert,
+    style: {
+      background: "linear-gradient(to right, #222221, #b00000 )",
+    },
+  }).showToast();
+}
+async function addMyList(movieId) {
+
+
+  let selectedMovie = await axios(`${BASE_URL}/allMovies/${movieId}`);
+  let selectedMovieData = selectedMovie.data;
+  console.log(selectedMovieData);
+
+  let resp = await axios("http://localhost:8080/users");
+  let data = resp.data;
+  let checkUser = data.find((user) => user.check === true);
+  let checkMovie = allMovies.some((movie) => movie.id == selectedMovieData.id);
+  console.log(checkMovie);
+  if (!checkUser) {
+    showAlert("Please Sign in", "info");
+  } else if (checkMovie) {
+    showAlert("This movie alredy added my-list", "info");
+  } else if (!checkMovie && checkUser) {
+    let favMovie = selectedMovieData;
+    allMovies.push(favMovie);
+    localStorage.setItem("favMovies", JSON.stringify(allMovies));
+    showAlert("Added", "info");
+  }
+}

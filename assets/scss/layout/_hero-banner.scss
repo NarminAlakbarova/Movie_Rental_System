@@ -133,6 +133,9 @@
         }
         .content-right {
           padding-left: 100px;
+          @media screen and (max-width:991px){
+            display: none;
+          }
           a {
             position: relative;
             width: 100px;
@@ -180,13 +183,28 @@
     }
     @media screen and (max-width: 991px) {
       .carousel-caption {
-        top: 20%;
+        // top: 20%;
         .carusel-content {
           .content-left {
             font-size: 16px;
           
             .first-title {
               font-size: 40px;
+            }
+          }
+     
+        }
+      }
+    }
+    @media screen and (max-width: 767px) {
+      .carousel-caption {
+        top: 15%;
+        .carusel-content {
+          .content-left {
+            font-size: 16px;
+          
+            .first-title {
+              font-size: 30px;
             }
           }
      

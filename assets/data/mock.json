@@ -535,7 +535,15 @@
       "season": "3",
       "id": 39,
       "time": "1h 7m",
-      "img": "../assets/img/premium/wednesday.jpeg"
+      "img": "../assets/img/premium/wednesday.jpeg",
+      "comments": [
+        {
+          "username": "guler",
+          "email": "guler123@gmail.com",
+          "commentContent": "pis deyil",
+          "commentDate": "6/19/2023, 2:51:23 PM"
+        }
+      ]
     },
     {
       "movieName": "Quasi",
@@ -692,7 +700,7 @@
       ]
     },
     {
-      "movieName": "Bridgerton",
+      "movieName": " Queen Charlotte",
       "imbd": "7.4",
       "title": "During the Regency era in England, eight close-knit siblings of the powerful Bridgerton family attempt to find love.",
       "releaseDate": "September 24, 2017",
@@ -703,7 +711,7 @@
       "id": 50,
       "price": 3,
       "time": "1h 20m",
-      "img": "../assets/img/hero-banner/bridgerton.jpg",
+      "img": "../assets/img/hero-banner/queen.jpg",
       "comments": [
         {
           "username": "kysewipyh",

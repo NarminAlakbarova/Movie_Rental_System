@@ -15,7 +15,7 @@ function favMovies() {
           <div class="content">
             <h3>${movie.movieName}</h3>
             <p>${movie.time}</p>
-            <a href="#">Play Now</a>
+            <a href="details.html?id=${movie.id}">Play Now</a>
           </div>
           <div class="icons">
             <div>
