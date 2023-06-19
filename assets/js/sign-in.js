@@ -3,6 +3,8 @@ let userNameEmailInp = document.querySelector(".username-email");
 let passwordInp = document.querySelector(".passwordInp");
 const BASE_URL = "http://localhost:8080/";
 let allUsers = [];
+
+// ALERT
 function showAlert(alerttext, infoalert) {
   Toastify({
     text: alerttext,
@@ -12,7 +14,8 @@ function showAlert(alerttext, infoalert) {
     },
   }).showToast();
 }
-// getAllUser();
+
+// FORM
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
   let resp = await axios(`${BASE_URL}users`);
@@ -37,11 +40,9 @@ form.addEventListener("submit", async function (e) {
       await axios.patch(`${BASE_URL}users/${regularUser.id}`, {
         check: true,
       });
-      if (regularUser.isAdmin) {
-        window.location.href = "../admin/admin.html";
-      } else {
-        window.location.href = "index.html";
-      }
+      window.location.href = regularUser.isAdmin
+        ? "../admin/admin.html"
+        : "index.html";
     } else {
       showAlert("Invalid credentials", "info");
     }

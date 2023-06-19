@@ -59,7 +59,7 @@
     },
     {
       "isAdmin": false,
-      "check": false,
+      "check": true,
       "userName": "Fatime",
       "firstName": "zamifitog",
       "lastName": "zabyvo",
@@ -95,7 +95,7 @@
       "password": "Pa$$w0rd!",
       "email": "sajec@mailinator.com",
       "id": 11,
-      "check": false
+      "check": true
     },
     {
       "isAdmin": false,
