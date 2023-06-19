@@ -105,27 +105,14 @@ function drawDetails(item) {
   </div>
 </div>
 </div>
-<div class="col-md-3 col-12 my-3">
+<div class="col-md-3 col-12 text-sm-right p-3  ">
 <div class="card right-content">
   <img
     src="${item.img}"
     alt=""
     class="detailsimg"
   />
-  <div class="modal-details">
-    <span class="close-details">&times;</span>
-    <div class="modal-content">
-      <iframe
-        width="560"
-        height="315"
-        src="${item.trailer}"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </div>
+  
   <div class="overlay">
     <i class="fa-solid fa-play"></i>
     <p>Trailer Link</p>

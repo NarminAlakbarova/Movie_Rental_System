@@ -2618,6 +2618,7 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 #details .details .right-content {
   position: relative;
   border: none;
+  height: 150px;
 }
 #details .details .right-content .overlay {
   display: flex;
@@ -2636,6 +2637,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 #details .details .right-content img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 #details .details .right-content .modal-details {
   display: none;
