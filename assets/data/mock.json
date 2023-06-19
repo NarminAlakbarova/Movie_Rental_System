@@ -59,7 +59,7 @@
     },
     {
       "isAdmin": false,
-      "check": false,
+      "check": true,
       "userName": "Fatime",
       "firstName": "zamifitog",
       "lastName": "zabyvo",
@@ -135,7 +135,7 @@
       "id": 15
     },
     {
-      "isAdmin": false,
+      "isAdmin": true,
       "userName": "fiwupi",
       "firstName": "gecyke",
       "lastName": "zadeg",
@@ -336,18 +336,6 @@
       "time": "1h 20m"
     },
     {
-      "movieName": "The Walking Dead",
-      "imbd": "8.1",
-      "title": "Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins and must lead a group of survivors to stay alive.",
-      "releaseDate": "May 3, 2019",
-      "trailer": "https://www.youtube.com/embed/Hgeu5rhoxxY",
-      "genres": "Horror ",
-      "section": "Must-Have",
-      "id": 27,
-      "img": "../assets/img/Must-Have-series/the-walking-dead.jpg",
-      "time": "1h 20m"
-    },
-    {
       "movieName": "13 Reasons Why",
       "imbd": "7.5",
       "title": "Follows teenager Clay Jensen, in his quest to uncover the story behind his classmate and crush, Hannah, and her decision to end her life.",
@@ -358,18 +346,6 @@
       "id": 28,
       "img": "../assets/img/Must-Have-series/the-walking-dead.jpg",
       "time": "2h 20m"
-    },
-    {
-      "movieName": " The 100 ",
-      "imbd": "7.6",
-      "title": "Set 97 years after a nuclear war destroyed civilization, when a spaceship housing humanity's lone survivors sends 100 juvenile delinquents back to Earth, hoping to repopulate the planet.",
-      "releaseDate": "May 3, 2019",
-      "trailer": "https://www.youtube.com/embed/Hgeu5rhoxxY",
-      "genres": "Mystery ",
-      "section": "Must-Have",
-      "id": 29,
-      "time": "1h 45m",
-      "img": "../assets/img/Must-Have-series/the100.jpg"
     },
     {
       "movieName": "Orange Is the New Black  ",

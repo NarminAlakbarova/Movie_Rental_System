@@ -754,8 +754,9 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 #upcoming .upcoming .must-have-series .right-cards .right-all-content {
   display: flex;
 }
-#upcoming .upcoming .must-have-series .right-cards .right-all-content p {
+#upcoming .upcoming .must-have-series .right-cards .right-all-content a {
   margin-bottom: 0;
+  color: white;
 }
 #upcoming .upcoming .must-have-series .right-cards .right-all-content .right-content {
   padding-left: 20px;

@@ -5,6 +5,7 @@ let allInputs = document.querySelectorAll("input");
 let submitBtn = document.querySelector(".submitbtn");
 let allPremiumMovies = JSON.parse(localStorage.getItem("premiumMovies")) || [];
 let purchasedMovies = JSON.parse(localStorage.getItem("myMovies")) || [];
+let basketCount2 = document.querySelector(".basket-count");
 
 // DRAW FUNC
 function allBasket() {
@@ -58,7 +59,6 @@ function calcSubtotal() {
 }
 calcSubtotal();
 
-
 // BASKET LENGTH
 function basketLength() {
   countBasket.innerHTML = `${allPremiumMovies.length}`;
@@ -73,10 +73,18 @@ function deleteBasket(movieId) {
   allBasket();
   calcSubtotal();
   basketLength();
+  basketCounter2();
 }
 
-console.log(allInputs);
-
+function basketCounter2() {
+  let counter = allPremiumMovies.length;
+  console.log(counter);
+  if (basketCount2) {
+    basketCount2.innerHTML = counter.toString();
+    console.log(counter);
+  }
+}
+basketCounter2();
 // SHOW ALERT
 function showAlert(alerttext, infoalert) {
   Toastify({
@@ -103,6 +111,7 @@ submitBtn.addEventListener("click", function () {
     subtotalCount.innerHTML = "0";
     showAlert("Items purchased successfully!", "info");
     basketLength();
+    basketCounter2();
   } else {
     showAlert("Please fill in all the required fields.", "info");
   }

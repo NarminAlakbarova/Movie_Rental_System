@@ -10,7 +10,7 @@ let logOutIcon = document.querySelector(".log-out");
 let userNameSpan = document.querySelector(".user-name");
 const USER_URL = "http://localhost:8080";
 let allPremiumMovies2 = JSON.parse(localStorage.getItem("premiumMovies")) || [];
-let allDataCommon=[]
+let allDataCommon = [];
 // DROPDOWN
 dropdown.addEventListener("mouseenter", function () {
   dropdown.setAttribute("data-bs-toggle", "");
@@ -25,20 +25,19 @@ dropdown.addEventListener("mouseleave", function () {
 
 function drawUserName(obj) {
   userNameSpan.innerHTML = "";
-  userNameSpan.innerHTML = `${obj ? obj.userName : ''}`;
+  userNameSpan.innerHTML = `${obj ? obj.userName : ""}`;
 }
 
 async function findUser() {
   let resp = await axios(`${USER_URL}/users`);
   let data = resp.data;
-  allDataCommon=data
+  allDataCommon = data;
   console.log(data);
   let user = allDataCommon.find((item) => item.check === true);
   console.log(user);
   drawUserName(user);
 }
 findUser();
-
 
 // BURGET MENU
 jQuery(document).ready(function () {
@@ -57,10 +56,7 @@ jQuery(document).ready(function () {
 
 //   SCROLL
 function scrollFunction() {
-  if (
-    document.body.scrollTop > 50 ||
-    document.documentElement.scrollTop > 50
-  ) {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     header.style.background = "#141414";
   } else {
     header.style.background = "";
@@ -86,8 +82,7 @@ $(document).ready(function () {
   });
 });
 
-// LOG-OUT 
-
+// LOG-OUT
 
 logOutIcon.addEventListener("click", async function () {
   let users = allDataCommon.find((user) => user.check === true);
@@ -109,6 +104,9 @@ function basketCounter() {
 }
 basketCounter();
 
+window.onload = function () {
+  basketCounter();
+};
 // SPINNER
 let spinner = document.querySelector(".loader");
 window.addEventListener("load", () => {

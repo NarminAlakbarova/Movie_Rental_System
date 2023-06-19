@@ -1,7 +1,6 @@
 const BASE_URL = "http://localhost:8080";
 let movieId = new URLSearchParams(window.location.search).get("id");
 let allMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
-
 let descriptionLink = document.querySelector(".description-link");
 let rateReviewLink = document.querySelector(".rate-review-link");
 let descriptionSection = document.querySelector("#description");
@@ -279,6 +278,8 @@ function showAlert(alerttext, infoalert) {
     },
   }).showToast();
 }
+
+// ADD MY LIST
 async function addMyList(movieId) {
   let selectedMovie = await axios(`${BASE_URL}/allMovies/${movieId}`);
   let selectedMovieData = selectedMovie.data;

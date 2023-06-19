@@ -52,7 +52,7 @@ function drawTabele(arr) {
       }"></a>
       <i class="fa-solid fa-trash btn btn-danger" onclick=deleteMovies(${
         item.id
-      })></i>
+      },this)></i>
     </td>
   </tr>
     
@@ -83,21 +83,23 @@ searchInp.addEventListener("input", function (e) {
 });
 // document.querySelector(`#${moviesId}`).closest("tr").remove();
 // DELETE
-function deleteMovies(moviesId) {
+function deleteMovies(moviesId, btn) {
   swal({
     title: "Are you sure?",
     text: "Once deleted, you will not be able to recover this imaginary file!",
     icon: "warning",
     buttons: true,
     dangerMode: true,
-  }).then((willDelete) => {
+  }).then(async (willDelete) => {
     if (willDelete) {
-      axios.delete(`${BASE_URL}/allMovies/${moviesId}`);
+      await axios.delete(`${BASE_URL}/allMovies/${moviesId}`);
+      btn.closest("tr").remove();
     } else {
       swal("Your imaginary file is safe!");
     }
   });
 }
+
 
 // MORE DETAILS
 function showMoreDetails(userId) {
@@ -192,4 +194,3 @@ loadMore.addEventListener("click", function () {
     getAllData();
   }
 });
-

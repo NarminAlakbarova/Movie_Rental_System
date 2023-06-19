@@ -205,7 +205,9 @@ function drawMostHaveRow(arr) {
                           />
                           </div>
                           <div class="right-content">
-                          <p>${item.movieName}</p>
+                          <a href="details.html?id=${item.id}">${
+      item.movieName
+    }</a>
                           <div class="star-icon">
                           <i class="fa-solid fa-star"></i>
                           <p>${item.imbd}</p>

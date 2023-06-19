@@ -4,6 +4,7 @@ let searchInpPrem = document.querySelector(".search");
 let dropdownPrem = document.querySelector(".sortDrop");
 let allPremiumMovies = JSON.parse(localStorage.getItem("premiumMovies")) || [];
 let purchasedMovies = JSON.parse(localStorage.getItem("myMovies")) || [];
+let basketCount2 = document.querySelector(".basket-count");
 
 let dataArr = [];
 let copyArr = [];
@@ -152,12 +153,24 @@ async function addBasket(moviId) {
     let premiumMovies = copyArr.find((obj) => obj.id === moviId);
     allPremiumMovies.push(premiumMovies);
     localStorage.setItem("premiumMovies", JSON.stringify(allPremiumMovies));
+
     showAlert("Added", "info");
+   
+    basketCounter2();
   } else if (allPremiumMovies.includes(selectedObj)) {
+
     showAlert("This movie alredy added basket", "info");
   }
 }
-
+function basketCounter2() {
+  let counter = allPremiumMovies.length;
+  console.log(counter);
+  if (basketCount2) {
+    basketCount2.innerHTML = counter.toString();
+    console.log(counter);
+  }
+}
+basketCounter2();
 // GET PURCHASEDMOVIES
 function getPurchasedMovies() {
   purchasedMovie.innerHTML = "";
