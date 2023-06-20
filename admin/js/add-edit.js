@@ -8,6 +8,7 @@ let genresInp = document.querySelector("#genres");
 let dateInp = document.querySelector("#date");
 let moviesNameInp = document.querySelector("#name");
 let trailerInp = document.querySelector("#urlinp");
+let priceInp = document.querySelector("#price-inp");
 let form = document.querySelector("form");
 let base64;
 let section;
@@ -27,12 +28,27 @@ async function drawInput() {
   moviesNameInp.value = data.movieName;
   selectSection.value = data.section;
   trailerInp.value = data.trailer;
+  priceInp.value=data.price
   addEditBtn.innerHTML = "Edit";
 }
 drawInput();
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
+  if (
+    moviesNameInp.value === "" ||
+    imbdInp.value === "" ||
+    textTitle.value === "" ||
+    dateInp.value === "" ||
+    trailerInp.value === "" ||
+    genresInp.value === "" ||
+    base64 === "" ||
+    timeInp.value === "" ||
+    priceInp.value === ""
+  ) {
+    alert("Please fill in all the fields")
+    return;
+  }
   let obj = {
     movieName: moviesNameInp.value,
     imbd: imbdInp.value,
@@ -42,6 +58,7 @@ form.addEventListener("submit", async function (e) {
     genres: genresInp.value,
     img: base64,
     time:timeInp.value,
+    price:priceInp.value,
     section: section || "Lorem",
   };
   if (id) {

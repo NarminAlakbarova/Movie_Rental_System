@@ -24,6 +24,17 @@ function showAlert(alerttext, infoalert) {
 // FORM
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
+  if (
+    userNameInp.value === "" ||
+    emailInp.value === "" ||
+    firstNameInp.value === "" ||
+    lastNameInp.value === "" ||
+    passwordInp.value === "" ||
+    passwordInp2.value === ""
+  ) {
+    showAlert("Please fill in all the fields", "info");
+    return; 
+  }
   let obj = {
     isAdmin: false,
     userName: userNameInp.value,
