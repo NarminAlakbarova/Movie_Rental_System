@@ -397,7 +397,7 @@ header .header .admin .dropdown button {
 }
 #films-panel {
   padding-top: 100px;
-  padding-left: 300px;
+  padding-left: 270px;
 }
 #films-panel .films-panel .card {
   box-shadow: 42px 0px 199px 28px rgba(65, 90, 119, 0.75);
@@ -415,7 +415,7 @@ header .header .admin .dropdown button {
   color: white;
   border: none;
 }
-#films-panel .films-panel .card .count {
+#films-panel .films-panel .card .value-counter {
   font-size: 20px;
 }
 #films-panel .films-panel .card h4 {

@@ -4,7 +4,7 @@ let max = 6;
 // COUNTER
 let a = 0;
 $(document).ready(function () {
-  $(".count").each(function () {
+  $(".value-counter").each(function () {
     let $this = $(this);
     jQuery({ Counter: 0 }).animate(
       { Counter: $this.text() },
