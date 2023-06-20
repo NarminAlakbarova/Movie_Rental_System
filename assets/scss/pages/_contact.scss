@@ -13,10 +13,8 @@
   }
   .hero-banner {
     text-align: center;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(center);
     position: relative;
     z-index: 999;
     h2 {

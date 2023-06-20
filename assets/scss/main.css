@@ -71,6 +71,40 @@ body {
     transform: rotate(360deg);
   }
 }
+.all-movies-swipper .swiper-wrapper .swiper-slide .content h2, .carousel .carousel-item .carousel-caption .carusel-content .content-left .first-title {
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: url("../../../assets/img/texure.jpg");
+  color: transparent;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: left;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 991px) {
+  .all-movies-swipper .swiper-wrapper .swiper-slide .content h2, .carousel .carousel-item .carousel-caption .carusel-content .content-left .first-title {
+    font-size: 50px;
+  }
+}
+
+.premium-container .premium-title h3, #trailers .trailers .trailers-title h3, .suggested-container .suggested-title h3, #upcoming .upcoming h3 {
+  text-align: center;
+  position: relative;
+  color: white;
+  font-weight: 400;
+}
+.premium-container .premium-title h3::after, #trailers .trailers .trailers-title h3::after, .suggested-container .suggested-title h3::after, #upcoming .upcoming h3::after {
+  content: "";
+  height: 2px;
+  background-color: #e50914;
+  width: 30%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 10px 0;
+}
+
 header {
   padding: 10px;
   background-color: black;
@@ -134,6 +168,7 @@ header .header .right-nav .fa-bars {
 }
 header .header .right-nav .search-user {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 header .header .right-nav .search-user .fa-search {
@@ -174,9 +209,8 @@ header .header .right-nav .notification span {
   border-radius: 50%;
   font-size: 12px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   top: -10px;
   left: 15px;
   color: white;
@@ -200,9 +234,10 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li:hover p {
   color: black !important;
 }
 header .header .right-nav .account .sign-in-up .dropdown-menu li a {
-  display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 @media screen and (max-width: 991px) {
@@ -241,8 +276,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   background-color: #141414;
   z-index: 999999;
   display: flex;
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
 }
@@ -483,21 +518,6 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 .carousel .carousel-item .carousel-caption .carusel-content .content-left p {
   text-align: start;
 }
-.carousel .carousel-item .carousel-caption .carusel-content .content-left .first-title {
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: url("../../../assets/img/texure.jpg");
-  color: transparent;
-  font-size: 40px;
-  font-weight: 900;
-  text-align: left;
-  text-transform: uppercase;
-}
-@media screen and (max-width: 991px) {
-  .carousel .carousel-item .carousel-caption .carusel-content .content-left .first-title {
-    font-size: 50px;
-  }
-}
 .carousel .carousel-item .carousel-caption .carusel-content .content-left .info-film {
   display: flex;
   align-items: center;
@@ -618,18 +638,12 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   cursor: pointer;
 }
 #upcoming .upcoming h3 {
-  position: relative;
-  color: white;
-  font-weight: 400;
+  text-align: left;
   font-size: 24px;
 }
 #upcoming .upcoming h3::after {
-  content: "";
-  height: 2px;
-  background-color: #e50914;
   width: 10%;
-  display: block;
-  position: absolute;
+  left: 5.5%;
   margin: 5px 0;
 }
 #upcoming .upcoming .left-cards {
@@ -701,7 +715,6 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-content: space-between;
   padding: 0 10px;
   position: absolute;
   bottom: 25%;
@@ -781,23 +794,6 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.suggested-container .suggested-title h3 {
-  text-align: center;
-  position: relative;
-  color: white;
-  font-weight: 400;
-}
-.suggested-container .suggested-title h3::after {
-  content: "";
-  height: 2px;
-  background-color: #e50914;
-  width: 30%;
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  margin: 10px 0;
 }
 .suggested-container .swiper-slide .card {
   border: none;
@@ -922,6 +918,7 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 }
 #best-movie .best-movie .best-movie-row .best-movie-col .info-film .imdb {
   display: flex;
+  justify-content: center;
   align-items: center;
   -moz-column-gap: 8px;
        column-gap: 8px;
@@ -932,6 +929,7 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 }
 #best-movie .best-movie .best-movie-row .best-movie-col .info-film #gp {
   display: flex;
+  justify-content: center;
   align-items: center;
   -moz-column-gap: 8px;
        column-gap: 8px;
@@ -943,9 +941,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   color: white;
   padding: 7px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 #best-movie .best-movie .best-movie-row .best-movie-col .about-film {
   color: rgba(207, 206, 206, 0.4666666667);
@@ -1015,23 +1012,6 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   align-items: center;
   text-transform: capitalize;
 }
-#trailers .trailers .trailers-title h3 {
-  text-align: center;
-  position: relative;
-  color: white;
-  font-weight: 400;
-}
-#trailers .trailers .trailers-title h3::after {
-  content: "";
-  height: 2px;
-  background-color: #e50914;
-  width: 30%;
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  margin: 10px 0;
-}
 #trailers .trailers .cards {
   display: flex;
   flex-direction: column;
@@ -1095,6 +1075,7 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  transition: 1s;
 }
 #trailers .trailers .cards .img img:hover {
   opacity: 0.7;
@@ -1128,20 +1109,6 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   flex-direction: column;
   align-items: flex-start;
   row-gap: 10px;
-}
-.all-movies-swipper .swiper-wrapper .swiper-slide .content h2 {
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: url("../../assets/img/texure.jpg");
-  color: transparent;
-  font-size: 60px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-@media screen and (max-width: 991px) {
-  .all-movies-swipper .swiper-wrapper .swiper-slide .content h2 {
-    font-size: 50px;
-  }
 }
 .all-movies-swipper .swiper-wrapper .swiper-slide .content p {
   color: white;
@@ -1190,8 +1157,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 #all-movies .all-movies .all-movies-row .search {
   padding: 30px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background-color: #181818;
 }
 #all-movies .all-movies .all-movies-row .search input {
@@ -1321,7 +1288,7 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 }
 #all-movies .all-movies .all-movies-row .right-col .card img {
   width: 100%;
-  height: 250px; /* İstediğiniz boyutu burada belirleyebilirsiniz */
+  height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1446,8 +1413,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 }
 #hero-banner .hero-banner {
   text-align: center;
-  display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -1530,8 +1497,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 }
 #hero-banner .hero-banner {
   text-align: center;
-  display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -1710,27 +1677,10 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   padding-bottom: 80px;
 }
 .premium-container .premium-title {
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.premium-container .premium-title h3 {
-  text-align: center;
-  position: relative;
-  color: white;
-  font-weight: 400;
-}
-.premium-container .premium-title h3::after {
-  content: "";
-  height: 2px;
-  background-color: #e50914;
-  width: 30%;
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  margin: 10px 0;
 }
 .premium-container .lastSwipper .swiper-slide {
   position: relative;
@@ -1799,6 +1749,7 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 }
 .premium-container .lastSwipper .swiper-slide .info-film .imdb {
   display: flex;
+  justify-content: center;
   align-items: center;
   -moz-column-gap: 5px;
        column-gap: 5px;
@@ -1814,7 +1765,9 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   background-color: rgb(83, 83, 83);
   color: white;
   padding: 7px;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 .premium-container .lastSwipper .swiper-slide .gender {
   display: flex;
@@ -1853,18 +1806,18 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   height: 50vh;
   display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 #hero h2 {
   color: white;
 }
 #hero .links {
-  display: flex;
-  align-items: center;
   text-align: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 #hero .links a,
 #hero .links p {
@@ -1891,8 +1844,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 #premium-movies .premium-movies .search {
   padding: 30px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background-color: #181818;
 }
 #premium-movies .premium-movies .search input {
@@ -2091,8 +2044,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   padding: 20px 20px 20px 50px;
   text-align: center;
   color: rgba(255, 255, 255, 0.842);
-  display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
   position: relative;
   row-gap: 15px;
@@ -2244,8 +2197,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 #blog .blog-container .blog .right-col .search {
   padding: 30px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background-color: #181818;
 }
 #blog .blog-container .blog .right-col .search input {
@@ -2303,6 +2256,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 #blog .blog-container .blog .right-col .categories-col .categories-ul {
   padding: 20px;
   background-color: #181818;
+  height: 300px;
+  overflow-y: scroll;
 }
 #blog .blog-container .blog .right-col .categories-col .categories-ul ul {
   color: white;
@@ -2335,8 +2290,7 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 }
 #blog .blog-container .blog .right-col .tags-col .tags ul li {
   display: inline-block;
-  margin-bottom: 15px;
-  margin-left: 10px;
+  margin: 0 10px 15px 0;
 }
 #blog .blog-container .blog .right-col .tags-col .tags ul li a {
   color: white;
@@ -2674,45 +2628,6 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#details .details .right-content .modal-details {
-  display: none;
-  position: fixed;
-  z-index: 11111111111;
-  left: 0%;
-  top: 0%;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-#details .details .right-content .modal-details .close-details {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-  cursor: pointer;
-}
-#details .details .right-content .modal-details .modal-content {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 80%;
-  max-width: 700px;
-  height: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#details .details .right-content .modal-details .modal-content iframe {
-  width: 100%;
-  height: 100%;
-}
 
 #links .links ul {
   display: flex;
@@ -3043,8 +2958,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   font-size: 1.2rem;
   font-weight: 600;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   transition: all 0.5s ease-in-out;
 }
 #basket .basket .basket-cards .card .card-body button.type1::before {
@@ -3060,8 +2975,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   font-size: 1.2rem;
   font-weight: 600;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   transition: all 0.5s ease-in-out;
 }
 #basket .basket .basket-cards .card .card-body button.type1:hover::after {
@@ -3092,8 +3007,8 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 }
 #basket .basket .basket-cards .card .card-body .price {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: white;
 }
 #basket .basket .basket-cards .card .card-body .price .price-title {
@@ -3142,7 +3057,7 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
 }
 #my-list .my-list .card .content a {
   padding: 10px 30px;
-  background-color: #BF000A;
+  background-color: #bf000a;
   border-radius: 10px;
   color: white;
 }
@@ -3159,7 +3074,7 @@ header .header .right-nav .account .sign-in-up .dropdown-menu li a {
   padding: 10px;
 }
 #my-list .my-list .card .icons i {
-  color: #BF000A;
+  color: #bf000a;
   transition: 1s;
 }
 #my-list .my-list .card .icons i:hover {

@@ -38,9 +38,7 @@
                 transform: translateY(50px);
                 font-size: 1.2rem;
                 font-weight: 600;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flexbox(center);
                 transition: all 0.5s ease-in-out;
               }
 
@@ -56,9 +54,7 @@
                 transform: translateY(0px) scale(1.2);
                 font-size: 1.2rem;
                 font-weight: 600;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flexbox(center);
                 transition: all 0.5s ease-in-out;
               }
 
@@ -79,7 +75,7 @@
           a {
             padding-right: 10px;
             img {
-           height: 40px;
+              height: 40px;
             }
           }
           img {
@@ -93,9 +89,7 @@
             }
           }
           .price {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flexbox(center);
             color: white;
             .price-title {
               width: 65px;

@@ -1,5 +1,4 @@
 .carousel {
-  // height: 100vh;
   .carousel-item {
     position: relative;
     .opacity-slide {
@@ -51,10 +50,10 @@
     }
     img {
       height: 100vh;
-      @media screen and (max-width:991px) {
+      @media screen and (max-width: 991px) {
         height: 90vh;
       }
-      @media screen and (max-width:767px) {
+      @media screen and (max-width: 767px) {
         height: 100vh;
       }
     }
@@ -90,17 +89,7 @@
           }
 
           .first-title {
-            -webkit-background-clip: text;
-            background-clip: text;
-            background-image: url("../../../assets/img/texure.jpg");
-            color: transparent;
-            font-size: 40px;
-            font-weight: 900;
-            text-align: left;
-            text-transform: uppercase;
-            @media screen and (max-width: 991px) {
-              font-size: 50px;
-            }
+            @extend %primary_title;
           }
           .info-film {
             display: flex;
@@ -139,7 +128,7 @@
         }
         .content-right {
           padding-left: 100px;
-          @media screen and (max-width:991px){
+          @media screen and (max-width: 991px) {
             display: none;
           }
           a {
@@ -182,23 +171,19 @@
             padding-left: 0;
             padding-top: 30px;
           }
-       
         }
       }
-  
     }
     @media screen and (max-width: 991px) {
       .carousel-caption {
-
         .carusel-content {
           .content-left {
             font-size: 16px;
-          
+
             .first-title {
               font-size: 40px;
             }
           }
-     
         }
       }
     }
@@ -208,16 +193,14 @@
         .carusel-content {
           .content-left {
             font-size: 16px;
-          
+
             .first-title {
               font-size: 30px;
             }
           }
-     
         }
       }
     }
-   
   }
 }
 

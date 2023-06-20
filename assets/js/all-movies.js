@@ -26,7 +26,7 @@ function drawRow(arr) {
             <i class="fa-solid fa-star"></i>
             ${item.imbd}
           </div>
-          <h4>${item.movieName}</h4>
+          <h4>${item.movieName.split(" ").slice(0, 2).concat("...").join(" ")}</h4>
           <p>${item.genres}</p>
         </div>
       </div>

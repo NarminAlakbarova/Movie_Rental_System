@@ -41,6 +41,7 @@ form.addEventListener("submit", async function (e) {
     trailer: trailerInp.value,
     genres: genresInp.value,
     img: base64,
+    time:timeInp.value,
     section: section || "Lorem",
   };
   if (id) {

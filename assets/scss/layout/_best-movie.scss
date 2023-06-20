@@ -19,7 +19,6 @@
   .best-movie {
     .best-movie-row {
       height: 90vh;
-
       .best-movie-col {
         row-gap: 10px;
         z-index: 88;
@@ -44,8 +43,7 @@
             margin-bottom: 0;
           }
           .imdb {
-            display: flex;
-            align-items: center;
+            @include flexbox(center);
             column-gap: 8px;
             img {
               width: 60px;
@@ -53,8 +51,7 @@
             }
           }
           #gp {
-            display: flex;
-            align-items: center;
+            @include flexbox(center);
             column-gap: 8px;
             .gp {
               width: 30px;
@@ -62,8 +59,7 @@
               background-color: rgb(83, 83, 83);
               color: white;
               padding: 7px;
-              @include flexbox;
-              justify-content: center;
+              @include flexbox(center);
             }
           }
         }
@@ -73,9 +69,7 @@
         .play-now {
           margin-top: 20px;
           cursor: pointer;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include flexbox(center);
           border: none;
           width: 9em;
           height: 3em;

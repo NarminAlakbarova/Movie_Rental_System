@@ -47,15 +47,9 @@
       .dropdowns {
         display: flex;
         column-gap: 30px;
-
-        // padding-bottom: 30px;
         .dropdown {
-          // display: none;
-          // display: flex;
-
           .dropdown-menu {
             background-color: #415a77;
-
             li {
               &:hover {
                 a {
