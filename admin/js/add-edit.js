@@ -69,6 +69,9 @@ form.addEventListener("submit", async function (e) {
   window.location.href = "films.html";
 });
 
+
+
+
 const convertBase64 = (file) => {
   return new Promise((resolve, reject) => {
     const fileReader = new FileReader();
