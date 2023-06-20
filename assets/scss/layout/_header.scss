@@ -105,8 +105,10 @@ header {
             background-color: rgb(0, 0, 0, 0.9);
 
             li {
+              padding: 5px 0;
               a,
               p {
+                transition: 0.5s;
                 color: #fff;
               }
 
@@ -116,6 +118,8 @@ header {
                   color: black !important;
                 }
               }
+       
+         
               a {
                 column-gap: 10px;
                 @include flexbox(center);

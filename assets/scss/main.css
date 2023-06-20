@@ -225,8 +225,12 @@ header .header .right-nav .account .sign-in-up .dropdown-toggle::after {
 header .header .right-nav .account .sign-in-up .dropdown-menu {
   background-color: rgba(0, 0, 0, 0.9);
 }
+header .header .right-nav .account .sign-in-up .dropdown-menu li {
+  padding: 5px 0;
+}
 header .header .right-nav .account .sign-in-up .dropdown-menu li a,
 header .header .right-nav .account .sign-in-up .dropdown-menu li p {
+  transition: 0.5s;
   color: #fff;
 }
 header .header .right-nav .account .sign-in-up .dropdown-menu li:hover a,

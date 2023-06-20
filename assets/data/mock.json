@@ -151,6 +151,15 @@
       "password": "Pa$$w0rd!",
       "email": "poje@mailinator.com",
       "id": 17
+    },
+    {
+      "isAdmin": false,
+      "userName": "kutoxo",
+      "firstName": "kiqobujaxy",
+      "lastName": "kuhob",
+      "password": "Pa$$w0rd!",
+      "email": "zidelivi@mailinator.com",
+      "id": 18
     }
   ],
   "allMovies": [

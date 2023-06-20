@@ -127,3 +127,4 @@ async function yesFunc(id) {
   const isAdmin = resp.data.isAdmin;
   await axios.patch(`${BASE_URL}users/${id}`, { isAdmin: !isAdmin });
 }
+
