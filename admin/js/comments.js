@@ -30,7 +30,6 @@ getCardsData();
 
 async function drawComment(movieId) {
   let findMovie = alldata.find((item) => item.id == movieId);
-  console.log(findMovie);
   commentsRow.innerHTML = "";
 
   if (findMovie && findMovie.comments && findMovie.comments.length > 0) {
@@ -58,5 +57,5 @@ async function drawComment(movieId) {
 }
 moreBtn.addEventListener("click", function () {
   max = max + 18;
-  getCardsData()
+  getCardsData();
 });

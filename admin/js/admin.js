@@ -123,7 +123,6 @@ async function editUser(userId) {
 }
 
 async function yesFunc(id) {
-  console.log(id);
   const resp = await axios.get(`${BASE_URL}users/${id}`);
   const isAdmin = resp.data.isAdmin;
   await axios.patch(`${BASE_URL}users/${id}`, { isAdmin: !isAdmin });

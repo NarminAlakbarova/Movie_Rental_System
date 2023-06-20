@@ -78,10 +78,8 @@ function deleteBasket(movieId) {
 
 function basketCounter2() {
   let counter = allPremiumMovies.length;
-  console.log(counter);
   if (basketCount2) {
     basketCount2.innerHTML = counter.toString();
-    console.log(counter);
   }
 }
 basketCounter2();

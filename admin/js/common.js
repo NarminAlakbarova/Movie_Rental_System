@@ -29,10 +29,7 @@ function getModeFunc() {
     body.classList = "dark-mode";
     sunIcon.classList = "fa-solid fa-moon";
   }
-  else{
-    body.classList.remove("dark-mode")
-    sunIcon.classList.remove("fa-solid fa-moon")
-  }
+
 }
 getModeFunc();
 

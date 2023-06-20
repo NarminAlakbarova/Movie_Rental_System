@@ -80,7 +80,6 @@ searchInpPrem.addEventListener("input", function (e) {
 
 // SORT
 dropdownPrem.addEventListener("click", function (e) {
-  console.log("hello");
   let target = e.target;
   e.preventDefault();
   if (target.classList.contains("dropdown-item")) {
@@ -93,7 +92,6 @@ function sortMovies(sortType) {
     copyArr = dataArr;
   } else if (sortType === "imdb rated- highest") {
     copyArr = copyArr.toSorted((a, b) => b.imbd - a.imbd);
-    console.log("nn");
   } else if (sortType === "imdb rated - lowest") {
     copyArr = copyArr.toSorted((a, b) => a.imbd - b.imbd);
   } else if (sortType === "A-Z") {
@@ -142,7 +140,6 @@ function showAlert(alerttext, infoalert) {
 
 // ADD BASKET
 async function addBasket(moviId) {
-  console.log("jj");
   let selectedObj = copyArr.find((item) => item.id == moviId);
   let resp = await axios("http://localhost:8080/users");
   let data = resp.data;
@@ -164,10 +161,8 @@ async function addBasket(moviId) {
 }
 function basketCounter2() {
   let counter = allPremiumMovies.length;
-  console.log(counter);
   if (basketCount2) {
     basketCount2.innerHTML = counter.toString();
-    console.log(counter);
   }
 }
 basketCounter2();

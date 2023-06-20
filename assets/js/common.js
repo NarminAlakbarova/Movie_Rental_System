@@ -32,9 +32,7 @@ async function findUser() {
   let resp = await axios(`${USER_URL}/users`);
   let data = resp.data;
   allDataCommon = data;
-  console.log(data);
   let user = allDataCommon.find((item) => item.check === true);
-  console.log(user);
   drawUserName(user);
 }
 findUser();
@@ -86,7 +84,6 @@ $(document).ready(function () {
 
 logOutIcon.addEventListener("click", async function () {
   let users = allDataCommon.find((user) => user.check === true);
-  console.log(users);
   await axios.patch(`http://localhost:8080/users/${users.id}`, {
     check: false,
   });
@@ -96,10 +93,8 @@ logOutIcon.addEventListener("click", async function () {
 // BASKET COUNTER
 function basketCounter() {
   let counter = allPremiumMovies2.length;
-  console.log(counter);
   if (basketCount) {
     basketCount.innerHTML = counter.toString();
-    console.log(counter);
   }
 }
 basketCounter();

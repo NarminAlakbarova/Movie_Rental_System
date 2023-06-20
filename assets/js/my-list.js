@@ -1,5 +1,4 @@
 let allMovies = JSON.parse(localStorage.getItem("favMovies")) || [];
-console.log(allMovies);
 let myList = document.querySelector(".my-list-row");
 
 function favMovies() {

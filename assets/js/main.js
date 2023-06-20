@@ -69,7 +69,7 @@ async function copyData() {
   let resp = await axios(`${BASE_URL}/allMovies`);
   let data = resp.data;
   allData = data;
-  // console.log(allData);
+
 }
 
 // SUGGESTED SECTION JS
@@ -100,7 +100,6 @@ function drawSuggestedSlide(arr) {
 async function getSuggestedData() {
   await copyData();
   let filteredData = allData.filter((item) => item.section === "Suggested");
-  // console.log(allData);
   drawSuggestedSlide(filteredData);
 }
 
@@ -118,17 +117,12 @@ function showAlert(alerttext, infoalert) {
   }).showToast();
 }
 async function addMyList(movieId) {
-  console.log(allData);
-
   let selectedMovie = await axios(`${BASE_URL}/allMovies/${movieId}`);
   let selectedMovieData = selectedMovie.data;
-  console.log(selectedMovieData);
-
   let resp = await axios("http://localhost:8080/users");
   let data = resp.data;
   let checkUser = data.find((user) => user.check === true);
   let checkMovie = allMovies.some((movie) => movie.id == selectedMovieData.id);
-  console.log(checkMovie);
   if (!checkUser) {
     showAlert("Please Sign in", "info");
   } else if (checkMovie) {
@@ -273,10 +267,7 @@ async function showTrailer(element, itemId) {
   let data = resp.data;
 
   if (data) {
-    console.log("1");
-
     let modal = element.querySelector(".modal");
-    console.log(modal);
     let iframe = modal.querySelector("iframe");
     iframe.src = data.trailer;
     modal.style.display = "block";
@@ -286,10 +277,7 @@ async function showTrailer(element, itemId) {
 
 function closeModal(element) {
   let modal = element.closest("div");
-  console.log(modal);
-  // console.log("2");
   if (modal) {
-    console.log("3");
     let iframe = modal.querySelector("iframe");
     iframe.src = "";
     modal.style.display = "none";
@@ -444,13 +432,11 @@ function drawHeroSection(arr) {
 async function getHeroData() {
   await copyData();
   allData = allData.filter((item) => item.section === "Hero-Banner");
-  // console.log(allData);
   drawHeroSection(allData);
 }
 getHeroData();
 
 async function showHeroTrailer(element, itemId) {
-  console.log("mm");
   let resp = await axios(`http://localhost:8080/allMovies/${itemId}`);
   let data = resp.data;
   if (data) {

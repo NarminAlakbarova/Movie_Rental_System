@@ -81,7 +81,6 @@ loadMore.addEventListener("click", function () {
 
 // SORT
 dropdownAll.addEventListener("click", function (event) {
-  console.log("hello");
   event.preventDefault();
   let target = event.target;
   if (target.classList.contains("dropdown-item")) {
@@ -94,7 +93,6 @@ function sortMovies(sortType) {
     copyArr = dataArr;
   } else if (sortType === "imdb rated- highest") {
     copyArr = copyArr.toSorted((a, b) => b.imbd - a.imbd);
-    console.log("nn");
   } else if (sortType === "imdb rated - lowest") {
     copyArr = copyArr.toSorted((a, b) => a.imbd - b.imbd);
   } else if (sortType === "A-Z") {
@@ -113,10 +111,9 @@ sortMovies();
 
 // filter
 premUl.addEventListener("click", function (e) {
-  console.log(e);
   if (e.target.tagName === "A") {
     e.preventDefault();
-    var genre = e.target.innerHTML.trim();
+    let genre = e.target.innerHTML.trim();
     filterByGenre(genre);
   }
 });
@@ -159,12 +156,10 @@ function showAlert(alerttext, infoalert) {
 async function addMyList(movieId) {
   let selectedMovie = await axios(`${BASE_URL}/allMovies/${movieId}`);
   let selectedMovieData = selectedMovie.data;
-  console.log(selectedMovieData);
   let resp = await axios("http://localhost:8080/users");
   let data = resp.data;
   let checkUser = data.find((user) => user.check === true);
   let checkMovie = allMovies.some((movie) => movie.id == selectedMovieData.id);
-  console.log(checkMovie);
   if (!checkUser) {
     showAlert("Please Sign in", "info");
   } else if (checkMovie) {

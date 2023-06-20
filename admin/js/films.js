@@ -103,7 +103,6 @@ function deleteMovies(moviesId, btn) {
 
 // MORE DETAILS
 function showMoreDetails(userId) {
-  console.log(userId);
   let findFilm = copyArr.find((item) => item.id == userId);
   let modalBody = document.getElementById("userModalBody");
   modalBody.innerHTML = `
@@ -132,7 +131,6 @@ function showMoreDetails(userId) {
 
 let dropdown = document.querySelector(".sortDrop");
 dropdown.addEventListener("click", function (event) {
-  console.log("hello");
   let target = event.target;
   if (target.classList.contains("dropdown-item")) {
     sortMovies(target.innerText);
@@ -144,7 +142,6 @@ function sortMovies(sortType) {
     copyArr = dataArr;
   } else if (sortType === "imdb rated- highest") {
     copyArr = copyArr.toSorted((a, b) => b.imbd - a.imbd);
-    console.log("nn");
   } else if (sortType === "imdb rated - lowest") {
     copyArr = copyArr.toSorted((a, b) => a.imbd - b.imbd);
   } else if (sortType === "A-Z") {

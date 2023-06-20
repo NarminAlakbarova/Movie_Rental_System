@@ -70,10 +70,8 @@ const convertBase64 = (file) => {
 const uploadImage = async (event) => {
   const file = event.target.files[0];
   base64 = await convertBase64(file);
-  // console.log(file);
 };
 
 imgInput.addEventListener("change", (e) => {
-  //   console.log(e.target.files);
   uploadImage(e);
 });
