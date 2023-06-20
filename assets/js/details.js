@@ -30,6 +30,15 @@ descriptionLink.addEventListener("click", function () {
   rateReviewLink.classList.remove("active");
 });
 // COMMENTS
+function showAlert(alerttext, infoalert) {
+  Toastify({
+    text: alerttext,
+    className: infoalert,
+    style: {
+      background: "linear-gradient(to right, #222221, #b00000 )",
+    },
+  }).showToast();
+}
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
   let obj = {
@@ -39,14 +48,22 @@ form.addEventListener("submit", async function (e) {
     commentDate: dateValue.toLocaleString(),
   };
 
-  let resp = await axios(`${BASE_URL}/allMovies/${movieId}`);
-  let data = resp.data;
-  if (data.comments) {
-    data.comments.push(obj);
+  let response = await axios("http://localhost:8080/users");
+  let dataUser = response.data;
+  let checkUser = dataUser.find((user) => user.check === true);
+
+  if (checkUser) {
+    let resp = await axios(`${BASE_URL}/allMovies/${movieId}`);
+    let data = resp.data;
+    if (data.comments) {
+      data.comments.push(obj);
+    } else {
+      data.comments = [obj];
+    }
+    await axios.patch(`${BASE_URL}/allMovies/${movieId}`, data);
   } else {
-    data.comments = [obj];
+    showAlert("Please Sign in", "info");
   }
-  await axios.patch(`${BASE_URL}/allMovies/${movieId}`, data);
 });
 
 function drawDetails(item) {
