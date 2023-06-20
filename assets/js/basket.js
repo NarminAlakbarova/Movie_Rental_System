@@ -53,7 +53,7 @@ allBasket();
 function calcSubtotal() {
   let totalPrice = 0;
   allPremiumMovies.forEach((item) => {
-    totalPrice += item.price;
+    totalPrice += +item.price;
   });
   subtotalCount.innerHTML = `${totalPrice} $`;
 }

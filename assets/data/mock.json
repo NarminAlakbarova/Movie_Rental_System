@@ -38,7 +38,7 @@
       "id": 5
     },
     {
-      "isAdmin": true,
+      "isAdmin": false,
       "check": false,
       "userName": "potihafuqu",
       "firstName": "fadyty",
@@ -48,7 +48,7 @@
       "id": 6
     },
     {
-      "isAdmin": false,
+      "isAdmin": true,
       "check": false,
       "userName": "rygibalyle",
       "firstName": "lyrohazew",
@@ -59,7 +59,7 @@
     },
     {
       "isAdmin": false,
-      "check": true,
+      "check": false,
       "userName": "Fatime",
       "firstName": "zamifitog",
       "lastName": "zabyvo",
@@ -638,7 +638,15 @@
       "id": 48,
       "price": 3,
       "time": "1h 20m",
-      "img": "../assets/img/hero-banner/sherlock.jpg"
+      "img": "../assets/img/hero-banner/sherlock.jpg",
+      "comments": [
+        {
+          "username": "habovusus",
+          "email": "pukih@mailinator.com",
+          "commentContent": "Nulla laborum quis i",
+          "commentDate": "6/20/2023, 8:44:38 PM"
+        }
+      ]
     },
     {
       "movieName": "Avengers: Infinity War",
@@ -779,15 +787,6 @@
       "content": "Reprehenderit sit m",
       "contactDate": "6/19/2023, 4:22:21 PM",
       "id": 1
-    },
-    {
-      "username": "Aladdin Franco",
-      "lastname": "Lowe",
-      "phone": "+1 (835) 639-7109",
-      "email": "xizufepowo@mailinator.com",
-      "content": "Quo ipsum dolor sint",
-      "contactDate": "6/20/2023, 2:32:37 PM",
-      "id": 2
     }
   ]
 }
