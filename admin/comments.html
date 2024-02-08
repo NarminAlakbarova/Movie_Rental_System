@@ -22,40 +22,45 @@
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./assets/scss/main.css" />
-    <link rel="icon" type="image/x-icon" href="../assets/img/users/pic-1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/x-icon" href="../assets/img/users/pic-1.png" />
     <title>Admin</title>
   </head>
   <body>
     <!-- HEADER -->
     <header>
-      <div class="container">
-        <div class="header">
-          <div class="admin">
-            <i class="fa-solid fa-sun"></i>
-            <div class="letter">
-              <a href="contact-us.html" class="fa-solid fa-envelope"></a>
-              <span class="count">1</span>
-            </div>
+      <div class="header">
+        <p>Welcome, Admin</p>
+        <div class="admin">
+          <i class="fa-solid fa-sun"></i>
+          <div class="letter">
+            <a href="contact-us.html" class="fa-solid fa-envelope"></a>
+            <span class="count">1</span>
+          </div>
 
-            <div class="dropdown">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                id="dropdownMenuButton1"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Admin
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li>
-                  <a class="dropdown-item" href="../sign-in.html">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>Log
-                    out</a
-                  >
-                </li>
-              </ul>
-            </div>
+          <div class="dropdown">
+            <button
+              class="btn dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Admin
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a class="dropdown-item" href="../sign-in.html">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -66,13 +71,17 @@
         <div class="left-bars">
           <div class="left-bars-title">
             <div class="admin-info">
-              <img src="../assets/img/team.png" alt="" />
+              <img src="../assets/img/logo.png" alt="" />
               <div class="admin-name">
-                <h5>John Doe</h5>
-                <p>Gold Member</p>
+                <h5>MovieStar</h5>
+                <i class="fa-solid fa-bars"></i>
               </div>
             </div>
             <ul class="bars-content">
+              <li>
+                <i class="fa-solid fa-house-user"></i>
+                <a href="home.html" id="users-link">Home</a>
+              </li>
               <li>
                 <i class="fa-solid fa-users"></i>
                 <a href="admin.html" id="users-link">Users</a>
@@ -81,7 +90,7 @@
                 <i class="fa-solid fa-film"></i>
                 <a href="films.html" id="films-link">Films</a>
               </li>
-   
+
               <li>
                 <i class="fa-solid fa-comment"></i>
                 <a href="comments.html">Comments</a>
@@ -100,18 +109,13 @@
     <section id="comments">
       <div class="container">
         <div class="comments">
-          <div class="row cards-row">
-       
-     
-          </div>
-          
+          <div class="row cards-row"></div>
+
           <div class="buttons">
             <button id="more-btn">Load More</button>
-            </div>
-          <h2>Comments</h2>
-          <div class="row comment-row">
-        
           </div>
+          <p>Comments</p>
+          <div class="row comment-row"></div>
         </div>
       </div>
     </section>
@@ -132,5 +136,4 @@
   ></script>
   <script src="./js/comments.js"></script>
   <script src="./js/common.js"></script>
-
 </html>

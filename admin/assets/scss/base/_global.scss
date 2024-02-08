@@ -6,9 +6,14 @@
 
 body {
   color: white;
+  background-color: #f5f5f5;
   // transition: 1s all;
+  p {
+    font-family: "Montserrat", sans-serif;
+  }
   &.dark-mode {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.904);
+
     header {
       background-color: #272626;
       transition: 1s;
@@ -28,7 +33,6 @@ body {
       }
     }
     #admin-panel {
-        
       .admin-panel {
         h4 {
           color: white;
@@ -44,8 +48,9 @@ body {
           tbody {
             tr {
               td {
-                background-color: #495057;
+                background-color: #d1d1d136;
                 border-color: #5a6066;
+                color: white;
               }
             }
           }
@@ -53,8 +58,6 @@ body {
       }
     }
     #films-panel {
-      
-
       .films-panel {
         .search-sort {
           input {
@@ -87,8 +90,9 @@ body {
           tbody {
             tr {
               td {
-                background-color: #495057;
+                background-color: #d1d1d136;
                 border-color: #5a6066;
+                color: white;
               }
             }
           }
@@ -101,78 +105,140 @@ body {
       }
     }
     #add-movies {
-    color: white;
-        .add-movies {
-          form {
+      color: white;
+      .add-movies {
+        form {
+          label,
+          h3 {
+            color: white;
+          }
 
-            label, h3{
-              color: white;
+          textarea {
+            background-color: #495057;
+            border: 2px solid #495057;
+          }
+          input,
+          select {
+            background-color: #495057;
+            border: 2px solid #495057;
+          }
+
+          #add {
+            margin-top: 15px;
+            position: relative;
+            width: 120px;
+            height: 40px;
+            background-color: #0d1b2a;
+            display: flex;
+            align-items: center;
+            color: white;
+            flex-direction: column;
+            justify-content: center;
+            border: none;
+            padding: 12px;
+            gap: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            &::before {
+              content: "";
+              position: absolute;
+              inset: 0;
+              left: -4px;
+              top: -1px;
+              margin: auto;
+              width: 128px;
+              height: 48px;
+              border-radius: 10px;
+              background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+              z-index: -10;
+              pointer-events: none;
+              transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             }
-         
-            textarea {
-         
-              background-color: #495057;
-              border: 2px solid #495057;
+            &::after {
+              content: "";
+              z-index: -1;
+              position: absolute;
+              inset: 0;
+              background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+              transform: translate3d(0, 0, 0) scale(0.95);
+              filter: blur(20px);
             }
-            input,
-            select {
-              background-color: #495057;
-              border: 2px solid #495057;
+            &:hover::after {
+              filter: blur(30px);
             }
-      
-            #add {
-              margin-top: 15px;
-              position: relative;
-              width: 120px;
-              height: 40px;
-              background-color: #0d1b2a;
-              display: flex;
-              align-items: center;
-              color: white;
-              flex-direction: column;
-              justify-content: center;
-              border: none;
-              padding: 12px;
-              gap: 12px;
-              border-radius: 8px;
-              cursor: pointer;
-              &::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                left: -4px;
-                top: -1px;
-                margin: auto;
-                width: 128px;
-                height: 48px;
-                border-radius: 10px;
-                background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
-                z-index: -10;
-                pointer-events: none;
-                transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            &:hover::before {
+              transform: rotate(-180deg);
+            }
+            &:active::before {
+              scale: 0.7;
+            }
+          }
+        }
+      }
+    }
+    #comments {
+      .comment-row {
+        .comment-title {
+          color: #0d1b2a;
+        }
+        .comment-card {
+          padding: 10px;
+          background-color: #83838362;
+          color: #83838362;
+          border: none;
+          display: flex;
+          flex-direction: row;
+          column-gap: 30px;
+
+          img {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+    #home-page {
+      .home-page {
+        .charts {
+          canvas {
+            background-color: #5353532f;
+          }
+        }
+        .statics {
+          .card {
+            background-color: #5353532f;
+            .content {
+              p {
+                color: white;
               }
-              &::after {
-                content: "";
-                z-index: -1;
-                position: absolute;
-                inset: 0;
-                background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
-                transform: translate3d(0, 0, 0) scale(0.95);
-                filter: blur(20px);
+           
+            }
+          }
+        }
+      }
+    }
+    #contact {
+      .contact {
+        table {
+          thead {
+            tr {
+              th {
+                background-color: #272626;
               }
-              &:hover::after {
-                filter: blur(30px);
-              }
-              &:hover::before {
-                transform: rotate(-180deg);
-              }
-              &:active::before {
-                scale: 0.7;
+            }
+          }
+          tbody {
+            tr {
+              td {
+                background-color: #d1d1d136;
+                border-color: #5a6066;
+                color: white;
               }
             }
           }
         }
       }
-      
+    }
+    
   }
 }

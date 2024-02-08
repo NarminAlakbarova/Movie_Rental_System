@@ -8,14 +8,15 @@
       flex-direction: column;
       align-items: center;
       width: 70%;
-      label{
+      label {
         color: #0d1b2a;
       }
-      h3 {
-        color: #0d1b2a;
+      p {
+        color: #8690a9;
+        font-size: 28px;
       }
       textarea {
-        background-color: #778da9;
+        background-color: #b2d1d1;
         border: 2px solid white;
         border-radius: 5px;
 
@@ -25,7 +26,7 @@
         }
         &:focus {
           outline-color: #415a77;
-          box-shadow: -3px -3px 15px #1b263b;
+          box-shadow: -3px -3px 15px #006666;
           transition: 0.1s;
           transition-property: box-shadow;
         }
@@ -37,16 +38,17 @@
       select {
         padding: 10px;
         width: 100%;
-        color: #e0e1dd;
-        background-color: #778da9;
+        color: #0d1b2a;
+        background-color: #b2d1d1;
         border: 2px solid white;
         border-radius: 5px;
+        outline: none;
         &::placeholder {
           color: white;
         }
         &:focus {
           outline-color: #415a77;
-          box-shadow: -3px -3px 15px #1b263b;
+          box-shadow: -3px -3px 15px #006666;
           transition: 0.1s;
           transition-property: box-shadow;
         }
@@ -57,7 +59,7 @@
         position: relative;
         width: 120px;
         height: 40px;
-        background-color: #0d1b2a;
+        background-color: #006666;
         display: flex;
         align-items: center;
         color: white;

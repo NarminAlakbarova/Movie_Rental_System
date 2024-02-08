@@ -59,7 +59,7 @@
     },
     {
       "isAdmin": false,
-      "check": true,
+      "check": false,
       "userName": "Fatime",
       "firstName": "zamifitog",
       "lastName": "zabyvo",
@@ -838,24 +838,6 @@
       "content": "Praesentium molestia",
       "contactDate": "6/20/2023, 10:33:09 PM",
       "id": 1
-    },
-    {
-      "username": "Daquan Frazier",
-      "lastname": "Lawson",
-      "phone": "+1 (607) 239-8388",
-      "email": "byxy@mailinator.com",
-      "content": "Numquam qui dolore v",
-      "contactDate": "6/20/2023, 10:33:17 PM",
-      "id": 2
-    },
-    {
-      "username": "Alvin Shaffer",
-      "lastname": "Wolfe",
-      "phone": "+1 (286) 554-2219",
-      "email": "kodale@mailinator.com",
-      "content": "Vitae veniam ex qua",
-      "contactDate": "6/20/2023, 11:29:08 PM",
-      "id": 3
     }
   ]
 }

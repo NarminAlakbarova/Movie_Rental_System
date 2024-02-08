@@ -1,29 +1,22 @@
-let contactRow = document.querySelector(".contact-row");
+let tbody = document.querySelector("tbody");
 
 const BASE_URL = "http://localhost:8080";
 
 function drawRow(arr) {
-  contactRow.innerHTML = "";
+  tbody.innerHTML = "";
   arr.forEach((item) => {
-    contactRow.innerHTML += `
-        
-        <span class="col-lg-3 my-2">
-        <div class="card">
-          <div class="avatar">
-            <img src="../assets/img/users/pic-4.png" alt="Avatar" />
-            <i class="fa-regular fa-trash-can" onclick=deleteContactCard(${item.id})></i>
-          </div>
-          <div class="message-content">
-            <div class="sender">${item.username}</div>
-            <div class="message">
-              ${item.content}
-            </div>
-            <div class="timestamp">${item.contactDate}</div>
-          </div>
-          <div class="back-card"></div>
-          <div class="thid-card"></div>
-        </div>
-      </span>
+    tbody.innerHTML += `
+    <tr>
+    <td>${item.contactDate}</td>
+
+    <td> <img src="../assets/img/users/pic-4.png" alt="Avatar" /></td>
+    <td>${item.username}</td>
+    <td>${item.content}</td>
+ 
+    <td><i class='fa-solid fa-trash btn' onclick=deleteContactCard(${item.id})></i></td>
+  </tr>
+    
+
         
         `;
   });

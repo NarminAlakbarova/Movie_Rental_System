@@ -1,25 +1,6 @@
 let loadMore = document.querySelector("#load-more");
 let max = 6;
 
-// COUNTER
-let a = 0;
-$(document).ready(function () {
-  $(".value-counter").each(function () {
-    let $this = $(this);
-    jQuery({ Counter: 0 }).animate(
-      { Counter: $this.text() },
-      {
-        duration: 2000,
-        easing: "swing",
-        step: function () {
-          $this.text(Math.ceil(this.Counter));
-        },
-      }
-    );
-  });
-  a = 1;
-});
-
 let dataArr = [];
 let copyArr = [];
 let sortedArr = [];
@@ -44,13 +25,11 @@ function drawTabele(arr) {
     <td>
 
 
-      <i class="fa-solid fa-eye btn btn-success" onclick=showMoreDetails(${
-        item.id
-      })></i>
+      <i class="fa-solid fa-eye btn " onclick=showMoreDetails(${item.id})></i>
       <a class="fa-solid fa-pen-to-square btn btn-secondary" href="add-movies.html?id=${
         item.id
       }"></a>
-      <i class="fa-solid fa-trash btn btn-danger" onclick=deleteMovies(${
+      <i class="fa-solid fa-trash btn " onclick=deleteMovies(${
         item.id
       },this)></i>
     </td>
@@ -99,7 +78,6 @@ function deleteMovies(moviesId, btn) {
     }
   });
 }
-
 
 // MORE DETAILS
 function showMoreDetails(userId) {

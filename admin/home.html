@@ -17,10 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+
     <link rel="stylesheet" href="./assets/scss/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,8 +25,8 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/users/pic-1.png" />
+    <title>Admin</title>
   </head>
   <body>
     <!-- HEADER -->
@@ -79,7 +76,7 @@
             <ul class="bars-content">
               <li>
                 <i class="fa-solid fa-house-user"></i>
-                <a href="home.html" id="users-link">Home</a>
+                <a href="admin.html" id="users-link">Home</a>
               </li>
               <li>
                 <i class="fa-solid fa-users"></i>
@@ -104,95 +101,98 @@
         </div>
       </div>
     </section>
-    <!-- Form -->
-
-    <section id="add-movies">
-      <div class="container">
-        <div class="add-movies">
-          <form action="">
-            <p class="my-4">Add Movies</p>
-            <div class="row">
-              <div class="col-md-6 d-flex flex-column">
-                <label for="">Movie Name</label>
-                <input
-                  type="text"
-                  name=""
-                  id="name"
-                  placeholder="Enter movie name..."
-                />
-              </div>
-              <div class="col-md-6 d-flex flex-column">
-                <label for="">Release Date</label>
-                <input
-                  type="text"
-                  name=""
-                  id="date"
-                  placeholder="Enter Release date..."
-                />
-              </div>
-              <div class="col-md-6 d-flex flex-column">
-                <label for="">Genres</label>
-                <input
-                  type="text"
-                  name=""
-                  id="genres"
-                  placeholder="Enter a genres.."
-                />
-              </div>
-              <div class="col-md-6 d-flex flex-column">
-                <label for="">Section</label>
-                <select name="" id="selection">
-                  <option value="upcoming">upcoming</option>
-                  <option value="Suggested">Suggested</option>
-                  <option value="Must-Have">Must-Have</option>
-                  <option value="Trailer">Trailer</option>
-                  <option value="Premium">Premium</option>
-                </select>
-              </div>
-
-              <div class="col-md-4 d-flex flex-column">
-                <label for="">Time</label>
-                <input type="text" id="time" placeholder="time.." />
-              </div>
-              <div class="col-md-4 d-flex flex-column">
-                <label for="">imbd</label>
-                <input type="number" id="imbd" placeholder="imbd..." />
-              </div>
-              <div class="col-md-4 d-flex-flex-column">
-                <label for="">Price</label>
-                <input
-                  type="number"
-                  name=""
-                  id="price-inp"
-                  placeholder=" price..."
-                />
-              </div>
-              <div class="col-md-12 mt-3">
-                <label for="">Title</label>
-                <textarea
-                  style="width: 100%"
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="5"
-                  placeholder="Films Title..."
-                ></textarea>
-              </div>
-              <div class="col-md-12 mb-3">
-                <label for="">Trailer</label>
-                <input type="url" id="urlinp" placeholder="Trailer link..." />
-              </div>
-              <div class="col-md-12">
-                <input type="file" id="imginp" style="width: 100%" />
-              </div>
-            </div>
-            <div class="col-md-12 d-flex justify-content-center">
-              <button type="submit" id="add">Add</button>
-            </div>
-          </form>
+    <div
+      class="modal fade"
+      id="userModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="userModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="userModalLabel">User Details</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+              id="closeModalBtn"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="userModalBody"></div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <div id="home-page">
+      <div class="container">
+        <div class="home-page">
+          <div class="statics">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="card" style="border-bottom: 2px solid #006666">
+                  <div class="header">Total Films</div>
+                  <div class="content">
+                    <p class="value-counter" data-value="1050">1050</p>
+                    <i
+                      class="fa-solid fa-clapperboard"
+                      style="background-color: #b2d1d1; color: #006666"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card" style="border-bottom: 2px solid #ffae1a">
+                  <div class="header">Prmium Films</div>
+                  <div class="content">
+                    <p class="value-counter" data-value="1050">1050</p>
+                    <i
+                      class="fa-solid fa-clapperboard"
+                      style="background-color: #ffe7ba; color: #ffca67"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card" style="border-bottom: 2px solid #ff8367">
+                  <div class="header">Upcoming</div>
+                  <div class="content">
+                    <p class="value-counter" data-value="1050">1050</p>
+                    <i
+                      class="fa-solid fa-clapperboard"
+                      style="background-color: #ffd2c8; color: #ff8367"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="card" style="border-bottom: 2px solid #86909c">
+                  <div class="header">Popular</div>
+                  <div class="content">
+                    <p class="value-counter" data-value="1050">1050</p>
+                    <i
+                      class="fa-solid fa-clapperboard"
+                      style="background-color: #f7f8f9; color: #555555"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="charts">
+            <canvas id="myChart" style="width: 100%; max-width: 700px"></canvas>
+            <canvas
+              id="myChart2"
+              style="width: 100%; max-width: 350px"
+            ></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
@@ -208,6 +208,6 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
-  <script src="./js/add-edit.js"></script>
+  <script src="./js/home.js"></script>
   <script src="./js/common.js"></script>
 </html>
